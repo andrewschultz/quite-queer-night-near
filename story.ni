@@ -4,6 +4,8 @@ volume variables and stuff
 
 include Trivial Niceties by Andrew Schultz.
 
+include Quite Queer Night Near Tests by Andrew Schultz.
+
 chapter largely copied from VVFF
 
 to moot (x - a thing): move x to Gazy Gap;
@@ -122,11 +124,34 @@ check going east in Blight Blear Bight Bier:
 
 chapter Bare Bones Stair Stones
 
-Bare Bones Stair Stones is east of Bight Bier.
+Bare Bones Stair Stones is east of Bight Bier. "You can go back west to the Bier, though you don't need to. You can also go north and south, but there seems to be a way out above--or there could be!"
+
+to decide which number is stone-filler:
+	let temp be boolval of ts-mulch-more;
+	if ts-bump-bark is true and ts-stump-stark is true and ts-pump-park is true and ts-plaster-plate is true, increment temp;
+	decide on temp;
+
+check going up in Bare Bones Stair Stones:
+	let Q be stone-filler;
+	if Q is 2:
+		say "You see a way through! You've built the bare bones stair stones into something more. You're ready to ascend and leave ... but you are so sure you will make it, you slip and tumble into...";
+		move player to gold gaol;
+		the rule succeeds;
+	if Q is 0:
+		say "The stones are nowhere near in climbable condition yet.";
+	else if Q is 1:
+		say "The stones are almost climbable but still too risky. You need to do a bit more.";
+	the rule fails;
 
 chapter Peep Pool
 
-Peep Pool is south of Stair Stones. [->deep duel] [->reap rule]
+Peep Pool is south of Stair Stones. "A passage bending north and east[if ts-duel-deep is false]. You may wish to look in the pool and summon something. That's what pools are for[end if].". [->deep duel] [->reap rule]
+
+ts-duel-deep is a truth state that varies.
+
+check going east in Peep Pool:
+	if creep cruel is touchable, say "You need to make it by the creep (cruel.)" instead;
+	if creep cruel is off-stage, say "The pool pulls you back. Whatever's beyond it, you seem to need to face the pool first." instead;
 
 section creep cruel
 
@@ -153,6 +178,8 @@ the stark stump is a thing.
 chapter Gaster Gate
 
 Gaster Gate is east of Dark Dump. [->plaster plate]
+
+ts-plaster-plate is a truth state that varies.
 
 section Master Mate
 
@@ -359,7 +386,8 @@ this is the vc-leap-leet rule:
 	the rule succeeds;
 
 this is the vr-leap-leet rule:
-	say "The sheet leaps into your hands!"
+	say "The sheet leaps into your hands!";
+	now player has sheep sheet;
 
 this is the vc-more-mulch rule:
 	if player is not in Gore Gulch, the rule fails;
@@ -406,10 +434,14 @@ this is the vr-pink-pug rule:
 
 this is the vc-plaster-plate rule:
 	if player is not in gaster gate, the rule fails;
+	if master mate is moot:
+		vcal "You already made a plaster plate.";
+		continue the action;
 	the rule succeeds;
 
 this is the vr-plaster-plate rule:
 	say "A huge chunk of the gaster gate breaks off and creates a plaster plate. It's much too big to eat off, but it crumbles quickly apart (probably not Last [']Er Late brand) and is washed away beyond the dark dump.";
+	now ts-plaster-plate is true;
 	moot master mate;
 
 this is the vc-reap-rule rule:
