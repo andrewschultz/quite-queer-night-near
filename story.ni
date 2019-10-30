@@ -4,13 +4,52 @@ volume variables and stuff
 
 include Trivial Niceties by Andrew Schultz.
 
+chapter largely copied from VVFF
+
 to moot (x - a thing): move x to Gazy Gap;
 
 definition: a thing (called x) is moot:
 	if x is in Gazy Gap, yes;
 	no;
 
-section verb carnage
+a thing can be boring. a thing is usually boring. a thing has text called bore-text. bore-text of a thing is "You don't have to do any usual parser manipulations on [the item described]. Maybe examine."
+
+ha-half is a truth state that varies.
+
+zap-core-entry is a truth state that varies.
+
+to up-which (ts - a truth state):
+	if ts is true:
+		up-reg;
+	else:
+		up-min;
+		increment cur-bonus
+
+core-max is a number that varies. core-max is 12. [core-max is fixed. It is the number of point-scoring actions you need.]
+
+min-needed is a number that varies. min-needed is 13. [min-needed increases as you find LLPs.]
+
+max-bonus is a number that varies. max-bonus is 1.
+
+cur-bonus is a number that varies. cur-bonus is 0. [we could define min-needed as core-max + cur-bonus I guess.]
+
+core-score is a number that varies. core-score is 0.
+
+max-overall is a number that varies.
+
+max-poss is a number that varies.
+
+to up-min:
+	increment min-needed;
+	increment the score;
+
+to up-reg:
+	increment core-score;
+	increment the score;
+
+to max-down: decrement max-poss;
+
+chapter verb carnage
 
 understand the command "attach" as something new.
 understand the command "buy" as something new.
@@ -69,7 +108,7 @@ ts-fight-fear is a truth state that varies.
 
 section sheep sheet
 
-the cheap cheat sheep sheet is a thing.
+the cheap cheat sheep sheet is a thing in Blight Blear Bight Bier.
 
 section DDTT
 
@@ -131,6 +170,95 @@ chapter Gazy Gap
 Gazy Gap is a room.
 
 volume the whole special verb thing
+
+chapter parser error tweak(s)
+
+Rule for printing a parser error (this is the clue half right words rule):
+[	now table-to-scour is table of homonym rejections;
+	abide by the mistake-checker rule;]
+	abide by the verb-checker rule;
+[	now table-to-scour is table of mistake substitutions;
+	abide by the mistake-checker rule;]
+	continue the action;
+
+chapter the big rule(s)
+
+this is the verb-checker rule:
+	let local-ha-half be false;
+	repeat through the table of verb checks:
+		let my-count be 0;
+		if the player's command matches the regular expression "(^|\W)([w1 entry])($|\W)", increment my-count;
+		if there is a w2 entry:
+			if the player's command matches the regular expression "(^|\W)([w2 entry])($|\W)", increment my-count;
+		else if my-count > 0:
+			increment my-count;
+		let wfull-fail be false;
+		[say "[ver-rule entry].";]
+		if there is a wfull entry:
+			if the player's command matches the wfull entry:
+				now my-count is 3;
+			else if my-count is 2:
+				now wfull-fail is true;
+		if my-count >= 2:
+			process the ver-rule entry;
+			if the rule failed:
+				next;
+			else if the rule succeeded:
+				if okflip entry is false:
+					unless my-count is 3 or there is no w2 entry or the player's command matches the regular expression "^([w1 entry])\W": [this is for the DIM'D test case... and "my-count is 3" is a hack for FLIMFLAM]
+						say "You've got it backwards! Just flip things around, and it'll be okay.";
+						the rule succeeds;
+				if wfull-fail is true:
+					say "Ooh! You're close, but you juggled things up, somehow.";
+					the rule succeeds;
+				if there is a core entry and idid entry is false:
+					up-which core entry;
+					if core entry is false:
+						increase lump-count by 2;
+				if zap-core-entry is true:
+					blank out the core entry;
+					now zap-core-entry is false;
+				now idid entry is true;
+				process the do-rule entry;
+				process the notify score changes rule;
+				if there is a core entry and core entry is false, check-lump-progress;
+			the rule succeeds;
+		if ha-half is true and my-count is 1: [there is a bug here with, say, DEAL DIER instead of DEAL DEAR. It prints something extra.]
+			now vc-dont-print is true;
+			now already-rhymed-this is false;
+			process the ver-rule entry;
+			if the rule failed:
+				now vc-dont-print is false;
+				next;
+			now vc-dont-print is false;
+			if already-rhymed-this is true, break;
+			now local-ha-half is true;
+			if debug-state is true, say "DEBUG: [ver-rule entry] tipped off the HA HALF button.";
+			next;
+	if local-ha-half is true:
+		say "The HA HALF button lights up on your Leet Learner.";
+		the rule succeeds;
+
+chapter the lump or its replacement
+
+next-lump-level is a number that varies. next-lump-level is 5.
+next-lump-delta is a number that varies. next-lump-delta is 2.
+lump-count is a number that varies. lump-count is 0.
+lump-charges is a number that varies. lump-charges is 0.
+lump-uses is a number that varies. lump-uses is 0.
+
+to say jjj: say "JERKING JUMP or JJ"
+
+to check-lump-progress:
+	increment lump-count;
+	if lump-count >= next-lump-level:
+		say "[line break][if lurking lump is off-stage]Thwup! You hear a sound...and notice a lurking lump has fallen. Gazing at its dull shine, you realize it could help you move ahead on a tricky rhyme, at the right place at the right time, with [jjj].[paragraph break]You take the lump[else if lurking lump is moot]Thwup! A lurking lump appears again. You take it[else]The lurking lump pulses and grows. All your guesses have paid off[end if].";
+		now player has lurking lump;
+		increment lump-charges;
+		decrease lump-count by next-lump-level;
+		increase next-lump-level by next-lump-delta;
+
+a lurking lump is a boring thing. description is "The lurking lump shines dully. It looks to have [lump-charges in words] charge[plur of lump-charges] for you to make a JERKING JUMP (JJ) if anything is baffling you.". bore-text of lurking lump is "You can only JERKING JUMP (JJ) with the lurking lump."
 
 chapter the big table
 
@@ -273,7 +401,8 @@ this is the vc-pink-pug rule:
 	the rule succeeds;
 
 this is the vr-pink-pug rule:
-	say "POOF! The drink-drug think-thug turns into a far more innocuous pink pug."
+	say "POOF! The drink-drug think-thug turns into a far more innocuous pink pug.";
+	moot Drink Drug Think Thug;
 
 this is the vc-plaster-plate rule:
 	if player is not in gaster gate, the rule fails;
