@@ -2,11 +2,36 @@
 
 volume variables and stuff
 
+the story headline is "Hokey Haunts, Jokey Jaunts".
+
 include Trivial Niceties by Andrew Schultz.
 
 include Quite Queer Night Near Tests by Andrew Schultz.
 
+include Quite Queer Night Near Mistakes by Andrew Schultz.
+
+procedural rule while eating something: ignore the carrying requirements rule.
+
+The print final score rule is not listed in for printing the player's obituary.
+
+cheattype is a kind of value. the cheattypes are phbt, letplus, letminus, partplus, partminus, leteq, letboth.
+
+to phbt (x - a thing):
+	now cht of x is phbt;
+
+to phbt (x - a room): now cht of x is phbt;
+
+a room has a cheattype called cht. cht of a room is usually phbt.
+
+a thing has a cheattype called cht. cht of a thing is usually phbt.
+
 chapter largely copied from VVFF
+
+when play begins:
+	now the right hand status line is "[score]/[if max-poss is not min-needed][min-needed]-[end if][max-poss]";
+
+check requesting the score:
+	say "You have [score] out of [min-needed] points needed to win the game[if max-poss > min-needed], but there's a bonus point[end if].";
 
 to moot (x - a thing): move x to Gazy Gap;
 
@@ -29,7 +54,7 @@ to up-which (ts - a truth state):
 
 core-max is a number that varies. core-max is 12. [core-max is fixed. It is the number of point-scoring actions you need.]
 
-min-needed is a number that varies. min-needed is 13. [min-needed increases as you find LLPs.]
+min-needed is a number that varies. min-needed is 12. [min-needed increases as you find LLPs.]
 
 max-bonus is a number that varies. max-bonus is 1.
 
@@ -165,11 +190,19 @@ ts-mulch-more is a truth state that varies.
 
 chapter Dark Dump
 
-Dark Dump is north of Gore Gulch. [-> stark stump] [->bark bump] [->park pump]
+Dark Dump is north of Bare Bones Stair Stones. [-> stark stump] [->bark bump] [->park pump]
 
 ts-bump-bark is a truth state that varies.
 ts-pump-park is a truth state that varies.
 ts-stump-stark is a truth state that varies.
+
+section bark bump
+
+the bark bump is a thing.
+
+section park pump
+
+the park pump is a thing.
 
 section stark stump
 
@@ -200,12 +233,14 @@ volume the whole special verb thing
 
 chapter parser error tweak(s)
 
+table-to-scour is a table name that varies.
+
 Rule for printing a parser error (this is the clue half right words rule):
 [	now table-to-scour is table of homonym rejections;
 	abide by the mistake-checker rule;]
 	abide by the verb-checker rule;
-[	now table-to-scour is table of mistake substitutions;
-	abide by the mistake-checker rule;]
+	now table-to-scour is table of mistake substitutions;
+	abide by the mistake-checker rule;
 	continue the action;
 
 chapter the big rule(s)
@@ -287,6 +322,43 @@ to check-lump-progress:
 
 a lurking lump is a boring thing. description is "The lurking lump shines dully. It looks to have [lump-charges in words] charge[plur of lump-charges] for you to make a JERKING JUMP (JJ) if anything is baffling you.". bore-text of lurking lump is "You can only JERKING JUMP (JJ) with the lurking lump."
 
+this is the mistake-checker rule:
+	repeat through table-to-scour:
+		if the player's command matches mist-cmd entry:
+			process the mist-rule entry;
+			if the rule succeeded:
+				say "[mist-txt entry][line break]";
+				if there is a leet-rule entry:
+					process the leet-rule entry;
+					unless the rule succeeded, the rule succeeds;
+				let d1 be -10;
+				let d2 be -10;
+				if there is a w1let entry:
+					now d1 is w1let entry - number of characters in word number 1 in the player's command;
+					if there is a w2let entry:
+						now d2 is w2let entry - number of characters in word number 2 in the player's command;
+					if d2 is -10, now d2 is d1;
+					say "[leetclue of cluecheat of d1 and d2].";
+				if got-yet entry is false:
+					check-lump-progress;
+				now got-yet entry is true;
+				the rule succeeds;
+
+to decide which cheattype is the cluecheat of (n1 - a number) and (n2 - a number):
+	if n2 > n1, decide on cluecheat of n2 and n1;
+	if n1 is 0 and n2 is 0, decide on leteq; [center]
+	if n1 > 0 and n2 is 0, decide on partplus; [center left]
+	if n1 > 0 and n2 > 0, decide on letplus; [left]
+	if n1 is 0 and n2 < 0, decide on partminus; [center right]
+	if n1 < 0 and n2 < 0, decide on letminus; [right]
+	decide on letboth; [one +, one minus, wobbles]
+
+to say leetclue of (x - a cheattype):
+	if sheep sheet is not touchable, continue the action;
+	say "You refer to the cheap cheet, noticing it goes to [x].";
+
+to say scancol of (x - a cheattype): say "[if x is letplus]++[else if x is partplus]+=/=+[else if x is leteq]==[else if x is partminus]-=/=-[else if x is letminus]--[else if x is letboth]+-/-+[else if x is phbt]00[else]BUG[end if]"
+
 chapter the big table
 
 table of verb checks [xxvc]
@@ -344,7 +416,9 @@ this is the vc-bark-bump rule:
 	the rule succeeds;
 
 this is the vr-bark-bump rule:
-	say "A bark bump appears!"
+	say "A bark bump appears to the north! You weren't going that way, but it provides a bit of a channel.";
+	move bark bump to Dark Dump;
+	now ts-bump-bark is true;
 
 this is the vc-cold-kale rule:
 	if player is not in gold gaol, the rule fails;
@@ -355,6 +429,7 @@ this is the vc-cold-kale rule:
 
 this is the vr-cold-kale rule:
 	say "Some cold kale appears! It's not very tasty, but it's better than nothing.";
+	now ts-kale-cold is true;
 	see-how-nourished;
 	process the endgame prod rule;
 
@@ -377,6 +452,7 @@ this is the vc-fight-fear rule:
 
 this is the vr-fight-fear rule:
 	say "You do your best to feel braver. It works, well enough! And that's a good thing, too, because a Drink Drug Think Thug appears. Boy, they're the worst. Even abusing their body and mind, they can beat you up physically and mentally.";
+	now ts-fight-fear is true;
 
 this is the vc-leap-leet rule:
 	if sheep sheet is off-stage, the rule fails;
@@ -397,7 +473,8 @@ this is the vc-more-mulch rule:
 	the rule succeeds;
 
 this is the vr-more-mulch rule:
-	say "More mulch appears! It spills out to the peep pool and beyond."
+	say "More mulch appears! It spills out to the peep pool and beyond.";
+	now ts-mulch-more is true;
 
 this is the vc-old-ale rule:
 	if player is not in gold gaol, the rule fails;
@@ -408,6 +485,7 @@ this is the vc-old-ale rule:
 
 this is the vr-old-ale rule:
 	say "Yum! Or not. You find a firkin or flagon or whatever of old ale, and it doesn't taste very good, but it's nourishing and hopefully not too alcoholic.";
+	now ts-ale-old is true;
 	see-how-nourished;
 	process the endgame prod rule;
 
@@ -419,7 +497,8 @@ this is the vc-park-pump rule:
 	the rule succeeds;
 
 this is the vr-park-pump rule:
-	say "Poof! A park pump appears, just like you remember as a kid!"
+	say "Poof! A park pump appears, just like you remember as a kid! It appears to be auto-pumping, creating a waterway until things get too flooded.";
+	now ts-pump-park is true;
 
 this is the vc-pink-pug rule:
 	if drink drug think thug is off-stage, the rule fails;
@@ -464,8 +543,9 @@ this is the vc-stark-stump rule:
 	the rule succeeds;
 
 this is the vr-stark-stump rule:
-	say "Poof! A stark stump appears!";
+	say "Poof! A stark stump appears! It blocks the way to the west, but it provides a channel in case anything would come flowing through.";
 	move stark stump to Dark Dump;
+	now ts-stump-stark is true;
 
 this is the vc-told-tale rule:
 	if player is not in gold gaol, the rule fails;
@@ -476,6 +556,7 @@ this is the vc-told-tale rule:
 
 this is the vr-told-tale rule:
 	say "Yeah, that's it. You've had your fun. Time to move on. Your adventures are just silly enough and just believable enough to scare friends or to laugh at things.";
-	end the story;
+	end the story finally saying "HOKEY HAUNTS, JOKEY JAUNTS";
+	follow the shutdown rules;
 
 [zzqqnnr]
