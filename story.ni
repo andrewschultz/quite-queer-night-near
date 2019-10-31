@@ -49,6 +49,7 @@ when play begins:
 
 check requesting the score:
 	say "You have [score] out of [min-needed] points needed to win the game[if max-poss > min-needed], but there's a bonus point[end if].";
+	if debug-state is true, say "DEBUG: [lump-count] lump count.";
 
 to moot (x - a thing): move x to Gazy Gap;
 
@@ -177,7 +178,7 @@ the cheap cheat sheep sheet is a thing in Blight Blear Bight Bier. cht of sheep 
 
 section DDTT
 
-The Drink Drug Think Thug is a person. cht of Think Thug is letminus. [-> pink pug]
+The Drink Drug Think Thug is a person. cht of Think Thug is letminus. "Wait, no, you can't go east until you dispose of that Drink Drug Think Thug blocking the way.". [-> pink pug]
 
 check going east in Blight Blear Bight Bier:
 	if Drink Drug Think Thug is in Bier, say "Not with the Drink Drug Think Thug by." instead;
@@ -210,7 +211,7 @@ check going up in Bare Bones Stair Stones:
 
 chapter Peep Pool
 
-Peep Pool is south of Stair Stones. "A passage bending north and east[if ts-duel-deep is false]. You may wish to look in the pool and summon something. That's what pools are for[end if].". cht of peep pool is leteq. [->deep duel] [->keep cool]
+Peep Pool is south of Stair Stones. "A passage bending north and east[if ts-duel-deep is false]. You may wish to look in the pool and summon something. That's what pools are for[end if][if steep stool is in peep pool]. A steep stool blocks the way east--maybe someone or something can help you destroy it[end if].". cht of peep pool is leteq. [->deep duel] [->keep cool]
 
 the steep stool is scenery in Peep Pool. "The steep stool is too smooth and, err, steep to climb, and it's too wide to get around. You may need to get rid of it--or have someone destroy it. Perhaps an enemy is waiting behind it to bust out.". cht of steep stool is letminus. [->deep duel]
 
@@ -594,7 +595,7 @@ this is the vr-fight-fear rule:
 this is the vc-keep-cool rule:
 	if player is not in peep pool, the rule fails;
 	if creep cruel is not in peep pool:
-		vcal "You have no one to assert hegemony over.";
+		vcal "You have no one annoying you. But there might be someone later, if you're lucky! Wow!";
 		now ts-tried-keep is true;
 		continue the action;
 	the rule succeeds;
@@ -660,7 +661,7 @@ this is the vc-pink-pug rule:
 	the rule succeeds;
 
 this is the vr-pink-pug rule:
-	say "POOF! The drink-drug think-thug turns into a far more innocuous pink pug.";
+	say "POOF! The drink-drug think-thug turns into a far more innocuous pink pug, which runs off, yapping.";
 	moot Drink Drug Think Thug;
 
 this is the vc-plaster-plate rule:
@@ -692,6 +693,7 @@ this is the vc-told-tale rule:
 	if player is not in gold gaol, the rule fails;
 	if ts-ale-old is false or ts-kale-cold is false:
 		vcal "You're not nourished enough to make it far out of the cell. You need food and drink. Even lousy food and drink.";
+		now ts-tale-early is true;
 		continue the action;
 	the rule succeeds;
 
@@ -726,12 +728,22 @@ to lump-minus:
 	increment lump-uses;
 	process the notify score changes rule;
 
+to decide which number is solved-jerk-check: [yeah yeah magic numbers]
+	if ts-tried-keep is true and cruel creep is in peep pool, decide on 1;
+	if ts-tale-early is true and ts-ale-old is true and ts-kale-cold is true, decide on 2;
+	decide on 0;
+
 carry out jerkingjumping:
 	if debug-state is false:
 		if lurking lump is off-stage, say "You have nothing that would help you do that." instead;
 		if lurking lump is moot, say "You used up all the lump's charges, but maybe you can get more." instead;
 	else:
 		say "DEBUG: ignoring the charges in the lump, currently at [lump-charges].";
+	if solved-jerk-check > 0:
+		say "There's something you can do right now that you tried before, but you weren't prepared yet. If you'd still like to use the lump anyway (not recommended,) say YES.";
+		unless the player yes-consents:
+			say "Okay.";
+			the rule succeeds;
 	now in-jerk-jump is true;
 	now vc-dont-print is true;
 	repeat through table of verb checks:
