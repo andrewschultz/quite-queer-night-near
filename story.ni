@@ -147,7 +147,7 @@ the cheap cheat sheep sheet is a thing in Blight Blear Bight Bier. cht of sheep 
 
 section DDTT
 
-The Drink Drug Think Thug is a person in Blight Blear Bight Bier. cht of Think Thug is letminus. [-> pink pug]
+The Drink Drug Think Thug is a person. cht of Think Thug is letminus. [-> pink pug]
 
 check going east in Blight Blear Bight Bier:
 	if Drink Drug Think Thug is in Bier, say "Not with the Drink Drug Think Thug by." instead;
@@ -182,11 +182,13 @@ chapter Peep Pool
 
 Peep Pool is south of Stair Stones. "A passage bending north and east[if ts-duel-deep is false]. You may wish to look in the pool and summon something. That's what pools are for[end if].". cht of peep pool is leteq. [->deep duel] [->keep cool]
 
+the steep stool is scenery in Peep Pool. "The steep stool is too smooth and, err, steep to climb, and it's too wide to get around. You may need to get rid of it--or have someone destroy it. Perhaps an enemy is waiting behind it to bust out.". cht of steep stool is letminus. [->deep duel]
+
 ts-duel-deep is a truth state that varies.
 
 check going east in Peep Pool:
 	if creep cruel is touchable, say "You need to make it by the creep (cruel.)" instead;
-	if creep cruel is off-stage, say "The pool pulls you back. Whatever's beyond it, you seem to need to face the pool first." instead;
+	if steep stool is touchable, say "The steep stool is in the way." instead;
 
 section creep cruel
 
@@ -274,6 +276,18 @@ carry out xxing:
 	if cht of noun is phbt, say "You see nothing when you look closely at [the noun][if noun is a room], so there's nothing you need to do with the room title[end if]." instead;
 	say "[leetclue of cht of noun].";
 
+chapter abouting
+
+abouting is an action applying to nothing.
+
+understand the command "about" as something new.
+
+understand "about" as abouting.
+
+carry out abouting:
+	say "QQNN was written in under four hours for EctoComp 2019. It heavily cut-and-pasted from Very Vile Fairy File. It did not receive outside testing. If you want to report bugs/suggestions, do so at http://github.com/andrewschultz/quite-queer-night-near/issues. I appreciate them--I want to make a post-comp release!";
+	the rule succeeds.
+
 chapter parser error tweak(s)
 
 table-to-scour is a table name that varies.
@@ -307,7 +321,7 @@ Rule for printing a parser error (this is the check for room name in player comm
 	continue the action;
 
 rule for printing a parser error:
-	say "This is a sort of guess-the-verb game. All point scoring actions are verbs to guess. [if sheep sheet is touchable]Since[else]If[end if] you have the sheep sheet handy, you can [b]XX[r] something, but this may not be fully robust, as this is SpeedIF.";
+	say "This is a sort of guess-the-verb game. All point scoring actions are verbs to guess. [if sheep sheet is touchable]Since[else]If[end if] you have the sheep sheet handy, you can [b]XX[r] something, but this may not be fully robust, as this is release 1 of SpeedIF. You can also type ABOUT to see general information.";
 
 chapter the big rule(s)
 
@@ -369,8 +383,8 @@ this is the verb-checker rule:
 
 chapter the lump or its replacement
 
-next-lump-level is a number that varies. next-lump-level is 5.
-next-lump-delta is a number that varies. next-lump-delta is 2.
+next-lump-level is a number that varies. next-lump-level is 3.
+next-lump-delta is a number that varies. next-lump-delta is 0.
 lump-count is a number that varies. lump-count is 0.
 lump-charges is a number that varies. lump-charges is 0.
 lump-uses is a number that varies. lump-uses is 0.
@@ -404,7 +418,7 @@ this is the mistake-checker rule:
 					if there is a w2let entry:
 						now d2 is w2let entry - number of characters in word number 2 in the player's command;
 					if d2 is -10, now d2 is d1;
-					say "[leetclue of cluecheat of d1 and d2].";
+					say "[line break][leetclue of cluecheat of d1 and d2].";
 				if got-yet entry is false:
 					check-lump-progress;
 				now got-yet entry is true;
@@ -421,7 +435,7 @@ to decide which cheattype is the cluecheat of (n1 - a number) and (n2 - a number
 
 to say leetclue of (x - a cheattype):
 	if sheep sheet is not touchable, continue the action;
-	say "You refer to the sheep sheet, noticing it says [noun] goes to [scancol of x].";
+	say "You refer to the sheep sheet, noticing it says [if noun is nothing]your effort[else][the noun][end if] goes to [scancol of x]";
 
 to say scancol of (x - a cheattype): say "[if x is letplus]++[else if x is partplus]+=/=+[else if x is leteq]==[else if x is partminus]-=/=-[else if x is letminus]--[else if x is letboth]+-/-+[else if x is phbt]00[else]BUG[end if]"
 
@@ -433,7 +447,7 @@ w1 (text)	w2 (text)	okflip	core	idid	ver-rule	do-rule	wfull (topic)
 "pink"	"pug"	true	true	false	vc-pink-pug rule	vr-pink-pug rule	--
 "leap"	"leet"	true	false	false	vc-leap-leet rule	vr-leap-leet rule	--
 "deep"	"duel"	true	true	false	vc-deep-duel rule	vr-deep-duel rule	-- [start peep pool]
-"reap"	"rule"	true	true	false	vc-reap-rule rule	vr-reap-rule rule	--
+"keep"	"cool"	true	true	false	vc-keep-cool rule	vr-keep-cool rule	--
 "more"	"mulch"	true	true	false	vc-more-mulch rule	vr-more-mulch rule	-- [start gore gulch]
 "plaster"	"plate"	true	true	false	vc-plaster-plate rule	vr-plaster-plate rule	-- [start gaster gate]
 "bark"	"bump"	true	true	false	vc-bark-bump rule	vr-bark-bump rule	-- [start dark dump]
@@ -463,10 +477,10 @@ to see-how-nourished:
 	else:
 		say "Having had both food and drink, you're ready to move on.";
 
-ts-tried-reap is a truth state that varies.
+ts-tried-keep is a truth state that varies.
 
-every turn when ts-tried-reap is true and creep cruel is in Peep Pool:
-	say "You should probably REEP RULE again. It will get rid of the creep (cruel.)";
+every turn when ts-tried-keep is true and creep cruel is in Peep Pool:
+	say "You should probably KEEP COOL again. It will get rid of the creep (cruel.)";
 
 ts-tale-early is a truth state that varies.
 
@@ -532,8 +546,9 @@ this is the vc-deep-duel rule:
 	the rule succeeds;
 
 this is the vr-deep-duel rule:
-	say "You look into the peep pool and bravely summon an opponent for a deep duel. It turns out to be: a creep, cruel.";
+	say "You look into the peep pool and bravely summon an opponent for a deep duel. You hear a crash from the steep stool to the east. The stool is utterly shattered now. There's a passage east, but it's blocked by the person who made it possible: a creep, cruel.";
 	move creep cruel to peep pool;
+	moot steep stool.
 
 this is the vc-fight-fear rule:
 	if ts-fight-fear is true:
@@ -617,16 +632,16 @@ this is the vr-plaster-plate rule:
 	now ts-plaster-plate is true;
 	moot master mate;
 
-this is the vc-reap-rule rule:
+this is the vc-keep-cool rule:
 	if player is not in peep pool, the rule fails;
 	if creep cruel is not in peep pool:
 		vcal "You have no one to assert hegemony over.";
-		now ts-tried-reap is true;
+		now ts-tried-keep is true;
 		continue the action;
 	the rule succeeds;
 
-this is the vr-reap-rule rule:
-	say "You manage to show the creep (cruel) who's boss with a kinder, gentler version of leadership. While you're light on details, the creep (cruel) isn't the sort of person who sticks around to hear them.";
+this is the vr-keep-cool rule:
+	say "You manage to ignore the creep (cruel) as they get more and more desperate to insult you. Eventually, they find you not worth the effort.";
 	moot creep cruel;
 
 this is the vc-stark-stump rule:
