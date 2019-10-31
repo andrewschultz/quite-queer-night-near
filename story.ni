@@ -28,6 +28,10 @@ a thing has a cheattype called cht. cht of a thing is usually phbt.
 check examining:
 	if description of noun is empty, say "The description of [the noun] has been hidden because it is too scary for mere text and not because I was trying to cram a lot of programming into 4 hours. Ooh! Ooh! The unknown is so frightening!" instead;
 
+section when play begins - not for release
+
+when play begins: now debug-state is true;
+
 chapter largely copied from VVFF
 
 when play begins:
@@ -196,7 +200,7 @@ the creep cruel is a person. cht of creep cruel is letminus. [->keep cool]
 
 chapter Gore Gulch
 
-Gore Gulch is east of Peep Pool. cht of Gore Gulch is leteq. [-> more mulch]
+Gore Gulch is east of Peep Pool. cht of Gore Gulch is leteq. "The only way back is east. [if ts-mulch-more is false]There's something icky and sticky here besides gore, but you're not sure what[else]You extracted more mulch here, so there's nothing else to do[end if].". [-> more mulch]
 
 ts-mulch-more is a truth state that varies.
 
@@ -233,7 +237,7 @@ the stark stump is scenery. "The stark stump is so huge, it blocks passage west.
 
 chapter Gaster Gate
 
-Gaster Gate is east of Dark Dump. "The only way back is west. A gaster (that's archaic for scary) gate blocks the way east[if master mate is moot]. With the Master Mate gone, there's not much left to do here[end if].". cht of Gaster Gate is letplus. [->plaster plate]
+Gaster Gate is east of Dark Dump. "The only way back is west. A gaster (that's an archaic verb meaning to scare) gate blocks the way east[if master mate is moot]. With the Master Mate gone, there's not much left to do here[end if].". cht of Gaster Gate is letplus. [->plaster plate]
 
 ts-plaster-plate is a truth state that varies.
 
@@ -559,6 +563,19 @@ this is the vc-fight-fear rule:
 this is the vr-fight-fear rule:
 	say "You do your best to feel braver. It works, well enough! And that's a good thing, too, because a Drink Drug Think Thug appears. Boy, they're the worst. Even abusing their body and mind, they can beat you up physically and mentally.";
 	now ts-fight-fear is true;
+	move Think Thug to Bight Bier;
+
+this is the vc-keep-cool rule:
+	if player is not in peep pool, the rule fails;
+	if creep cruel is not in peep pool:
+		vcal "You have no one to assert hegemony over.";
+		now ts-tried-keep is true;
+		continue the action;
+	the rule succeeds;
+
+this is the vr-keep-cool rule:
+	say "You manage to ignore the creep (cruel) as they get more and more desperate to insult you. Eventually, they find you not worth the effort.";
+	moot creep cruel;
 
 this is the vc-leap-leet rule:
 	if sheep sheet is off-stage, the rule fails;
@@ -632,18 +649,6 @@ this is the vr-plaster-plate rule:
 	now ts-plaster-plate is true;
 	moot master mate;
 
-this is the vc-keep-cool rule:
-	if player is not in peep pool, the rule fails;
-	if creep cruel is not in peep pool:
-		vcal "You have no one to assert hegemony over.";
-		now ts-tried-keep is true;
-		continue the action;
-	the rule succeeds;
-
-this is the vr-keep-cool rule:
-	say "You manage to ignore the creep (cruel) as they get more and more desperate to insult you. Eventually, they find you not worth the effort.";
-	moot creep cruel;
-
 this is the vc-stark-stump rule:
 	if player is not in dark dump, the rule fails;
 	if ts-stump-stark is true:
@@ -670,3 +675,57 @@ this is the vr-told-tale rule:
 	follow the shutdown rules;
 
 [zzqqnnr]
+
+chapter jerking jump
+
+jerkingjumping is an action applying to nothing.
+
+understand the command "jerking jump" as something new.
+understand the command "jj" as something new.
+
+understand "jerking jump" as jerkingjumping.
+understand "jj" as jerkingjumping.
+
+in-jerk-jump is a truth state that varies.
+
+to say firstor of (t - indexed text):
+	replace the regular expression "\|.*" in t with "";
+	say "[t in upper case]";
+
+to lump-minus:
+	decrement lump-charges;
+	say "The lurking lump shrivels[if lump-charges is 0] and vanishes. Maybe more good guesses will bring it back[one of][or] again[stopping][else], but it still looks functional[end if].";
+	if lump-charges is 0, moot lurking lump;
+	now in-jerk-jump is false;
+	increment lump-uses;
+	process the notify score changes rule;
+
+carry out jerkingjumping:
+	if debug-state is false:
+		if lurking lump is off-stage, say "You have nothing that would help you do that." instead;
+		if lurking lump is moot, say "You used up all the lump's charges, but maybe you can get more." instead;
+	else:
+		say "DEBUG: ignoring the charges in the lump, currently at [lump-charges].";
+	now in-jerk-jump is true;
+	now vc-dont-print is true;
+	repeat through table of verb checks:
+		unless there is a core entry, next;
+		if core entry is false, next;
+		if idid entry is true, next;
+		process the ver-rule entry;
+		if the rule succeeded:
+			say "After some thought, you consider the right way forward: [firstor of w1 entry] [firstor of w2 entry]...";
+			now idid entry is true; [this is so BURY BILE gets processed. We already checked IDID above.]
+			up-which core entry; [?? I really need to clean this code up. I want just to increment the score in one place. If a rule can keep track of the current row, that would be nifty.]
+			process the do-rule entry;
+			if zap-core-entry is true:
+				blank out the core entry;
+				now zap-core-entry is false;
+			skip upcoming rulebook break;
+			lump-minus;
+			now vc-dont-print is false;
+			the rule succeeds;
+	now vc-dont-print is false;
+	say "The lurking lump remains immovable. I guess you've done all you need, here.";
+	the rule succeeds.
+
