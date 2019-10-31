@@ -4,6 +4,12 @@ volume variables and stuff
 
 the story headline is "Hokey Haunts, Jokey Jaunts".
 
+the release number is 1.
+
+release along with a website.
+
+release along with an interpreter.
+
 include Trivial Niceties by Andrew Schultz.
 
 include Quite Queer Night Near Tests by Andrew Schultz.
@@ -129,8 +135,16 @@ understand the command "wreck" as something new.
 
 volume verby stuff
 
+sheep-hint is a truth state that varies.
+
 check taking:
-	say "You never have to take anything in this game." instead;
+	if noun is not sheep sheet, say "You never have to take anything in this game." instead;
+	if sheep-hint is false:
+		say "The sheep sheet feels a bit cold. You could take it anyway, but maybe you can do something to warm it up first.";
+		now sheep-hint is true;
+		the rule fails;
+
+report taking sheep sheet: max-down;
 
 check going nowhere:
 	if player is in bight bier, say "The only way is east.";
@@ -159,7 +173,7 @@ section sheep sheet
 check examining the sheep sheet for the first time:
 	if player does not have sheep sheet, say "It claims to be a SHEEP SHEET because only sheeple use hints. This reminds you of all the times you were scared to ask for help, which is pretty scary. Not, like, mortally. But it's lasted.[line break]";
 
-the cheap cheat sheep sheet is a thing in Blight Blear Bight Bier. cht of sheep sheet is letminus. "It has information on--well, most everything you see here. XX any item for particular information.". [->leap leet]
+the cheap cheat sheep sheet is a thing in Blight Blear Bight Bier. cht of sheep sheet is letminus. "It has information on--well, most everything you see here. XX any item for particular information. I guess it's a sheep sheet because you still feel sheepish looking at it, no matter how many times you have, and also I feel sheepish for such a silly name.". [->heap heat]
 
 section DDTT
 
@@ -280,14 +294,14 @@ understand "xx [thing]" as xxing.
 understand "xx" as xxing.
 
 rule for supplying a missing noun when xxing:
-	say "You wave the leet learner all around [location of player]...";
+	say "You consult the sheet about [location of player]...";
 	now the noun is the location of the player;
 	continue the action;
 
 carry out xxing:
 	if sheep sheet is not touchable, say "You can't figure anything out. Maybe having that sheet would help." instead;
 	if noun is sheep sheet:
-		if player has sheep sheet, say "The leet learner is great as it is. You don't want to change it." instead;
+		if player has sheep sheet, say "You can't really consult the sheet about itself." instead;
 		say "The sheep sheet shimmers vaguely. You suspect you can just take it, but getting it right would give a style point." instead;
 	if cht of noun is phbt, say "You see nothing when you look closely at [the noun][if noun is a room], so there's nothing you need to do with the room title[end if]." instead;
 	say "[leetclue of cht of noun].";
@@ -461,7 +475,7 @@ table of verb checks [xxvc]
 w1 (text)	w2 (text)	okflip	core	idid	ver-rule	do-rule	wfull (topic)
 "fight"	"fear"	true	true	false	vc-fight-fear rule	vr-fight-fear rule	-- [start bight bier]
 "pink"	"pug"	true	true	false	vc-pink-pug rule	vr-pink-pug rule	--
-"leap"	"leet"	true	false	false	vc-leap-leet rule	vr-leap-leet rule	--
+"heap"	"heat"	true	false	false	vc-heap-heat rule	vr-heap-heat rule	--
 "deep"	"duel"	true	true	false	vc-deep-duel rule	vr-deep-duel rule	-- [start peep pool]
 "keep"	"cool"	true	true	false	vc-keep-cool rule	vr-keep-cool rule	--
 "more"	"mulch"	true	true	false	vc-more-mulch rule	vr-more-mulch rule	-- [start gore gulch]
@@ -589,15 +603,15 @@ this is the vr-keep-cool rule:
 	say "You manage to ignore the creep (cruel) as they get more and more desperate to insult you. Eventually, they find you not worth the effort.";
 	moot creep cruel;
 
-this is the vc-leap-leet rule:
+this is the vc-heap-heat rule:
 	if sheep sheet is off-stage, the rule fails;
 	if player has cheap cheat sheep sheet:
 		vcal "You already did that.";
 		continue the action;
 	the rule succeeds;
 
-this is the vr-leap-leet rule:
-	say "The sheet leaps into your hands!";
+this is the vr-heap-heat rule:
+	say "You rub your hands together for warmth, blow on the sheet, and so on. And what do you know? It feels less frigid when you pick it up. It'd still be functional either way, but small victories.";
 	now player has sheep sheet;
 
 this is the vc-more-mulch rule:
