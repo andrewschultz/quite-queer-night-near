@@ -15,6 +15,7 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	mist-txt
 "beep beat"	sheet-nearby rule	false	4	4	sheet-untaken rule	"You imagine an eternity spent listening to funky techno music. Scary!"
 "bleep bleat"	sheet-nearby rule	false	4	4	sheet-untaken rule	"You sputter something grawlix-heavy."
 "sleep sleet"	sheet-nearby rule	false	4	4	sheet-untaken rule	"You don't need anything raining down on you."
+"creep crete"	sheet-nearby rule	false	4	4	sheet-untaken rule	"You fail to hyperwarp across the Mediterranean."
 "link lug"	lug-nearby rule	false	4	3	--	"You need to make the thug much less intimidating."
 "fink fug"	lug-nearby rule	false	4	3	--	"No fog carries the Think Thug away."
 "mink mug"	lug-nearby rule	false	4	3	--	"The Think Thug is too smart to be upset for being called a rat-face or whatever."
@@ -27,7 +28,9 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	mist-txt
 "boar/bore bulge"	in-gore-gulch rule 	false	5	4	--	"That's a bit of a stretch, but Gore Gulch remains unstretched." [start gore gulch]
 "bold bail/bowl/bale"	in-gore-gulch rule 	false	7	5	--	"You don't have to be bold. The gaol is unguarded." [start gold gaol]
 "fold fail"	in-gold-gaol rule 	true	4	4	--	"You don't have to be bold. The gaol is unguarded."
-"sold sail/sale"	in-gold-gaol rule 	true	4	4	--	"You don't have to be buy anything."
+"mold male/mail"	in-gold-gaol rule 	true	4	4	--	"You uncover no old letters checking on how you are. Not surprising. You've only been here a bit."
+"polled pail/pale"	in-gold-gaol rule 	true	4	4	--	"You haven't been here long enough to even want the company of a pollster."
+"sold sail/sale"	in-gold-gaol rule 	true	4	4	--	"You don't have to buy anything. You don't want to."
 "wold wail/whale"	in-gore-gulch rule 	true	4	4	--	"Nothing too drastic, here."
 
 section rules

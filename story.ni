@@ -41,8 +41,8 @@ when play begins: now debug-state is true;
 chapter largely copied from VVFF
 
 when play begins:
-	say "You should have known better than to eat any sort of marmite. Eww. But you definitely should not have eaten Far Fight Marmite. Especially not the bulk bar-bite kind. But you can't resist items on deep clearance at the lovely crowded store you visit every week. Full of indigestion, you hear voices saying 'Quite queer night near ... quite queer night near...[wfak]";
-	say "[line break]You think you got to sleep. When you wake up, you hear a voice boom ARRRRIGHT! A bunch of very small humanoids push you out of your bedroom chanding 'Tar! Tight! Spar! Spite!' You walk through. You see ... a bier with your name on it! Scary, scary!";
+	say "You should have known better than to eat any sort of marmite. Eww. But you definitely should not have eaten Far Fight Marmite. Especially not the bulk bar-bite kind. But you can't resist items on deep clearance at the lovely crowded store you visit every week. Full of indigestion, you hear voices saying 'Quite queer night near ... quite queer night near... [wfak]";
+	say "[paragraph break]You think you got to sleep. When you wake up, you hear a voice boom ARRRRIGHT! A bunch of very small humanoids push you out of your bedroom chanting 'Tar! Tight! Spar! Spite!' You walk through. You see ... a bier with your name on it! Scary, scary!";
 	now max-poss is max-bonus + min-needed;
 	now the right hand status line is "[score]/[if max-poss is not min-needed][min-needed]-[end if][max-poss]";
 	now ha-half is true;
@@ -178,7 +178,7 @@ the cheap cheat sheep sheet is a thing in Blight Blear Bight Bier. cht of sheep 
 
 section DDTT
 
-The Drink Drug Think Thug is a person. cht of Think Thug is letminus. "Wait, no, you can't go east until you dispose of that Drink Drug Think Thug blocking the way.". [-> pink pug]
+The Drink Drug Think Thug is a person. cht of Think Thug is letminus. "Wait, no, you can't go east until you dispose of that Drink Drug Think Thug blocking the way.". description of Thug is "Big and brutal and surprisingly not dumb-looking. You'll need to change the Thug drastically to get by.". [-> pink pug]
 
 check going east in Blight Blear Bight Bier:
 	if Drink Drug Think Thug is in Bier, say "Not with the Drink Drug Think Thug by." instead;
@@ -223,7 +223,7 @@ check going east in Peep Pool:
 
 section creep cruel
 
-the creep cruel is a person. cht of creep cruel is letminus. [->keep cool]
+the creep cruel is a person. cht of creep cruel is letminus. "A cruel creep snickers, pacing back and forth and blocking the way east where the steep stool was, just to spite you.". description is "The creep cruel is a bit bigger than you, but more importantly, it probably knows dirty fighting tricks.". [->keep cool]
 
 chapter Gore Gulch
 
