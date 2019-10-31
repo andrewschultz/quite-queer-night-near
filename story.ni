@@ -14,7 +14,7 @@ procedural rule while eating something: ignore the carrying requirements rule.
 
 The print final score rule is not listed in for printing the player's obituary.
 
-cheattype is a kind of value. the cheattypes are phbt, letplus, letminus, partplus, partminus, leteq, letboth.
+cheattype is a kind of value. the cheattypes are phbt, letplus, letminus, partplus, partminus, leteq, letboth, and allover.
 
 to phbt (x - a thing):
 	now cht of x is phbt;
@@ -25,10 +25,18 @@ a room has a cheattype called cht. cht of a room is usually phbt.
 
 a thing has a cheattype called cht. cht of a thing is usually phbt.
 
+check examining:
+	if description of noun is empty, say "The description of [the noun] has been hidden because it is too scary for mere text and not because I was trying to cram a lot of programming into 4 hours. Ooh! Ooh! The unknown is so frightening!" instead;
+
 chapter largely copied from VVFF
 
 when play begins:
+	say "You should have known better than to eat any sort of marmite. Eww. But you definitely should not have eaten Far Fight Marmite. Especially not the bulk bar-bite kind. But you can't resist items on deep clearance at the lovely crowded store you visit every week. Full of indigestion, you hear voices saying 'Quite queer night near ... quite queer night near...";
+	wfak;
+	say "[line break]You think you got to sleep. When you wake up, you hear a voice boom ARRRRIGHT! A bunch of very small humanoids push you out of your bedroom chanding 'Tar! Tight! Spar! Spite!' You walk through. You see ... a bier with your name on it! Scary, scary!";
+	now max-poss is max-bonus + min-needed;
 	now the right hand status line is "[score]/[if max-poss is not min-needed][min-needed]-[end if][max-poss]";
+	now ha-half is true;
 
 check requesting the score:
 	say "You have [score] out of [min-needed] points needed to win the game[if max-poss > min-needed], but there's a bonus point[end if].";
@@ -129,32 +137,34 @@ volume the map
 
 chapter Blight Blear Bight Bier
 
-Blight Blear Bight Bier is a room. "Boy! It's scary here! You can only go east[if thug is off-stage], but it might be even scarier there. You need some way to make things less scary, on this Quite Queer Night Near by the Blight Blear Bight Bear. A spite spear hangs in the distance, just ready to swoop on you[end if].". [->fight fear]
+Blight Blear Bight Bier is a room. "Boy! It's scary here! You can only go east[if thug is off-stage], but it might be even scarier there. You need some way to make things less scary, on this Quite Queer Night Near by the Blight Blear Bight Bear. A spite spear hangs in the distance, just ready to swoop on you[end if].". cht of Blight Blear Bight Bier is letboth. [->fight fear]
 
 ts-fight-fear is a truth state that varies.
 
 section sheep sheet
 
-the cheap cheat sheep sheet is a thing in Blight Blear Bight Bier.
+the cheap cheat sheep sheet is a thing in Blight Blear Bight Bier. cht of sheep sheet is letminus. "It has information on--well, most everything you see here. XX any item for particular information.". [->leap leet]
 
 section DDTT
 
-The Drink Drug Think Thug is a person in Blight Blear Bight Bier. [-> pink pug]
+The Drink Drug Think Thug is a person in Blight Blear Bight Bier. cht of Think Thug is letminus. [-> pink pug]
 
 check going east in Blight Blear Bight Bier:
 	if Drink Drug Think Thug is in Bier, say "Not with the Drink Drug Think Thug by." instead;
 	if Drink Drug Think Thug is off-stage, say "No. You're too scared to do anything right now." instead;
 
-[check going south in Blight Blear Bight Bier when player has sheep sheet: say "You got what you needed from Leap Leet."]
-
 chapter Bare Bones Stair Stones
 
-Bare Bones Stair Stones is east of Bight Bier. "You can go back west to the Bier, though you don't need to. You can also go north and south, but there seems to be a way out above--or there could be!"
+Bare Bones Stair Stones is east of Bight Bier. "You can go back west to the Bier, though you don't need to. You can also go north and south, but there seems to be a way out above--[if stone-filler is 0]or there could be[else if stone-filler is 1]you just need to fill the stairs in a bit more[else]you don't seem to have much else to do here[end if]!".
 
 to decide which number is stone-filler:
 	let temp be boolval of ts-mulch-more;
-	if ts-bump-bark is true and ts-stump-stark is true and ts-pump-park is true and ts-plaster-plate is true, increment temp;
+	if north-flow, increment temp;
 	decide on temp;
+
+to decide whether north-flow:
+	if ts-bump-bark is true and ts-stump-stark is true and ts-pump-park is true and ts-plaster-plate is true, yes;
+	no;
 
 check going up in Bare Bones Stair Stones:
 	let Q be stone-filler;
@@ -170,7 +180,7 @@ check going up in Bare Bones Stair Stones:
 
 chapter Peep Pool
 
-Peep Pool is south of Stair Stones. "A passage bending north and east[if ts-duel-deep is false]. You may wish to look in the pool and summon something. That's what pools are for[end if].". [->deep duel] [->reap rule]
+Peep Pool is south of Stair Stones. "A passage bending north and east[if ts-duel-deep is false]. You may wish to look in the pool and summon something. That's what pools are for[end if].". cht of peep pool is leteq. [->deep duel] [->keep cool]
 
 ts-duel-deep is a truth state that varies.
 
@@ -180,17 +190,28 @@ check going east in Peep Pool:
 
 section creep cruel
 
-the creep cruel is a person.
+the creep cruel is a person. cht of creep cruel is letminus. [->keep cool]
 
 chapter Gore Gulch
 
-Gore Gulch is east of Peep Pool. [-> more mulch]
+Gore Gulch is east of Peep Pool. cht of Gore Gulch is leteq. [-> more mulch]
 
 ts-mulch-more is a truth state that varies.
 
 chapter Dark Dump
 
-Dark Dump is north of Bare Bones Stair Stones. [-> stark stump] [->bark bump] [->park pump]
+Dark Dump is north of Bare Bones Stair Stones. "It's far too dark to the north and west[n-w-block]. You can still go south and east.". cht of dark dump is allover. [-> stark stump] [->bark bump] [->park pump]
+
+to say n-w-block:
+	if bark bump is touchable and stark stump are touchable:
+		say ", but a bark bump blocks the way north and a stark stump blocks the way south";
+	else if stark stump is touchable:
+		say ", but a stark stump blocks the way west. It feels like something similar and arboreal, if a bit weird, could also make this a safer corridor";
+	else if bark bump is touchable:
+		say ", but a tall bark bump blocks the way north. Maybe summoning something less weird could make this a safer corridor";
+	else:
+		say ", and although nothing impedes you either way, perhaps you could build something to block baddies from coming IN";
+	if park pump is touchable, say ". A park pump is also in the center here, and it will pump water and create a stream if somehow the small amount pooled here disappears"
 
 ts-bump-bark is a truth state that varies.
 ts-pump-park is a truth state that varies.
@@ -198,29 +219,29 @@ ts-stump-stark is a truth state that varies.
 
 section bark bump
 
-the bark bump is a thing.
+the bark bump is scenery. "A huge bark bump to the north makes it impossible for anything to go that way."
 
 section park pump
 
-the park pump is a thing.
+the park pump is scenery. "The pump quit pumping once there was too much water."
 
 section stark stump
 
-the stark stump is a thing.
+the stark stump is scenery. "The stark stump is so huge, it blocks passage west. It's immovable."
 
 chapter Gaster Gate
 
-Gaster Gate is east of Dark Dump. [->plaster plate]
+Gaster Gate is east of Dark Dump. "The only way back is west. A gaster (that's archaic for scary) gate blocks the way east[if master mate is moot]. With the Master Mate gone, there's not much left to do here[end if].". cht of Gaster Gate is letplus. [->plaster plate]
 
 ts-plaster-plate is a truth state that varies.
 
 section Master Mate
 
-the Master Mate is a person in Gaster Gate.
+the Master Mate is a person in Gaster Gate. "A master mate stands here, looking pityingly on you. What could you possibly do to help things?". cht of Master Mate is letplus. [->plaster plate]
 
 chapter Gold Gaol
 
-Gold Gaol is a room. [->old ale] [->cold kale] [->told tale]
+Gold Gaol is a room. "There's nothing much to do here. Well, the wall says FOLD FAIL, giving an idea of how goal 'should' be pronounced. Hey, when you're a prisoner, you sort of need to do as you're told, I guess.". cht of gold gaol is allover. [->old ale] [->cold kale] [->told tale]
 
 ts-ale-old is a truth state that varies.
 ts-kale-cold is a truth state that varies.
@@ -230,6 +251,28 @@ chapter Gazy Gap
 Gazy Gap is a room.
 
 volume the whole special verb thing
+
+chapter LLing
+
+xxing is an action applying to one thing.
+
+understand the command "xx" as something new.
+
+understand "xx [thing]" as xxing.
+understand "xx" as xxing.
+
+rule for supplying a missing noun when xxing:
+	say "You wave the leet learner all around [location of player]...";
+	now the noun is the location of the player;
+	continue the action;
+
+carry out xxing:
+	if sheep sheet is not touchable, say "You can't figure anything out. Maybe having that sheet would help." instead;
+	if noun is sheep sheet:
+		if player has sheep sheet, say "The leet learner is great as it is. You don't want to change it." instead;
+		say "The sheep sheet shimmers vaguely. You suspect you can just take it, but getting it right would give a style point." instead;
+	if cht of noun is phbt, say "You see nothing when you look closely at [the noun][if noun is a room], so there's nothing you need to do with the room title[end if]." instead;
+	say "[leetclue of cht of noun].";
 
 chapter parser error tweak(s)
 
@@ -242,6 +285,29 @@ Rule for printing a parser error (this is the clue half right words rule):
 	now table-to-scour is table of mistake substitutions;
 	abide by the mistake-checker rule;
 	continue the action;
+
+zap-weird-break is a truth state that varies.
+
+Rule for printing a parser error (this is the check for room name in player command rule):
+	repeat with X running from 1 to the number of words in the player's command:
+		if the printed name of location of player matches the regular expression "(^|\W)([word number X in the player's command])($|\W)", case insensitively:
+			if word number 1 in the player's command is "xx":
+				say "It looks like you may have tried to scan the current location. You just need to say LL to do this. Would you like to do so now?[line break]";
+				if the player consents:
+					skip upcoming rulebook break;
+					now zap-weird-break is true;
+					try xxing location of player;
+					now zap-weird-break is false;
+					the rule succeeds;
+				say "Okay. ";
+			else:
+				say "It looks like you may have tried to refer to the room name, or part of it. ";
+			say "You never need to use the room name directly.";
+			the rule succeeds;
+	continue the action;
+
+rule for printing a parser error:
+	say "This is a sort of guess-the-verb game. All point scoring actions are verbs to guess. [if sheep sheet is touchable]Since[else]If[end if] you have the sheep sheet handy, you can [b]XX[r] something, but this may not be fully robust, as this is SpeedIF.";
 
 chapter the big rule(s)
 
@@ -298,7 +364,7 @@ this is the verb-checker rule:
 			if debug-state is true, say "DEBUG: [ver-rule entry] tipped off the HA HALF button.";
 			next;
 	if local-ha-half is true:
-		say "The HA HALF button lights up on your Leet Learner.";
+		say "Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.";
 		the rule succeeds;
 
 chapter the lump or its replacement
@@ -355,7 +421,7 @@ to decide which cheattype is the cluecheat of (n1 - a number) and (n2 - a number
 
 to say leetclue of (x - a cheattype):
 	if sheep sheet is not touchable, continue the action;
-	say "You refer to the cheap cheet, noticing it goes to [x].";
+	say "You refer to the sheep sheet, noticing it says [noun] goes to [scancol of x].";
 
 to say scancol of (x - a cheattype): say "[if x is letplus]++[else if x is partplus]+=/=+[else if x is leteq]==[else if x is partminus]-=/=-[else if x is letminus]--[else if x is letboth]+-/-+[else if x is phbt]00[else]BUG[end if]"
 
@@ -389,8 +455,11 @@ to vcal (t - text): [verb conditional print, flag already rhymed]
 
 to see-how-nourished:
 	say "[line break]";
+	now cht of gold gaol is leteq; [-> told tale]
 	if ts-ale-old is false or ts-kale-cold is false:
 		say "You still need more nourishment, though. Food and drink.";
+		if ts-ale-old is false:
+			now cht of gold gaol is letminus; [gold gaol->old ale]
 	else:
 		say "Having had both food and drink, you're ready to move on.";
 
@@ -403,6 +472,27 @@ ts-tale-early is a truth state that varies.
 
 every turn when ts-tale-early is true and ts-ale-old is true and ts-kale-cold is true (this is the endgame prod rule):
 	say "You should probably try to make a TOLD TALE again. That's all that's left to do.";
+
+to check-north-flow:
+	if north-flow, say "[line break][if player is in dark dump]It seems like you have all the pieces together to create a river leading to the stones. You move back east to start dumping the plaster in. [end if]Breaking down the plaster plate is not hard. You dump it into the pool that formed in the east edge of the Dark Dump, and it flows slowly downward back to the area with the stair stones.";
+	check-stair-stones;
+
+to check-stair-stones:
+	let Q be stone-filler;
+	if Q is 1:
+		say "That's got to help rebuild the stair, but you probably need a bit more.";
+		now printed name of Stair Stones is "Stair Stones";
+	if Q is 2:
+		say "You wouldn't be surprised if the stair stones are fully navigable now.";
+		now printed name of Stair Stones is "Lair [']Lone's Stair Stones";
+	if player is in dark dump:
+		if stump is in dump and bump is in dump and pump is in dump: [oh, this makes me laugh]
+			now cht of dark dump is phbt;
+		else:
+			if bump is in dump and pump is in dump:
+				now cht of dark dump is letplus; [dark dump->stark stump]
+			else if stump is in dump:
+				now cht of dark dump is leteq; [dark dump->park pump]
 
 section rules to sort
 
@@ -419,6 +509,7 @@ this is the vr-bark-bump rule:
 	say "A bark bump appears to the north! You weren't going that way, but it provides a bit of a channel.";
 	move bark bump to Dark Dump;
 	now ts-bump-bark is true;
+	check-north-flow;
 
 this is the vc-cold-kale rule:
 	if player is not in gold gaol, the rule fails;
@@ -473,8 +564,9 @@ this is the vc-more-mulch rule:
 	the rule succeeds;
 
 this is the vr-more-mulch rule:
-	say "More mulch appears! It spills out to the peep pool and beyond.";
+	say "More mulch appears! It spills out to the peep pool and beyond, probably even back to the stair stones.";
 	now ts-mulch-more is true;
+	check-stair-stones;
 
 this is the vc-old-ale rule:
 	if player is not in gold gaol, the rule fails;
@@ -499,6 +591,8 @@ this is the vc-park-pump rule:
 this is the vr-park-pump rule:
 	say "Poof! A park pump appears, just like you remember as a kid! It appears to be auto-pumping, creating a waterway until things get too flooded.";
 	now ts-pump-park is true;
+	move park pump to dark dump;
+	check-north-flow;
 
 this is the vc-pink-pug rule:
 	if drink drug think thug is off-stage, the rule fails;
@@ -546,6 +640,7 @@ this is the vr-stark-stump rule:
 	say "Poof! A stark stump appears! It blocks the way to the west, but it provides a channel in case anything would come flowing through.";
 	move stark stump to Dark Dump;
 	now ts-stump-stark is true;
+	check-north-flow;
 
 this is the vc-told-tale rule:
 	if player is not in gold gaol, the rule fails;
@@ -556,7 +651,7 @@ this is the vc-told-tale rule:
 
 this is the vr-told-tale rule:
 	say "Yeah, that's it. You've had your fun. Time to move on. Your adventures are just silly enough and just believable enough to scare friends or to laugh at things.";
-	end the story finally saying "HOKEY HAUNTS, JOKEY JAUNTS";
+	end the story finally saying "BAH?! BOO-YAH, YOU!";
 	follow the shutdown rules;
 
 [zzqqnnr]
