@@ -10,6 +10,11 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	mist-txt
 "height here"	in-bight-bier rule	false	5	4	fear-to-fight rule	"How physically low or high you are isn't important. It's the mental bit."
 "white wier"	in-bight-bier rule	false	5	4	fear-to-fight rule	"No fence appears."
 "sight seer"	in-bight-bier rule	false	5	4	fear-to-fight rule	"Yes, you're a sight seer."
+"streep street"	sheet-nearby rule	false	4	4	sheet-untaken rule	"Stalking an actress is scary, yes, but we're not going for that sort of scary."
+"leap leet"	sheet-nearby rule	false	4	4	sheet-untaken rule	"You take a giant step towards understanding a tricky science concept from high school."
+"beep beat"	sheet-nearby rule	false	4	4	sheet-untaken rule	"You imagine an eternity spent listening to funky techno music. Scary!"
+"bleep bleat"	sheet-nearby rule	false	4	4	sheet-untaken rule	"You sputter something grawlix-heavy."
+"sleep sleet"	sheet-nearby rule	false	4	4	sheet-untaken rule	"You don't need anything raining down on you."
 "link lug"	lug-nearby rule	false	4	3	--	"You need to make the thug much less intimidating."
 "fink fug"	lug-nearby rule	false	4	3	--	"No fog carries the Think Thug away."
 "mink mug"	lug-nearby rule	false	4	3	--	"The Think Thug is too smart to be upset for being called a rat-face or whatever."
@@ -31,24 +36,29 @@ section rules
 
 this is the fear-to-fight rule: if ts-fight-fear is false, the rule succeeds;
 
-this is the lug-nearby rule: if think thug is touchable, the rule succeeds;
-
-this is the in-stones rule: if player is in Stair Stones, the rule succeeds;
-
 this is the in-bight-bier rule: if player is in Bight Bier, the rule succeeds;
 
 this is the in-dark-dump rule: if player is in Dark Dump, the rule succeeds;
+
+this is the in-gaster-gate rule: if player is in Gaster Gate, the rule succeeds;
 
 this is the in-gold-gaol rule: if player is in Gold Gaol, the rule succeeds;
 
 this is the in-gore-gulch rule: if player is in Gore Gulch, the rule succeeds;
 
-this is the in-gaster-gate rule: if player is in Gaster Gate, the rule succeeds;
+this is the in-stones rule: if player is in Stair Stones, the rule succeeds;
+
+this is the lug-nearby rule: if think thug is touchable, the rule succeeds;
 
 this is the plates-needed rule: if master mate is not moot, the rule succeeds;
 
-Quite Queer Night Near Mistakes ends here.
+this is the sheet-nearby rule: if sheep sheet is touchable, the rule succeeds;
+
+this is the sheet-untaken rule: if player does not have sheep sheet, the rule succeeds;
 
 [zzqqmi]
 
+Quite Queer Night Near Mistakes ends here.
+
 ---- DOCUMENTATION ----
+

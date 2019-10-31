@@ -132,6 +132,16 @@ volume verby stuff
 check taking:
 	say "You never have to take anything in this game." instead;
 
+check going nowhere:
+	if player is in bight bier, say "The only way is east.";
+	if player is in gaster gate or player is in gore gulch, say "The only way is west.";
+	if player is in stair stones, say "You can only go north, south or west[if stone-filler is 2]. And up. You probably want to go up[else]. And you can try to go up[end if]." instead;
+	if player is in stark stump, say "You can only go east or south." instead;
+	if player is in peep pool, say "You can only go north or[if creep cruel is not moot], once the way is clear, [end if]east." instead;
+	if player is in gold gaol:
+		say "You need to look back on your experiences before leaving." instead;
+	say "I wish I could give more information, but you can't go that way." instead;
+
 volume the player
 
 description of player is "You are [if thug is off-stage]no longer [end if]shedding a tight tear[if player is in bier]. You're no sight seer[end if]."
@@ -145,6 +155,9 @@ Blight Blear Bight Bier is a room. "Boy! It's scary here! You can only go east[i
 ts-fight-fear is a truth state that varies.
 
 section sheep sheet
+
+check examining the sheep sheet for the first time:
+	if player does not have sheep sheet, say "It claims to be a SHEEP SHEET because only sheeple use hints. This reminds you of all the times you were scared to ask for help, which is pretty scary. Not, like, mortally. But it's lasted.[line break]";
 
 the cheap cheat sheep sheet is a thing in Blight Blear Bight Bier. cht of sheep sheet is letminus. "It has information on--well, most everything you see here. XX any item for particular information.". [->leap leet]
 
