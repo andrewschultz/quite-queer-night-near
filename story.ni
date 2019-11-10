@@ -12,6 +12,8 @@ release along with an interpreter.
 
 include Trivial Niceties by Andrew Schultz.
 
+include Quite Queer Night Near Tables by Andrew Schultz.
+
 include Quite Queer Night Near Tests by Andrew Schultz.
 
 include Quite Queer Night Near Mistakes by Andrew Schultz.
@@ -30,6 +32,10 @@ to phbt (x - a room): now cht of x is phbt;
 a room has a cheattype called cht. cht of a room is usually phbt.
 
 a thing has a cheattype called cht. cht of a thing is usually phbt.
+
+to say once-now of (ru - a rule):
+	process ru;
+	say "[if the rule succeeded]now[else]once[end if]"
 
 check examining:
 	if description of noun is empty, say "The description of [the noun] has been hidden because it is too scary for mere text and not because I was trying to cram a lot of programming into 4 hours. Ooh! Ooh! The unknown is so frightening!" instead;
@@ -174,11 +180,11 @@ section sheep sheet
 check examining the sheep sheet for the first time:
 	if player does not have sheep sheet, say "It claims to be a SHEEP SHEET because only sheeple use hints. This reminds you of all the times you were scared to ask for help, which is pretty scary. Not, like, mortally. But it's lasted.[line break]";
 
-the cheap cheat sheep sheet is a thing in Blight Blear Bight Bier. cht of sheep sheet is letminus. "It has information on--well, most everything you see here. XX any item for particular information. I guess it's a sheep sheet because you still feel sheepish looking at it, no matter how many times you have, and also I feel sheepish for such a silly name.". [->heap heat]
+the cheap cheat sheep sheet is a thing in Blight Blear Bight Bier. cht of sheep sheet is letminus. "A cheap cheat sheep sheet lies here, sort of daring you to take it. It's obscured by sleep sleet.". description of sheep sheet is "It has information on--well, most everything you see here. XX any item for particular information. I guess it's a sheep sheet because you still feel sheepish looking at it, no matter how many times you have, and also I feel sheepish for such a silly name.". [->heap heat]
 
 section DDTT
 
-The Drink Drug Think Thug is a person. cht of Think Thug is letminus. "Wait, no, you can't go east until you dispose of that Drink Drug Think Thug blocking the way.". description of Thug is "Big and brutal and surprisingly not dumb-looking. You'll need to change the Thug drastically to get by.". [-> pink pug]
+The Drink Drug Think Thug is a person in Blight Blear Bight Bier. cht of Think Thug is letminus. "Wait, no, you can't go east until you dispose of that Drink Drug Think Thug blocking the way.". description of Thug is "Big and brutal and surprisingly not dumb-looking. You'll need to change the Thug drastically to get by.". [-> pink pug]
 
 check going east in Blight Blear Bight Bier:
 	if Drink Drug Think Thug is in Bier, say "Not with the Drink Drug Think Thug by." instead;
@@ -332,6 +338,22 @@ carry out creditsing:
 	say "[line break]If you'd like to be in these credits, you too can do so by finding an issue or making a good suggestion.";
 	the rule succeeds.
 
+chapter soundsing
+
+soundsing is an action applying to nothing.
+
+understand the command "sounds" as something new.
+understand the command "sound" as something new.
+
+understand "sounds" and "sound" as soundsing.
+
+carry out soundsing:
+	say "The basic sounds in the English language are:[paragraph break]";
+	say "one letter: b k d f g h j l m n p r s t v w x z (c q and x map to others.)";
+	say "two letters: ur ar or bl br cl cr dr fl fr gl gr pl pr sk sl sp st sw spr str tr.";
+	say "rarer two letters: ch so th (thing or this) wh ng nk oi ow oo (took) aw zh (vision.)";
+	the rule succeeds.
+
 chapter parser error tweak(s)
 
 table-to-scour is a table name that varies.
@@ -408,6 +430,7 @@ this is the verb-checker rule:
 				process the do-rule entry;
 				process the notify score changes rule;
 				if there is a core entry and core entry is false, check-lump-progress;
+			process the note right guess wrong time rule;
 			the rule succeeds;
 		if ha-half is true and my-count is 1: [there is a bug here with, say, DEAL DIER instead of DEAL DEAR. It prints something extra.]
 			now vc-dont-print is true;
@@ -482,6 +505,57 @@ to say leetclue of (x - a cheattype):
 	say "You refer to the sheep sheet, noticing it says [if noun is nothing]your effort[else][the noun][end if] goes to [scancol of x]";
 
 to say scancol of (x - a cheattype): say "[if x is letplus]++[else if x is partplus]+=/=+[else if x is leteq]==[else if x is partminus]-=/=-[else if x is letminus]--[else if x is letboth]+-/-+[else if x is phbt]00[else if x is allover]??[else]BUG[end if]"
+
+chapter thinking
+
+ever-thought is a truth state that varies.
+
+the block thinking rule is not listed in any rulebook.
+
+to read-laters (ts - a truth state):
+	let thought-any be false;
+	repeat through table of forlaters:
+		if ready-to-hint entry is true:
+			if is-done entry is true:
+				if debug-state is true, say "(DEBUG NOTE) Somehow the [cmd-to-say entry] is-done entry didn't get wiped out after the score adjustments.";
+				now ready-to-hint entry is false;
+				next; [ this may duplicate code from the score and thinking changes rules but I'm still a bit nervous about it at the moment. This shuts the door 100%. ]
+			process the can-do-now entry; [?? surround with vc-dont-print being true then false ??]
+			let Q be whether or not the rule succeeded;
+			if Q is not ts, next;
+			if thought-any is false, say "[line break]";
+			if the rule succeeded, say "([b]CAN DO NOW[r]) ";
+			now thought-any is true;
+			say "[think-advice entry][line break]";
+
+to clue-later (ct - text):
+	if vc-dont-print is true, continue the action;
+	repeat through table of forlaters:
+		if ct is cmd-to-say entry:
+			if debug-state is true and ready-to-hint entry is true, say "(DEBUG re-checking)[line break]";
+			if ready-to-hint entry is false, now think-clue-flag is true;
+			now ready-to-hint entry is true;
+			continue the action;
+	now think-clue-flag is true;
+	say "Oops. I tried to save [ct] in the THINK command for later, but failed[not-crit-but].";
+
+to say not-crit-but: say ". This is not a critical bug, but I'd like to know about it"
+
+carry out thinking:
+	now vc-dont-print is true;
+	read-laters true;
+	read-laters false;
+	if ever-thought is false:
+		now ever-thought is true;
+		say "[line break][b]NOTE[r]: The game will indicate when one command you found early will be applicable. An asterisk or (+) will also appear in the score in the upper right. Until then, you can [b]THINK[r] to see things you figured but aren't quite ready to do yet.";
+	now vc-dont-print is false;
+
+think-clue-flag is a truth state that varies.
+
+every turn when think-clue-flag is true (this is the note right guess wrong time rule):
+	say "[line break][one of][b]NOTE[r]: this command will be useful later, but you aren't ready to use it, yet. You can track commands like this by typing [b]THINK[r], which will also clue you if they now work.[or](useful command again saved to [b]THINK[r] for later reference.)[stopping]";
+	now think-clue-flag is false;
+	continue the action;
 
 chapter the big table
 
@@ -606,10 +680,11 @@ this is the vr-fight-fear rule:
 	move Think Thug to Bight Bier;
 
 this is the vc-keep-cool rule:
-	if player is not in peep pool, the rule fails;
+	if player is not in peep pool or creep cruel is moot, the rule fails;
 	if creep cruel is not in peep pool:
 		vcal "You have no one annoying you. But there might be someone later, if you're lucky! Wow!";
 		now ts-tried-keep is true;
+		clue-later "KEEP COOL";
 		continue the action;
 	the rule succeeds;
 
@@ -671,6 +746,7 @@ this is the vc-pink-pug rule:
 	if drink drug think thug is off-stage or player is not in bight bier, the rule fails;
 	if ts-fight-fear is false:
 		vcal "You're too scared to think that something like that could even work.";
+		clue-later "PINK PUG";
 		continue the action;
 	if drink drug think thug is moot:
 		vcal "You already got rid of the thug.";
@@ -711,6 +787,7 @@ this is the vc-told-tale rule:
 	if ts-ale-old is false or ts-kale-cold is false:
 		vcal "You're not nourished enough to make it far out of the cell. You need food and drink. Even lousy food and drink.";
 		now ts-tale-early is true;
+		clue-later "TOLD TALE";
 		continue the action;
 	the rule succeeds;
 
@@ -745,7 +822,7 @@ to lump-minus:
 	increment lump-uses;
 	process the notify score changes rule;
 
-to decide which number is solved-jerk-check: [yeah yeah magic numbers]
+to decide which number is solved-jerk-check: [yeah yeah magic numbers ?? we need to fix this]
 	if ts-tried-keep is true and cruel creep is in peep pool, decide on 1;
 	if ts-tale-early is true and ts-ale-old is true and ts-kale-cold is true, decide on 2;
 	decide on 0;
