@@ -1,0 +1,114 @@
+#-- rbr-qqnn-thru.txt
+#-- main branch file for Very Vile Fairy File walkthroughs
+#--
+#-- use HHV.PY to verify ha-half
+#--
+
+files=reg-qqnn-thru-min.txt,reg-qqnn-thru-all.txt,reg-qqnn-thru-think.txt,reg-qqnn-alt-verbs.txt,reg-qqnn-thru-mistakes.txt,reg-qqnn-thru-ha-half.txt
+
+## *FILE
+## *FORK
+
+TSV:## minimum walkthrough	## walkthrough with all points	## walkthrough with altverb tests ## walkthrough with fake deaths ## walkthrough testing all mistakes
+
+** game: /home/andrew/prt/debug-quite-queer-night-near.z8
+** interpreter: /home/andrew/prt/dfrotz -m
+
+==t2
+>pink pug
+!by one point
+>think
+PINK PUG
+
+==t3
+>z
+>fright freer
+by one point
+>undo
+
+>fight fear
+by one point
+
+==t!0
+>heap heat
+by one point
+
+==t3
+>z
+>undo
+>bleep bleat
+by one point
+
+>pink pug
+by one point
+
+>e
+Bare Bones Stair Stones
+
+>s
+
+==t2
+>keep cool
+!by one point
+>think
+KEEP COOL
+
+>deep duel
+by one point
+
+>keep cool
+by one point
+
+>e
+
+>more mulch
+by one point
+
+>w
+>n
+>n
+
+==t3
+>hark hump
+by one point
+>undo
+
+>bark bump
+by one point
+
+>stark stump
+by one point
+
+>park pump
+by one point
+
+>e
+
+>plaster plate
+by one point
+
+>w
+>s
+>u
+
+==t2
+>told tale
+!by one point
+>think
+TOLD TALE
+>cold kale
+>think
+once
+TOLD TALE
+>undo
+>undo
+
+>old ale
+by one point
+
+>cold kale
+by one point
+
+>told tale
+by one point
+
