@@ -55,7 +55,15 @@ when play begins:
 
 check requesting the score:
 	say "You have [score] out of [min-needed] points needed to win the game[if max-poss > min-needed], but there's a bonus point[end if].";
+	if can-cheat-win, say "[line break]You can, if you want, jump all the way to the end to win with JJ.";
 	if debug-state is true, say "DEBUG: [lump-count] lump count.";
+	if debug-state is true:
+		showme ts-bump-bark;
+		showme ts-pump-park;
+		showme ts-stump-stark;
+		showme ts-plaster-plate;
+		showme ts-mulch-more;
+	the rule succeeds;
 
 to moot (x - a thing): move x to Gazy Gap;
 
@@ -466,6 +474,7 @@ to check-lump-progress:
 		increment lump-charges;
 		decrease lump-count by next-lump-level;
 		increase next-lump-level by next-lump-delta;
+		process the winnable-with-cheating rule;
 
 a lurking lump is a boring thing. description is "The lurking lump shines dully. It looks to have [lump-charges in words] charge[plur of lump-charges] for you to make a JERKING JUMP (JJ) if anything is baffling you.". bore-text of lurking lump is "You can only JERKING JUMP (JJ) with the lurking lump."
 
@@ -609,14 +618,19 @@ to check-north-flow:
 	if north-flow, say "[line break][if player is in dark dump]It seems like you have all the pieces together to create a river leading to the stones. You move back east to start dumping the plaster in. [end if]Breaking down the plaster plate is not hard. You dump it into the pool that formed in the east edge of the Dark Dump, and it flows slowly downward back to the area with the stair stones.";
 	check-stair-stones;
 
+old-filler is a number that varies.
+
 to check-stair-stones:
 	let Q be stone-filler;
-	if Q is 1:
-		say "That's got to help rebuild the stair, but you probably need a bit more.";
-		now printed name of Stair Stones is "Stair Stones";
-	if Q is 2:
-		say "You wouldn't be surprised if the stair stones are fully navigable now.";
-		now printed name of Stair Stones is "Lair [']Lone's Stair Stones";
+	if debug-state is true, say "[q].";
+	if Q is not old-filler:
+		if Q is 1:
+			say "[line break]That's got to help rebuild the stair, but you probably need a bit more.";
+			now printed name of Bare Bones Stair Stones is "Stair Stones";
+		if Q is 2:
+			say "You wouldn't be surprised if the stair stones are fully navigable now.";
+			now printed name of Bare Bones Stair Stones is "Lair [']Lone's Stair Stones";
+		now old-filler is Q;
 	if player is in dark dump:
 		if stump is in dump and bump is in dump and pump is in dump: [oh, this makes me laugh]
 			now cht of dark dump is phbt;
@@ -768,6 +782,7 @@ this is the vr-plaster-plate rule:
 	say "A huge chunk of the gaster gate breaks off and creates a plaster plate. It's much too big to eat off, but it crumbles quickly apart (probably not Last [']Er Late brand) and is washed away beyond the dark dump.";
 	now ts-plaster-plate is true;
 	moot master mate;
+	check-north-flow;
 
 this is the vc-stark-stump rule:
 	if player is not in dark dump, the rule fails;
@@ -821,6 +836,19 @@ to lump-minus:
 	now in-jerk-jump is false;
 	increment lump-uses;
 	process the notify score changes rule;
+	process the winnable-with-cheating rule;
+
+to decide whether can-cheat-win:
+	if (core-max - core-score) * 3 <= lump-uses, yes;
+	no;
+
+warn-cheap-win is a truth state that varies.
+
+this is the winnable-with-cheating rule:
+	if warn-cheap-win is false, continue the action;
+	if can-cheat-win:
+		say "[line break]By the way, you can now cheat your way through the game with the JJ command, if you want.";
+		now warn-cheap-win is true;
 
 to decide which number is solved-jerk-check: [yeah yeah magic numbers ?? we need to fix this]
 	if ts-tried-keep is true and cruel creep is in peep pool, decide on 1;
