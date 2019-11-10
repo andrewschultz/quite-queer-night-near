@@ -44,12 +44,14 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	mist-txt
 "raster rate"	in-gaster-gate rule 	false	7	5	plates-needed rule	"Your text adventure remains totally texty."
 "boar/bore bulge"	in-gore-gulch rule 	false	5	4	--	"That's a bit of a stretch, but Gore Gulch remains unstretched." [start gore gulch]
 "bold bail/bowl/bale"	in-gore-gulch rule 	false	7	5	--	"You don't have to be bold. The gaol is unguarded." [start gold gaol]
+"doled dale"	in-gore-gulch rule 	false	7	5	--	"That's a bit too archaic to be a final solution, but ... you do dream about these sorts of things in prison."
 "fold fail"	in-gold-gaol rule 	true	4	4	--	"You don't have to be bold. The gaol is unguarded."
 "hold hail/hale"	in-gold-gaol rule 	true	4	4	--	"There is nobody to summon, and you don't want to summon weather, either."
 "mold male/mail"	in-gold-gaol rule 	true	4	4	--	"You uncover no old letters checking on how you are. Not surprising. You've only been here a bit."
 "polled pail/pale"	in-gold-gaol rule 	true	4	4	--	"You haven't been here long enough to even want the company of a pollster."
 "scold scale"	in-gold-gaol rule	true	4	4	--	"The scold scale is probably something you get BEFORE you are sent to prison."
 "sold sail/sale"	in-gold-gaol rule 	true	4	4	--	"You don't have to buy anything. You don't want to."
+"swolled swale"	in-gore-gulch rule 	false	7	5	--	"The gold gaol cannot change THAT drastically."
 "trolled trail"	in-gore-gulch rule 	true	4	4	--	"You will have to make your own trail out. Make it enough yours, you could recount it to others."
 "wold wail/whale"	in-gore-gulch rule 	true	4	4	--	"Nothing too drastic, here."
 

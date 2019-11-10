@@ -487,14 +487,14 @@ chapter the big table
 
 table of verb checks [xxvc]
 w1 (text)	w2 (text)	okflip	core	idid	ver-rule	do-rule	wfull (topic)
-"fight"	"fear"	true	true	false	vc-fight-fear rule	vr-fight-fear rule	-- [start bight bier]
+"fight|fright"	"fear|freer"	true	true	false	vc-fight-fear rule	vr-fight-fear rule	"fight fear" or "fright freer" [start bight bier]
 "pink"	"pug"	true	true	false	vc-pink-pug rule	vr-pink-pug rule	--
-"heap"	"heat"	true	false	false	vc-heap-heat rule	vr-heap-heat rule	--
+"heap|bleep"	"heat|bleat"	true	false	false	vc-heap-heat rule	vr-heap-heat rule	"heap heat" or "bleep bleat"
 "deep"	"duel"	true	true	false	vc-deep-duel rule	vr-deep-duel rule	-- [start peep pool]
 "keep"	"cool"	true	true	false	vc-keep-cool rule	vr-keep-cool rule	--
 "more"	"mulch"	true	true	false	vc-more-mulch rule	vr-more-mulch rule	-- [start gore gulch]
 "plaster"	"plate"	true	true	false	vc-plaster-plate rule	vr-plaster-plate rule	-- [start gaster gate]
-"bark"	"bump"	true	true	false	vc-bark-bump rule	vr-bark-bump rule	-- [start dark dump]
+"bark|hark"	"bump|hump"	true	true	false	vc-bark-bump rule	vr-bark-bump rule	"bark bump" or "hark hump" [start dark dump]
 "park"	"pump"	true	true	false	vc-park-pump rule	vr-park-pump rule	--
 "stark"	"stump"	true	true	false	vc-stark-stump rule	vr-stark-stump rule	--
 "old"	"ale"	true	true	false	vc-old-ale rule	vr-old-ale rule	-- [start gold gaol]
@@ -625,7 +625,8 @@ this is the vc-heap-heat rule:
 	the rule succeeds;
 
 this is the vr-heap-heat rule:
-	say "You rub your hands together for warmth, blow on the sheet, and so on. And what do you know? It feels less frigid when you pick it up. It'd still be functional either way, but small victories.";
+	let Q Be whether or not word number 1 in the player's command is "bleep";
+	say "You [if Q is true]let go some grawlix-heavy invective, and it gives you enough of a boost to deal with the sleep sleet in order to pull out the cheap cheat[else]rub your hands together for warmth, blow on the sheet, and so on[end if]. And what do you know? It stays less frigid after you pick it up. It'd still be technically functional at any temperature, but small victories.";
 	now player has sheep sheet;
 
 this is the vc-more-mulch rule:
@@ -667,7 +668,10 @@ this is the vr-park-pump rule:
 	check-north-flow;
 
 this is the vc-pink-pug rule:
-	if drink drug think thug is off-stage, the rule fails;
+	if drink drug think thug is off-stage or player is not in bight bier, the rule fails;
+	if ts-fight-fear is false:
+		vcal "You're too scared to think that something like that could even work.";
+		continue the action;
 	if drink drug think thug is moot:
 		vcal "You already got rid of the thug.";
 		continue the action;
