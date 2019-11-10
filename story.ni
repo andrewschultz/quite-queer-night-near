@@ -316,7 +316,20 @@ understand the command "about" as something new.
 understand "about" as abouting.
 
 carry out abouting:
-	say "QQNN was written in under four hours for EctoComp 2019. It heavily cut-and-pasted from Very Vile Fairy File. It did not receive outside testing. If you want to report bugs/suggestions, do so at http://github.com/andrewschultz/quite-queer-night-near/issues. I appreciate them--I want to make a post-comp release!";
+	say "QQNN was written in under four hours for EctoComp 2019. It heavily cut-and-pasted from Very Vile Fairy File. It did not receive outside testing. However, I submitted a post-comp releaee that allowed for tweaks that weren't possible in the time allowed. If you want to report bugs/suggestions, do so at http://github.com/andrewschultz/quite-queer-night-near/issues. I appreciate them! CREDITS has additional thanks.";
+	say "[line break][one of]QQNN is a sort of guess-the-verb game. If you want the game mechanic semi-spoiled, type ABOUT again[or]QQNN relies on couplets to increase your score. For instance, if there is a cold coy Rolled Roy needed courage, you could change him into BOLD BOY, and the game tries to give clever responses for tries (good-faith or otherwise) sycg as OLD OI[stopping].";
+
+chapter creditsing
+
+creditsing is an action applying to nothing.
+
+understand the command "credits" as something new.
+
+understand "credits" as creditsing.
+
+carry out creditsing:
+	say "Thanks to JJ Guest for starting EctoComp, Duncan Bowsman for continuing it, and Ruber Eaglenest and JoshG for keeping it going further. EctoComp has been a fun way to throw out little games. Also, thanks to itch.io for hosting this game.";
+	say "[line break]If you'd like to be in these credits, you too can do so by finding an issue or making a good suggestion.";
 	the rule succeeds.
 
 chapter parser error tweak(s)
@@ -468,7 +481,7 @@ to say leetclue of (x - a cheattype):
 	if sheep sheet is not touchable, continue the action;
 	say "You refer to the sheep sheet, noticing it says [if noun is nothing]your effort[else][the noun][end if] goes to [scancol of x]";
 
-to say scancol of (x - a cheattype): say "[if x is letplus]++[else if x is partplus]+=/=+[else if x is leteq]==[else if x is partminus]-=/=-[else if x is letminus]--[else if x is letboth]+-/-+[else if x is phbt]00[else]BUG[end if]"
+to say scancol of (x - a cheattype): say "[if x is letplus]++[else if x is partplus]+=/=+[else if x is leteq]==[else if x is partminus]-=/=-[else if x is letminus]--[else if x is letboth]+-/-+[else if x is phbt]00[else if x is allover]??[else]BUG[end if]"
 
 chapter the big table
 
