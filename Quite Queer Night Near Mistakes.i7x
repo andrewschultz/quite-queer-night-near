@@ -19,6 +19,7 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	mist-txt
 "beep beat"	sheet-nearby rule	false	4	4	sheet-untaken rule	"You imagine an eternity spent listening to funky techno music. Scary!"
 "creep crete"	sheet-nearby rule	false	4	4	sheet-untaken rule	"You fail to hyperwarp across the Mediterranean."
 "leap leet"	sheet-nearby rule	false	4	4	sheet-untaken rule	"You take a giant step towards understanding a tricky science concept from high school."
+"peep peat"	sheet-nearby rule	false	4	4	sheet-untaken rule	"The ground around you remains hard."
 "sleep sleet"	sheet-nearby rule	false	4	4	sheet-untaken rule	"You don't need anything raining down on you."
 "streep street"	sheet-nearby rule	false	4	4	sheet-untaken rule	"Stalking an actress is scary, yes, but we're not going for that sort of scary."
 "sweep suite/sweet"	sheet-nearby rule	false	4	4	sheet-untaken rule	"Neither a favorite team's success nor drudgery will get your mind off things."
@@ -43,17 +44,17 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	mist-txt
 "laster late"	in-gaster-gate rule 	false	7	5	plates-needed rule	"A good try, if un-grammatical. But you already have lasted, and you don't want your obstacles to last."
 "raster rate"	in-gaster-gate rule 	false	7	5	plates-needed rule	"Your text adventure remains totally texty."
 "boar/bore bulge"	in-gore-gulch rule 	false	5	4	--	"That's a bit of a stretch, but Gore Gulch remains unstretched." [start gore gulch]
-"bold bail/bowl/bale"	in-gore-gulch rule 	false	7	5	--	"You don't have to be bold. The gaol is unguarded." [start gold gaol]
-"doled dale"	in-gore-gulch rule 	false	7	5	--	"That's a bit too archaic to be a final solution, but ... you do dream about these sorts of things in prison."
-"fold fail"	in-gold-gaol rule 	true	4	4	--	"You don't have to be bold. The gaol is unguarded."
-"hold hail/hale"	in-gold-gaol rule 	true	4	4	--	"There is nobody to summon, and you don't want to summon weather, either."
-"mold male/mail"	in-gold-gaol rule 	true	4	4	--	"You uncover no old letters checking on how you are. Not surprising. You've only been here a bit."
-"polled pail/pale"	in-gold-gaol rule 	true	4	4	--	"You haven't been here long enough to even want the company of a pollster."
-"scold scale"	in-gold-gaol rule	true	4	4	--	"The scold scale is probably something you get BEFORE you are sent to prison."
-"sold sail/sale"	in-gold-gaol rule 	true	4	4	--	"You don't have to buy anything. You don't want to."
-"swolled swale"	in-gore-gulch rule 	false	7	5	--	"The gold gaol cannot change THAT drastically."
-"trolled trail"	in-gore-gulch rule 	true	4	4	--	"You will have to make your own trail out. Make it enough yours, you could recount it to others."
-"wold wail/whale"	in-gore-gulch rule 	true	4	4	--	"Nothing too drastic, here."
+"bold bail/bowl/bale"	in-gold-gaol rule 	false	7	5	--	"You don't have to be bold. The gaol is unguarded." [start gold gaol]
+"doled dale"	in-gold-gaol rule 	false	7	5	--	"That's a bit too archaic to be a final solution, but ... you do dream about these sorts of things in prison."
+"fold fail"	in-gold-gaol rule 	true	4	4	--	"You look at FOLD FAIL on the wall, hoping for the lump to maybe grow a bit brighter. It does not. Poor you!"
+"hold hail/hale"	in-gold-gaol rule 	false	4	4	--	"There is nobody to summon, and you don't want to summon weather, either."
+"mold male/mail"	in-gold-gaol rule 	false	4	4	--	"You uncover no old letters checking on how you are. Not surprising. You've only been here a bit."
+"polled pail/pale"	in-gold-gaol rule 	false	4	4	--	"You haven't been here long enough to even want the company of a pollster."
+"scold scale"	in-gold-gaol rule	false	4	4	--	"The scold scale is probably something you get BEFORE you are sent to prison."
+"sold sail/sale"	in-gold-gaol rule 	false	4	4	--	"You don't have to buy anything. You don't want to."
+"swolled swale"	in-gold-gaol rule 	false	7	5	--	"The gold gaol cannot change THAT drastically."
+"trolled trail"	in-gold-gaol rule 	false	4	4	--	"You will have to make your own trail out. Make it enough yours, you could recount it to others."
+"wold wail/whale"	in-gold-gaol rule 	false	4	4	--	"Nothing too drastic, here."
 
 section rules
 

@@ -437,7 +437,9 @@ this is the verb-checker rule:
 				now idid entry is true;
 				process the do-rule entry;
 				process the notify score changes rule;
-				if there is a core entry and core entry is false, check-lump-progress;
+				if there is a core entry and core entry is false:
+					check-lump-progress;
+				process the winnable-with-cheating rule;
 			process the note right guess wrong time rule;
 			the rule succeeds;
 		if ha-half is true and my-count is 1: [there is a bug here with, say, DEAL DIER instead of DEAL DEAR. It prints something extra.]
@@ -486,7 +488,11 @@ this is the mistake-checker rule:
 				say "[mist-txt entry][line break]";
 				if there is a leet-rule entry:
 					process the leet-rule entry;
-					unless the rule succeeded, the rule succeeds;
+					unless the rule succeeded:
+						if got-yet entry is false:
+							check-lump-progress;
+						now got-yet entry is true;
+						the rule succeeds;
 				let d1 be -10;
 				let d2 be -10;
 				if there is a w1let entry:
@@ -495,6 +501,7 @@ this is the mistake-checker rule:
 						now d2 is w2let entry - number of characters in word number 2 in the player's command;
 					if d2 is -10, now d2 is d1;
 					say "[line break][leetclue of cluecheat of d1 and d2].";
+				if debug-state is true, say "Got yet? [got-yet entry].";
 				if got-yet entry is false:
 					check-lump-progress;
 				now got-yet entry is true;
@@ -606,7 +613,7 @@ to see-how-nourished:
 
 ts-tried-keep is a truth state that varies.
 
-every turn when ts-tried-keep is true and creep cruel is in Peep Pool:
+every turn when ts-tried-keep is true and creep cruel is in Peep Pool: [??zap this when ready]
 	say "You should probably KEEP COOL again. It will get rid of the creep (cruel.)";
 
 ts-tale-early is a truth state that varies.
@@ -622,7 +629,6 @@ old-filler is a number that varies.
 
 to check-stair-stones:
 	let Q be stone-filler;
-	if debug-state is true, say "[q].";
 	if Q is not old-filler:
 		if Q is 1:
 			say "[line break]That's got to help rebuild the stair, but you probably need a bit more.";
@@ -836,16 +842,17 @@ to lump-minus:
 	now in-jerk-jump is false;
 	increment lump-uses;
 	process the notify score changes rule;
-	process the winnable-with-cheating rule;
 
 to decide whether can-cheat-win:
-	if (core-max - core-score) * 3 <= lump-uses, yes;
+	if core-max - core-score <= lump-charges, yes;
 	no;
 
 warn-cheap-win is a truth state that varies.
 
 this is the winnable-with-cheating rule:
-	if warn-cheap-win is false, continue the action;
+	if warn-cheap-win is true, continue the action;
+	if debug-state is true:
+		say "DEBUG: remaining = [core-max - core-score], Lump charges = [lump-charges].";
 	if can-cheat-win:
 		say "[line break]By the way, you can now cheat your way through the game with the JJ command, if you want.";
 		now warn-cheap-win is true;

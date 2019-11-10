@@ -38,6 +38,9 @@ You imagine an eternity spent listening to funky techno music. Scary!
 You fail to hyperwarp across the Mediterranean.
 > leap leet
 You take a giant step towards understanding a tricky science concept from high school.
+> peep peat
+sheep sheet
+The ground around you remains hard.
 > sleep sleet
 You don't need anything raining down on you.
 > streep street
@@ -124,6 +127,9 @@ You fail to hyperwarp across the Mediterranean.
 > leap leet
 !sheep sheet
 You take a giant step towards understanding a tricky science concept from high school.
+> peep peat
+!sheep sheet
+The ground around you remains hard.
 > sleep sleet
 !sheep sheet
 You don't need anything raining down on you.
@@ -267,7 +273,7 @@ sheep sheet
 That's a bit too archaic to be a final solution, but ... you do dream about these sorts of things in prison.
 > fold fail
 sheep sheet
-You don't have to be bold. The gaol is unguarded.
+You look at FOLD FAIL on the wall, hoping for the lump to maybe grow a bit brighter. It does not. Poor you!
 > hold hail
 sheep sheet
 There is nobody to summon, and you don't want to summon weather, either.
