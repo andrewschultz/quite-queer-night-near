@@ -145,6 +145,10 @@ Neither a favorite team's success nor drudgery will get your mind off things.
 >e
 Bare Bones Stair Stones
 
+==t0
+>u
+The stones are nowhere near in climbable condition yet.
+
 @mis
 > care cones
 sheep sheet
@@ -193,9 +197,12 @@ That's a bit of a stretch, but Gore Gulch remains unstretched.
 
 >more mulch
 by one point
+/^Stair Stones
+The gunky material flowing back to Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
 
->w
->n
+>u
+The stones are almost climbable but still too risky. You need to do a bit more.
+
 >n
 
 Dark Dump
@@ -243,6 +250,8 @@ Your text adventure remains totally texty.
 
 >plaster plate
 by one point
+Lair 'Lone's Stair Stones
+The gunky material flowing back to Bare Bones Stair Stones is icky, but it will help patch them up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
 
 @mis
 > faster fate
@@ -258,10 +267,7 @@ A good try, if un-grammatical. But you already have lasted, and you don't want y
 !sheep sheet
 Your text adventure remains totally texty.
 
->w
->s
 >u
-
 Gold Gaol
 
 @mis

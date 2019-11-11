@@ -200,7 +200,7 @@ check going east in Blight Blear Bight Bier:
 
 chapter Bare Bones Stair Stones
 
-Bare Bones Stair Stones is east of Bight Bier. "You can go back west to the Bier, though you don't need to. You can also go north and south, but there seems to be a way out above--[if stone-filler is 0]or there could be[else if stone-filler is 1]you just need to fill the stairs in a bit more[else]you don't seem to have much else to do here[end if]!".
+Bare Bones Stair Stones is east of Bight Bier. "You can go back west to the Bier[if sheep sheet is in bier]--who knows, that sheet could come in handy[ese], though you don't need to[end if]. You can also go north and south, but there seems to be a way out above--[if stone-filler is 0]or there could be[else if stone-filler is 1]you just need to fill the stairs in a bit more[else]you don't seem to have much else to do here[end if]!".
 
 to decide which number is stone-filler:
 	let temp be boolval of ts-mulch-more;
@@ -501,7 +501,6 @@ this is the mistake-checker rule:
 						now d2 is w2let entry - number of characters in word number 2 in the player's command;
 					if d2 is -10, now d2 is d1;
 					say "[line break][leetclue of cluecheat of d1 and d2].";
-				if debug-state is true, say "Got yet? [got-yet entry].";
 				if got-yet entry is false:
 					check-lump-progress;
 				now got-yet entry is true;
@@ -630,13 +629,12 @@ old-filler is a number that varies.
 to check-stair-stones:
 	let Q be stone-filler;
 	if Q is not old-filler:
-		if Q is 1:
-			say "[line break]That's got to help rebuild the stair, but you probably need a bit more.";
-			now printed name of Bare Bones Stair Stones is "Stair Stones";
-		if Q is 2:
-			say "You wouldn't be surprised if the stair stones are fully navigable now.";
-			now printed name of Bare Bones Stair Stones is "Lair [']Lone's Stair Stones";
+		say "[line break]The gunky material flowing back to [stair stones] is icky, but it will help patch them up[one of][or] even more[stopping]. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks [one of]almost [or][stopping]traversable.";
+		if Q is 1, now printed name of Bare Bones Stair Stones is "Stair Stones";
+		if Q is 2, now printed name of Bare Bones Stair Stones is "Lair [']Lone's Stair Stones";
 		now old-filler is Q;
+		move player to Stair Stones, without printing a room description;
+		say "[b][stair stones][r][line break]";
 	if player is in dark dump:
 		if stump is in dump and bump is in dump and pump is in dump: [oh, this makes me laugh]
 			now cht of dark dump is phbt;
