@@ -206,7 +206,7 @@ volume the map
 
 chapter Blight Blear Bight Bier
 
-Blight Blear Bight Bier is a room. "Boy! It's scary here! You can only go east[if thug is off-stage], but it might be even scarier there. You need some way to make things less scary, on this Quite Queer Night Near by the Blight Blear Bight Bear. A spite spear hangs in the distance, just ready to swoop on you[end if].". cht of Blight Blear Bight Bier is letboth. [->fight fear]
+Blight Blear Bight Bier is a room. "Boy! It's scary here! [if spite spear is in bight bier]A spite spear hangs above, and y[else]Y[end if]ou can only go east[if thug is off-stage], but it might be even scarier there. You need some way to make things less scary, on this Quite Queer Night Near by the Blight Blear Bight Bear. A spite spear hangs in the distance, just ready to swoop on you[end if].". cht of Blight Blear Bight Bier is letboth. [->fight fear]
 
 ts-fight-fear is a truth state that varies.
 
@@ -219,13 +219,15 @@ the cheap cheat sheep sheet is a thing in Blight Blear Bight Bier. cht of sheep 
 
 section sleep sleet
 
-the sleep sleet is boring scenery in Blight Blear Bight Bier. cht of sleep sleet is letminus. "The sleep sleet hails down all around the cheap cheat sheep sheet. Just one more obstacle against taking it. The cold is probably too much. How could you dispel that?". bore-text is "Standard actions won't get rid of the sleet and let you take the sheet.".
+the sleep sleet is boring scenery in Blight Blear Bight Bier. cht of sleep sleet is letminus. "The sleep sleet hails down all around the cheap cheat sheep sheet. Just one more obstacle against taking it. The cold is probably too much. How could you dispel that?". bore-text is "Standard actions won't get rid of the sleet and let you take the sheet.". cht of sleep sleet is letminus. [->heap heat]
 
 section spite spear
 
+the spite spear is boring scenery in Blight Blear Bight Bier. "It's too far away to see in detail, but you don't need to. It reminds you of people you were scared would hit or insult you, who knew how to string that out.". bore-text is "You may need to take care of your own emotions to get rid of the spite spear.". cht of spite spear is letminus.
+
 section DDTT
 
-The Drink Drug Think Thug is a person in Blight Blear Bight Bier. cht of Think Thug is letminus. "Wait, no, you can't go east until you dispose of that Drink Drug Think Thug blocking the way.". description of Thug is "Big and brutal and surprisingly not dumb-looking. You'll need to change the Thug drastically to get by.". [-> pink pug]
+The Drink Drug Think Thug is a person in Blight Blear Bight Bier. cht of Think Thug is letminus. "Wait, no, you can't go east until you dispose of that Drink Drug Think Thug blocking the way.". description of Thug is "Big and brutal and surprisingly not dumb-looking. Even though they've abused their body and mind, they can beat you up physically and mentally. You'll need to change the Thug drastically to get by.". [-> pink pug]
 
 check going east in Blight Blear Bight Bier:
 	if Drink Drug Think Thug is in Bier, say "Not with the Drink Drug Think Thug by." instead;
@@ -726,9 +728,9 @@ this is the vc-fight-fear rule:
 	the rule succeeds;
 
 this is the vr-fight-fear rule:
-	say "You do your best to feel braver. It works, well enough! And that's a good thing, too, because a Drink Drug Think Thug appears. Boy, they're the worst. Even abusing their body and mind, they can beat you up physically and mentally.";
+	say "You do your best to feel braver. It works, well enough! The Drink Drug Think Thug seems a bit less tough now, and what do you know? The spite spear vanishes, too!";
 	now ts-fight-fear is true;
-	move Think Thug to Bight Bier;
+	moot spite spear;
 
 this is the vc-keep-cool rule:
 	if player is not in peep pool or creep cruel is moot, the rule fails;
