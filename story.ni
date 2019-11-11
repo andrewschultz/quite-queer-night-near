@@ -44,7 +44,36 @@ section when play begins - not for release
 
 when play begins: now debug-state is true;
 
+chapter boringness
+
+a thing has a rule called bore-rule. bore-rule of a thing is usually the bore-nothing rule.
+
+a thing can be boring. a thing is usually boring. a thing has text called bore-text. bore-text of a thing is "You don't have to do any usual parser manipulations on [the item described]. Maybe examine."
+
+skip-bore-text is a truth state that varies.
+
+this is the bore-nothing rule: do nothing;
+
+instead of doing something with a boring thing:
+	if action is procedural, continue the action;
+	abide by the bore-rule of noun;
+	if skip-bore-text is true:
+		now skip-bore-text is false;
+		continue the action;
+	if bore-text of noun is not empty, say "[bore-text of noun][line break]" instead;
+	say "Not much to do with [the noun], so, examining...";
+	try examining the noun instead;
+
 chapter largely copied from VVFF
+
+to decide whether the action is procedural:
+	if examining, yes;
+	[if reading, yes;]
+	[if hintobjing, yes;]
+	[if lling, yes;]
+	if thinking, yes;
+	if jerkingjumping, yes;
+	no;
 
 when play begins:
 	say "You should have known better than to eat any sort of marmite. Eww. But you definitely should not have eaten Far Fight Marmite. Especially not the bulk bar-bite kind. But you can't resist items on deep clearance at the lovely crowded store you visit every week. Full of indigestion, you hear voices saying 'Quite queer night near ... quite queer night near... [wfak]";
@@ -70,8 +99,6 @@ to moot (x - a thing): move x to Gazy Gap;
 definition: a thing (called x) is moot:
 	if x is in Gazy Gap, yes;
 	no;
-
-a thing can be boring. a thing is usually boring. a thing has text called bore-text. bore-text of a thing is "You don't have to do any usual parser manipulations on [the item described]. Maybe examine."
 
 ha-half is a truth state that varies.
 
@@ -190,6 +217,12 @@ check examining the sheep sheet for the first time:
 
 the cheap cheat sheep sheet is a thing in Blight Blear Bight Bier. cht of sheep sheet is letminus. "A cheap cheat sheep sheet lies here, sort of daring you to take it. It's obscured by sleep sleet.". description of sheep sheet is "It has information on--well, most everything you see here. XX any item for particular information. I guess it's a sheep sheet because you still feel sheepish looking at it, no matter how many times you have, and also I feel sheepish for such a silly name.". [->heap heat]
 
+section sleep sleet
+
+the sleep sleet is boring scenery in Blight Blear Bight Bier. cht of sleep sleet is letminus. "The sleep sleet hails down all around the cheap cheat sheep sheet. Just one more obstacle against taking it. The cold is probably too much. How could you dispel that?". bore-text is "Standard actions won't get rid of the sleet and let you take the sheet.".
+
+section spite spear
+
 section DDTT
 
 The Drink Drug Think Thug is a person in Blight Blear Bight Bier. cht of Think Thug is letminus. "Wait, no, you can't go east until you dispose of that Drink Drug Think Thug blocking the way.". description of Thug is "Big and brutal and surprisingly not dumb-looking. You'll need to change the Thug drastically to get by.". [-> pink pug]
@@ -200,7 +233,7 @@ check going east in Blight Blear Bight Bier:
 
 chapter Bare Bones Stair Stones
 
-Bare Bones Stair Stones is east of Bight Bier. "You can go back west to the Bier[if sheep sheet is in bier]--who knows, that sheet could come in handy[ese], though you don't need to[end if]. You can also go north and south, but there seems to be a way out above--[if stone-filler is 0]or there could be[else if stone-filler is 1]you just need to fill the stairs in a bit more[else]you don't seem to have much else to do here[end if]!".
+Bare Bones Stair Stones is east of Bight Bier. "You can go back west to the Bier[if sheep sheet is in bier]--who knows, that sheet could come in handy[else], though you don't need to[end if]. You can also go north and south, but there seems to be a way out above--[if stone-filler is 0]or there could be[else if stone-filler is 1]you just need to fill the stairs in a bit more[else]you don't seem to have much else to do here[end if]!".
 
 to decide which number is stone-filler:
 	let temp be boolval of ts-mulch-more;
@@ -721,6 +754,7 @@ this is the vr-heap-heat rule:
 	let Q Be whether or not word number 1 in the player's command is "bleep";
 	say "You [if Q is true]let go some grawlix-heavy invective, and it gives you enough of a boost to deal with the sleep sleet in order to pull out the cheap cheat[else]rub your hands together for warmth, blow on the sheet, and so on[end if]. And what do you know? It stays less frigid after you pick it up. It'd still be technically functional at any temperature, but small victories.";
 	now player has sheep sheet;
+	moot sleep sleet;
 
 this is the vc-more-mulch rule:
 	if player is not in Gore Gulch, the rule fails;

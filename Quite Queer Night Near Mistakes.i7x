@@ -20,7 +20,6 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	mist-txt
 "creep crete"	sheet-nearby rule	false	4	4	sheet-untaken rule	"You fail to hyperwarp across the Mediterranean."
 "leap leet"	sheet-nearby rule	false	4	4	sheet-untaken rule	"You take a giant step towards understanding a tricky science concept from high school."
 "peep peat"	sheet-nearby rule	false	4	4	sheet-untaken rule	"The ground around you remains hard."
-"sleep sleet"	sheet-nearby rule	false	4	4	sheet-untaken rule	"You don't need anything raining down on you."
 "streep street"	sheet-nearby rule	false	4	4	sheet-untaken rule	"Stalking an actress is scary, yes, but we're not going for that sort of scary."
 "sweep suite/sweet"	sheet-nearby rule	false	4	4	sheet-untaken rule	"Neither a favorite team's success nor drudgery will get your mind off things."
 "weep wheat"	sheet-nearby rule	false	4	4	sheet-untaken rule	"The ground remains unarable."
