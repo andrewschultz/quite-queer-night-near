@@ -28,7 +28,7 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	mist-txt
 "mink mug"	lug-nearby rule	false	4	3	--	"The Think Thug is too smart to be upset for being called a rat-face or whatever."
 "rink rug"	lug-nearby rule	false	4	3	--	"A rug would be out of place inside a roller rink or ice skating rink. Still, it was worth a try."
 "slink slug"	lug-nearby rule	false	4	3	--	"Perhaps that is a bit too drastic. Another more likable animal might work great, though."
-"care cones"	in-stones rule	false	4	3	--	"Nothing appears to make you feel more loved. Aww." [start stair stones]
+"care cones"	in-stones rule	false	4	3	--	"Nothing appears to make you feel more loved. Aww." [start bare bones stair stones]
 "crayer crones"	in-stones rule	false	4	3	--	"Not only is that a stretch, but it would actively hurt your quest."
 "fair/fare phones"	in-stones rule	false	4	3	--	"You have no outside communication here."
 "grayer grones"	in-stones rule	false	4	3	--	"A little more atmosphere doesn't help, but it doesn't hurt, either."
@@ -54,10 +54,22 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	mist-txt
 "swolled swale"	in-gold-gaol rule 	false	7	5	--	"The gold gaol cannot change THAT drastically."
 "trolled trail"	in-gold-gaol rule 	false	4	4	--	"You will have to make your own trail out. Make it enough yours, you could recount it to others."
 "wold wail/whale"	in-gold-gaol rule 	false	4	4	--	"Nothing too drastic, here."
+"jeep jewel/joule"	in-peep-pool rule	false	4	4	creep-unbeaten rule	"The jeep would probably run over YOU."
+"reap rule"	in-peep-pool rule	false	4	4	creep-unbeaten rule	"This adventure is about surviving, not taking over."
+
+table of homonym rejections
+mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	mist-txt
+"bite/bight bier/beer"	in-bight-bier rule	false	5	4	fear-to-fight rule	"You don't need homonyms here. Something else... something a bit more common..."
+"deep dual" or "dual deep"	in-peep-pool rule	false	4	4	creep-unbeaten rule	"[if creep cruel is off-stage]You are very close. You don't need to make the pool deeper, but you need something else deep[else]Summoning the cruel creep was enough[end if]."
+"bear bones"	in-stones rule	false	--	--	--	"That would make for creepier ambience, but more importantly, the bear bones would make the stair stones even tougher to climb."
+"stare stones"	in-stones rule	false	--	--	--	"Nothing appears in the stones. You [if stone-filler is 2]can just[else if stone-filler is 1]have a bit more work before you[else]would need to repair them to[end if] climb them."
+"gold gale/gail"	in-gold-gaol rule	false	--	--	--	"You can't change the gaol. You can escape easily enough. You just need to figure how, comfortably."
 
 section rules
 
 [xxqqmi]
+
+this is the creep-unbeaten rule: if creep cruel is not moot, the rule fails;
 
 this is the fear-to-fight rule: if ts-fight-fear is false, the rule succeeds;
 
@@ -70,6 +82,8 @@ this is the in-gaster-gate rule: if player is in Gaster Gate, the rule succeeds;
 this is the in-gold-gaol rule: if player is in Gold Gaol, the rule succeeds;
 
 this is the in-gore-gulch rule: if player is in Gore Gulch, the rule succeeds;
+
+this is the in-peep-pool rule: if player is in peep pool, the rule succeeds;
 
 this is the in-stones rule: if player is in Stair Stones, the rule succeeds;
 

@@ -78,7 +78,7 @@ to decide whether the action is procedural:
 when play begins:
 	say "You should have known better than to eat any sort of marmite. Eww. But you definitely should not have eaten Far Fight Marmite. Especially not the bulk bar-bite kind. But you can't resist items on deep clearance at the lovely crowded store you visit every week. Full of indigestion, you hear voices saying 'Quite queer night near ... quite queer night near... [wfak]";
 	say "[paragraph break]You think you got to sleep. On waking up, you exit your bedroom to ... two small grey Teletubby-looking things (shudder) calling themselves Timmy Tingles and Jimmy Jingles! 'Come dance with us on the Shimmy Shingles!'[wfak]";
-	say "[line break]This is all too corny for you. You try to brush past, but they call on Primmy Pringles and Limmy Lingles, three times their size and meaner, to drag you away...to the Dimmy Dingles? No, worse![wfak]";
+	say "[line break]This is all too corny for you. You try to brush past, but they cry 'You're no Mimmy Mingles' before calling on Primmy Pringles and Limmy Lingles, three times their size and meaner, to drag you away...to the Dimmy Dingles? No, worse![wfak]";
 	say "[line break]You black out as you are dragged away. A voice booms 'ARRRRRIGHT! Tar! Tight! Spar! Spite!' You look around. You see ... a bier with your name on it! Scary, scary!";
 	now max-poss is max-bonus + min-needed;
 	now the right hand status line is "[score]/[if max-poss is not min-needed][min-needed]-[end if][max-poss]";
@@ -404,8 +404,8 @@ chapter parser error tweak(s)
 table-to-scour is a table name that varies.
 
 Rule for printing a parser error (this is the clue half right words rule):
-[	now table-to-scour is table of homonym rejections;
-	abide by the mistake-checker rule;]
+	now table-to-scour is table of homonym rejections;
+	abide by the mistake-checker rule;
 	abide by the verb-checker rule;
 	now table-to-scour is table of mistake substitutions;
 	abide by the mistake-checker rule;
@@ -734,19 +734,6 @@ this is the vr-fight-fear rule:
 	now ts-fight-fear is true;
 	moot spite spear;
 
-this is the vc-keep-cool rule:
-	if player is not in peep pool or creep cruel is moot, the rule fails;
-	if creep cruel is not in peep pool:
-		vcal "You have no one annoying you. But there might be someone later, if you're lucky! Wow!";
-		now ts-tried-keep is true;
-		clue-later "KEEP COOL";
-		continue the action;
-	the rule succeeds;
-
-this is the vr-keep-cool rule:
-	say "You manage to ignore the creep (cruel) as they get more and more desperate to insult you. Eventually, they find you not worth the effort.";
-	moot creep cruel;
-
 this is the vc-heap-heat rule:
 	if sheep sheet is off-stage, the rule fails;
 	if player has cheap cheat sheep sheet:
@@ -759,6 +746,19 @@ this is the vr-heap-heat rule:
 	say "You [if Q is true]let go some grawlix-heavy invective, and it gives you enough of a boost to deal with the sleep sleet in order to pull out the cheap cheat[else]rub your hands together for warmth, blow on the sheet, and so on[end if]. And what do you know? It stays less frigid after you pick it up. It'd still be technically functional at any temperature, but small victories.";
 	now player has sheep sheet;
 	moot sleep sleet;
+
+this is the vc-keep-cool rule:
+	if player is not in peep pool or creep cruel is moot, the rule fails;
+	if creep cruel is not in peep pool:
+		vcal "You have no one annoying you. But there might be someone later, if you're lucky! Wow!";
+		now ts-tried-keep is true;
+		clue-later "KEEP COOL";
+		continue the action;
+	the rule succeeds;
+
+this is the vr-keep-cool rule:
+	say "You manage to ignore the creep (cruel) as they get more and more desperate to insult you. Eventually, they find you not worth the effort.";
+	moot creep cruel;
 
 this is the vc-more-mulch rule:
 	if player is not in Gore Gulch, the rule fails;
