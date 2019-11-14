@@ -77,7 +77,9 @@ to decide whether the action is procedural:
 
 when play begins:
 	say "You should have known better than to eat any sort of marmite. Eww. But you definitely should not have eaten Far Fight Marmite. Especially not the bulk bar-bite kind. But you can't resist items on deep clearance at the lovely crowded store you visit every week. Full of indigestion, you hear voices saying 'Quite queer night near ... quite queer night near... [wfak]";
-	say "[paragraph break]You think you got to sleep. When you wake up, you hear a voice boom ARRRRIGHT! A bunch of very small humanoids push you out of your bedroom chanting 'Tar! Tight! Spar! Spite!' You walk through. You see ... a bier with your name on it! Scary, scary!";
+	say "[paragraph break]You think you got to sleep. On waking up, you exit your bedroom to ... two small grey Teletubby-looking things (shudder) calling themselves Timmy Tingles and Jimmy Jingles! 'Come dance with us on the Shimmy Shingles!'[wfak]";
+	say "[line break]This is all too corny for you. You try to brush past, but they call on Primmy Pringles and Limmy Lingles, three times their size and meaner, to drag you away...to the Dimmy Dingles? No, worse![wfak]";
+	say "[line break]You black out as you are dragged away. A voice booms 'ARRRRRIGHT! Tar! Tight! Spar! Spite!' You look around. You see ... a bier with your name on it! Scary, scary!";
 	now max-poss is max-bonus + min-needed;
 	now the right hand status line is "[score]/[if max-poss is not min-needed][min-needed]-[end if][max-poss]";
 	now ha-half is true;
