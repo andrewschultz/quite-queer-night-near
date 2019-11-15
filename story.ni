@@ -88,12 +88,12 @@ check requesting the score:
 	say "You have [score] out of [min-needed] points needed to win the game[if max-poss > min-needed], but there's a bonus point[end if].";
 	if can-cheat-win, say "[line break]You can, if you want, jump all the way to the end to win with JJ.";
 	if debug-state is true, say "DEBUG: [lump-count] lump count.";
-	if debug-state is true:
+[	if debug-state is true:
 		showme ts-bump-bark;
 		showme ts-pump-park;
 		showme ts-stump-stark;
 		showme ts-plaster-plate;
-		showme ts-mulch-more;
+		showme ts-mulch-more;]
 	the rule succeeds;
 
 to moot (x - a thing): move x to Gazy Gap;
@@ -252,6 +252,7 @@ check going up in Bare Bones Stair Stones:
 	let Q be stone-filler;
 	if Q is 2:
 		say "You see a way through! You've built the bare bones stair stones into something more. You're ready to ascend and leave ... but you are so sure you will make it, you slip and tumble into...";
+		if sheep sheet is in bight bier, max-down;
 		move player to gold gaol;
 		the rule succeeds;
 	if Q is 0:
@@ -498,12 +499,13 @@ this is the verb-checker rule:
 chapter the lump or its replacement
 
 next-lump-level is a number that varies. next-lump-level is 3.
-next-lump-delta is a number that varies. next-lump-delta is 0.
+max-lump-delta is a number that varies. max-lump-delta is 5.
+next-lump-delta is a number that varies. next-lump-delta is 1.
 lump-count is a number that varies. lump-count is 0.
 lump-charges is a number that varies. lump-charges is 0.
 lump-uses is a number that varies. lump-uses is 0.
 
-to say jjj: say "JERKING JUMP or JJ"
+to say jjj: say "JERKING JUMP (JJ)"
 
 to check-lump-progress:
 	increment lump-count;
@@ -513,9 +515,10 @@ to check-lump-progress:
 		increment lump-charges;
 		decrease lump-count by next-lump-level;
 		increase next-lump-level by next-lump-delta;
+		if next-lump-level > max-lump-delta, now next-lump-level is max-lump-delta;
 		process the winnable-with-cheating rule;
 
-a lurking lump is a boring thing. description is "The lurking lump shines dully. It looks to have [lump-charges in words] charge[plur of lump-charges] for you to make a JERKING JUMP (JJ) if anything is baffling you.". bore-text of lurking lump is "You can only JERKING JUMP (JJ) with the lurking lump."
+a lurking lump is a boring thing. description is "The lurking lump shines dully. It looks to have [lump-charges in words] charge[plur of lump-charges] for you to make a [jjj] if anything is baffling you.". bore-text of lurking lump is "You can only [jjj] with the lurking lump."
 
 this is the mistake-checker rule:
 	repeat through table-to-scour:
@@ -903,7 +906,7 @@ carry out jerkingjumping:
 		if lurking lump is off-stage, say "You have nothing that would help you do that." instead;
 		if lurking lump is moot, say "You used up all the lump's charges, but maybe you can get more." instead;
 	else:
-		say "DEBUG: ignoring the charges in the lump, currently at [lump-charges].";
+		say "DEBUG: charges left in lump = [lump-charges].";
 	if solved-jerk-check > 0:
 		say "There's something you can do right now that you tried before, but you weren't prepared yet. If you'd still like to use the lump anyway (not recommended,) say YES.";
 		unless the player yes-consents:
@@ -930,5 +933,18 @@ carry out jerkingjumping:
 			the rule succeeds;
 	now vc-dont-print is false;
 	say "The lurking lump remains immovable. I guess you've done all you need, here.";
+	the rule succeeds.
+
+chapter jjjjng
+
+jjjing is an action applying to nothing.
+
+understand the command "jjj" as something new.
+
+understand "jjj" as jjjing.
+
+carry out jjjing:
+	now lump-charges is 14;
+	say "Increasing lump charges to 14 for cheap dirty testing.";
 	the rule succeeds.
 
