@@ -916,10 +916,14 @@ carry out jerkingjumping:
 	now vc-dont-print is true;
 	repeat through table of verb checks:
 		unless there is a core entry, next;
-		if core entry is false, next;
 		if idid entry is true, next;
 		process the ver-rule entry;
 		if the rule succeeded:
+			if core entry is false and player is not in gold gaol: [the only case is to get the sheet]
+				say "The lurking lump seems to tug you [if player is in bight bear]in the direction of the sheep sheet[else]back to the sheep shet and the Bight Bier[end if], but you may not have to. Try for it anyway?";
+				unless the player yes-consents:
+					say "OK. It's not STRICTLY necessary. Maybe you'll figure it on your own.";
+					the rule succeeds;
 			say "After some thought, you consider the right way forward: [firstor of w1 entry] [firstor of w2 entry]...";
 			now idid entry is true; [this is so BURY BILE gets processed. We already checked IDID above.]
 			up-which core entry; [?? I really need to clean this code up. I want just to increment the score in one place. If a rule can keep track of the current row, that would be nifty.]
