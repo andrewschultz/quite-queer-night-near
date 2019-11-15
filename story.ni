@@ -72,7 +72,7 @@ to decide whether the action is procedural:
 	[if hintobjing, yes;]
 	if csing, yes;
 	if thinking, yes;
-	if jerkingjumping, yes;
+	if pathpavining, yes;
 	no;
 
 when play begins:
@@ -86,8 +86,8 @@ when play begins:
 
 check requesting the score:
 	say "You have [score] out of [min-needed] points needed to win the game[if max-poss > min-needed], but there's a bonus point[end if].";
-	if can-cheat-win, say "[line break]You can, if you want, jump all the way to the end to win with JJ.";
-	if debug-state is true, say "DEBUG: [lump-count] lump count.";
+	if can-cheat-win, say "[line break]You can, if you want, jump all the way to the end to win with PP.";
+	if debug-state is true, say "DEBUG: [wrmm-count] maven next-charge count.";
 [	if debug-state is true:
 		showme ts-bump-bark;
 		showme ts-pump-park;
@@ -192,12 +192,11 @@ report taking sheep sheet: max-down;
 
 check going nowhere:
 	if player is in bight bier, say "The only way is east." instead;
-	if player is in gaster gate or player is in gore gulch, say "The only way is west." instead;
+	if player is in gaster gate or player is in gore gulch, say "The only way out is back west." instead;
 	if player is in stair stones, say "You can only go north, south or west[if stone-filler is 2]. And up. You probably want to go up[else]. And you can try to go up[end if]." instead;
-	if player is in stark stump, say "You can only go east or south." instead;
+	if player is in dark dump, say "You can only go east or south." instead;
 	if player is in peep pool, say "You can only go north or[if creep cruel is not moot], once the way is clear,[end if] east." instead;
-	if player is in gold gaol:
-		say "You need to look back on your experiences before leaving." instead;
+	if player is in gold gaol, say "You need to look back on your experiences before leaving." instead;
 	say "I wish I could give more information, but you can't go that way." instead;
 
 volume the player
@@ -453,7 +452,7 @@ Rule for printing a parser error (this is the check for room name in player comm
 	repeat with X running from 1 to the number of words in the player's command:
 		if the printed name of location of player matches the regular expression "(^|\W)([word number X in the player's command])($|\W)", case insensitively:
 			if word number 1 in the player's command is "xx":
-				say "It looks like you may have tried to scan the current location. You just need to say LL to do this. Would you like to do so now?[line break]";
+				say "It looks like you may have tried to scan the current location. You just need to say CC to do this. Would you like to do so now?[line break]";
 				if the player consents:
 					skip upcoming rulebook break;
 					now zap-weird-break is true;
@@ -503,7 +502,7 @@ this is the verb-checker rule:
 				if there is a core entry and idid entry is false:
 					up-which core entry;
 					if core entry is false:
-						increase lump-count by 2;
+						increase wrmm-count by 2;
 				if zap-core-entry is true:
 					blank out the core entry;
 					now zap-core-entry is false;
@@ -511,7 +510,7 @@ this is the verb-checker rule:
 				process the do-rule entry;
 				process the notify score changes rule;
 				if there is a core entry and core entry is false:
-					check-lump-progress;
+					check-wrmm-progress;
 				process the winnable-with-cheating rule;
 			process the note right guess wrong time rule;
 			the rule succeeds;
@@ -531,29 +530,29 @@ this is the verb-checker rule:
 		say "Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.";
 		the rule succeeds;
 
-chapter the lump or its replacement
+chapter wrath ravin' math maven
 
-next-lump-level is a number that varies. next-lump-level is 3.
-max-lump-delta is a number that varies. max-lump-delta is 5.
-next-lump-delta is a number that varies. next-lump-delta is 1.
-lump-count is a number that varies. lump-count is 0.
-lump-charges is a number that varies. lump-charges is 0.
-lump-uses is a number that varies. lump-uses is 0.
+next-wrmm-level is a number that varies. next-wrmm-level is 3.
+max-wrmm-delta is a number that varies. max-wrmm-delta is 5.
+next-wrmm-delta is a number that varies. next-wrmm-delta is 1.
+wrmm-count is a number that varies. wrmm-count is 0.
+wrmm-charges is a number that varies. wrmm-charges is 0.
+wrmm-uses is a number that varies. wrmm-uses is 0.
 
-to say jjj: say "JERKING JUMP (JJ)"
+to say ppp: say "PATH PAVIN (PP)"
 
-to check-lump-progress:
-	increment lump-count;
-	if lump-count >= next-lump-level:
-		say "[line break][if lurking lump is off-stage]Thwup! You hear a sound...and notice a lurking lump has fallen. Gazing at its dull shine, you realize it could help you move ahead on a tricky rhyme, at the right place at the right time, with [jjj].[paragraph break]You take the lump[else if lurking lump is moot]Thwup! A lurking lump appears again. You take it[else]The lurking lump pulses and grows. All your guesses have paid off[end if].";
-		now player has lurking lump;
-		increment lump-charges;
-		decrease lump-count by next-lump-level;
-		increase next-lump-level by next-lump-delta;
-		if next-lump-level > max-lump-delta, now next-lump-level is max-lump-delta;
+to check-wrmm-progress:
+	increment wrmm-count;
+	if wrmm-count >= next-wrmm-level:
+		say "[line break][if wrath ravin' math maven is off-stage]Thwup! You hear a sound...and notice a small humanoid something rustling in. From its esoteric babble, you deduce it is a [maven]! It resists as you pick it up, but you're too big. You realize it could help you move ahead on a tricky rhyme, at the right place at the right time, with [ppp][else if wrath ravin' math maven is moot]Zoom! The [maven] zips back near, sullenly. You pick it up[else]The [maven] howls and grows bigger. All your guesses have paid off[end if].";
+		now player has wrath ravin' math maven;
+		increment wrmm-charges;
+		decrease wrmm-count by next-wrmm-level;
+		increase next-wrmm-level by next-wrmm-delta;
+		if next-wrmm-level > max-wrmm-delta, now next-wrmm-level is max-wrmm-delta;
 		process the winnable-with-cheating rule;
 
-a lurking lump is a boring thing. description is "The lurking lump shines dully. It looks to have [lump-charges in words] charge[plur of lump-charges] for you to make a [jjj] if anything is baffling you.". bore-text of lurking lump is "You can only [jjj] with the lurking lump."
+the wrath ravin' math maven is a boring thing. description is "The wrath ravin['] math maven won't stop complaining, but it's stuck to you, and you know it is good for [ppp]--[wrmm-charges in words] charge[plur of wrmm-charges], to be precise.". bore-text of wrath ravin' math maven is "The math maven only allows for PATH PAVIN (PP)."
 
 this is the mistake-checker rule:
 	repeat through table-to-scour:
@@ -565,7 +564,7 @@ this is the mistake-checker rule:
 					process the leet-rule entry;
 					unless the rule succeeded:
 						if got-yet entry is false:
-							check-lump-progress;
+							check-wrmm-progress;
 						now got-yet entry is true;
 						the rule succeeds;
 				let d1 be -10;
@@ -577,7 +576,7 @@ this is the mistake-checker rule:
 					if d2 is -10, now d2 is d1;
 					say "[line break][leetclue of cluecheat of d1 and d2].";
 				if got-yet entry is false:
-					check-lump-progress;
+					check-wrmm-progress;
 				now got-yet entry is true;
 				the rule succeeds;
 
@@ -895,15 +894,15 @@ this is the vr-told-tale rule:
 
 [zzqqnnr]
 
-chapter jerking jump
+chapter path pavin
 
-jerkingjumping is an action applying to nothing.
+pathpavining is an action applying to nothing.
 
-understand the command "jerking jump" as something new.
-understand the command "jj" as something new.
+understand the command "path pavin" as something new.
+understand the command "pp" as something new.
 
-understand "jerking jump" as jerkingjumping.
-understand "jj" as jerkingjumping.
+understand "path pavin" as pathpavining.
+understand "pp" as pathpavining.
 
 in-jerk-jump is a truth state that varies.
 
@@ -911,16 +910,16 @@ to say firstor of (t - indexed text):
 	replace the regular expression "\|.*" in t with "";
 	say "[t in upper case]";
 
-to lump-minus:
-	decrement lump-charges;
-	say "The lurking lump shrivels[if lump-charges is 0] and vanishes. Maybe more good guesses will bring it back[one of][or] again[stopping][else], but it still looks functional[end if].";
-	if lump-charges is 0, moot lurking lump;
+to wrmm-minus:
+	decrement wrmm-charges;
+	say "The wrath ravin['] math maven groans [if wrmm-charges is 0]and struggles from your grasp and runs off. Maybe more good guesses will bring it back[one of][or] again[stopping][else], but you grip it tighter[end if].";
+	if wrmm-charges is 0, moot wrath ravin' math maven;
 	now in-jerk-jump is false;
-	increment lump-uses;
+	increment wrmm-uses;
 	process the notify score changes rule;
 
 to decide whether can-cheat-win:
-	if core-max - core-score <= lump-charges, yes;
+	if core-max - core-score <= wrmm-charges, yes;
 	no;
 
 warn-cheap-win is a truth state that varies.
@@ -928,9 +927,9 @@ warn-cheap-win is a truth state that varies.
 this is the winnable-with-cheating rule:
 	if warn-cheap-win is true, continue the action;
 	if debug-state is true:
-		say "DEBUG: remaining = [core-max - core-score], Lump charges = [lump-charges].";
+		say "DEBUG: (win-with-cheat check) remaining = [core-max - core-score], Maven charges = [wrmm-charges].";
 	if can-cheat-win:
-		say "[line break]By the way, you can now cheat your way through the game with the JJ command, if you want.";
+		say "[line break]By the way, you can now cheat your way through the game with the PP command, if you want.";
 		now warn-cheap-win is true;
 
 to decide which number is solved-jerk-check: [yeah yeah magic numbers ?? we need to fix this]
@@ -938,14 +937,14 @@ to decide which number is solved-jerk-check: [yeah yeah magic numbers ?? we need
 	if ts-tale-early is true and ts-ale-old is true and ts-kale-cold is true, decide on 2;
 	decide on 0;
 
-carry out jerkingjumping:
+carry out pathpavining:
 	if debug-state is false:
-		if lurking lump is off-stage, say "You have nothing that would help you do that." instead;
-		if lurking lump is moot, say "You used up all the lump's charges, but maybe you can get more." instead;
+		if wrath ravin' math maven is off-stage, say "You have nothing that would help you do that." instead;
+		if wrath ravin' math maven is moot, say "The [maven] ran off because you used it, but maybe good guesses will bring it back." instead;
 	else:
-		say "DEBUG: charges left in lump = [lump-charges].";
+		say "DEBUG: maven charges = [wrmm-charges].";
 	if solved-jerk-check > 0:
-		say "There's something you can do right now that you tried before, but you weren't prepared yet. If you'd still like to use the lump anyway (not recommended,) say YES.";
+		say "The wrath ravin['] math maven howls extra loud. 'Surely you don't mean to use me for this? Something you may already have figured?' It ... it's probably right. If you'd still like to use it anyway (not recommended,) say YES.";
 		unless the player yes-consents:
 			say "Okay.";
 			the rule succeeds;
@@ -957,7 +956,7 @@ carry out jerkingjumping:
 		process the ver-rule entry;
 		if the rule succeeded:
 			if core entry is false and player is not in gold gaol: [the only case is to get the sheet]
-				say "The lurking lump seems to tug you [if player is in bight bier]in the direction of the sheep sheet[else]back to the sheep shet and the Bight Bier[end if], but you may not have to. Try for it anyway?";
+				say "The [maven] seems to tug you [if player is in bight bier]in the direction of the sheep sheet[else]back to the sheep shet and the Bight Bier[end if], but you may not have to. Try for it anyway?";
 				unless the player yes-consents:
 					say "OK. It's not STRICTLY necessary. Maybe you'll figure it on your own.";
 					the rule succeeds;
@@ -969,11 +968,11 @@ carry out jerkingjumping:
 				blank out the core entry;
 				now zap-core-entry is false;
 			skip upcoming rulebook break;
-			lump-minus;
+			wrmm-minus;
 			now vc-dont-print is false;
 			the rule succeeds;
 	now vc-dont-print is false;
-	say "The lurking lump remains immovable. I guess you've done all you need, here.";
+	say "The [maven] sighs in exasperation. I guess there's nothing it can help you with, here.";
 	the rule succeeds.
 
 chapter jjjjng
@@ -985,7 +984,7 @@ understand the command "jjj" as something new.
 understand "jjj" as jjjing.
 
 carry out jjjing:
-	now lump-charges is 14;
-	say "Increasing lump charges to 14 for cheap dirty testing.";
+	now wrmm-charges is 14;
+	say "Increasing maven charges to 14 for cheap dirty testing.";
 	the rule succeeds.
 

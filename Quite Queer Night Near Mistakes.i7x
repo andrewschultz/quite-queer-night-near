@@ -40,6 +40,7 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	mist-txt
 "mink mug"	lug-nearby rule	false	4	3	--	"The Think Thug is too smart to be upset for being called a rat-face or whatever."
 "rink rug"	lug-nearby rule	false	4	3	--	"A rug would be out of place inside a roller rink or ice skating rink. Still, it was worth a try."
 "slink slug"	lug-nearby rule	false	4	3	--	"Perhaps that is a bit too drastic. Another more likable animal might work great, though."
+"hath haven"	maven-summoned rule	false	--	--	--	"[if maven is moot]The math maven already has one, for now[else]You don't want to let the maven escape. It could help you! Once you're free, you can set it free[end if]."
 "care cones"	in-stones rule	false	4	3	--	"Nothing appears to make you feel more loved. Aww." [start bare bones stair stones]
 "clayer/clare/clair clones"	in-stones rule	false	4	3	--	"No golems appear to try and build the stairs. But on the bright side, none appear from the stairs to make it tougher to go up."
 "crayer crones"	in-stones rule	false	4	3	--	"Not only is that a stretch, but it would actively hurt your quest."
@@ -61,7 +62,7 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	mist-txt
 "boar/bore bulge"	in-gore-gulch rule 	false	5	4	--	"That's a bit of a stretch, but Gore Gulch remains unstretched." [start gore gulch]
 "bold bail/bowl/bale"	in-gold-gaol rule 	false	7	5	--	"You don't have to be bold. The gaol is unguarded." [start gold gaol]
 "doled dale"	in-gold-gaol rule 	false	7	5	--	"That's a bit too archaic to be a final solution, but ... you do dream about these sorts of things in prison."
-"fold fail"	in-gold-gaol rule 	true	4	4	--	"You look at FOLD FAIL on the wall, hoping for the lump to maybe grow a bit brighter. It does not. Poor you!"
+"fold fail"	in-gold-gaol rule 	true	4	4	--	"You look at FOLD FAIL on the wall, hoping for the [maven] to get exasperated enough to spill a solution. But apparently it's good at passive-aggressiveness, too!"
 "hold hail/hale"	in-gold-gaol rule 	false	4	4	--	"There is nobody to summon, and you don't want to summon weather, either."
 "mold male/mail"	in-gold-gaol rule 	false	4	4	--	"You uncover no old letters checking on how you are. Not surprising. You've only been here a bit."
 "polled pail/pale"	in-gold-gaol rule 	false	4	4	--	"You haven't been here long enough to even want the company of a pollster."
@@ -86,7 +87,7 @@ section rules
 
 [xxqqmi]
 
-this is the creep-unbeaten rule: if creep cruel is not moot, the rule fails;
+this is the creep-unbeaten rule: if creep cruel is not moot, the rule succeeds;
 
 this is the fear-to-fight rule: if ts-fight-fear is false, the rule succeeds;
 
@@ -105,6 +106,8 @@ this is the in-peep-pool rule: if player is in peep pool, the rule succeeds;
 this is the in-stones rule: if player is in Stair Stones, the rule succeeds;
 
 this is the lug-nearby rule: if think thug is touchable, the rule succeeds;
+
+this is the maven-summoned rule: if math maven is not off-stage, the rule succeeds;
 
 this is the plates-needed rule: if master mate is not moot, the rule succeeds;
 
