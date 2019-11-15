@@ -4,8 +4,9 @@
 #-- use HHV.PY to verify ha-half
 #--
 
-files=reg-qqnn-thru-min.txt,reg-qqnn-thru-all.txt,reg-qqnn-thru-think.txt,reg-qqnn-alt-verbs.txt,reg-qqnn-thru-mistakes.txt,reg-qqnn-thru-ha-half.txt
+files=reg-qqnn-thru-min.txt,reg-qqnn-thru-all.txt,reg-qqnn-thru-think.txt,reg-qqnn-alt-verbs.txt,reg-qqnn-thru-mistakes.txt,reg-qqnn-thru-ha-half.txt,reg-qqnn-scan.txt
 ~	mis	t4
+~	cs	t5
 
 ## *FILE
 ## *FORK
@@ -15,7 +16,25 @@ TSV:## minimum walkthrough	## walkthrough with all points	## walkthrough with al
 ** game: /home/andrew/prt/debug-quite-queer-night-near.z8
 ** interpreter: /home/andrew/prt/dfrotz -m
 
+@cs
+>cs me
+You don't need to change yourself. Whew.
+>cs
+WRONG
+>cs sleep sleet
+WRONG
+>cs spite spear
+WRONG
+>cs think thug
+WRONG
+>cs sheep sheet
+WRONG
+
+
 @mis
+> bite bier
+sheep sheet
+You don't need homonyms here. Something else... something a bit more common...
 > flight fleer
 You need to get less scared, not more.
 > light leer
@@ -41,8 +60,6 @@ You take a giant step towards understanding a tricky science concept from high s
 > peep peat
 sheep sheet
 The ground around you remains hard.
-> sleep sleet
-You don't need anything raining down on you.
 > streep street
 Stalking an actress is scary, yes, but we're not going for that sort of scary.
 > sweep suite
@@ -90,6 +107,12 @@ by one point
 >bleep bleat
 by one point
 
+@mis
+> bite bier
+!sheep sheet
+You don't need homonyms here. Something else... something a bit more common...
+No extraneous leet checks.
+
 >pink pug
 by one point
 
@@ -130,9 +153,6 @@ You take a giant step towards understanding a tricky science concept from high s
 > peep peat
 !sheep sheet
 The ground around you remains hard.
-> sleep sleet
-!sheep sheet
-You don't need anything raining down on you.
 > streep street
 !sheep sheet
 Stalking an actress is scary, yes, but we're not going for that sort of scary.
@@ -144,6 +164,14 @@ Neither a favorite team's success nor drudgery will get your mind off things.
 
 >e
 Bare Bones Stair Stones
+
+@mis
+> bear bones
+!sheep sheet
+That would make for creepier ambience, but more importantly, the bear bones would make the stair stones even tougher to climb.
+> stare stones
+!sheep sheet
+Nothing appears in the stones. You/can just/have a bit more work before you/would need to repair them to/climb them.
 
 ==t0
 >u
@@ -174,6 +202,32 @@ Bringing horses into this mess would be animal cruelty.
 
 >s
 
+@cs
+>cs
+WRONG
+You refer to the sheep sheet, noticing it says
+==
+>cs steep stool
+You refer to the sheep sheet, noticing it says
+--
+>cs creep cruel
+You refer to the sheep sheet, noticing it says
+--
+
+@mis
+> jeep jewel
+sheep sheet
+The jeep would probably run over YOU.
+> reap rule
+sheep sheet
+This adventure is about surviving, not taking over.
+> deep dual
+sheep sheet
+You are very close. You don't need to make the pool deeper, but you need something else deep
+> dual deep
+sheep sheet
+You are very close. You don't need to make the pool deeper, but you need something else deep.
+
 ==t2
 >keep cool
 !by one point
@@ -183,12 +237,30 @@ KEEP COOL
 >deep duel
 by one point
 
+@mis
+>deep dual
+Summoning the creep (cruel) was enough.
+>dual deep
+Summoning the creep (cruel) was enough.
+
 >keep cool
 by one point
+
+@mis
+> jeep jewel
+!sheep sheet
+The jeep would probably run over YOU.
+> reap rule
+!sheep sheet
+This adventure is about surviving, not taking over.
 
 >e
 
 Gore Gulch
+
+@cs
+>cs
+You refer to the sheep sheet, noticing it says Gore Gulch goes to ==.
 
 @mis
 > boar bulge
@@ -206,6 +278,27 @@ The stones are almost climbable but still too risky. You need to do a bit more.
 >n
 
 Dark Dump
+
+@cs
+>cs
+You refer to the sheep sheet, noticing it says Dark Dump goes to ??
+
+@cs
+>stark stump
+>cs
+You refer to the sheep sheet, noticing it says Dark Dump goes to ==
+>undo
+>undo
+>park pump
+>cs
+You refer to the sheep sheet, noticing it says Dark Dump goes to ??
+>stark stump
+>cs
+You refer to the sheep sheet, noticing it says Dark Dump goes to ==
+>undo
+>undo
+>undo
+>undo
 
 @mis
 > clark clump
@@ -226,11 +319,23 @@ by one point
 >bark bump
 by one point
 
+@cs
+>cs
+You refer to the sheep sheet, noticing it says Dark Dump goes to ??.
+
 >stark stump
 by one point
 
+@cs
+>cs
+You refer to the sheep sheet, noticing it says Dark Dump goes to ==.
+
 >park pump
 by one point
+
+@cs
+>cs
+You can't find any information on the cheap cheat sheep sheet about Dark Dump. Must not need changing.
 
 >e
 
@@ -248,10 +353,18 @@ A good try, if un-grammatical. But you already have lasted, and you don't want y
 sheep sheet
 Your text adventure remains totally texty.
 
+@cs
+>cs
+You refer to the sheep sheet, noticing it says Gaster Gate goes to ++.
+
 >plaster plate
 by one point
 Lair 'Lone's Stair Stones
 The gunky material flowing back to Bare Bones Stair Stones is icky, but it will help patch them up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
+
+@cs
+>cs
+You can't find any information on the cheap cheat sheep sheet about Gaster Gate. Must not need changing.
 
 @mis
 > faster fate
@@ -317,11 +430,33 @@ TOLD TALE
 >undo
 >undo
 
+@mis
+> gold gale
+sheep sheet
+You can't change the gaol. You can escape easily enough. You just need to figure how, comfortably.
+
+@cs
+>cs
+You refer to the sheep sheet, noticing it says Gold Gaol goes to ??.
+>cold kale
+>cs
+You refer to the sheep sheet, noticing it says Gold Gaol goes to ??.
+>undo
+>undo
+
 >old ale
 by one point
 
+@cs
+>cs
+You refer to the sheep sheet, noticing it says Gold Gaol goes to ==.
+
 >cold kale
 by one point
+
+@cs
+>cs
+You refer to the sheep sheet, noticing it says Gold Gaol goes to ==.
 
 >told tale
 by one point

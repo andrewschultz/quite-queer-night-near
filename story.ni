@@ -195,7 +195,7 @@ check going nowhere:
 	if player is in gaster gate or player is in gore gulch, say "The only way is west." instead;
 	if player is in stair stones, say "You can only go north, south or west[if stone-filler is 2]. And up. You probably want to go up[else]. And you can try to go up[end if]." instead;
 	if player is in stark stump, say "You can only go east or south." instead;
-	if player is in peep pool, say "You can only go north or[if creep cruel is not moot], once the way is clear, [end if]east." instead;
+	if player is in peep pool, say "You can only go north or[if creep cruel is not moot], once the way is clear,[end if] east." instead;
 	if player is in gold gaol:
 		say "You need to look back on your experiences before leaving." instead;
 	say "I wish I could give more information, but you can't go that way." instead;
@@ -256,11 +256,11 @@ carry out csing:
 
 section sleep sleet
 
-the sleep sleet is boring scenery in Blight Blear Bight Bier. cht of sleep sleet is letminus. "The sleep sleet hails down all around the cheap cheat sheep sheet. Just one more obstacle against taking it. The cold is probably too much. How could you dispel that?". bore-text is "Standard actions won't get rid of the sleet and let you take the sheet.". cht of sleep sleet is letminus. [->heap heat]
+the sleep sleet is boring scenery in Blight Blear Bight Bier. cht of sleep sleet is letminus. "The sleep sleet hails down all around the cheap cheat sheep sheet. Just one more obstacle against taking it. The cold is probably too much. How could you dispel that?". bore-text is "Standard actions won't get rid of the sleet and let you take the sheet.". [->heap heat]
 
 section spite spear
 
-the spite spear is boring scenery in Blight Blear Bight Bier. "It's too far away to see in detail, but you don't need to. It reminds you of people you were scared would hit or insult you, who knew how to string that out.". bore-text is "You may need to take care of your own emotions to get rid of the spite spear.". cht of spite spear is letminus.
+the spite spear is boring scenery in Blight Blear Bight Bier. "It's too far away to see in detail, but you don't need to. It reminds you of people you were scared would hit or insult you, who knew how to string that out.". bore-text is "You may need to take care of your own emotions to get rid of the spite spear.". cht of spite spear is partminus. [-> fight fear]
 
 section DDTT
 
@@ -594,7 +594,7 @@ to say leetclue of (x - a cheattype):
 	if sheep sheet is not touchable, continue the action;
 	say "You refer to the sheep sheet, noticing it says [if noun is nothing]your effort[else][the noun][end if] goes to [scancol of x]";
 
-to say scancol of (x - a cheattype): say "[if x is letplus]++[else if x is partplus]+=/=+[else if x is leteq]==[else if x is partminus]-=/=-[else if x is letminus]--[else if x is letboth]+-/-+[else if x is phbt]00[else if x is allover]??[else]BUG[end if]"
+to say scancol of (x - a cheattype): say "[if x is letplus]++[else if x is partplus]+=/=+[else if x is leteq]==[else if x is partminus]-=/=-[else if x is letminus]--[else if x is letboth]+-/-+[else if x is phbt]00[else if x is allover]??[no line break][else]BUG[end if]"
 
 chapter thinking
 
