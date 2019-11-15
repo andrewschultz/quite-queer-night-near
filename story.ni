@@ -70,7 +70,7 @@ to decide whether the action is procedural:
 	if examining, yes;
 	[if reading, yes;]
 	[if hintobjing, yes;]
-	[if lling, yes;]
+	if csing, yes;
 	if thinking, yes;
 	if jerkingjumping, yes;
 	no;
@@ -191,8 +191,8 @@ check taking:
 report taking sheep sheet: max-down;
 
 check going nowhere:
-	if player is in bight bier, say "The only way is east.";
-	if player is in gaster gate or player is in gore gulch, say "The only way is west.";
+	if player is in bight bier, say "The only way is east." instead;
+	if player is in gaster gate or player is in gore gulch, say "The only way is west." instead;
 	if player is in stair stones, say "You can only go north, south or west[if stone-filler is 2]. And up. You probably want to go up[else]. And you can try to go up[end if]." instead;
 	if player is in stark stump, say "You can only go east or south." instead;
 	if player is in peep pool, say "You can only go north or[if creep cruel is not moot], once the way is clear, [end if]east." instead;
@@ -217,7 +217,42 @@ section sheep sheet
 check examining the sheep sheet for the first time:
 	if player does not have sheep sheet, say "It claims to be a SHEEP SHEET because only sheeple use hints. This reminds you of all the times you were scared to ask for help, which is pretty scary. Not, like, mortally. But it's lasted.[line break]";
 
-the cheap cheat sheep sheet is a thing in Blight Blear Bight Bier. cht of sheep sheet is letminus. "A cheap cheat sheep sheet lies here, sort of daring you to take it. It's obscured by sleep sleet.". description of sheep sheet is "It has information on--well, most everything you see here. XX any item for particular information. I guess it's a sheep sheet because you still feel sheepish looking at it, no matter how many times you have, and also I feel sheepish for such a silly name.". [->heap heat]
+the cheap cheat sheep sheet is a thing in Blight Blear Bight Bier. cht of sheep sheet is letminus. "A cheap cheat sheep sheet lies here, sort of daring you to take it. It's obscured by sleep sleet.". description of sheep sheet is "It has information on--well, most everything you see here. XX any item for particular information. I guess it's a sheep sheet because you still feel sheepish looking at it, no matter how many times you have, and also I feel sheepish for such a silly name. You can CC, SS, CCSS or CS anything to see cheating information.". [->heap heat]
+
+section ccsscs
+
+csing is an action applying to one thing.
+
+understand the command "cc" as something new.
+understand the command "ss" as something new.
+understand the command "ccss" as something new.
+understand the command "cs" as something new.
+
+understand "cc [thing]" as csing.
+understand "cs [thing]" as csing.
+understand "ss [thing]" as csing.
+understand "ccss [thing]" as csing.
+
+understand "cc" as csing.
+understand "cs" as csing.
+understand "ss" as csing.
+understand "ccss" as csing.
+
+rule for supplying a missing noun when csing:
+	if cheap cheat sheep sheet is touchable:
+		say "You consult [the sheet] about the general area...";
+		now the noun is the location of the player;
+	else:
+		say "You can't make any sense of the general area without [the sheet].";
+		reject the player's command;
+	continue the action;
+
+carry out csing:
+	if cheap cheat sheep sheet is not touchable, say "You'd like to, but [the sheet] isn't around. [if player is in gaol]There's no way to get it, but you made it this far[else]Nothing's stopping you from going back, though[end if]." instead;
+	if noun is the player, say "You don't need to change yourself. Whew." instead;
+	if cht of noun is phbt, say "You can't find any information on [the sheet] about [the noun]. Must not need changing." instead;
+	say "[leetclue of cht of noun].";
+	the rule succeeds;
 
 section sleep sleet
 
@@ -736,6 +771,7 @@ this is the vr-fight-fear rule:
 	say "You do your best to feel braver. It works, well enough! The Drink Drug Think Thug seems a bit less tough now, and what do you know? The spite spear vanishes, too!";
 	now ts-fight-fear is true;
 	moot spite spear;
+	phbt bight bier;
 
 this is the vc-heap-heat rule:
 	if sheep sheet is off-stage, the rule fails;
@@ -749,6 +785,7 @@ this is the vr-heap-heat rule:
 	say "You [if Q is true]let go some grawlix-heavy invective, and it gives you enough of a boost to deal with the sleep sleet in order to pull out the cheap cheat[else]rub your hands together for warmth, blow on the sheet, and so on[end if]. And what do you know? It stays less frigid after you pick it up. It'd still be technically functional at any temperature, but small victories.";
 	now player has sheep sheet;
 	moot sleep sleet;
+	phbt sheep sheet;
 
 this is the vc-keep-cool rule:
 	if player is not in peep pool or creep cruel is moot, the rule fails;
@@ -920,7 +957,7 @@ carry out jerkingjumping:
 		process the ver-rule entry;
 		if the rule succeeded:
 			if core entry is false and player is not in gold gaol: [the only case is to get the sheet]
-				say "The lurking lump seems to tug you [if player is in bight bear]in the direction of the sheep sheet[else]back to the sheep shet and the Bight Bier[end if], but you may not have to. Try for it anyway?";
+				say "The lurking lump seems to tug you [if player is in bight bier]in the direction of the sheep sheet[else]back to the sheep shet and the Bight Bier[end if], but you may not have to. Try for it anyway?";
 				unless the player yes-consents:
 					say "OK. It's not STRICTLY necessary. Maybe you'll figure it on your own.";
 					the rule succeeds;
