@@ -1,0 +1,382 @@
+#-- reg-mistake-odd-calc.txt
+#-- calculating odd mistake stuff, like how and when you get a bonus
+#--
+
+>score
+DEBUG: 0 lump count.
+>light leer
+DEBUG: 1 lump count.
+>height here
+DEBUG: 2 lump count.
+>right rear
+Thwup! You hear a sound...and notice a lurking lump has fallen. Gazing at its dull shine, you realize it could help you move ahead on a tricky rhyme, at the right place at the right time, with JERKING JUMP (JJ).
+
+>score
+Lump charges = 1.
+
+>sight seer
+WRONG
+
+>white wier
+>tight tier
+DEBUG: 3 lump count.
+>shite sheer
+The lurking lump pulses and grows. All your guesses have paid off.
+
+
+@mis
+> bite bier
+sheep sheet
+You don't need homonyms here. Something else... something a bit more common...
+> flight fleer
+You need to get less scared, not more.
+> light leer
+No, facial expressions aren't enough, here. Especially expressions of contempt.
+> height here
+How physically low or high you are isn't important. It's the mental bit.
+> right rear
+You are right in the rear, but you need to move on.
+> shite sheer
+Getting mad doesn't necessarily help here.
+> sight seer
+Yes, you're a sight seer.
+> white wier
+No fence appears.
+> tight tier
+You think up all the formal and informal meanings of the word tight, but nothing pops up.
+> beep beat
+You imagine an eternity spent listening to funky techno music. Scary!
+> creep crete
+You fail to hyperwarp across the Mediterranean.
+> leap leet
+You take a giant step towards understanding a tricky science concept from high school.
+> peep peat
+sheep sheet
+The ground around you remains hard.
+> streep street
+Stalking an actress is scary, yes, but we're not going for that sort of scary.
+> sweep suite
+Neither a favorite team's success nor drudgery will get your mind off things.
+> weep wheat
+The ground remains unarable.
+> fink fug
+sheep sheet
+No fog carries the Drink Drug Think Thug away or even makes it wimpier.
+> link lug
+sheep sheet
+You need to make the thug much less intimidating.
+> mink mug
+sheep sheet
+The Think Thug is too smart to be upset for being called a rat-face or whatever.
+> rink rug
+sheep sheet
+A rug would be out of place inside a roller rink or ice skating rink. Still, it was worth a try.
+> slink slug
+sheep sheet
+Perhaps that is a bit too drastic. Another more likable animal might work great, though.
+
+==t2
+>pink pug
+!by one point
+>think
+PINK PUG
+
+==t3
+>z
+>fright freer
+by one point
+>undo
+
+>fight fear
+by one point
+
+==t!0
+>heap heat
+by one point
+
+==t3
+>z
+>undo
+>bleep bleat
+by one point
+
+@mis
+> bite bier
+!sheep sheet
+You don't need homonyms here. Something else... something a bit more common...
+No extraneous leet checks.
+
+>pink pug
+by one point
+
+@mis
+> flight fleer
+!sheep sheet
+You need to get less scared, not more.
+> light leer
+!sheep sheet
+No, facial expressions aren't enough, here. Especially expressions of contempt.
+> height here
+!sheep sheet
+How physically low or high you are isn't important. It's the mental bit.
+> right rear
+!sheep sheet
+You are right in the rear, but you need to move on.
+> shite sheer
+!sheep sheet
+Getting mad doesn't necessarily help here.
+> sight seer
+!sheep sheet
+Yes, you're a sight seer.
+> white wier
+!sheep sheet
+No fence appears.
+> tight tier
+!sheep sheet
+You think up all the formal and informal meanings of the word tight, but nothing pops up.
+> beep beat
+!sheep sheet
+You imagine an eternity spent listening to funky techno music. Scary!
+> creep crete
+!sheep sheet
+You fail to hyperwarp across the Mediterranean.
+> leap leet
+!sheep sheet
+You take a giant step towards understanding a tricky science concept from high school.
+> peep peat
+!sheep sheet
+The ground around you remains hard.
+> streep street
+!sheep sheet
+Stalking an actress is scary, yes, but we're not going for that sort of scary.
+> sweep suite
+!sheep sheet
+Neither a favorite team's success nor drudgery will get your mind off things.
+> weep wheat
+!sheep sheet
+
+>e
+Bare Bones Stair Stones
+
+@mis
+> bear bones
+!sheep sheet
+That would make for creepier ambience, but more importantly, the bear bones would make the stair stones even tougher to climb.
+> stare stones
+!sheep sheet
+Nothing appears in the stones. You/can just/have a bit more work before you/would need to repair them to/climb them.
+
+==t0
+>u
+The stones are nowhere near in climbable condition yet.
+
+@mis
+> care cones
+sheep sheet
+Nothing appears to make you feel more loved. Aww.
+> crayer crones
+sheep sheet
+Not only is that a stretch, but it would actively hurt your quest.
+> fair phones
+sheep sheet
+You have no outside communication here.
+> grayer grones
+sheep sheet
+A little more atmosphere doesn't help, but it doesn't hurt, either.
+> scare scones
+sheep sheet
+Spooky food is a creative idea here, but maybe not a practical one.
+> mare moans
+sheep sheet
+Horses whinny in the distance.
+> rare roans
+sheep sheet
+Bringing horses into this mess would be animal cruelty.
+
+>s
+
+@mis
+> jeep jewel
+sheep sheet
+The jeep would probably run over YOU.
+> reap rule
+sheep sheet
+This adventure is about surviving, not taking over.
+> deep dual
+sheep sheet
+You are very close. You don't need to make the pool deeper, but you need something else deep
+> dual deep
+sheep sheet
+You are very close. You don't need to make the pool deeper, but you need something else deep.
+
+==t2
+>keep cool
+!by one point
+>think
+KEEP COOL
+
+>deep duel
+by one point
+
+@mis
+>deep dual
+Summoning the creep (cruel) was enough.
+>dual deep
+Summoning the creep (cruel) was enough.
+
+>keep cool
+by one point
+
+@mis
+> jeep jewel
+!sheep sheet
+The jeep would probably run over YOU.
+> reap rule
+!sheep sheet
+This adventure is about surviving, not taking over.
+
+>e
+
+Gore Gulch
+
+@mis
+> boar bulge
+sheep sheet
+That's a bit of a stretch, but Gore Gulch remains unstretched.
+
+>more mulch
+by one point
+/^Stair Stones
+The gunky material flowing back to Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
+
+>u
+The stones are almost climbable but still too risky. You need to do a bit more.
+
+>n
+
+Dark Dump
+
+@mis
+> clark clump
+sheep sheet
+Clark Griswold does not appear in a heap.
+> lark lump
+sheep sheet
+Eww, dead birds?
+> mark mump
+sheep sheet
+You don't want half a sickness, even a temporary one.
+
+==t3
+>hark hump
+by one point
+>undo
+
+>bark bump
+by one point
+
+>stark stump
+by one point
+
+>park pump
+by one point
+
+>e
+
+@mis
+> faster fate
+sheep sheet
+But that might mean a faster BAD fate as well as a good one.
+> hastur hate
+sheep sheet
+Oh no. You don't need to make things worse.
+> laster late
+sheep sheet
+A good try, if un-grammatical. But you already have lasted, and you don't want your obstacles to last.
+> raster rate
+sheep sheet
+Your text adventure remains totally texty.
+
+>plaster plate
+by one point
+Lair 'Lone's Stair Stones
+The gunky material flowing back to Bare Bones Stair Stones is icky, but it will help patch them up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
+
+@mis
+> faster fate
+!sheep sheet
+But that might mean a faster BAD fate as well as a good one.
+> hastur hate
+!sheep sheet
+Oh no. You don't need to make things worse.
+> laster late
+!sheep sheet
+A good try, if un-grammatical. But you already have lasted, and you don't want your obstacles to last.
+> raster rate
+!sheep sheet
+Your text adventure remains totally texty.
+
+>u
+Gold Gaol
+
+@mis
+> bold bail
+sheep sheet
+You don't have to be bold. The gaol is unguarded.
+> doled dale
+sheep sheet
+That's a bit too archaic to be a final solution, but ... you do dream about these sorts of things in prison.
+> fold fail
+sheep sheet
+You look at FOLD FAIL on the wall, hoping for the lump to maybe grow a bit brighter. It does not. Poor you!
+> hold hail
+sheep sheet
+There is nobody to summon, and you don't want to summon weather, either.
+> mold male
+sheep sheet
+You uncover no old letters checking on how you are. Not surprising. You've only been here a bit.
+> polled pail
+sheep sheet
+You haven't been here long enough to even want the company of a pollster.
+> scold scale
+sheep sheet
+The scold scale is probably something you get BEFORE you are sent to prison.
+> sold sail
+sheep sheet
+You don't have to buy anything. You don't want to.
+> swolled swale
+sheep sheet
+The gold gaol cannot change THAT drastically.
+> trolled trail
+sheep sheet
+You will have to make your own trail out. Make it enough yours, you could recount it to others.
+> wold wail
+sheep sheet
+Nothing too drastic, here.
+
+==t2
+>told tale
+!by one point
+>think
+TOLD TALE
+>cold kale
+>think
+once
+TOLD TALE
+>undo
+>undo
+
+@mis
+> gold gale
+sheep sheet
+You can't change the gaol. You can escape easily enough. You just need to figure how, comfortably.
+
+>old ale
+by one point
+
+>cold kale
+by one point
+
+>told tale
+by one point
+
