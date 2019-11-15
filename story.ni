@@ -88,6 +88,11 @@ check requesting the score:
 	say "You have [score] out of [min-needed] points needed to win the game[if max-poss > min-needed], but there's a bonus point[end if].";
 	if can-cheat-win, say "[line break]You can, if you want, jump all the way to the end to win with PP.";
 	if debug-state is true, say "DEBUG: [wrmm-count] maven next-charge count.";
+	if math maven is not off-stage:
+		let X be still-guess of table of homonym rejections;
+		let Y be still-guess of table of mistake substitutions;
+		let total-guesses be number of rows in table of homonym rejections + number of rows in table of mistake substitutions - 1; [we could run a loop to see what starts as "true" but it's not worth it to me. Only FOLD FAIL starts that way.]
+		say "You have made [wrmm-total] good guesses so far. You can still access [X + Y] of [total-guesses] good guesses.";
 [	if debug-state is true:
 		showme ts-bump-bark;
 		showme ts-pump-park;
@@ -95,6 +100,16 @@ check requesting the score:
 		showme ts-plaster-plate;
 		showme ts-mulch-more;]
 	the rule succeeds;
+
+to decide which number is still-guess of (ta - a table name):
+	let temp be 0;
+	repeat through ta:
+		if got-yet entry is false:
+			if there is a still-rule entry:
+				process the still-rule entry;
+				unless the rule succeeded, next;
+			increment temp;
+	decide on temp;
 
 to moot (x - a thing): move x to Gazy Gap;
 
@@ -502,7 +517,7 @@ this is the verb-checker rule:
 				if there is a core entry and idid entry is false:
 					up-which core entry;
 					if core entry is false:
-						increase wrmm-count by 2;
+						increase wrmm-count by 2; [don't increase wrmm-total as a LLP is not a good guess]
 				if zap-core-entry is true:
 					blank out the core entry;
 					now zap-core-entry is false;
@@ -536,6 +551,7 @@ next-wrmm-level is a number that varies. next-wrmm-level is 3.
 max-wrmm-delta is a number that varies. max-wrmm-delta is 5.
 next-wrmm-delta is a number that varies. next-wrmm-delta is 1.
 wrmm-count is a number that varies. wrmm-count is 0.
+wrmm-total is a number that varies. wrmm-total is 0.
 wrmm-charges is a number that varies. wrmm-charges is 0.
 wrmm-uses is a number that varies. wrmm-uses is 0.
 
@@ -543,6 +559,7 @@ to say ppp: say "PATH PAVIN (PP)"
 
 to check-wrmm-progress:
 	increment wrmm-count;
+	increment wrmm-total;
 	if wrmm-count >= next-wrmm-level:
 		say "[line break][if wrath ravin' math maven is off-stage]Thwup! You hear a sound...and notice a small humanoid something rustling in. From its esoteric babble, you deduce it is a [maven]! It resists as you pick it up, but you're too big. You realize it could help you move ahead on a tricky rhyme, at the right place at the right time, with [ppp][else if wrath ravin' math maven is moot]Zoom! The [maven] zips back near, sullenly. You pick it up[else]The [maven] howls and grows bigger. All your guesses have paid off[end if].";
 		now player has wrath ravin' math maven;
