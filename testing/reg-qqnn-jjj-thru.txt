@@ -1,0 +1,46 @@
+#-- reg-qqnn-jjj-thru.txt
+#-- Jerking Jump through
+
+>jjj
+
+>jj
+one point
+
+>jj
+one point
+
+>jj
+The lurking lump seems to tug you in the direction of the sheep sheet, but you may not have to. Try for it anyway?
+
+>e
+
+>jj
+
+>n
+>jj
+one point
+>jj
+one point
+>jj
+one point
+>e
+>jj
+one point
+
+>s
+>jj
+one point
+>jj
+one point
+>e
+>jj
+one point
+>w
+>n
+>u
+>jj
+one point
+>jj
+one point
+>jj
+one point
