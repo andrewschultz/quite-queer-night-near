@@ -9,20 +9,29 @@ DEBUG: 1 lump count.
 >height here
 DEBUG: 2 lump count.
 >right rear
-Thwup! You hear a sound...and notice a lurking lump has fallen. Gazing at its dull shine, you realize it could help you move ahead on a tricky rhyme, at the right place at the right time, with JERKING JUMP (JJ).
+Thwup! You hear a sound...and notice a small humanoid something rustling in. From its esoteric babble, you deduce it is a wrath ravin' math maven! It resists as you pick it up, but you're too big. You realize it could help you move ahead on a tricky rhyme, at the right place at the right time, with PATH PAVIN (PP).
+
+>z
+>sight seer
+WRONG
+>white wier
+WRONG
+>tight tier
+WRONG
+>pp
+>hath haven
+The math maven already has one, for now
+>shite sheer
+Zoom! The wrath ravin' math maven zips back near, sullenly. You pick it up.
+>undo
+>undo
+>undo
 
 >score
 Lump charges = 1.
 
->sight seer
-WRONG
-
->white wier
->tight tier
-DEBUG: 3 lump count.
 >shite sheer
-The lurking lump pulses and grows. All your guesses have paid off.
-
+The wrath ravin' math maven howls and grows bigger. All your guesses have paid off.
 
 @mis
 > bite bier

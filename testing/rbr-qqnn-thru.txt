@@ -30,8 +30,25 @@ WRONG
 >cs sheep sheet
 WRONG
 
-
 @mis
+> kite keyer
+sheep sheet
+You don't need the risk of getting zapped by electricity, too.
+> might mere
+sheep sheet
+You'd still be scared, reducing your antagonist's strength. You'd be scared of even losing to them. What can you do to stop being scared?
+> skite skier
+sheep sheet
+Too archaic, and you would gain no joy seeing someone else mess up.
+> plight pleaer
+sheep sheet
+Seeing someone else scared and begging won't help you.
+> sprite spreer
+sheep sheet
+Chugging pop will not help in your present circumstances.
+> trite treer
+sheep sheet
+You don't need anything to be chasing you up a tree, hackneyed or otherwise.
 > bite bier
 sheep sheet
 You don't need homonyms here. Something else... something a bit more common...
@@ -66,6 +83,27 @@ Stalking an actress is scary, yes, but we're not going for that sort of scary.
 Neither a favorite team's success nor drudgery will get your mind off things.
 > weep wheat
 The ground remains unarable.
+> meep meat
+sheep sheet
+No roadrunner whizzes by, and neither does a devious, planning coyote.
+> deep deet
+sheep sheet
+Details will pop up on the sheep sheet as you need them.
+> neep neat
+sheep sheet
+You see no turnip turn up.
+> seep seat
+sheep sheet
+What on earth would you do with a leaky chair?
+> hath haven
+!sheep sheet
+You don't want to let the maven escape. It could help you! Once you're free, you can set it free/.
+> chink chug
+sheep sheet
+The Drink Drug Think Thug is too large to disappear through any crack. You're too large to escape
+> jink jug
+sheep sheet
+No liquid container to help your dexterity appears. Oh, well. It might've jinked YOU, anyway.
 > fink fug
 sheep sheet
 No fog carries the Drink Drug Think Thug away or even makes it wimpier.
@@ -117,6 +155,36 @@ No extraneous leet checks.
 by one point
 
 @mis
+> kite keyer
+!sheep sheet
+You don't need the risk of getting zapped by electricity, too.
+> might mere
+!sheep sheet
+You'd still be scared, reducing your antagonist's strength. You'd be scared of even losing to them. What can you do to stop being scared?
+> skite skier
+!sheep sheet
+Too archaic, and you would gain no joy seeing someone else mess up.
+> plight pleaer
+!sheep sheet
+Seeing someone else scared and begging won't help you.
+> sprite spreer
+!sheep sheet
+Chugging pop will not help in your present circumstances.
+> trite treer
+!sheep sheet
+You don't need anything to be chasing you up a tree, hackneyed or otherwise.
+> meep meat
+!sheep sheet
+No roadrunner whizzes by, and neither does a devious, planning coyote.
+> deep deet
+!sheep sheet
+Details will pop up on the sheep sheet as you need them.
+> neep neat
+!sheep sheet
+You see no turnip turn up.
+> seep seat
+!sheep sheet
+What on earth would you do with a leaky chair?
 > flight fleer
 !sheep sheet
 You need to get less scared, not more.
@@ -172,6 +240,18 @@ That would make for creepier ambience, but more importantly, the bear bones woul
 > stare stones
 !sheep sheet
 Nothing appears in the stones. You/can just/have a bit more work before you/would need to repair them to/climb them.
+> clayer clones
+sheep sheet
+No golems appear to try and build the stairs. But on the bright side, none appear from the stairs to make it tougher to go up.
+> hair hones
+sheep sheet
+This is no time for follicular or lagomorphic care!
+> jer jones
+sheep sheet
+The owner of the Dallas Cowboys is nightmarish in his own way, though yes, it might be fun to stick him in a nightmare.
+> tare tones
+sheep sheet
+No more scary noises than needed, please.
 
 ==t0
 >u
@@ -384,6 +464,9 @@ Your text adventure remains totally texty.
 Gold Gaol
 
 @mis
+> rolled rail
+sheep sheet
+You don't need assistance getting out. Or a need to rail verbally.
 > bold bail
 sheep sheet
 You don't have to be bold. The gaol is unguarded.
