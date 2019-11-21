@@ -518,11 +518,11 @@ this is the verb-checker rule:
 					up-which core entry;
 					if core entry is false:
 						increase wrmm-count by 2; [don't increase wrmm-total as a LLP is not a good guess]
+				process the do-rule entry;
 				if zap-core-entry is true:
 					blank out the core entry;
 					now zap-core-entry is false;
 				now idid entry is true;
-				process the do-rule entry;
 				process the notify score changes rule;
 				if there is a core entry and core entry is false:
 					check-wrmm-progress;
