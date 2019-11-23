@@ -4,7 +4,7 @@ volume variables and stuff
 
 the story headline is "Hokey Haunts, Jokey Jaunts".
 
-the release number is 1.
+the release number is 2.
 
 release along with a website.
 
@@ -24,8 +24,7 @@ The print final score rule is not listed in for printing the player's obituary.
 
 cheattype is a kind of value. the cheattypes are phbt, letplus, letminus, partplus, partminus, leteq, letboth, and allover.
 
-to phbt (x - a thing):
-	now cht of x is phbt;
+to phbt (x - a thing): now cht of x is phbt;
 
 to phbt (x - a room): now cht of x is phbt;
 
@@ -154,12 +153,15 @@ to max-down: decrement max-poss;
 
 chapter verb carnage
 
+[xxqqcarn]
+
 understand the command "attach" as something new.
 understand the command "buy" as something new.
 understand the command "chop" as something new.
 understand the command "crack" as something new.
 understand the command "embrace" as something new.
 understand the command "fight" as something new.
+understand the command "hold" as something new.
 understand the command "hop" as something new.
 understand the command "hug" as something new.
 understand the command "insert" as something new.
@@ -172,6 +174,7 @@ understand the command "polish" as something new.
 understand the command "prune" as something new.
 understand the command "punch" as something new.
 understand the command "purchase" as something new.
+understand the command "say" as something new.
 understand the command "scrub" as something new.
 understand the command "shine" as something new.
 understand the command "sip" as something new.
@@ -191,6 +194,8 @@ understand the command "touch" as something new.
 understand the command "wave" as something new.
 understand the command "wipe" as something new.
 understand the command "wreck" as something new.
+
+[zzqqcarn]
 
 volume verby stuff
 
@@ -213,6 +218,10 @@ check going nowhere:
 	if player is in peep pool, say "You can only go north or[if creep cruel is not moot], once the way is clear,[end if] east." instead;
 	if player is in gold gaol, say "You need to look back on your experiences before leaving." instead;
 	say "I wish I could give more information, but you can't go that way." instead;
+
+volume adding verbs
+
+check attacking: say "The game is not called row-right-now night!" instead;
 
 volume the player
 
@@ -263,6 +272,9 @@ rule for supplying a missing noun when csing:
 
 carry out csing:
 	if cheap cheat sheep sheet is not touchable, say "You'd like to, but [the sheet] isn't around. [if player is in gaol]There's no way to get it, but you made it this far[else]Nothing's stopping you from going back, though[end if]." instead;
+	if noun is sheep sheet:
+		if player has sheep sheet, say "You can't really consult the sheet about itself." instead;
+		say "The sheep sheet shimmers vaguely. You suspect you can just take it, but getting it right would give a style point." instead;
 	if noun is the player, say "You don't need to change yourself. Whew." instead;
 	if cht of noun is phbt, say "You can't find any information on [the sheet] about [the noun]. Must not need changing." instead;
 	say "[leetclue of cht of noun].";
@@ -386,28 +398,6 @@ Gazy Gap is a room.
 
 volume the whole special verb thing
 
-chapter LLing
-
-xxing is an action applying to one thing.
-
-understand the command "xx" as something new.
-
-understand "xx [thing]" as xxing.
-understand "xx" as xxing.
-
-rule for supplying a missing noun when xxing:
-	say "You consult the sheet about [location of player]...";
-	now the noun is the location of the player;
-	continue the action;
-
-carry out xxing:
-	if sheep sheet is not touchable, say "You can't figure anything out. Maybe having that sheet would help." instead;
-	if noun is sheep sheet:
-		if player has sheep sheet, say "You can't really consult the sheet about itself." instead;
-		say "The sheep sheet shimmers vaguely. You suspect you can just take it, but getting it right would give a style point." instead;
-	if cht of noun is phbt, say "You see nothing when you look closely at [the noun][if noun is a room], so there's nothing you need to do with the room title[end if]." instead;
-	say "[leetclue of cht of noun].";
-
 chapter abouting
 
 abouting is an action applying to nothing.
@@ -471,7 +461,7 @@ Rule for printing a parser error (this is the check for room name in player comm
 				if the player consents:
 					skip upcoming rulebook break;
 					now zap-weird-break is true;
-					try xxing location of player;
+					try csing location of player;
 					now zap-weird-break is false;
 					the rule succeeds;
 				say "Okay. ";
@@ -518,11 +508,11 @@ this is the verb-checker rule:
 					up-which core entry;
 					if core entry is false:
 						increase wrmm-count by 2; [don't increase wrmm-total as a LLP is not a good guess]
+				now idid entry is true;
 				process the do-rule entry;
 				if zap-core-entry is true:
 					blank out the core entry;
 					now zap-core-entry is false;
-				now idid entry is true;
 				process the notify score changes rule;
 				if there is a core entry and core entry is false:
 					check-wrmm-progress;
@@ -539,7 +529,7 @@ this is the verb-checker rule:
 			now vc-dont-print is false;
 			if already-rhymed-this is true, break;
 			now local-ha-half is true;
-			if debug-state is true, say "DEBUG: [ver-rule entry] tipped off the HA HALF button.";
+			if debug-state is true, say "DEBUG: [ver-rule entry] tipped off half-body tingling.";
 			next;
 	if local-ha-half is true:
 		say "Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.";
@@ -568,6 +558,7 @@ to check-wrmm-progress:
 		increase next-wrmm-level by next-wrmm-delta;
 		if next-wrmm-level > max-wrmm-delta, now next-wrmm-level is max-wrmm-delta;
 		process the winnable-with-cheating rule;
+		if debug-state is true, say "DEBUG: [wrmm-count] maven count, [wrmm-charges] maven charges.";
 
 the wrath ravin' math maven is a boring thing. description is "The wrath ravin['] math maven won't stop complaining, but it's stuck to you, and you know it is good for [ppp]--[wrmm-charges in words] charge[plur of wrmm-charges], to be precise.". bore-text of wrath ravin' math maven is "The math maven only allows for PATH PAVIN (PP)."
 
@@ -687,7 +678,10 @@ already-rhymed-this is a truth state that varies.
 
 vc-dont-print is a truth state that varies.
 
-to vcal (t - text): [verb conditional print, flag already rhymed]
+to vcp (t - text): [verb conditional print]
+	if vc-dont-print is false, say "[t][line break]";
+
+to vcal (t - text): [verb conditional print, flag already rhymed e.g. if HEAP HEAT and then try it again]
 	now already-rhymed-this is true;
 	if vc-dont-print is false, say "[t][line break]";
 
@@ -742,7 +736,7 @@ section rules to sort
 this is the vc-bark-bump rule:
 	if player is not in dark dump, the rule fails;
 	if ts-bump-bark is true:
-		vcal "You already did that.";
+		vcal "That's already here.";
 		continue the action;
 	the rule succeeds;
 
@@ -804,11 +798,14 @@ this is the vr-heap-heat rule:
 	phbt sheep sheet;
 
 this is the vc-keep-cool rule:
-	if player is not in peep pool or creep cruel is moot, the rule fails;
-	if creep cruel is not in peep pool:
-		vcal "You have no one annoying you. But there might be someone later, if you're lucky! Wow!";
+	if player is not in peep pool, the rule fails;
+	if creep cruel is off-stage:
+		vcp "You have no one annoying you. But there might be someone later, if you're lucky! Wow!";
 		now ts-tried-keep is true;
 		clue-later "KEEP COOL";
+		continue the action;
+	if creep cruel is moot:
+		vcal "You don't need to keep cool any more.";
 		continue the action;
 	the rule succeeds;
 
@@ -844,7 +841,7 @@ this is the vr-old-ale rule:
 this is the vc-park-pump rule:
 	if player is not in dark dump, the rule fails;
 	if ts-pump-park is true:
-		vcal "You already did that.";
+		vcal "That's already here.";
 		continue the action;
 	the rule succeeds;
 
@@ -857,7 +854,7 @@ this is the vr-park-pump rule:
 this is the vc-pink-pug rule:
 	if drink drug think thug is off-stage or player is not in bight bier, the rule fails;
 	if ts-fight-fear is false:
-		vcal "You're too scared to think that something like that could even work.";
+		vcp "You're too scared to think that something like that could even work.";
 		clue-later "PINK PUG";
 		continue the action;
 	if drink drug think thug is moot:
@@ -880,12 +877,13 @@ this is the vr-plaster-plate rule:
 	say "A huge chunk of the gaster gate breaks off and creates a plaster plate. It's much too big to eat off, but it crumbles quickly apart (probably not Last [']Er Late brand) and is washed away beyond the dark dump.";
 	now ts-plaster-plate is true;
 	moot master mate;
+	phbt gaster gate;
 	check-north-flow;
 
 this is the vc-stark-stump rule:
 	if player is not in dark dump, the rule fails;
 	if ts-stump-stark is true:
-		vcal "You already did that.";
+		vcal "That's already here.";
 		continue the action;
 	the rule succeeds;
 
@@ -898,7 +896,7 @@ this is the vr-stark-stump rule:
 this is the vc-told-tale rule:
 	if player is not in gold gaol, the rule fails;
 	if ts-ale-old is false or ts-kale-cold is false:
-		vcal "You're not nourished enough to make it far out of the cell. You need food and drink. Even lousy food and drink.";
+		vcp "You're not nourished enough to make it far out of the cell. You need food and drink. Even lousy food and drink.";
 		now ts-tale-early is true;
 		clue-later "TOLD TALE";
 		continue the action;
@@ -906,6 +904,7 @@ this is the vc-told-tale rule:
 
 this is the vr-told-tale rule:
 	say "Yeah, that's it. You've had your fun. Time to move on. Your adventures are just silly enough and just believable enough to scare friends or to laugh at things.";
+	process the notify score changes rule;
 	end the story finally saying "BAH?! BOO-YAH, YOU!";
 	follow the shutdown rules;
 
@@ -992,15 +991,15 @@ carry out pathpavining:
 	say "The [maven] sighs in exasperation. I guess there's nothing it can help you with, here.";
 	the rule succeeds.
 
-chapter jjjjng
+chapter pppjng
 
-jjjing is an action applying to nothing.
+ppping is an action applying to nothing.
 
-understand the command "jjj" as something new.
+understand the command "ppp" as something new.
 
-understand "jjj" as jjjing.
+understand "ppp" as ppping.
 
-carry out jjjing:
+carry out ppping:
 	now wrmm-charges is 14;
 	say "Increasing maven charges to 14 for cheap dirty testing.";
 	the rule succeeds.
