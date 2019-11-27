@@ -1,46 +1,49 @@
-#-- reg-qqnn-qqq-thru.txt
+#-- reg-ppnn-ppp-thru.txt
 #-- Jerking Jump through
 
->qqq
+** game: /home/andrew/prt/debug-quite-queer-night-near.z8
+** interpreter: /home/andrew/prt/dfrotz -m
 
->qq
+* main-thru
+
+>ppp
+
+>pp
 one point
 
->qq
+>pp
 one point
 
->qq
-The lurking lump seems to tug you in the direction of the sheep sheet, but you may not have to. Try for it anyway?
+>pp
+The wrath ravin' math maven seems to tug you in the direction of the sheep sheet, but you may not have to. Try for it anyway?
 
 >e
 
->qq
+>pp
 
 >n
->qq
+>pp
 one point
->qq
+>pp
 one point
->qq
+>pp
 one point
 >e
->qq
+>pp
 one point
 
 >s
->qq
+>pp
 one point
->qq
+>pp
 one point
 >e
->qq
+>pp
 one point
->w
->n
 >u
->qq
+>pp
 one point
->qq
+>pp
 one point
->qq
+>pp
 one point
