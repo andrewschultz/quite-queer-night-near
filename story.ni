@@ -69,6 +69,7 @@ to decide whether the action is procedural:
 	if examining, yes;
 	[if reading, yes;]
 	[if hintobjing, yes;]
+	if attacking, yes;
 	if csing, yes;
 	if thinking, yes;
 	if pathpavining, yes;
@@ -181,6 +182,7 @@ understand the command "kill" as something new.
 understand the command "kiss" as something new.
 understand the command "light" as something new.
 understand the command "murder" as something new.
+understand the command "no" as something new.
 understand the command "polish" as something new.
 understand the command "prune" as something new.
 understand the command "punch" as something new.
@@ -205,6 +207,7 @@ understand the command "touch" as something new.
 understand the command "wave" as something new.
 understand the command "wipe" as something new.
 understand the command "wreck" as something new.
+understand the command "yes" as something new.
 
 [zzqqcarn]
 
@@ -424,6 +427,15 @@ Gazy Gap is a room.
 
 volume the whole special verb thing
 
+chapter inventory (redone)
+
+check taking inventory:
+	unless player has maven or player has sheet, say "You have nothing that can help you in any way. Lonesomeness! Fear[if player is not in gold gaol]! But maybe you could pull that sheep sheet away.[else]![end if]" instead;
+	if player has maven, say "A [maven] wriggles in your grasp, and you can release it for hints with [PPP]. ";
+	if player has sheet, say "The sheep sheet you took can document things you see with [b]CS[r]. Or you can [b]READ the sheet to see what's going on. ";
+	say "[line break]";
+	the rule succeeds;
+
 chapter abouting
 
 abouting is an action applying to nothing.
@@ -508,10 +520,12 @@ Rule for printing a parser error (this is the check for room name in player comm
 	continue the action;
 
 rule for printing a parser error:
-	if score > 0:
-		say "That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe [if player is in stair stones]get up those stair stones, somehow[else if cht of location of player is phbt] look around somewhere else--there doesn't seem to be much left to do here[else]there's a bit more to find here, though[end if].";
-	else:
-		say "This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them. [if sheep sheet is touchable]Since[else]If[end if] you have the sheep sheet handy, you can [b]XX[r] something. You can also type ABOUT to see general information.";
+	if latest parser error is the not a verb I recognise error:
+		if score > 0:
+			say "That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe [if player is in stair stones]get up those stair stones, somehow[else if cht of location of player is phbt] look around somewhere else--there doesn't seem to be much left to do here[else]there's a bit more to find here, though[end if].";
+		else:
+			say "This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them. [if sheep sheet is touchable]Since[else]If[end if] you have the sheep sheet handy, you can [b]XX[r] something. You can also type ABOUT to see general information.";
+		the rule succeeds;
 
 chapter the big rule(s)
 
@@ -586,7 +600,7 @@ wrmm-total is a number that varies. wrmm-total is 0.
 wrmm-charges is a number that varies. wrmm-charges is 0.
 wrmm-uses is a number that varies. wrmm-uses is 0.
 
-to say ppp: say "PATH PAVIN (PP)"
+to say ppp: say "[b]PATH PAVIN (PP)[r]"
 
 to check-wrmm-progress:
 	increment wrmm-count;
