@@ -4,7 +4,17 @@ Version 1/191030 of Quite Queer Night Near Tests by Andrew Schultz begins here.
 
 test lum with "right rear/height here/sight seer".
 
-test wthru with "leap leet/fight fear/pink pug/e/s/deep duel/reap rule/e/more mulch/w/n/n/stark stump/bark bump/park pump/e/plaster plate/w/s/u/cold kale/old ale/told tale"
+test start with "leap leet/fight fear/pink pug/e".
+
+test w-n with "n/stark stump/bark bump/park pump/e/plaster plate/".
+
+test w-s with "s/deep duel/keep cool/e/more mulch".
+
+test ending with "u/cold kale/old ale/told tale".
+
+test w1 with "test start/e/test w-s/test w-n/test ending/".
+
+test w2 with "test start/e/test w-n/test w-s/test ending/".
 
 Quite Queer Night Near Tests ends here.
 

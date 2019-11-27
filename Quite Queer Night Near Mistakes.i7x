@@ -33,13 +33,13 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	still-rule	mist-txt
 "streep street"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-takeable rule	"Stalking an actress is scary, yes, but we're not going for that sort of scary."
 "sweep suite/sweet"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-takeable rule	"Neither a favorite team's success nor drudgery will get your mind off things."
 "weep wheat"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-takeable rule	"The ground remains unarable."
-"chink chug"	lug-nearby rule	false	4	3	--	thug-around rule	"The Drink Drug Think Thug is too large to disappear through any crack. You're too large to escape."
-"fink fug"	lug-nearby rule	false	4	3	--	thug-around rule	"No fog carries the Drink Drug Think Thug away or even makes it wimpier."
-"jink jug"	lug-nearby rule	false	4	3	--	thug-around rule	"No liquid container to help your dexterity appears. Oh, well. It might've jinked YOU, anyway."
-"link lug"	lug-nearby rule	false	4	3	--	thug-around rule	"You need to make the thug much less intimidating."
-"mink mug"	lug-nearby rule	false	4	3	--	thug-around rule	"The Think Thug is too smart to be upset for being called a rat-face or whatever."
-"rink rug"	lug-nearby rule	false	4	3	--	thug-around rule	"A rug would be out of place inside a roller rink or ice skating rink. Still, it was worth a try."
-"slink slug"	lug-nearby rule	false	4	3	--	thug-around rule	"Perhaps that is a bit too drastic. Another more likable animal might work great, though."
+"chink chug"	lug-nearby rule	false	4	3	thug-around rule	thug-around rule	"The Drink Drug Think Thug is too large to disappear through any crack. You're too large to escape."
+"fink fug"	lug-nearby rule	false	4	3	thug-around rule	thug-around rule	"No fog carries the Drink Drug Think Thug away or even makes it wimpier."
+"jink jug"	lug-nearby rule	false	4	3	thug-around rule	thug-around rule	"No liquid container to help your dexterity appears. Oh, well. It might've jinked YOU, anyway."
+"link lug"	lug-nearby rule	false	4	3	thug-around rule	thug-around rule	"You need to make the thug much less intimidating."
+"mink mug"	lug-nearby rule	false	4	3	thug-around rule	thug-around rule	"The Think Thug is too smart to be upset for being called a rat-face or whatever."
+"rink rug"	lug-nearby rule	false	4	3	thug-around rule	thug-around rule	"A rug would be out of place inside a roller rink or ice skating rink. Still, it was worth a try."
+"slink slug"	lug-nearby rule	false	4	3	thug-around rule	thug-around rule	"Perhaps that is a bit too drastic. Another more likable animal might work great, though."
 "hath haven"	maven-summoned rule	false	--	--	--	--	"[if maven is moot]The math maven already has one, for now[else]You don't want to let the maven escape. It could help you! Once you're free, you can set it free[end if]."
 "care cones"	in-stones rule	false	4	3	--	not-gaol rule	"Nothing appears to make you feel more loved. Aww." [start bare bones stair stones]
 "clayer/clare/clair clones"	in-stones rule	false	4	3	--	not-gaol rule	"No golems appear to try and build the stairs. But on the bright side, none appear from the stairs to make it tougher to go up."
@@ -52,9 +52,10 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	still-rule	mist-txt
 "rare roans"	in-stones rule	false	4	3	--	not-gaol rule	"Bringing horses into this mess would be animal cruelty."
 "scare scones"	in-stones rule	false	4	3	--	not-gaol rule	"Spooky food is a creative idea here, but maybe not a practical one."
 "tare/tear tones"	in-stones rule	false	4	3	--	not-gaol rule	"No more scary noises than needed, please."
-"clark clump"	in-dark-dump rule	false	4	4	--	not-gaol rule	"Clark Griswold does not appear in a heap." [start dark dump]
-"lark lump"	in-dark-dump rule	false	4	4	--	not-gaol rule	"Eww, dead birds?"
-"mark mump"	in-dark-dump rule	false	4	4	--	not-gaol rule	"You don't want half a sickness, even a temporary one."
+"ark/arc ump"	in-dark-dump rule	false	4	4	any-dump-left rule	not-gaol rule	"Nobody appears to decide which animals will be doomed to forty days and nights of floods." [start dark dump]
+"clark clump"	in-dark-dump rule	false	4	4	any-dump-left rule	not-gaol rule	"Clark Griswold does not appear in a heap."
+"lark lump"	in-dark-dump rule	false	4	4	any-dump-left rule	not-gaol rule	"Eww, dead birds?"
+"mark mump"	in-dark-dump rule	false	4	4	any-dump-left rule	not-gaol rule	"You don't want half a sickness, even a temporary one."
 "faster fate"	in-gaster-gate rule	false	7	5	plates-needed rule	not-gaol rule	"But that might mean a faster BAD fate as well as a good one." [start gaster gate]
 "hastur hate"	in-gaster-gate rule	false	7	5	plates-needed rule	not-gaol rule	"Oh no. You don't need to make things worse."
 "laster late"	in-gaster-gate rule	false	7	5	plates-needed rule	not-gaol rule	"A good try, if un-grammatical. But you already have lasted, and you don't want your obstacles to last."
@@ -74,7 +75,7 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	still-rule	mist-txt
 "wold wail/whale"	in-gold-gaol rule	false	4	4	--	--	"Nothing too drastic, here."
 "jeep jewel/joule"	in-peep-pool rule	false	4	4	creep-unbeaten rule	not-gaol rule	"The jeep would probably run over YOU." [start peep pool]
 "reap rule"	in-peep-pool rule	false	4	4	creep-unbeaten rule	not-gaol rule	"This adventure is about surviving, not taking over."
-"weep wool"	in-peep-pool rule	false	4	4	creep-unbeaten rule	not-gaol rule	"Crying is out. So are nice new clothes. You're on a spooky Halloween adventure, here!"
+"weep wool"	in-peep-pool rule	false	4	4	creep-unbeaten rule	not-gaol rule	"Crying is out. So are nice new warm clothes. You're on a spooky Halloween adventure, here!"
 
 table of homonym rejections
 mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	still-rule	mist-txt
@@ -83,16 +84,11 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	still-rule	mist-txt
 "bear bones"	in-stones rule	false	--	--	--	not-gaol rule	"That would make for creepier ambience, but more importantly, the bear bones would make the stair stones even tougher to climb."
 "stare stones"	in-stones rule	false	--	--	--	not-gaol rule	"Nothing appears in the stones. You [if stone-filler is 2]can just[else if stone-filler is 1]have a bit more work before you[else]would need to repair them to[end if] climb them."
 "gold gale/gail"	in-gold-gaol rule	false	4	4	--	--	"You can't change the gaol. You can escape easily enough. You just need to figure how, comfortably."
+"tolled/told tail" or "tolled tail"	in-gold-gaol rule	false	4	4	--	--	"That must be very close indeed."
 
 section mist-rules alphabetized
 
 [xxqqmi]
-
-this is the creep-unbeaten rule: if creep cruel is not moot, the rule succeeds;
-
-this is the duel-unstarted rule: if creep cruel is off-stage, the rule succeeds;
-
-this is the fear-to-fight rule: if ts-fight-fear is false, the rule succeeds;
 
 this is the in-bight-bier rule: if player is in Bight Bier, the rule succeeds;
 
@@ -112,11 +108,7 @@ this is the lug-nearby rule: if think thug is touchable, the rule succeeds;
 
 this is the maven-summoned rule: if math maven is not off-stage, the rule succeeds;
 
-this is the plates-needed rule: if master mate is not moot, the rule succeeds;
-
 this is the sheet-nearby rule: if sheep sheet is touchable, the rule succeeds;
-
-this is the sheet-untaken rule: if player does not have sheep sheet, the rule succeeds;
 
 [zzqqmi]
 
@@ -124,9 +116,21 @@ section leet-rules alphabetized
 
 [xxqqle]
 
+this is the any-dump-left rule: if bark bump is off-stage or park pump is off-stage or stark stump is off-stage, the rule succeeds;
+
+this is the creep-unbeaten rule: if creep cruel is not moot, the rule succeeds;
+
+this is the duel-unstarted rule: if creep cruel is off-stage, the rule succeeds;
+
+this is the fear-to-fight rule: if ts-fight-fear is false, the rule succeeds;
+
 this is the not-gaol rule: if player is not in gold gaol, the rule succeeds;
 
+this is the plates-needed rule: if master mate is not moot, the rule succeeds;
+
 this is the sheet-takeable rule: if player has sheep sheet or player is not in gold gaol, the rule succeeds;
+
+this is the sheet-untaken rule: if player does not have sheep sheet, the rule succeeds;
 
 this is the thug-around rule: if think thug is not moot, the rule succeeds;
 
