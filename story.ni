@@ -86,7 +86,7 @@ when play begins:
 check requesting the score:
 	say "You have [score] out of [min-needed] points needed to win the game[if max-poss > min-needed], but there's a bonus point[end if].";
 	if can-cheat-win, say "[line break]You can, if you want, jump all the way to the end to win with PP.";
-	if debug-state is true, say "DEBUG: [wrmm-count] maven next-charge count.";
+	if debug-state is true, say "DEBUG: [wrmm-count] maven next-charge count. Maven charges = [wrmm-charges].";
 	if math maven is not off-stage:
 		let X be still-guess of table of homonym rejections;
 		let Y be still-guess of table of mistake substitutions;
@@ -387,7 +387,7 @@ the Master Mate is a person in Gaster Gate. "A master mate stands here, looking 
 
 chapter Gold Gaol
 
-Gold Gaol is a room. "There's nothing much to do here. Well, the wall says FOLD FAIL, giving an idea of how goal 'should' be pronounced. Hey, when you're a prisoner, you sort of need to do as you're told, I guess.". cht of gold gaol is allover. [->old ale] [->cold kale] [->told tale]
+Gold Gaol is a room. "There's nothing much to do here. Well, the wall says FOLD FAIL, giving an idea of how gaol [i]should[r]' be pronounced. Hey, when you're a prisoner, you sort of need to do as you're told, I guess.". cht of gold gaol is allover. [->old ale] [->cold kale] [->told tale]
 
 ts-ale-old is a truth state that varies.
 ts-kale-cold is a truth state that varies.
@@ -558,7 +558,7 @@ to check-wrmm-progress:
 		increase next-wrmm-level by next-wrmm-delta;
 		if next-wrmm-level > max-wrmm-delta, now next-wrmm-level is max-wrmm-delta;
 		process the winnable-with-cheating rule;
-		if debug-state is true, say "DEBUG: [wrmm-count] maven count, [wrmm-charges] maven charges.";
+	if debug-state is true, say "DEBUG: [wrmm-count] maven count, [wrmm-charges] maven charges.";
 
 the wrath ravin' math maven is a boring thing. description is "The wrath ravin['] math maven won't stop complaining, but it's stuck to you, and you know it is good for [ppp]--[wrmm-charges in words] charge[plur of wrmm-charges], to be precise.". bore-text of wrath ravin' math maven is "The math maven only allows for PATH PAVIN (PP)."
 

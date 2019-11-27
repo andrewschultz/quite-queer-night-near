@@ -60,8 +60,8 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	still-rule	mist-txt
 "laster late"	in-gaster-gate rule	false	7	5	plates-needed rule	not-gaol rule	"A good try, if un-grammatical. But you already have lasted, and you don't want your obstacles to last."
 "raster rate"	in-gaster-gate rule	false	7	5	plates-needed rule	not-gaol rule	"Your text adventure remains totally texty."
 "boar/bore bulge"	in-gore-gulch rule	false	5	4	--	not-gaol rule	"That's a bit of a stretch, but Gore Gulch remains unstretched." [start gore gulch]
-"bold bail/bowl/bale"	in-gold-gaol rule	false	7	5	--	--	"You don't have to be bold. The gaol is unguarded." [start gold gaol]
-"doled dale"	in-gold-gaol rule	false	7	5	--	--	"That's a bit too archaic to be a final solution, but ... you do dream about these sorts of things in prison."
+"bold bail/bowl/bale"	in-gold-gaol rule	false	4	4	--	--	"You don't have to be bold. The gaol is unguarded." [start gold gaol]
+"doled dale"	in-gold-gaol rule	false	4	4	--	--	"That's a bit too archaic to be a final solution, but ... you do dream about these sorts of things in prison."
 "fold fail"	in-gold-gaol rule	true	4	4	--	--	"You look at FOLD FAIL on the wall, hoping for the [maven] to get exasperated enough to spill a solution. But apparently it's good at passive-aggressiveness, too!" [the TRUE here indicates this is not strictly a good guess. Since FOLD FAIL is in the room description, it can't and shouldn't count.]
 "hold hail/hale"	in-gold-gaol rule	false	4	4	--	--	"There is nobody to summon, and you don't want to summon weather, either."
 "mold male/mail"	in-gold-gaol rule	false	4	4	--	--	"You uncover no old letters checking on how you are. Not surprising. You've only been here a bit."
@@ -69,25 +69,28 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	still-rule	mist-txt
 "rolled rail"	in-gold-gaol rule	false	4	4	--	--	"You don't need assistance getting out. Or a need to rail verbally."
 "scold scale"	in-gold-gaol rule	false	4	4	--	--	"The scold scale is probably something you get BEFORE you are sent to prison."
 "sold sail/sale"	in-gold-gaol rule	false	4	4	--	--	"You don't have to buy anything. You don't want to."
-"swolled swale"	in-gold-gaol rule	false	7	5	--	--	"The gold gaol cannot change THAT drastically."
+"swolled swale"	in-gold-gaol rule	false	4	4	--	--	"The gold gaol cannot change THAT drastically."
 "trolled trail"	in-gold-gaol rule	false	4	4	--	--	"You will have to make your own trail out. Make it enough yours, you could recount it to others."
 "wold wail/whale"	in-gold-gaol rule	false	4	4	--	--	"Nothing too drastic, here."
 "jeep jewel/joule"	in-peep-pool rule	false	4	4	creep-unbeaten rule	not-gaol rule	"The jeep would probably run over YOU." [start peep pool]
 "reap rule"	in-peep-pool rule	false	4	4	creep-unbeaten rule	not-gaol rule	"This adventure is about surviving, not taking over."
+"weep wool"	in-peep-pool rule	false	4	4	creep-unbeaten rule	not-gaol rule	"Crying is out. So are nice new clothes. You're on a spooky Halloween adventure, here!"
 
 table of homonym rejections
 mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	still-rule	mist-txt
 "bite/bight bier/beer"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"You don't need homonyms here. Something else... something a bit more common..."
-"deep dual" or "dual deep"	in-peep-pool rule	false	4	4	creep-unbeaten rule	not-gaol rule	"[if creep cruel is off-stage]You are very close. You don't need to make the pool deeper, but you need something else deep[else]Summoning the cruel creep was enough[end if]."
+"deep dual" or "dual deep"	in-peep-pool rule	false	4	4	duel-unstarted rule	not-gaol rule	"[if creep cruel is off-stage]You are very close. You don't need to make the pool deeper, but you need something else deep[else]Summoning the creep (cruel) was enough[end if]."
 "bear bones"	in-stones rule	false	--	--	--	not-gaol rule	"That would make for creepier ambience, but more importantly, the bear bones would make the stair stones even tougher to climb."
 "stare stones"	in-stones rule	false	--	--	--	not-gaol rule	"Nothing appears in the stones. You [if stone-filler is 2]can just[else if stone-filler is 1]have a bit more work before you[else]would need to repair them to[end if] climb them."
-"gold gale/gail"	in-gold-gaol rule	false	--	--	--	--	"You can't change the gaol. You can escape easily enough. You just need to figure how, comfortably."
+"gold gale/gail"	in-gold-gaol rule	false	4	4	--	--	"You can't change the gaol. You can escape easily enough. You just need to figure how, comfortably."
 
-section mist-rule alphabetized
+section mist-rules alphabetized
 
 [xxqqmi]
 
 this is the creep-unbeaten rule: if creep cruel is not moot, the rule succeeds;
+
+this is the duel-unstarted rule: if creep cruel is off-stage, the rule succeeds;
 
 this is the fear-to-fight rule: if ts-fight-fear is false, the rule succeeds;
 
@@ -109,12 +112,6 @@ this is the lug-nearby rule: if think thug is touchable, the rule succeeds;
 
 this is the maven-summoned rule: if math maven is not off-stage, the rule succeeds;
 
-this is the not-gaol rule: if player is not in gold gaol, the rule succeeds;
-
-this is the sheet-takeable rule: if player has sheep sheet or player is not in gold gaol, the rule succeeds;
-
-this is the thug-around rule: if think thug is not moot, the rule succeeds;
-
 this is the plates-needed rule: if master mate is not moot, the rule succeeds;
 
 this is the sheet-nearby rule: if sheep sheet is touchable, the rule succeeds;
@@ -123,7 +120,17 @@ this is the sheet-untaken rule: if player does not have sheep sheet, the rule su
 
 [zzqqmi]
 
-section leet-rule alphabetized
+section leet-rules alphabetized
+
+[xxqqle]
+
+this is the not-gaol rule: if player is not in gold gaol, the rule succeeds;
+
+this is the sheet-takeable rule: if player has sheep sheet or player is not in gold gaol, the rule succeeds;
+
+this is the thug-around rule: if think thug is not moot, the rule succeeds;
+
+[zzqqle]
 
 Quite Queer Night Near Mistakes ends here.
 
