@@ -80,7 +80,7 @@ when play begins:
 	say "[line break]This is all too corny for you. You try to brush past, but they cry 'You're no Mimmy Mingles' before calling on Primmy Pringles and Limmy Lingles, three times their size and meaner, to drag you away...to the Dimmy Dingles? No, worse![wfak]";
 	say "[line break]You black out as you are dragged away. A voice booms 'ARRRRRIGHT! Tar! Tight! Spar! Spite!' You look around. You see ... a bier with your name on it! Scary, scary!";
 	now max-poss is max-bonus + min-needed;
-	now the right hand status line is "[score]/[if max-poss is not min-needed][min-needed]-[end if][max-poss]";
+	now the right hand status line is "[score][if doable-hinted > 0](+[doable-hinted])[end if]/[if max-poss is not min-needed][min-needed]-[end if][max-poss]";
 	now ha-half is true;
 
 check requesting the score:
@@ -99,6 +99,17 @@ check requesting the score:
 		showme ts-plaster-plate;
 		showme ts-mulch-more;]
 	the rule succeeds;
+
+to decide which number is doable-hinted:
+	let temp be 0;
+	now vc-dont-print is true;
+	repeat through the table of forlaters:
+		if ready-to-hint entry is true:
+			process the can-do-now entry;
+			if the rule succeeded:
+				if is-done entry is false, increment temp;
+	now vc-dont-print is false;
+	decide on temp;
 
 to decide which number is still-guess of (ta - a table name):
 	let temp be 0;
@@ -305,6 +316,13 @@ chapter Bare Bones Stair Stones
 
 Bare Bones Stair Stones is east of Bight Bier. "You can go back west to the Bier[if sheep sheet is in bier]--who knows, that sheet could come in handy[else], though you don't need to[end if]. You can also go north and south, but there seems to be a way out above--[if stone-filler is 0]or there could be[else if stone-filler is 1]you just need to fill the stairs in a bit more[else]you don't seem to have much else to do here[end if]!".
 
+check going in Bare Bones Stair Stones when player has math maven:
+	if noun is south and ts-mulch-more is true, say "[maven-groan].";
+	if noun is north and north-flow, say "The [maven-groan].";
+	if noun is west and player has sheep sheet, say "[maven-groan].";
+
+to say maven-groan: say "The [maven] rolls its eyes and groans as you go back [noun][one of]. Perhaps you're done there[or][stopping]"
+
 to decide which number is stone-filler:
 	let temp be boolval of ts-mulch-more;
 	if north-flow, increment temp;
@@ -335,9 +353,12 @@ the steep stool is scenery in Peep Pool. "The steep stool is too smooth and, err
 
 ts-duel-deep is a truth state that varies.
 
+check going north in peep pool:
+	if creep cruel is touchable, say "'Yeep! You'll...' calls the creep (cruel,) and though you manage to avoid stumbling or caring, you get slightly agitated wondering what bad things could happen." instead;
+
 check going east in Peep Pool:
-	if creep cruel is touchable, say "You need to make it by the creep (cruel.)" instead;
-	if steep stool is touchable, say "The steep stool is in the way." instead;
+	if creep cruel is touchable, say "The creep (cruel) blocks you from going east. Exasperating, but that's just its nature. Maybe you can get rid of it." instead;
+	if steep stool is touchable, say "The steep stool is in the way. It's too big and heavy to move." instead;
 
 section creep cruel
 
@@ -658,6 +679,7 @@ to clue-later (ct - text):
 		if ct is cmd-to-say entry:
 			if debug-state is true and ready-to-hint entry is true, say "(DEBUG re-checking)[line break]";
 			if ready-to-hint entry is false, now think-clue-flag is true;
+			process the note right guess wrong time rule;
 			now ready-to-hint entry is true;
 			continue the action;
 	now think-clue-flag is true;
@@ -794,7 +816,7 @@ this is the vc-deep-duel rule:
 	the rule succeeds;
 
 this is the vr-deep-duel rule:
-	say "There is no progress without conflict. You look into the peep pool and wait for an opponent to show. A crash from the steep stool to the east indicates someone has arrived for a deep duel: a creep, cruel![paragraph break]Maybe if you defeat them, you'll be able to go east.";
+	say "There is no progress without conflict. You look into the peep pool and wait for an opponent to show. A crash from the steep stool to the east indicates someone has arrived for a deep duel: a creep, cruel![paragraph break]Maybe if you defeat them, you'll be able to go east. But right now, being around them is just annoying.";
 	move creep cruel to peep pool;
 	moot steep stool.
 
@@ -1025,7 +1047,7 @@ to say maven-up-stairs:
 	if stone-filler is 2:
 		say "gestures upward, as if to ask why you haven't climbed already";
 	else:
-		say "tries to run up the stones and fails miserably. It then points [if stone-filler is 0]north and south[else if cht of gore gulch is phbt]north[else]south[end if]";
+		say "tries to run up the stones and fails miserably. It then points [if stone-filler is 0]north and south[else if ts-mulch-more is true]north[else]south[end if]";
 
 chapter pppjng
 
