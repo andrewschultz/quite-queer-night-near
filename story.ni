@@ -211,12 +211,14 @@ check taking:
 report taking sheep sheet: max-down;
 
 check going nowhere:
+	if player is in gold gaol, say "You need to look back on your experiences before leaving. Anyway, you can't figure directions here." instead;
+	if noun is inside or noun is outside, say "You never need to go inside or outside, though you may need to go up [if stair stones is unvisited]one place[else]in [stair stones][end if]." instead;
 	if player is in bight bier, say "The only way is east." instead;
-	if player is in gaster gate or player is in gore gulch, say "The only way out is back west." instead;
+	if player is in gaster gate, say "The gate blocks passage every way except back west." instead;
+	if player is in gore gulch, say "Ickiness guards every way except back west." instead;
 	if player is in stair stones, say "You can only go north, south or west[if stone-filler is 2]. And up. You probably want to go up[else]. And you can try to go up[end if]." instead;
 	if player is in dark dump, say "You can only go east or south." instead;
 	if player is in peep pool, say "You can only go north or[if creep cruel is not moot], once the way is clear,[end if] east." instead;
-	if player is in gold gaol, say "You need to look back on your experiences before leaving." instead;
 	say "I wish I could give more information, but you can't go that way." instead;
 
 volume adding verbs
@@ -235,10 +237,21 @@ Blight Blear Bight Bier is a room. "Boy! It's scary here! [if spite spear is in 
 
 ts-fight-fear is a truth state that varies.
 
+section DDTT
+
+[after choosing notable locale objects when player is in Bight Bier:
+	if Drink Drug Think Thug is in Bight Bier, set the locale priority of Drink Drug Think Thug to 9;]
+
+The Drink Drug Think Thug is a person in Blight Blear Bight Bier. cht of Think Thug is letminus. "Wait, no, you can't go east until you dispose of that Drink Drug Think Thug blocking the way.". description of Thug is "Big and brutal and surprisingly not dumb-looking. Even though they've abused their body and mind, they can beat you up physically and mentally. You'll need to change the Thug drastically to get by.". [-> pink pug]
+
+check going east in Blight Blear Bight Bier:
+	if Drink Drug Think Thug is in Bier, say "Not with the Drink Drug Think Thug by." instead;
+	if Drink Drug Think Thug is off-stage, say "No. You're too scared to do anything right now." instead;
+
 section sheep sheet
 
 check examining the sheep sheet for the first time:
-	if player does not have sheep sheet, say "It claims to be a SHEEP SHEET because only sheeple use hints. This reminds you of all the times you were scared to ask for help, which is pretty scary. Not, like, mortally. But it's lasted.[line break]";
+	if player does not have sheep sheet, say "It claims to be a SHEEP SHEET because only sheeple use hints. This reminds you of all the times you were scared to ask for help, because you might feel dumb still not getting it or realizing you could've done without the help if you'd REALLY been thinking.[paragraph break]Which is pretty scary. Not nearly, like, mortally. But it's lasted.[line break]";
 
 the cheap cheat sheep sheet is a thing in Blight Blear Bight Bier. cht of sheep sheet is letminus. "A cheap cheat sheep sheet lies here, sort of daring you to take it. It's obscured by sleep sleet.". description of sheep sheet is "It has information on--well, most everything you see here. XX any item for particular information. I guess it's a sheep sheet because you still feel sheepish looking at it, no matter how many times you have, and also I feel sheepish for such a silly name. You can CC, SS, CCSS or CS anything to see cheating information.". [->heap heat]
 
@@ -288,14 +301,6 @@ section spite spear
 
 the spite spear is boring scenery in Blight Blear Bight Bier. "It's too far away to see in detail, but you don't need to. It reminds you of people you were scared would hit or insult you, who knew how to string that out.". bore-text is "You may need to take care of your own emotions to get rid of the spite spear.". cht of spite spear is partminus. [-> fight fear]
 
-section DDTT
-
-The Drink Drug Think Thug is a person in Blight Blear Bight Bier. cht of Think Thug is letminus. "Wait, no, you can't go east until you dispose of that Drink Drug Think Thug blocking the way.". description of Thug is "Big and brutal and surprisingly not dumb-looking. Even though they've abused their body and mind, they can beat you up physically and mentally. You'll need to change the Thug drastically to get by.". [-> pink pug]
-
-check going east in Blight Blear Bight Bier:
-	if Drink Drug Think Thug is in Bier, say "Not with the Drink Drug Think Thug by." instead;
-	if Drink Drug Think Thug is off-stage, say "No. You're too scared to do anything right now." instead;
-
 chapter Bare Bones Stair Stones
 
 Bare Bones Stair Stones is east of Bight Bier. "You can go back west to the Bier[if sheep sheet is in bier]--who knows, that sheet could come in handy[else], though you don't need to[end if]. You can also go north and south, but there seems to be a way out above--[if stone-filler is 0]or there could be[else if stone-filler is 1]you just need to fill the stairs in a bit more[else]you don't seem to have much else to do here[end if]!".
@@ -340,7 +345,7 @@ the creep cruel is a person. cht of creep cruel is letminus. "A cruel creep snic
 
 chapter Gore Gulch
 
-Gore Gulch is east of Peep Pool. cht of Gore Gulch is leteq. "The only way back is east. [if ts-mulch-more is false]There's something icky and sticky here besides gore, but you're not sure what[else]You extracted more mulch here, so there's nothing else to do[end if].". [-> more mulch]
+Gore Gulch is east of Peep Pool. cht of Gore Gulch is leteq. "The only way back is west. [if ts-mulch-more is false]There's something icky and sticky here besides gore, but you're not sure what[else]You extracted more mulch here, so there's nothing else to do[end if].". [-> more mulch]
 
 ts-mulch-more is a truth state that varies.
 
@@ -439,6 +444,16 @@ carry out soundsing:
 	say "rarer two letters: ch so th (thing or this) wh ng nk oi ow oo (took) aw zh (vision.)";
 	the rule succeeds.
 
+chapter after reading a command
+
+after reading a command:
+	if the player's command matches the regular expression "<^a-z '>":
+		if the player's command matches the regular expression "^ *<\*;>":
+			if currently transcripting:
+				say "Noted.";
+		say "You don't need any special characters in your command to win.";
+		if debug-state is false, reject the player's command;
+
 chapter parser error tweak(s)
 
 table-to-scour is a table name that varies.
@@ -472,7 +487,10 @@ Rule for printing a parser error (this is the check for room name in player comm
 	continue the action;
 
 rule for printing a parser error:
-	say "This is a sort of guess-the-verb game. All point scoring actions are verbs to guess. [if sheep sheet is touchable]Since[else]If[end if] you have the sheep sheet handy, you can [b]XX[r] something, but this may not be fully robust, as this is release 1 of SpeedIF. You can also type ABOUT to see general information.";
+	if score > 0:
+		say "That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe [if player is in stair stones]get up those stair stones, somehow[else if cht of location of player is phbt] look around somewhere else--there doesn't seem to be much left to do here[else]there's a bit more to find here, though[end if].";
+	else:
+		say "This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them. [if sheep sheet is touchable]Since[else]If[end if] you have the sheep sheet handy, you can [b]XX[r] something. You can also type ABOUT to see general information.";
 
 chapter the big rule(s)
 
@@ -597,9 +615,18 @@ to decide which cheattype is the cluecheat of (n1 - a number) and (n2 - a number
 	if n1 < 0 and n2 < 0, decide on letminus; [right]
 	decide on letboth; [one +, one minus, wobbles]
 
+blight-hint is a truth state that varies.
+
+when play begins: if a random chance of 1 in 2 succeeds, now blight-hint is false.
+
 to say leetclue of (x - a cheattype):
 	if sheep sheet is not touchable, continue the action;
-	say "You refer to the sheep sheet, noticing it says [if noun is nothing]your effort[else][the noun][end if] goes to [scancol of x]";
+	say "You refer to the sheep sheet, noticing it says ";
+	if noun is Blight Blear Bight Bier and Think Thug is not moot:
+		now blight-hint is whether or not blight-hint is false;
+		say "[if blight-hint is true]Blight Blear goes to --[else]Bight Bier goes to ==[end if][one of]. Maybe there's another reading for the other half of this location's name[or][stopping]";
+		continue the action;
+	say "[if noun is nothing]your effort[else][the noun][end if] goes to [scancol of x]";
 
 to say scancol of (x - a cheattype): say "[if x is letplus]++[else if x is partplus]+=/=+[else if x is leteq]==[else if x is partminus]-=/=-[else if x is letminus]--[else if x is letboth]+-/-+[else if x is phbt]00[else if x is allover]??[no line break][else]BUG[end if]"
 
@@ -661,7 +688,7 @@ w1 (text)	w2 (text)	okflip	core	idid	ver-rule	do-rule	wfull (topic)
 "fight|fright"	"fear|freer"	true	true	false	vc-fight-fear rule	vr-fight-fear rule	"fight fear" or "fright freer" [start bight bier]
 "pink"	"pug"	true	true	false	vc-pink-pug rule	vr-pink-pug rule	--
 "heap|bleep"	"heat|bleat"	true	false	false	vc-heap-heat rule	vr-heap-heat rule	"heap heat" or "bleep bleat"
-"deep"	"duel"	true	true	false	vc-deep-duel rule	vr-deep-duel rule	-- [start peep pool]
+"deep|creep"	"duel|cruel"	true	true	false	vc-deep-duel rule	vr-deep-duel rule	"deep duel" or "creep cruel" [start peep pool]
 "keep"	"cool"	true	true	false	vc-keep-cool rule	vr-keep-cool rule	--
 "more"	"mulch"	true	true	false	vc-more-mulch rule	vr-more-mulch rule	-- [start gore gulch]
 "plaster"	"plate"	true	true	false	vc-plaster-plate rule	vr-plaster-plate rule	-- [start gaster gate]
@@ -767,7 +794,7 @@ this is the vc-deep-duel rule:
 	the rule succeeds;
 
 this is the vr-deep-duel rule:
-	say "You look into the peep pool and bravely summon an opponent for a deep duel. You hear a crash from the steep stool to the east. The stool is utterly shattered now. There's a passage east, but it's blocked by the person who made it possible: a creep, cruel.";
+	say "There is no progress without conflict. You look into the peep pool and wait for an opponent to show. A crash from the steep stool to the east indicates someone has arrived for a deep duel: a creep, cruel![paragraph break]Maybe if you defeat them, you'll be able to go east.";
 	move creep cruel to peep pool;
 	moot steep stool.
 
@@ -810,8 +837,9 @@ this is the vc-keep-cool rule:
 	the rule succeeds;
 
 this is the vr-keep-cool rule:
-	say "You manage to ignore the creep (cruel) as they get more and more desperate to insult you. Eventually, they find you not worth the effort.";
+	say "You manage to ignore the creep (cruel) as they get more and more desperate to insult you. Eventually, they explain you're not worth the effort, and also you are probably too callous and selfish to care about the next person they'll need to insult even worse.";
 	moot creep cruel;
+	phbt peep pool;
 
 this is the vc-more-mulch rule:
 	if player is not in Gore Gulch, the rule fails;
@@ -823,6 +851,7 @@ this is the vc-more-mulch rule:
 this is the vr-more-mulch rule:
 	say "More mulch appears! It spills out to the peep pool and beyond, probably even back to the stair stones.";
 	now ts-mulch-more is true;
+	phbt Gore Gulch;
 	check-stair-stones;
 
 this is the vc-old-ale rule:
@@ -905,6 +934,7 @@ this is the vc-told-tale rule:
 this is the vr-told-tale rule:
 	say "Yeah, that's it. You've had your fun. Time to move on. Your adventures are just silly enough and just believable enough to scare friends or to laugh at things.";
 	process the notify score changes rule;
+	phbt gold gaol;
 	end the story finally saying "BAH?! BOO-YAH, YOU!";
 	follow the shutdown rules;
 
@@ -955,7 +985,7 @@ to decide which number is solved-jerk-check: [yeah yeah magic numbers ?? we need
 
 carry out pathpavining:
 	if debug-state is false:
-		if wrath ravin' math maven is off-stage, say "You have nothing that would help you do that." instead;
+		if wrath ravin' math maven is off-stage, say "This is the hint/move-ahead command, but you don't have your hinting assistant, yet." instead;
 		if wrath ravin' math maven is moot, say "The [maven] ran off because you used it, but maybe good guesses will bring it back." instead;
 	else:
 		say "DEBUG: maven charges = [wrmm-charges].";
@@ -988,8 +1018,14 @@ carry out pathpavining:
 			now vc-dont-print is false;
 			the rule succeeds;
 	now vc-dont-print is false;
-	say "The [maven] sighs in exasperation. I guess there's nothing it can help you with, here.";
+	say "The [maven] [if player is in Stair Stones][maven-up-stairs][else]sighs in exasperation. I guess there's nothing it can help you with, here[end if].";
 	the rule succeeds.
+
+to say maven-up-stairs:
+	if stone-filler is 2:
+		say "gestures upward, as if to ask why you haven't climbed already";
+	else:
+		say "tries to run up the stones and fails miserably. It then points [if stone-filler is 0]north and south[else if cht of gore gulch is phbt]north[else]south[end if]";
 
 chapter pppjng
 
