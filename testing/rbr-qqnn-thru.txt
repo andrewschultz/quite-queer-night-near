@@ -6,7 +6,8 @@
 
 files=reg-qqnn-thru-min.txt,reg-qqnn-thru-all.txt,reg-qqnn-thru-think.txt,reg-qqnn-alt-verbs.txt,reg-qqnn-thru-mistakes.txt,reg-qqnn-thru-ha-half.txt,reg-qqnn-scan.txt
 ~	mis	t4
-~	cs	t5
+~	ha	t5
+~	cs	t6
 
 ## *FILE
 ## *FORK
@@ -16,41 +17,63 @@ TSV:## minimum walkthrough	## walkthrough with all points	## walkthrough with al
 ** game: /home/andrew/prt/debug-quite-queer-night-near.z8
 ** interpreter: /home/andrew/prt/dfrotz -m
 
+* main-thru
+
+@ha
+> zfight fear
+DEBUG: vc-fight-fear rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> fight zfear
+DEBUG: vc-fight-fear rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zpink pug
+DEBUG: vc-pink-pug rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> pink zpug
+DEBUG: vc-pink-pug rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zheap heat
+DEBUG: vc-heap-heat rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> heap zheat
+DEBUG: vc-heap-heat rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
 @cs
 >cs me
 You don't need to change yourself. Whew.
 >cs
-WRONG
+You refer to the sheep sheet, noticing it says Blight Blear Bight Bier goes to +-/-+.
 >cs sleep sleet
-WRONG
+You refer to the sheep sheet, noticing it says the sleep sleet goes to --.
 >cs spite spear
-WRONG
+You refer to the sheep sheet, noticing it says the spite spear goes to -=/=-.
 >cs think thug
-WRONG
+You refer to the sheep sheet, noticing it says the Drink Drug Think Thug goes to --.
 >cs sheep sheet
-WRONG
+The sheep sheet shimmers vaguely. You suspect you can just take it, but getting it right would give a style point.
 
 @mis
 > kite keyer
-sheep sheet
+refer to the sheep sheet
 You don't need the risk of getting zapped by electricity, too.
 > might mere
-sheep sheet
+refer to the sheep sheet
 You'd still be scared, reducing your antagonist's strength. You'd be scared of even losing to them. What can you do to stop being scared?
 > skite skier
-sheep sheet
+refer to the sheep sheet
 Too archaic, and you would gain no joy seeing someone else mess up.
 > plight pleaer
-sheep sheet
+refer to the sheep sheet
 Seeing someone else scared and begging won't help you.
 > sprite spreer
-sheep sheet
+refer to the sheep sheet
 Chugging pop will not help in your present circumstances.
 > trite treer
-sheep sheet
+refer to the sheep sheet
 You don't need anything to be chasing you up a tree, hackneyed or otherwise.
 > bite bier
-sheep sheet
+refer to the sheep sheet
 You don't need homonyms here. Something else... something a bit more common...
 > flight fleer
 You need to get less scared, not more.
@@ -75,7 +98,7 @@ You fail to hyperwarp across the Mediterranean.
 > leap leet
 You take a giant step towards understanding a tricky science concept from high school.
 > peep peat
-sheep sheet
+refer to the sheep sheet
 The ground around you remains hard.
 > streep street
 Stalking an actress is scary, yes, but we're not going for that sort of scary.
@@ -84,40 +107,40 @@ Neither a favorite team's success nor drudgery will get your mind off things.
 > weep wheat
 The ground remains unarable.
 > meep meat
-sheep sheet
+refer to the sheep sheet
 No roadrunner whizzes by, and neither does a devious, planning coyote.
 > deep deet
-sheep sheet
+refer to the sheep sheet
 Details will pop up on the sheep sheet as you need them.
 > neep neat
-sheep sheet
+refer to the sheep sheet
 You see no turnip turn up.
 > seep seat
-sheep sheet
+refer to the sheep sheet
 What on earth would you do with a leaky chair?
 > hath haven
-!sheep sheet
-You don't want to let the maven escape. It could help you! Once you're free, you can set it free/.
+!refer to the sheep sheet
+You don't want to let the maven escape. It could help you! Once you're free, you can set it free.
 > chink chug
-sheep sheet
+refer to the sheep sheet
 The Drink Drug Think Thug is too large to disappear through any crack. You're too large to escape
 > jink jug
-sheep sheet
+refer to the sheep sheet
 No liquid container to help your dexterity appears. Oh, well. It might've jinked YOU, anyway.
 > fink fug
-sheep sheet
+refer to the sheep sheet
 No fog carries the Drink Drug Think Thug away or even makes it wimpier.
 > link lug
-sheep sheet
+refer to the sheep sheet
 You need to make the thug much less intimidating.
 > mink mug
-sheep sheet
+refer to the sheep sheet
 The Think Thug is too smart to be upset for being called a rat-face or whatever.
 > rink rug
-sheep sheet
+refer to the sheep sheet
 A rug would be out of place inside a roller rink or ice skating rink. Still, it was worth a try.
 > slink slug
-sheep sheet
+refer to the sheep sheet
 Perhaps that is a bit too drastic. Another more likable animal might work great, though.
 
 ==t2
@@ -135,100 +158,150 @@ by one point
 >fight fear
 by one point
 
+==t3
+>z
+>bleep bleat
+by one point
+>undo
+
 ==t!0
 >heap heat
 by one point
 
-==t3
->z
->undo
->bleep bleat
-by one point
-
 @mis
 > bite bier
-!sheep sheet
+!refer to the sheep sheet
 You don't need homonyms here. Something else... something a bit more common...
-No extraneous leet checks.
 
 >pink pug
 by one point
 
 @mis
 > kite keyer
-!sheep sheet
+!refer to the sheep sheet
 You don't need the risk of getting zapped by electricity, too.
 > might mere
-!sheep sheet
+!refer to the sheep sheet
 You'd still be scared, reducing your antagonist's strength. You'd be scared of even losing to them. What can you do to stop being scared?
 > skite skier
-!sheep sheet
+!refer to the sheep sheet
 Too archaic, and you would gain no joy seeing someone else mess up.
 > plight pleaer
-!sheep sheet
+!refer to the sheep sheet
 Seeing someone else scared and begging won't help you.
 > sprite spreer
-!sheep sheet
+!refer to the sheep sheet
 Chugging pop will not help in your present circumstances.
 > trite treer
-!sheep sheet
+!refer to the sheep sheet
 You don't need anything to be chasing you up a tree, hackneyed or otherwise.
 > meep meat
-!sheep sheet
+!refer to the sheep sheet
 No roadrunner whizzes by, and neither does a devious, planning coyote.
 > deep deet
-!sheep sheet
 Details will pop up on the sheep sheet as you need them.
 > neep neat
-!sheep sheet
+!refer to the sheep sheet
 You see no turnip turn up.
 > seep seat
-!sheep sheet
+!refer to the sheep sheet
 What on earth would you do with a leaky chair?
 > flight fleer
-!sheep sheet
+!refer to the sheep sheet
 You need to get less scared, not more.
 > light leer
-!sheep sheet
+!refer to the sheep sheet
 No, facial expressions aren't enough, here. Especially expressions of contempt.
 > height here
-!sheep sheet
+!refer to the sheep sheet
 How physically low or high you are isn't important. It's the mental bit.
 > right rear
-!sheep sheet
+!refer to the sheep sheet
 You are right in the rear, but you need to move on.
 > shite sheer
-!sheep sheet
+!refer to the sheep sheet
 Getting mad doesn't necessarily help here.
 > sight seer
-!sheep sheet
+!refer to the sheep sheet
 Yes, you're a sight seer.
 > white wier
-!sheep sheet
+!refer to the sheep sheet
 No fence appears.
 > tight tier
-!sheep sheet
+!refer to the sheep sheet
 You think up all the formal and informal meanings of the word tight, but nothing pops up.
 > beep beat
-!sheep sheet
+!refer to the sheep sheet
 You imagine an eternity spent listening to funky techno music. Scary!
 > creep crete
-!sheep sheet
+!refer to the sheep sheet
 You fail to hyperwarp across the Mediterranean.
 > leap leet
-!sheep sheet
+!refer to the sheep sheet
 You take a giant step towards understanding a tricky science concept from high school.
 > peep peat
-!sheep sheet
+!refer to the sheep sheet
 The ground around you remains hard.
 > streep street
-!sheep sheet
+!refer to the sheep sheet
 Stalking an actress is scary, yes, but we're not going for that sort of scary.
 > sweep suite
-!sheep sheet
+!refer to the sheep sheet
 Neither a favorite team's success nor drudgery will get your mind off things.
 > weep wheat
+!refer to the sheep sheet
+> chink chug
 !sheep sheet
+The Drink Drug Think Thug is too large to disappear through any crack. You're too large to escape.
+> fink fug
+!sheep sheet
+No fog carries the Drink Drug Think Thug away or even makes it wimpier.
+> jink jug
+!sheep sheet
+No liquid container to help your dexterity appears. Oh, well. It might've jinked YOU, anyway.
+> link lug
+!sheep sheet
+You need to make the thug much less intimidating.
+> mink mug
+!sheep sheet
+The Think Thug is too smart to be upset for being called a rat-face or whatever.
+> rink rug
+!sheep sheet
+A rug would be out of place inside a roller rink or ice skating rink. Still, it was worth a try.
+> slink slug
+!sheep sheet
+Perhaps that is a bit too drastic. Another more likable animal might work great, though.
+
+@ha
+> fight fear
+!by one point
+Yes, fighting fear is a lifelong journey, but fighting too hard all at once will bring it back.
+> heap heat
+!by one point
+You already did that.
+> pink pug
+!by one point
+You already got rid of the thug.
+
+@ha
+> zfight fear
+!DEBUG: vc-fight-fear rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> fight zfear
+!DEBUG: vc-fight-fear rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zpink pug
+!DEBUG: vc-pink-pug rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> pink zpug
+!DEBUG: vc-pink-pug rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zheap heat
+!DEBUG: vc-heap-heat rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> heap zheat
+!DEBUG: vc-heap-heat rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 
 >e
 Bare Bones Stair Stones
@@ -237,75 +310,74 @@ Bare Bones Stair Stones
 > bear bones
 !sheep sheet
 That would make for creepier ambience, but more importantly, the bear bones would make the stair stones even tougher to climb.
+> care cones
+!sheep sheet
+Nothing appears to make you feel more loved. Aww.
+> crayer crones
+!sheep sheet
+Not only is that a stretch, but it would actively hurt your quest.
+> fair phones
+!sheep sheet
+You have no outside communication here.
+> grayer grones
+!sheep sheet
+A little more atmosphere doesn't help, but it doesn't hurt, either.
+> mare moans
+!sheep sheet
+Horses whinny in the distance.
+> rare roans
+!sheep sheet
+Bringing horses into this mess would be animal cruelty.
+> scare scones
+!sheep sheet
+Spooky food is a creative idea here, but maybe not a practical one.> bear bones
+!sheep sheet
+That would make for creepier ambience, but more importantly, the bear bones would make the stair stones even tougher to climb.
 > stare stones
 !sheep sheet
-Nothing appears in the stones. You/can just/have a bit more work before you/would need to repair them to/climb them.
+Nothing appears in the stones. You would need to repair them to climb them.
 > clayer clones
-sheep sheet
+!sheep sheet
 No golems appear to try and build the stairs. But on the bright side, none appear from the stairs to make it tougher to go up.
 > hair hones
-sheep sheet
+!sheep sheet
 This is no time for follicular or lagomorphic care!
 > jer jones
-sheep sheet
+!sheep sheet
 The owner of the Dallas Cowboys is nightmarish in his own way, though yes, it might be fun to stick him in a nightmare.
 > tare tones
-sheep sheet
+!sheep sheet
 No more scary noises than needed, please.
 
 ==t0
 >u
 The stones are nowhere near in climbable condition yet.
 
-@mis
-> care cones
-sheep sheet
-Nothing appears to make you feel more loved. Aww.
-> crayer crones
-sheep sheet
-Not only is that a stretch, but it would actively hurt your quest.
-> fair phones
-sheep sheet
-You have no outside communication here.
-> grayer grones
-sheep sheet
-A little more atmosphere doesn't help, but it doesn't hurt, either.
-> scare scones
-sheep sheet
-Spooky food is a creative idea here, but maybe not a practical one.
-> mare moans
-sheep sheet
-Horses whinny in the distance.
-> rare roans
-sheep sheet
-Bringing horses into this mess would be animal cruelty.
-
 >s
+
+Peep Pool
 
 @cs
 >cs
-WRONG
-You refer to the sheep sheet, noticing it says
-==
+You refer to the sheep sheet, noticing it says Peep Pool goes to ==.
 >cs steep stool
-You refer to the sheep sheet, noticing it says
---
->cs creep cruel
-You refer to the sheep sheet, noticing it says
---
-
+You refer to the sheep sheet, noticing it says the steep stool goes to --.
+ 
 @mis
 > jeep jewel
-sheep sheet
+refer to the sheep sheet
 The jeep would probably run over YOU.
 > reap rule
-sheep sheet
+refer to the sheep sheet
 This adventure is about surviving, not taking over.
+> weep wool
+refer to the sheep sheet
+Crying is out. So are nice new warm clothes. You're on a spooky Halloween adventure, here!
 > deep dual
-sheep sheet
+refer to the sheep sheet
 You are very close. You don't need to make the pool deeper, but you need something else deep
 > dual deep
-sheep sheet
+refer to the sheep sheet
 You are very close. You don't need to make the pool deeper, but you need something else deep.
 
 ==t2
@@ -314,8 +386,38 @@ You are very close. You don't need to make the pool deeper, but you need somethi
 >think
 KEEP COOL
 
+@ha
+> zdeep duel
+DEBUG: vc-deep-duel rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> deep zduel
+DEBUG: vc-deep-duel rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zkeep cool
+DEBUG: vc-keep-cool rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> keep zcool
+DEBUG: vc-keep-cool rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
 >deep duel
 by one point
+
+@cs
+>cs creep cruel
+You refer to the sheep sheet, noticing it says
+ --
+
+@ha
+>deep duel
+!by one point
+You already summoned the creep (cruel).
+> zdeep duel
+!DEBUG: vc-deep-duel rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> deep zduel
+!DEBUG: vc-deep-duel rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 
 @mis
 >deep dual
@@ -326,13 +428,27 @@ Summoning the creep (cruel) was enough.
 >keep cool
 by one point
 
+@ha
+>keep cool
+!by one point
+You don't need to keep cool any more.
+> zkeep cool
+!DEBUG: vc-keep-cool rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> keep zcool
+!DEBUG: vc-keep-cool rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
 @mis
 > jeep jewel
-!sheep sheet
+!refer to the sheep sheet
 The jeep would probably run over YOU.
 > reap rule
-!sheep sheet
+!refer to the sheep sheet
 This adventure is about surviving, not taking over.
+> weep wool
+!refer to the sheep sheet
+Crying is out. So are nice new warm clothes. You're on a spooky Halloween adventure, here!
 
 >e
 
@@ -344,13 +460,34 @@ You refer to the sheep sheet, noticing it says Gore Gulch goes to ==.
 
 @mis
 > boar bulge
-sheep sheet
+refer to the sheep sheet
 That's a bit of a stretch, but Gore Gulch remains unstretched.
+
+@ha
+> zmore mulch
+DEBUG: vc-more-mulch rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> more zmulch
+DEBUG: vc-more-mulch rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 
 >more mulch
 by one point
 /^Stair Stones
-The gunky material flowing back to Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
+The gunky material flowing back to Bare Bones Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
+
+@ha
+> gonear gore gulch
+> more mulch
+!by one point
+Hoo boy. You have enough mulch.
+> zmore mulch
+!DEBUG: vc-more-mulch rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> more zmulch
+!DEBUG: vc-more-mulch rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+>gonear stair stones
 
 >u
 The stones are almost climbable but still too risky. You need to do a bit more.
@@ -358,6 +495,26 @@ The stones are almost climbable but still too risky. You need to do a bit more.
 >n
 
 Dark Dump
+
+@ha
+> zbark bump
+DEBUG: vc-bark-bump rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> bark zbump
+DEBUG: vc-bark-bump rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zpark pump
+DEBUG: vc-park-pump rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> park zpump
+DEBUG: vc-park-pump rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zstark stump
+DEBUG: vc-stark-stump rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> stark zstump
+DEBUG: vc-stark-stump rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 
 @cs
 >cs
@@ -381,14 +538,17 @@ You refer to the sheep sheet, noticing it says Dark Dump goes to ==
 >undo
 
 @mis
-> clark clump
+> ark ump
 sheep sheet
+Nobody appears to decide which animals will be doomed to forty days and nights of floods.
+> clark clump
+refer to the sheep sheet
 Clark Griswold does not appear in a heap.
 > lark lump
-sheep sheet
+refer to the sheep sheet
 Eww, dead birds?
 > mark mump
-sheep sheet
+refer to the sheep sheet
 You don't want half a sickness, even a temporary one.
 
 ==t3
@@ -413,92 +573,185 @@ You refer to the sheep sheet, noticing it says Dark Dump goes to ==.
 >park pump
 by one point
 
+@ha
+> bark bump
+!by one point
+That's already here.
+> park pump
+!by one point
+That's already here.
+> stark stump
+!by one point
+That's already here.
+
+@ha
+> zbark bump
+!DEBUG: vc-bark-bump rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> bark zbump
+!DEBUG: vc-bark-bump rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zpark pump
+!DEBUG: vc-park-pump rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> park zpump
+!DEBUG: vc-park-pump rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zstark stump
+!DEBUG: vc-stark-stump rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> stark zstump
+!DEBUG: vc-stark-stump rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
 @cs
 >cs
 You can't find any information on the cheap cheat sheep sheet about Dark Dump. Must not need changing.
+
+@mis
+> ark ump
+!sheep sheet
+Nobody appears to decide which animals will be doomed to forty days and nights of floods.
+> clark clump
+!sheep sheet
+Clark Griswold does not appear in a heap.
+> lark lump
+!sheep sheet
+Eww, dead birds?
+> mark mump
+!sheep sheet
+You don't want half a sickness, even a temporary one.
 
 >e
 
 @mis
 > faster fate
-sheep sheet
+refer to the sheep sheet
 But that might mean a faster BAD fate as well as a good one.
 > hastur hate
-sheep sheet
+refer to the sheep sheet
 Oh no. You don't need to make things worse.
 > laster late
-sheep sheet
+refer to the sheep sheet
 A good try, if un-grammatical. But you already have lasted, and you don't want your obstacles to last.
 > raster rate
-sheep sheet
+refer to the sheep sheet
 Your text adventure remains totally texty.
 
 @cs
 >cs
 You refer to the sheep sheet, noticing it says Gaster Gate goes to ++.
 
+@ha
+> zplaster plate
+DEBUG: vc-plaster-plate rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> plaster zplate
+DEBUG: vc-plaster-plate rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
 >plaster plate
 by one point
 Lair 'Lone's Stair Stones
-The gunky material flowing back to Bare Bones Stair Stones is icky, but it will help patch them up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
+The gunky material flowing back to Stair Stones is icky, but it will help patch them up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
+
+@ha
+>gonear gaster gate
+> plaster plate
+!by one point
+You already made a plaster plate.
+> zplaster plate
+!DEBUG: vc-plaster-plate rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> plaster zplate
+!DEBUG: vc-plaster-plate rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+>gonear stair stones
 
 @cs
+>gonear gaster gate
 >cs
 You can't find any information on the cheap cheat sheep sheet about Gaster Gate. Must not need changing.
+>gonear stair stones
 
 @mis
+>gonear gaster gate
 > faster fate
-!sheep sheet
+!refer to the sheep sheet
 But that might mean a faster BAD fate as well as a good one.
 > hastur hate
-!sheep sheet
+!refer to the sheep sheet
 Oh no. You don't need to make things worse.
 > laster late
-!sheep sheet
+!refer to the sheep sheet
 A good try, if un-grammatical. But you already have lasted, and you don't want your obstacles to last.
 > raster rate
-!sheep sheet
+!refer to the sheep sheet
 Your text adventure remains totally texty.
+>gonear stair stones
 
 >u
 Gold Gaol
 
+@ha
+> zold ale
+DEBUG: vc-old-ale rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> old zale
+DEBUG: vc-old-ale rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zcold kale
+DEBUG: vc-cold-kale rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> cold zkale
+DEBUG: vc-cold-kale rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> ztold tale
+DEBUG: vc-told-tale rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> told ztale
+DEBUG: vc-told-tale rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
 @mis
 > rolled rail
-sheep sheet
+refer to the sheep sheet
 You don't need assistance getting out. Or a need to rail verbally.
 > bold bail
-sheep sheet
+refer to the sheep sheet
 You don't have to be bold. The gaol is unguarded.
 > doled dale
-sheep sheet
+refer to the sheep sheet
 That's a bit too archaic to be a final solution, but ... you do dream about these sorts of things in prison.
 > fold fail
-sheep sheet
-You look at FOLD FAIL on the wall, hoping for the lump to maybe grow a bit brighter. It does not. Poor you!
+refer to the sheep sheet
+You look at FOLD FAIL on the wall, hoping for the wrath ravin' math maven to get exasperated enough to spill a solution. But apparently it's good at passive-aggressiveness, too!
 > hold hail
-sheep sheet
+refer to the sheep sheet
 There is nobody to summon, and you don't want to summon weather, either.
 > mold male
-sheep sheet
+refer to the sheep sheet
 You uncover no old letters checking on how you are. Not surprising. You've only been here a bit.
 > polled pail
-sheep sheet
+refer to the sheep sheet
 You haven't been here long enough to even want the company of a pollster.
 > scold scale
-sheep sheet
+refer to the sheep sheet
 The scold scale is probably something you get BEFORE you are sent to prison.
 > sold sail
-sheep sheet
+refer to the sheep sheet
 You don't have to buy anything. You don't want to.
 > swolled swale
-sheep sheet
+refer to the sheep sheet
 The gold gaol cannot change THAT drastically.
-> trolled trail
+> tolled tail
 sheep sheet
+That must be very close indeed.
+> trolled trail
+refer to the sheep sheet
 You will have to make your own trail out. Make it enough yours, you could recount it to others.
 > wold wail
-sheep sheet
+refer to the sheep sheet
 Nothing too drastic, here.
 
 ==t2
@@ -515,7 +768,7 @@ TOLD TALE
 
 @mis
 > gold gale
-sheep sheet
+refer to the sheep sheet
 You can't change the gaol. You can escape easily enough. You just need to figure how, comfortably.
 
 @cs
@@ -523,7 +776,7 @@ You can't change the gaol. You can escape easily enough. You just need to figure
 You refer to the sheep sheet, noticing it says Gold Gaol goes to ??.
 >cold kale
 >cs
-You refer to the sheep sheet, noticing it says Gold Gaol goes to ??.
+You refer to the sheep sheet, noticing it says Gold Gaol goes to --.
 >undo
 >undo
 
@@ -540,6 +793,28 @@ by one point
 @cs
 >cs
 You refer to the sheep sheet, noticing it says Gold Gaol goes to ==.
+
+@ha
+> zold ale
+!DEBUG: vc-old-ale rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> old zale
+!DEBUG: vc-old-ale rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zcold kale
+!DEBUG: vc-cold-kale rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> cold zkale
+!DEBUG: vc-cold-kale rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+@ha
+> old ale
+!by one point
+If you were trying to get drunk, the old ale would be the way to do it. But you're trying to get FREE.
+> cold kale
+!by one point
+To quote Al and Peg Bundy: "More kale, dear?" / "Did I ASK for more kale, dear?"
 
 >told tale
 by one point
