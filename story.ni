@@ -519,6 +519,10 @@ this is the verb-checker rule:
 	let local-ha-half be false;
 	repeat through the table of verb checks:
 		let my-count be 0;
+		now vc-dont-print is true;
+		process the ver-rule entry;
+		if the rule failed, next;
+		now vc-dont-print is false;
 		if the player's command matches the regular expression "(^|\W)([w1 entry])($|\W)", increment my-count;
 		if there is a w2 entry:
 			if the player's command matches the regular expression "(^|\W)([w2 entry])($|\W)", increment my-count;
@@ -533,29 +537,27 @@ this is the verb-checker rule:
 				now wfull-fail is true;
 		if my-count >= 2:
 			process the ver-rule entry;
-			if the rule failed:
-				next;
-			else if the rule succeeded:
-				if okflip entry is false:
-					unless my-count is 3 or there is no w2 entry or the player's command matches the regular expression "^([w1 entry])\W": [this is for the DIM'D test case... and "my-count is 3" is a hack for FLIMFLAM]
-						say "You've got it backwards! Just flip things around, and it'll be okay.";
-						the rule succeeds;
-				if wfull-fail is true:
-					say "Ooh! You're close, but you juggled things up, somehow.";
+			unless the rule succeeded, the rule succeeds;
+			if okflip entry is false:
+				unless my-count is 3 or there is no w2 entry or the player's command matches the regular expression "^([w1 entry])\W": [this is for the DIM'D test case... and "my-count is 3" is a hack for FLIMFLAM]
+					say "You've got it backwards! Just flip things around, and it'll be okay.";
 					the rule succeeds;
-				if there is a core entry and idid entry is false:
-					up-which core entry;
-					if core entry is false:
-						increase wrmm-count by 2; [don't increase wrmm-total as a LLP is not a good guess]
-				now idid entry is true;
-				process the do-rule entry;
-				if zap-core-entry is true:
-					blank out the core entry;
-					now zap-core-entry is false;
-				process the notify score changes rule;
-				if there is a core entry and core entry is false:
-					check-wrmm-progress;
-				process the winnable-with-cheating rule;
+			if wfull-fail is true:
+				say "Ooh! You're close, but you juggled things up, somehow.";
+				the rule succeeds;
+			if there is a core entry and idid entry is false:
+				up-which core entry;
+				if core entry is false:
+					increase wrmm-count by 2; [don't increase wrmm-total as a LLP is not a good guess]
+			now idid entry is true;
+			process the do-rule entry;
+			if zap-core-entry is true:
+				blank out the core entry;
+				now zap-core-entry is false;
+			process the notify score changes rule;
+			if there is a core entry and core entry is false:
+				check-wrmm-progress;
+			process the winnable-with-cheating rule;
 			process the note right guess wrong time rule;
 			the rule succeeds;
 		if ha-half is true and my-count is 1: [there is a bug here with, say, DEAL DIER instead of DEAL DEAR. It prints something extra.]
@@ -905,7 +907,7 @@ this is the vr-park-pump rule:
 this is the vc-pink-pug rule:
 	if drink drug think thug is off-stage or player is not in bight bier, the rule fails;
 	if ts-fight-fear is false:
-		vcp "You're too scared to think that something like that could even work.";
+		vcp "You're too scared to think that something like that could even work. Maybe later, though.";
 		clue-later "PINK PUG";
 		continue the action;
 	if drink drug think thug is moot:
