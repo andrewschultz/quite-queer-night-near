@@ -1,59 +1,12 @@
-#-- rbr-qqnn-thru.txt
-#-- main branch file for Very Vile Fairy File walkthroughs
-#--
-#-- use HHV.PY to verify ha-half
-#--
 
-files=reg-qqnn-thru-min.txt,reg-qqnn-thru-all.txt,reg-qqnn-thru-think.txt,reg-qqnn-alt-verbs.txt,reg-qqnn-thru-mistakes.txt,reg-qqnn-thru-ha-half.txt,reg-qqnn-scan.txt
-~	mis	t4
-~	ha	t5
-~	cs	t6
-
-## *FILE
-## *FORK
-
-TSV:## minimum walkthrough	## walkthrough with all points	## walkthrough with altverb tests ## walkthrough with fake deaths ## walkthrough testing all mistakes
+## reg-qqnn-thru-mistakes.txt
+## GENERATOR FILE: rbr-qqnn-thru.txt
 
 ** game: /home/andrew/prt/debug-quite-queer-night-near.z8
 ** interpreter: /home/andrew/prt/dfrotz -m
 
 * main-thru
 
-@ha
-> zfight fear
-DEBUG: vc-fight-fear rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> fight zfear
-DEBUG: vc-fight-fear rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> zpink pug
-DEBUG: vc-pink-pug rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> pink zpug
-DEBUG: vc-pink-pug rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> zheap heat
-DEBUG: vc-heap-heat rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> heap zheat
-DEBUG: vc-heap-heat rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-
-@cs
->cs me
-You don't need to change yourself. Whew.
->cs
-You refer to the sheep sheet, noticing it says Blight Blear Bight Bier goes to +-/-+.
->cs sleep sleet
-You refer to the sheep sheet, noticing it says the sleep sleet goes to --.
->cs spite spear
-You refer to the sheep sheet, noticing it says the spite spear goes to -=/=-.
->cs think thug
-You refer to the sheep sheet, noticing it says the Drink Drug Think Thug goes to --.
->cs sheep sheet
-The sheep sheet shimmers vaguely. You suspect you can just take it, but getting it right would give a style point.
-
-@mis
 > kite keyer
 refer to the sheep sheet
 You don't need the risk of getting zapped by electricity, too.
@@ -143,33 +96,12 @@ A rug would be out of place inside a roller rink or ice skating rink. Still, it 
 refer to the sheep sheet
 Perhaps that is a bit too drastic. Another more likable animal might work great, though.
 
-==t2
->pink pug
-You're too scared to think that something like that could even work. Maybe later, though.
-!by one point
->think
-PINK PUG
-
-==t3
->z
->fright freer
-by one point
->undo
-
 >fight fear
 by one point
 
-==t3
->z
->bleep bleat
-by one point
->undo
-
-==t!0
 >heap heat
 by one point
 
-@mis
 > bite bier
 !refer to the sheep sheet
 You don't need homonyms here. Something else... something a bit more common...
@@ -177,7 +109,6 @@ You don't need homonyms here. Something else... something a bit more common...
 >pink pug
 by one point
 
-@mis
 > kite keyer
 !refer to the sheep sheet
 You don't need the risk of getting zapped by electricity, too.
@@ -273,41 +204,9 @@ A rug would be out of place inside a roller rink or ice skating rink. Still, it 
 !sheep sheet
 Perhaps that is a bit too drastic. Another more likable animal might work great, though.
 
-@ha
-> fight fear
-!by one point
-Yes, fighting fear is a lifelong journey, but fighting too hard all at once will bring it back.
-> heap heat
-!by one point
-You already did that.
-> pink pug
-!by one point
-You already got rid of the thug.
-
-@ha
-> zfight fear
-!DEBUG: vc-fight-fear rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> fight zfear
-!DEBUG: vc-fight-fear rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> zpink pug
-!DEBUG: vc-pink-pug rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> pink zpug
-!DEBUG: vc-pink-pug rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> zheap heat
-!DEBUG: vc-heap-heat rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> heap zheat
-!DEBUG: vc-heap-heat rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-
 >e
 Bare Bones Stair Stones
 
-@mis
 > bear bones
 !sheep sheet
 That would make for creepier ambience, but more importantly, the bear bones would make the stair stones even tougher to climb.
@@ -350,21 +249,10 @@ The owner of the Dallas Cowboys is nightmarish in his own way, though yes, it mi
 !sheep sheet
 No more scary noises than needed, please.
 
-==t0
->u
-The stones are nowhere near in climbable condition yet.
-
 >s
 
 Peep Pool
 
-@cs
->cs
-You refer to the sheep sheet, noticing it says Peep Pool goes to ==.
->cs steep stool
-You refer to the sheep sheet, noticing it says the steep stool goes to --.
- 
-@mis
 > jeep jewel
 refer to the sheep sheet
 The jeep would probably run over YOU.
@@ -381,47 +269,9 @@ You are very close. You don't need to make the pool deeper, but you need somethi
 refer to the sheep sheet
 You are very close. You don't need to make the pool deeper, but you need something else deep.
 
-==t2
->keep cool
-You have no one annoying you. But there might be someone later, if you're lucky! Wow!
-!by one point
->think
-KEEP COOL
-
-@ha
-> zdeep duel
-DEBUG: vc-deep-duel rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> deep zduel
-DEBUG: vc-deep-duel rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> zkeep cool
-DEBUG: vc-keep-cool rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> keep zcool
-DEBUG: vc-keep-cool rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-
 >deep duel
 by one point
 
-@cs
->cs creep cruel
-You refer to the sheep sheet, noticing it says
- --
-
-@ha
->deep duel
-!by one point
-You already summoned the creep (cruel).
-> zdeep duel
-!DEBUG: vc-deep-duel rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> deep zduel
-!DEBUG: vc-deep-duel rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-
-@mis
 >deep dual
 Summoning the creep (cruel) was enough.
 >dual deep
@@ -430,18 +280,6 @@ Summoning the creep (cruel) was enough.
 >keep cool
 by one point
 
-@ha
->keep cool
-!by one point
-You don't need to keep cool any more.
-> zkeep cool
-!DEBUG: vc-keep-cool rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> keep zcool
-!DEBUG: vc-keep-cool rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-
-@mis
 > jeep jewel
 !refer to the sheep sheet
 The jeep would probably run over YOU.
@@ -456,40 +294,14 @@ Crying is out. So are nice new warm clothes. You're on a spooky Halloween advent
 
 Gore Gulch
 
-@cs
->cs
-You refer to the sheep sheet, noticing it says Gore Gulch goes to ==.
-
-@mis
 > boar bulge
 refer to the sheep sheet
 That's a bit of a stretch, but Gore Gulch remains unstretched.
-
-@ha
-> zmore mulch
-DEBUG: vc-more-mulch rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> more zmulch
-DEBUG: vc-more-mulch rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 
 >more mulch
 by one point
 /^Stair Stones
 The gunky material flowing back to Bare Bones Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
-
-@ha
-> gonear gore gulch
-> more mulch
-!by one point
-Hoo boy. You have enough mulch.
-> zmore mulch
-!DEBUG: vc-more-mulch rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> more zmulch
-!DEBUG: vc-more-mulch rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
->gonear stair stones
 
 >u
 The stones are almost climbable but still too risky. You need to do a bit more.
@@ -498,48 +310,6 @@ The stones are almost climbable but still too risky. You need to do a bit more.
 
 Dark Dump
 
-@ha
-> zbark bump
-DEBUG: vc-bark-bump rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> bark zbump
-DEBUG: vc-bark-bump rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> zpark pump
-DEBUG: vc-park-pump rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> park zpump
-DEBUG: vc-park-pump rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> zstark stump
-DEBUG: vc-stark-stump rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> stark zstump
-DEBUG: vc-stark-stump rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-
-@cs
->cs
-You refer to the sheep sheet, noticing it says Dark Dump goes to ??
-
-@cs
->stark stump
->cs
-You refer to the sheep sheet, noticing it says Dark Dump goes to ==
->undo
->undo
->park pump
->cs
-You refer to the sheep sheet, noticing it says Dark Dump goes to ??
->stark stump
->cs
-You refer to the sheep sheet, noticing it says Dark Dump goes to ==
->undo
->undo
->undo
->undo
-
-@mis
 > ark ump
 sheep sheet
 Nobody appears to decide which animals will be doomed to forty days and nights of floods.
@@ -553,64 +323,15 @@ Eww, dead birds?
 refer to the sheep sheet
 You don't want half a sickness, even a temporary one.
 
-==t3
->hark hump
-by one point
->undo
-
 >bark bump
 by one point
-
-@cs
->cs
-You refer to the sheep sheet, noticing it says Dark Dump goes to ??.
 
 >stark stump
 by one point
 
-@cs
->cs
-You refer to the sheep sheet, noticing it says Dark Dump goes to ==.
-
 >park pump
 by one point
 
-@ha
-> bark bump
-!by one point
-That's already here.
-> park pump
-!by one point
-That's already here.
-> stark stump
-!by one point
-That's already here.
-
-@ha
-> zbark bump
-!DEBUG: vc-bark-bump rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> bark zbump
-!DEBUG: vc-bark-bump rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> zpark pump
-!DEBUG: vc-park-pump rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> park zpump
-!DEBUG: vc-park-pump rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> zstark stump
-!DEBUG: vc-stark-stump rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> stark zstump
-!DEBUG: vc-stark-stump rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-
-@cs
->cs
-You can't find any information on the cheap cheat sheep sheet about Dark Dump. Must not need changing.
-
-@mis
 > ark ump
 !sheep sheet
 Nobody appears to decide which animals will be doomed to forty days and nights of floods.
@@ -626,7 +347,6 @@ You don't want half a sickness, even a temporary one.
 
 >e
 
-@mis
 > faster fate
 refer to the sheep sheet
 But that might mean a faster BAD fate as well as a good one.
@@ -639,44 +359,12 @@ A good try, if un-grammatical. But you already have lasted, and you don't want y
 > raster rate
 refer to the sheep sheet
 Your text adventure remains totally texty.
-
-@cs
->cs
-You refer to the sheep sheet, noticing it says Gaster Gate goes to ++.
-
-@ha
-> zplaster plate
-DEBUG: vc-plaster-plate rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> plaster zplate
-DEBUG: vc-plaster-plate rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 
 >plaster plate
 by one point
 Lair 'Lone's Stair Stones
 The gunky material flowing back to Stair Stones is icky, but it will help patch them up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
 
-@ha
->gonear gaster gate
-> plaster plate
-!by one point
-You already made a plaster plate.
-> zplaster plate
-!DEBUG: vc-plaster-plate rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> plaster zplate
-!DEBUG: vc-plaster-plate rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
->gonear stair stones
-
-@cs
->gonear gaster gate
->cs
-You can't find any information on the cheap cheat sheep sheet about Gaster Gate. Must not need changing.
->gonear stair stones
-
-@mis
 >gonear gaster gate
 > faster fate
 !refer to the sheep sheet
@@ -692,35 +380,9 @@ A good try, if un-grammatical. But you already have lasted, and you don't want y
 Your text adventure remains totally texty.
 >gonear stair stones
 
-==t1
->s
-The wrath ravin' math maven rolls its eyes and groans as you go back north. Perhaps you're done there.
->n
-
 >u
 Gold Gaol
 
-@ha
-> zold ale
-DEBUG: vc-old-ale rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> old zale
-DEBUG: vc-old-ale rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> zcold kale
-DEBUG: vc-cold-kale rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> cold zkale
-DEBUG: vc-cold-kale rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> ztold tale
-DEBUG: vc-told-tale rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> told ztale
-DEBUG: vc-told-tale rule tipped off half-body tingling.
-Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-
-@mis
 > rolled rail
 refer to the sheep sheet
 You don't need assistance getting out. Or a need to rail verbally.
@@ -761,68 +423,15 @@ You will have to make your own trail out. Make it enough yours, you could recoun
 refer to the sheep sheet
 Nothing too drastic, here.
 
-==t2
->told tale
-You're not nourished enough to make it far out of the cell. You need food and drink. Even lousy food and drink.
-!by one point
->think
-TOLD TALE
->cold kale
->think
-once
-TOLD TALE
->undo
->undo
-
-@mis
 > gold gale
 refer to the sheep sheet
 You can't change the gaol. You can escape easily enough. You just need to figure how, comfortably.
 
-@cs
->cs
-You refer to the sheep sheet, noticing it says Gold Gaol goes to ??.
->cold kale
->cs
-You refer to the sheep sheet, noticing it says Gold Gaol goes to --.
->undo
->undo
-
 >old ale
 by one point
 
-@cs
->cs
-You refer to the sheep sheet, noticing it says Gold Gaol goes to ==.
-
 >cold kale
 by one point
-
-@cs
->cs
-You refer to the sheep sheet, noticing it says Gold Gaol goes to ==.
-
-@ha
-> zold ale
-!DEBUG: vc-old-ale rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> old zale
-!DEBUG: vc-old-ale rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> zcold kale
-!DEBUG: vc-cold-kale rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-> cold zkale
-!DEBUG: vc-cold-kale rule tipped off half-body tingling.
-!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-
-@ha
-> old ale
-!by one point
-If you were trying to get drunk, the old ale would be the way to do it. But you're trying to get FREE.
-> cold kale
-!by one point
-To quote Al and Peg Bundy: "More kale, dear?" / "Did I ASK for more kale, dear?"
 
 >told tale
 by one point

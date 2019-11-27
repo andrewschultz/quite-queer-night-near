@@ -1,0 +1,150 @@
+
+## reg-qqnn-scan.txt
+## GENERATOR FILE: rbr-qqnn-thru.txt
+
+** game: /home/andrew/prt/debug-quite-queer-night-near.z8
+** interpreter: /home/andrew/prt/dfrotz -m
+
+* main-thru
+
+>cs me
+You don't need to change yourself. Whew.
+>cs
+You refer to the sheep sheet, noticing it says Blight Blear Bight Bier goes to +-/-+.
+>cs sleep sleet
+You refer to the sheep sheet, noticing it says the sleep sleet goes to --.
+>cs spite spear
+You refer to the sheep sheet, noticing it says the spite spear goes to -=/=-.
+>cs think thug
+You refer to the sheep sheet, noticing it says the Drink Drug Think Thug goes to --.
+>cs sheep sheet
+The sheep sheet shimmers vaguely. You suspect you can just take it, but getting it right would give a style point.
+
+>fight fear
+by one point
+
+>heap heat
+by one point
+
+>pink pug
+by one point
+
+>e
+Bare Bones Stair Stones
+
+>s
+
+Peep Pool
+
+>cs
+You refer to the sheep sheet, noticing it says Peep Pool goes to ==.
+>cs steep stool
+You refer to the sheep sheet, noticing it says the steep stool goes to --.
+
+>deep duel
+by one point
+
+>cs creep cruel
+You refer to the sheep sheet, noticing it says
+ --
+
+>keep cool
+by one point
+
+>e
+
+Gore Gulch
+
+>cs
+You refer to the sheep sheet, noticing it says Gore Gulch goes to ==.
+
+>more mulch
+by one point
+/^Stair Stones
+The gunky material flowing back to Bare Bones Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
+
+>u
+The stones are almost climbable but still too risky. You need to do a bit more.
+
+>n
+
+Dark Dump
+
+>cs
+You refer to the sheep sheet, noticing it says Dark Dump goes to ??
+
+>stark stump
+>cs
+You refer to the sheep sheet, noticing it says Dark Dump goes to ==
+>undo
+>undo
+>park pump
+>cs
+You refer to the sheep sheet, noticing it says Dark Dump goes to ??
+>stark stump
+>cs
+You refer to the sheep sheet, noticing it says Dark Dump goes to ==
+>undo
+>undo
+>undo
+>undo
+
+>bark bump
+by one point
+
+>cs
+You refer to the sheep sheet, noticing it says Dark Dump goes to ??.
+
+>stark stump
+by one point
+
+>cs
+You refer to the sheep sheet, noticing it says Dark Dump goes to ==.
+
+>park pump
+by one point
+
+>cs
+You can't find any information on the cheap cheat sheep sheet about Dark Dump. Must not need changing.
+
+>e
+
+>cs
+You refer to the sheep sheet, noticing it says Gaster Gate goes to ++.
+
+>plaster plate
+by one point
+Lair 'Lone's Stair Stones
+The gunky material flowing back to Stair Stones is icky, but it will help patch them up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
+
+>gonear gaster gate
+>cs
+You can't find any information on the cheap cheat sheep sheet about Gaster Gate. Must not need changing.
+>gonear stair stones
+
+>u
+Gold Gaol
+
+>cs
+You refer to the sheep sheet, noticing it says Gold Gaol goes to ??.
+>cold kale
+>cs
+You refer to the sheep sheet, noticing it says Gold Gaol goes to --.
+>undo
+>undo
+
+>old ale
+by one point
+
+>cs
+You refer to the sheep sheet, noticing it says Gold Gaol goes to ==.
+
+>cold kale
+by one point
+
+>cs
+You refer to the sheep sheet, noticing it says Gold Gaol goes to ==.
+
+>told tale
+by one point
+

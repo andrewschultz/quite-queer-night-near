@@ -1,0 +1,281 @@
+
+## reg-qqnn-thru-ha-half.txt
+## GENERATOR FILE: rbr-qqnn-thru.txt
+
+** game: /home/andrew/prt/debug-quite-queer-night-near.z8
+** interpreter: /home/andrew/prt/dfrotz -m
+
+* main-thru
+
+> zfight fear
+DEBUG: vc-fight-fear rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> fight zfear
+DEBUG: vc-fight-fear rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zpink pug
+DEBUG: vc-pink-pug rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> pink zpug
+DEBUG: vc-pink-pug rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zheap heat
+DEBUG: vc-heap-heat rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> heap zheat
+DEBUG: vc-heap-heat rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+>fight fear
+by one point
+
+>heap heat
+by one point
+
+>pink pug
+by one point
+
+> fight fear
+!by one point
+Yes, fighting fear is a lifelong journey, but fighting too hard all at once will bring it back.
+> heap heat
+!by one point
+You already did that.
+> pink pug
+!by one point
+You already got rid of the thug.
+
+> zfight fear
+!DEBUG: vc-fight-fear rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> fight zfear
+!DEBUG: vc-fight-fear rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zpink pug
+!DEBUG: vc-pink-pug rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> pink zpug
+!DEBUG: vc-pink-pug rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zheap heat
+!DEBUG: vc-heap-heat rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> heap zheat
+!DEBUG: vc-heap-heat rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+>e
+Bare Bones Stair Stones
+
+>s
+
+Peep Pool
+
+> zdeep duel
+DEBUG: vc-deep-duel rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> deep zduel
+DEBUG: vc-deep-duel rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zkeep cool
+DEBUG: vc-keep-cool rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> keep zcool
+DEBUG: vc-keep-cool rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+>deep duel
+by one point
+
+>deep duel
+!by one point
+You already summoned the creep (cruel).
+> zdeep duel
+!DEBUG: vc-deep-duel rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> deep zduel
+!DEBUG: vc-deep-duel rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+>keep cool
+by one point
+
+>keep cool
+!by one point
+You don't need to keep cool any more.
+> zkeep cool
+!DEBUG: vc-keep-cool rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> keep zcool
+!DEBUG: vc-keep-cool rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+>e
+
+Gore Gulch
+
+> zmore mulch
+DEBUG: vc-more-mulch rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> more zmulch
+DEBUG: vc-more-mulch rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+>more mulch
+by one point
+/^Stair Stones
+The gunky material flowing back to Bare Bones Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
+
+> gonear gore gulch
+> more mulch
+!by one point
+Hoo boy. You have enough mulch.
+> zmore mulch
+!DEBUG: vc-more-mulch rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> more zmulch
+!DEBUG: vc-more-mulch rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+>gonear stair stones
+
+>u
+The stones are almost climbable but still too risky. You need to do a bit more.
+
+>n
+
+Dark Dump
+
+> zbark bump
+DEBUG: vc-bark-bump rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> bark zbump
+DEBUG: vc-bark-bump rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zpark pump
+DEBUG: vc-park-pump rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> park zpump
+DEBUG: vc-park-pump rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zstark stump
+DEBUG: vc-stark-stump rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> stark zstump
+DEBUG: vc-stark-stump rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+>bark bump
+by one point
+
+>stark stump
+by one point
+
+>park pump
+by one point
+
+> bark bump
+!by one point
+That's already here.
+> park pump
+!by one point
+That's already here.
+> stark stump
+!by one point
+That's already here.
+
+> zbark bump
+!DEBUG: vc-bark-bump rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> bark zbump
+!DEBUG: vc-bark-bump rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zpark pump
+!DEBUG: vc-park-pump rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> park zpump
+!DEBUG: vc-park-pump rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zstark stump
+!DEBUG: vc-stark-stump rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> stark zstump
+!DEBUG: vc-stark-stump rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+>e
+
+> zplaster plate
+DEBUG: vc-plaster-plate rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> plaster zplate
+DEBUG: vc-plaster-plate rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+>plaster plate
+by one point
+Lair 'Lone's Stair Stones
+The gunky material flowing back to Stair Stones is icky, but it will help patch them up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
+
+>gonear gaster gate
+> plaster plate
+!by one point
+You already made a plaster plate.
+> zplaster plate
+!DEBUG: vc-plaster-plate rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> plaster zplate
+!DEBUG: vc-plaster-plate rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+>gonear stair stones
+
+>u
+Gold Gaol
+
+> zold ale
+DEBUG: vc-old-ale rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> old zale
+DEBUG: vc-old-ale rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zcold kale
+DEBUG: vc-cold-kale rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> cold zkale
+DEBUG: vc-cold-kale rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> ztold tale
+DEBUG: vc-told-tale rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> told ztale
+DEBUG: vc-told-tale rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+>old ale
+by one point
+
+>cold kale
+by one point
+
+> zold ale
+!DEBUG: vc-old-ale rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> old zale
+!DEBUG: vc-old-ale rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> zcold kale
+!DEBUG: vc-cold-kale rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+> cold zkale
+!DEBUG: vc-cold-kale rule tipped off half-body tingling.
+!Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+> old ale
+!by one point
+If you were trying to get drunk, the old ale would be the way to do it. But you're trying to get FREE.
+> cold kale
+!by one point
+To quote Al and Peg Bundy: "More kale, dear?" / "Did I ASK for more kale, dear?"
+
+>told tale
+by one point
+
