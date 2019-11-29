@@ -9,6 +9,7 @@
 * main-thru
 
 >pink pug
+You're too scared to think that something like that could even work. Maybe later, though.
 !by one point
 >think
 PINK PUG
@@ -30,6 +31,7 @@ Bare Bones Stair Stones
 Peep Pool
 
 >keep cool
+You have no one annoying you. But there might be someone later, if you're lucky! Wow!
 !by one point
 >think
 KEEP COOL
@@ -76,6 +78,7 @@ The gunky material flowing back to Stair Stones is icky, but it will help patch 
 Gold Gaol
 
 >told tale
+You're not nourished enough to make it far out of the cell. You need food and drink. Even lousy food and drink.
 !by one point
 >think
 TOLD TALE

@@ -5,6 +5,7 @@
 #--
 
 files=reg-qqnn-thru-min.txt,reg-qqnn-thru-all.txt,reg-qqnn-thru-think.txt,reg-qqnn-alt-verbs.txt,reg-qqnn-thru-mistakes.txt,reg-qqnn-thru-ha-half.txt,reg-qqnn-scan.txt
+~	alt	t3
 ~	mis	t4
 ~	ha	t5
 ~	cs	t6
@@ -43,7 +44,11 @@ Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 >cs me
 You don't need to change yourself. Whew.
 >cs
-You refer to the sheep sheet, noticing it says Blight Blear Bight Bier goes to +-/-+.
+/You refer to the sheep sheet, noticing it says (Blight Blear goes to --|Bight Bier goes to ==).
+Maybe there's another reading for the other half of this location's name.
+>cs
+/You refer to the sheep sheet, noticing it says (Blight Blear goes to --|Bight Bier goes to ==).
+!Maybe there's another reading for the other half of this location's name.
 >cs sleep sleet
 You refer to the sheep sheet, noticing it says the sleep sleet goes to --.
 >cs spite spear
@@ -76,7 +81,7 @@ You don't need anything to be chasing you up a tree, hackneyed or otherwise.
 refer to the sheep sheet
 You don't need homonyms here. Something else... something a bit more common...
 > flight fleer
-You need to get less scared, not more.
+You need to get less scared, not more. Plus, there's nowhere to run, anyway.
 > light leer
 No, facial expressions aren't enough, here. Especially expressions of contempt.
 > height here
@@ -87,6 +92,9 @@ You are right in the rear, but you need to move on.
 Getting mad doesn't necessarily help here.
 > sight seer
 Yes, you're a sight seer.
+> smite smear
+sheep sheet
+You don't need violence or a battle cry.
 > white wier
 No fence appears.
 > tight tier
@@ -150,7 +158,7 @@ You're too scared to think that something like that could even work. Maybe later
 >think
 PINK PUG
 
-==t3
+@alt
 >z
 >fright freer
 by one point
@@ -159,7 +167,7 @@ by one point
 >fight fear
 by one point
 
-==t3
+@alt
 >z
 >bleep bleat
 by one point
@@ -209,7 +217,7 @@ You see no turnip turn up.
 What on earth would you do with a leaky chair?
 > flight fleer
 !refer to the sheep sheet
-You need to get less scared, not more.
+You need to get less scared, not more. Plus, there's nowhere to run, anyway.
 > light leer
 !refer to the sheep sheet
 No, facial expressions aren't enough, here. Especially expressions of contempt.
@@ -225,6 +233,9 @@ Getting mad doesn't necessarily help here.
 > sight seer
 !refer to the sheep sheet
 Yes, you're a sight seer.
+> smite smear
+!sheep sheet
+You don't need violence or a battle cry.
 > white wier
 !refer to the sheep sheet
 No fence appears.
@@ -251,27 +262,6 @@ Stalking an actress is scary, yes, but we're not going for that sort of scary.
 Neither a favorite team's success nor drudgery will get your mind off things.
 > weep wheat
 !refer to the sheep sheet
-> chink chug
-!sheep sheet
-The Drink Drug Think Thug is too large to disappear through any crack. You're too large to escape.
-> fink fug
-!sheep sheet
-No fog carries the Drink Drug Think Thug away or even makes it wimpier.
-> jink jug
-!sheep sheet
-No liquid container to help your dexterity appears. Oh, well. It might've jinked YOU, anyway.
-> link lug
-!sheep sheet
-You need to make the thug much less intimidating.
-> mink mug
-!sheep sheet
-The Think Thug is too smart to be upset for being called a rat-face or whatever.
-> rink rug
-!sheep sheet
-A rug would be out of place inside a roller rink or ice skating rink. Still, it was worth a try.
-> slink slug
-!sheep sheet
-Perhaps that is a bit too drastic. Another more likable animal might work great, though.
 
 @ha
 > fight fear
@@ -331,9 +321,8 @@ Horses whinny in the distance.
 Bringing horses into this mess would be animal cruelty.
 > scare scones
 !sheep sheet
-Spooky food is a creative idea here, but maybe not a practical one.> bear bones
+Spooky food is a creative idea here, but maybe not a practical one.
 !sheep sheet
-That would make for creepier ambience, but more importantly, the bear bones would make the stair stones even tougher to climb.
 > stare stones
 !sheep sheet
 Nothing appears in the stones. You would need to repair them to climb them.
@@ -401,6 +390,11 @@ Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 > keep zcool
 DEBUG: vc-keep-cool rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+@alt
+>creep cruel
+by one point
+>undo
 
 >deep duel
 by one point
@@ -553,7 +547,7 @@ Eww, dead birds?
 refer to the sheep sheet
 You don't want half a sickness, even a temporary one.
 
-==t3
+@alt
 >hark hump
 by one point
 >undo
@@ -694,7 +688,7 @@ Your text adventure remains totally texty.
 
 ==t1
 >s
-The wrath ravin' math maven rolls its eyes and groans as you go back north. Perhaps you're done there.
+The wrath ravin' math maven rolls its eyes and groans as you go back south. Perhaps you're done there.
 >n
 
 >u

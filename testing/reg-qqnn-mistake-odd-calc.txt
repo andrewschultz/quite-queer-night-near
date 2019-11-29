@@ -1,6 +1,7 @@
 #-- reg-mistake-odd-calc.txt
 #-- calculating odd mistake stuff, like how and when you get a bonus
 #--
+#-- most likely to fail: "you can still access x of x+6 good guesses"
 
 ** game: /home/andrew/prt/debug-quite-queer-night-near.z8
 ** interpreter: /home/andrew/prt/dfrotz -m
@@ -33,7 +34,7 @@ Zoom! The wrath ravin' math maven zips back near, sullenly. You pick it up.
 
 >score
 You have 0 out of 12 points needed to win the game, but there's a bonus point.
-You have made 6 good guesses so far. You can still access 64 of 70 good guesses.
+You have made 6 good guesses so far. You can still access 68 of 74 good guesses.
 
 >shite sheer
 The wrath ravin' math maven howls and grows bigger. All your guesses have paid off.

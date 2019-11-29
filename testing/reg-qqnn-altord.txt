@@ -61,8 +61,10 @@ Stair Stones
 Stair Stones
 
 >n
-The wrath ravin' math maven rolls its eyes and groans as you go back north. Perhaps you're done there.
+The wrath ravin' math maven rolls its eyes and groans as you go back north.
+!Perhaps you're done there.
 
+>s
 >s
 >deep duel
 >keep cool

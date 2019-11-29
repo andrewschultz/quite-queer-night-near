@@ -33,6 +33,10 @@ Bare Bones Stair Stones
 
 Peep Pool
 
+>creep cruel
+by one point
+>undo
+
 >deep duel
 by one point
 

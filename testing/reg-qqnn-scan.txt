@@ -10,7 +10,11 @@
 >cs me
 You don't need to change yourself. Whew.
 >cs
-You refer to the sheep sheet, noticing it says Blight Blear Bight Bier goes to +-/-+.
+/You refer to the sheep sheet, noticing it says (Blight Blear goes to --|Bight Bier goes to ==).
+Maybe there's another reading for the other half of this location's name.
+>cs
+/You refer to the sheep sheet, noticing it says (Blight Blear goes to --|Bight Bier goes to ==).
+!Maybe there's another reading for the other half of this location's name.
 >cs sleep sleet
 You refer to the sheep sheet, noticing it says the sleep sleet goes to --.
 >cs spite spear

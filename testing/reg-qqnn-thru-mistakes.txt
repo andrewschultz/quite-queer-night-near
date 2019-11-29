@@ -29,7 +29,7 @@ You don't need anything to be chasing you up a tree, hackneyed or otherwise.
 refer to the sheep sheet
 You don't need homonyms here. Something else... something a bit more common...
 > flight fleer
-You need to get less scared, not more.
+You need to get less scared, not more. Plus, there's nowhere to run, anyway.
 > light leer
 No, facial expressions aren't enough, here. Especially expressions of contempt.
 > height here
@@ -40,6 +40,9 @@ You are right in the rear, but you need to move on.
 Getting mad doesn't necessarily help here.
 > sight seer
 Yes, you're a sight seer.
+> smite smear
+sheep sheet
+You don't need violence or a battle cry.
 > white wier
 No fence appears.
 > tight tier
@@ -140,7 +143,7 @@ You see no turnip turn up.
 What on earth would you do with a leaky chair?
 > flight fleer
 !refer to the sheep sheet
-You need to get less scared, not more.
+You need to get less scared, not more. Plus, there's nowhere to run, anyway.
 > light leer
 !refer to the sheep sheet
 No, facial expressions aren't enough, here. Especially expressions of contempt.
@@ -156,6 +159,9 @@ Getting mad doesn't necessarily help here.
 > sight seer
 !refer to the sheep sheet
 Yes, you're a sight seer.
+> smite smear
+!sheep sheet
+You don't need violence or a battle cry.
 > white wier
 !refer to the sheep sheet
 No fence appears.
@@ -182,27 +188,6 @@ Stalking an actress is scary, yes, but we're not going for that sort of scary.
 Neither a favorite team's success nor drudgery will get your mind off things.
 > weep wheat
 !refer to the sheep sheet
-> chink chug
-!sheep sheet
-The Drink Drug Think Thug is too large to disappear through any crack. You're too large to escape.
-> fink fug
-!sheep sheet
-No fog carries the Drink Drug Think Thug away or even makes it wimpier.
-> jink jug
-!sheep sheet
-No liquid container to help your dexterity appears. Oh, well. It might've jinked YOU, anyway.
-> link lug
-!sheep sheet
-You need to make the thug much less intimidating.
-> mink mug
-!sheep sheet
-The Think Thug is too smart to be upset for being called a rat-face or whatever.
-> rink rug
-!sheep sheet
-A rug would be out of place inside a roller rink or ice skating rink. Still, it was worth a try.
-> slink slug
-!sheep sheet
-Perhaps that is a bit too drastic. Another more likable animal might work great, though.
 
 >e
 Bare Bones Stair Stones
@@ -230,9 +215,8 @@ Horses whinny in the distance.
 Bringing horses into this mess would be animal cruelty.
 > scare scones
 !sheep sheet
-Spooky food is a creative idea here, but maybe not a practical one.> bear bones
+Spooky food is a creative idea here, but maybe not a practical one.
 !sheep sheet
-That would make for creepier ambience, but more importantly, the bear bones would make the stair stones even tougher to climb.
 > stare stones
 !sheep sheet
 Nothing appears in the stones. You would need to repair them to climb them.

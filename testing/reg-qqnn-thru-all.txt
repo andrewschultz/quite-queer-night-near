@@ -62,6 +62,10 @@ by one point
 Lair 'Lone's Stair Stones
 The gunky material flowing back to Stair Stones is icky, but it will help patch them up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
 
+>s
+The wrath ravin' math maven rolls its eyes and groans as you go back south. Perhaps you're done there.
+>n
+
 >u
 Gold Gaol
 
