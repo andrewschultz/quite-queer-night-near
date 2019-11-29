@@ -65,3 +65,6 @@ howls and grows
 DEBUG: 4 maven count, 3 maven charges.
 >slink slug
 howls and grows
+>deep deet
+!maven count
+!maven charge

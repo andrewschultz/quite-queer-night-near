@@ -23,17 +23,17 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	still-rule	mist-txt
 "white wier/weir"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"No fence appears."
 "tight tier/tear"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"You think up all the formal and informal meanings of the word tight, but nothing pops up."
 "trite treer"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"You don't need anything to be chasing you up a tree, hackneyed or otherwise."
-"beep beat"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-takeable rule	"You imagine an eternity spent listening to funky techno music. Scary!"
-"meep meat"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-takeable rule	"No roadrunner whizzes by, and neither does a devious, planning coyote."
-"deep deet"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-takeable rule	"Details will pop up on the sheep sheet as you need them."
-"creep crete"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-takeable rule	"You fail to hyperwarp across the Mediterranean."
-"leap leet"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-takeable rule	"You take a giant step towards understanding a tricky science concept from high school."
-"neep neat"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-takeable rule	"You see no turnip turn up."
-"peep peat"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-takeable rule	"The ground around you remains hard."
-"seep seat"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-takeable rule	"What on earth would you do with a leaky chair?"
-"streep street"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-takeable rule	"Stalking an actress is scary, yes, but we're not going for that sort of scary."
-"sweep suite/sweet"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-takeable rule	"Neither a favorite team's success nor drudgery will get your mind off things."
-"weep wheat"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-takeable rule	"The ground remains unarable."
+"beep beat"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-available rule	"You imagine an eternity spent listening to funky techno music. Scary!"
+"meep meat"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-available rule	"No roadrunner whizzes by, and neither does a devious, planning coyote."
+"deep deet"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-untaken rule	"[if player has sheep sheet][sheet-spoil][else]You can't see any deep details, but maybe when you take the sheet...[end if]"
+"creep crete"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-available rule	"You fail to hyperwarp across the Mediterranean."
+"leap leet"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-available rule	"You take a giant step towards understanding a tricky science concept from high school."
+"neep neat"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-available rule	"You see no turnip turn up."
+"peep peat"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-available rule	"The ground around you remains hard."
+"seep seat"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-available rule	"What on earth would you do with a leaky chair?"
+"streep street"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-available rule	"Stalking an actress is scary, yes, but we're not going for that sort of scary."
+"sweep suite/sweet"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-available rule	"Neither a favorite team's success nor drudgery will get your mind off things."
+"weep wheat"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-available rule	"The ground remains unarable."
 "chink chug"	lug-nearby rule	false	4	3	thug-around rule	thug-around rule	"The Drink Drug Think Thug is too large to disappear through any crack. You're too large to escape."
 "fink fug"	lug-nearby rule	false	4	3	thug-around rule	thug-around rule	"No fog carries the Drink Drug Think Thug away or even makes it wimpier."
 "jink jug"	lug-nearby rule	false	4	3	thug-around rule	thug-around rule	"No liquid container to help your dexterity appears. Oh, well. It might've jinked YOU, anyway."
@@ -87,6 +87,23 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	still-rule	mist-txt
 "gold gale/gail"	in-gold-gaol rule	false	4	4	--	--	"You can't change the gaol. You can escape easily enough. You just need to figure how, comfortably."
 "tolled/told tail" or "tolled tail"	in-gold-gaol rule	false	4	4	--	--	"That must be very close indeed."
 
+section special text
+
+to say sheet-spoil:
+	say "[one of]You pore through all the items the sheet has information on. You cross-compare them and make hypotheses. You check for contradictions and inconsistencies in the data. It takes a while, but you come up with the following[or]You rehash your first deep examination of the sheet[stopping]:[line break]";
+	repeat through table of sheet spoilers:
+		say "[line break][reading entry] means the desired object or action has [res1 entry] letters in [res2 entry] word [res3 entry] the original object or room.[run paragraph on]";
+
+table of sheet spoilers
+reading	res1	res2	res3
+"++"	"more"	"each"	"than"
+"=="	"the same number of"	"each"	"as"
+"--"	"less"	"each"	"than"
+"+=/=+"	"more"	"one"	"than"
+"-=/=-"	"less"	"one"	"than"
+"+-/-+"	"more in one, less in the other"	"each"	"than"
+
+
 section mist-rules alphabetized
 
 [xxqqmi]
@@ -129,7 +146,7 @@ this is the not-gaol rule: if player is not in gold gaol, the rule succeeds;
 
 this is the plates-needed rule: if master mate is not moot, the rule succeeds;
 
-this is the sheet-takeable rule: if player has sheep sheet or player is not in gold gaol, the rule succeeds;
+this is the sheet-available rule: if player has sheep sheet or player is not in gold gaol, the rule succeeds;
 
 this is the sheet-untaken rule: if player does not have sheep sheet, the rule succeeds;
 

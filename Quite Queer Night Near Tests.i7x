@@ -16,6 +16,8 @@ test w1 with "test start/e/test w-s/test w-n/test ending/".
 
 test w2 with "test start/e/test w-n/test w-s/test ending/".
 
+test nolump with "link lug/slink slug/fink fug/heap heat/deep deet"
+
 Quite Queer Night Near Tests ends here.
 
 ---- DOCUMENTATION ----
