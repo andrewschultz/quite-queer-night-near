@@ -271,6 +271,9 @@ check examining the sheep sheet for the first time:
 
 the cheap cheat sheep sheet is a thing in Blight Blear Bight Bier. cht of sheep sheet is letminus. "A cheap cheat sheep sheet lies here, sort of daring you to take it. It's obscured by sleep sleet.". description of sheep sheet is "It has information on--well, most everything you see here. XX any item for particular information. I guess it's a sheep sheet because you still feel sheepish looking at it, no matter how many times you have, and also I feel sheepish for such a silly name. You can CC, SS, CCSS or CS anything to see cheating information.". [->heap heat]
 
+after examining sheep sheet when player has sheep sheet:
+	say "You can also type [b]DEEP DEET[r] to learn how, precisely, the sheet works.";
+
 section ccsscs
 
 csing is an action applying to one thing.
@@ -447,7 +450,7 @@ understand the command "about" as something new.
 understand "about" as abouting.
 
 carry out abouting:
-	say "QQNN was written in under four hours for EctoComp 2019. It heavily cut-and-pasted from Very Vile Fairy File. It did not receive outside testing. However, I submitted a post-comp releaee that allowed for tweaks that weren't possible in the time allowed. If you want to report bugs/suggestions, do so at http://github.com/andrewschultz/quite-queer-night-near/issues. I appreciate them! CREDITS has additional thanks.";
+	say "QQNN was written in under four hours for EctoComp 2019. It heavily cut-and-pasted from Very Vile Fairy File. It did not receive outside testing. However, I submitted a post-comp releaee that allowed for tweaks that weren't possible in the time allowed. If you want to report bugs/suggestions, do so at http://github.com/andrewschultz/quite-queer-night-near/issues. I appreciate them! CREDITS has additional thanks, and VERSIONS has some information about the versions.";
 	say "[line break][one of]QQNN is a sort of guess-the-verb game. If you want the game mechanic semi-spoiled, type ABOUT again[or]QQNN relies on couplets to increase your score. For instance, if there is a cold coy Rolled Roy needed courage, you could change him into BOLD BOY, and the game tries to give clever responses for tries (good-faith or otherwise) sycg as OLD OI[stopping].";
 
 chapter creditsing
@@ -460,7 +463,39 @@ understand "credits" as creditsing.
 
 carry out creditsing:
 	say "Thanks to JJ Guest for starting EctoComp, Duncan Bowsman for continuing it, and Ruber Eaglenest and JoshG for keeping it going further. EctoComp has been a fun way to throw out little games. Also, thanks to itch.io for hosting this game.";
+	say "[line break]Brian Rushton had some tips in-comp, and I received a very helpful transcript as well which helped me fix a few more things.";
 	say "[line break]If you'd like to be in these credits, you too can do so by finding an issue or making a good suggestion.";
+	the rule succeeds.
+
+chapter verbsing
+
+check going:
+	if noun is diagonal, say "Diagonal directions aren't used in this game.";
+
+verbsing is an action applying to nothing.
+
+understand the command "verbs" as something new.
+
+understand "verbs" as verbsing.
+
+carry out verbsing:
+	say "QQNN has a stripped-down parser. You can X/EXAMINE things or use the four basic directions, or go up. While you don't need any standard verbs beyond moving to win the game, you do have to figure out two-word actions to move forward.";
+	if cheap cheat sheep sheet is touchable, say "[line break]You can CC/CS/SS/CCSS to use the [cheap cheat] on any object. The command on its own scans your current location, which can also be helpful.";
+	if player has sheep sheet, say "[line break]DEEP DEET can be used to demystify the cheap cheat sheep sheet.";
+	if player has math maven, say "[line break]You can [ppp] to see if the [math maven] can help you here.";
+	the rule succeeds.
+
+chapter versioning
+
+versioning is an action applying to nothing.
+
+understand the command "version" as something new.
+
+understand "version" as versioning.
+
+carry out versioning:
+	say "Version 1 was released for EctoComp on October 30, 2019. It contained large chunks of code copied over from Very Vile Fairy File.";
+	say "Version 2 was released after EctoComp on November ??, 2019. It added the [maven] as a more animated and spooky helper than the Leet Learner, and it added a lot of cluing (including indications you were done in a certain area,) bug fixes, alternate solutions and even ambience like the Spite Spear. It also let you know how many possible good guesses were left, and it tracked if you could win the game with only the maven. Oh, and the introduction got sillier, too.";
 	the rule succeeds.
 
 chapter soundsing
@@ -526,7 +561,10 @@ rule for printing a parser error:
 		if score > 0:
 			say "That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe [if player is in stair stones]get up those stair stones, somehow[else if cht of location of player is phbt]look around somewhere else--there doesn't seem to be much left to do here[else]there's a bit more to find here, though[end if].";
 		else:
-			say "This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them. [if sheep sheet is touchable]Since[else]If[end if] you have the sheep sheet handy, you can [b]XX[r] something. You can also type ABOUT to see general information.";
+			say "This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them.";
+		say "[line break]";
+		unless player is in gold gaol and player does not have cheap cheat sheep sheet, say "[if sheep sheet is touchable]Since[else]If[end if] you have the sheep sheet handy, you can [b]CC[r] something. ";
+		say "You can also type VERBS for a list of valid verbs (it can change as you gain or lose hint items) or ABOUT to see general information.";
 		the rule succeeds;
 
 chapter the big rule(s)
@@ -628,6 +666,9 @@ this is the mistake-checker rule:
 				if there is a leet-rule entry:
 					process the leet-rule entry;
 					unless the rule succeeded:
+						if there is a still-rule entry: [this is a special case for if you take the sheet and then try DEEP DEET]
+							process the still-rule entry;
+							unless the rule succeeded, the rule succeeds;
 						if got-yet entry is false:
 							check-wrmm-progress;
 						now got-yet entry is true;
@@ -853,13 +894,13 @@ this is the vr-fight-fear rule:
 this is the vc-heap-heat rule:
 	if sheep sheet is off-stage, the rule fails;
 	if player has cheap cheat sheep sheet:
-		vcal "You already did that.";
+		vcal "You already warmed the sheet up.";
 		continue the action;
 	the rule succeeds;
 
 this is the vr-heap-heat rule:
 	let Q Be whether or not word number 1 in the player's command is "bleep";
-	say "You [if Q is true]let go some grawlix-heavy invective, and it gives you enough of a boost to deal with the sleep sleet in order to pull out the cheap cheat[else]rub your hands together for warmth, blow on the sheet, and so on[end if]. And what do you know? It stays less frigid after you pick it up. It'd still be technically functional at any temperature, but now it won't freeze your fingers if you carry it around.";
+	say "You [if Q is true]let go some grawlix-heavy invective, and it gives you enough of a boost to deal with the sleep sleet in order to pull out the cheap cheat[else]rub your hands together for warmth, blow on the sheet, and so on[end if]. And what do you know? It stays less frigid after you pick it up. It'd still be technically functional at any temperature, but now it won't freeze your fingers if you carry it around.[paragraph break]What's more, if you don't understand how it works, you can spoil things with [b]DEEP DEET[r].";
 	now player has sheep sheet;
 	moot sleep sleet;
 	phbt sheep sheet;
