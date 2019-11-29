@@ -16,7 +16,7 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	still-rule	mist-txt
 "right rear"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"You are right in the rear, but you need to move on."
 "shite sheer"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"Getting mad doesn't necessarily help here."
 "smite smear"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"You don't need violence or a battle cry."
-"sight seer"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"Yes, you're a sight seer."
+"sight/site seer"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"Yes, you're a sight seer."
 "skite skier"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"Too archaic, and you would gain no joy seeing someone else mess up."
 "plight pleaer"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"Seeing someone else scared and begging won't help you."
 "sprite spreer"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"Chugging pop will not help in your present circumstances."

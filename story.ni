@@ -10,6 +10,8 @@ release along with a website.
 
 release along with an interpreter.
 
+include undo output control by Erik Temple.
+
 include Trivial Niceties by Andrew Schultz.
 
 include Quite Queer Night Near Tables by Andrew Schultz.
@@ -615,7 +617,7 @@ to check-wrmm-progress:
 		process the winnable-with-cheating rule;
 	if debug-state is true, say "DEBUG: [wrmm-count] maven count, [wrmm-charges] maven charges.";
 
-the wrath ravin' math maven is a boring thing. description is "The wrath ravin['] math maven won't stop complaining, but it's stuck to you, and you know it is good for [ppp]--[wrmm-charges in words] charge[plur of wrmm-charges], to be precise.". bore-text of wrath ravin' math maven is "The math maven only allows for PATH PAVIN (PP)."
+the wrath ravin' math maven is a boring thing. description is "The wrath ravin['] math maven won't stop complaining, but it's stuck to you, and you know it is good for [ppp]--[wrmm-charges in words] charge[plur of wrmm-charges], to be precise.". bore-text of wrath ravin' math maven is "The math maven only allows for [ppp]."
 
 this is the mistake-checker rule:
 	repeat through table-to-scour:
@@ -857,7 +859,7 @@ this is the vc-heap-heat rule:
 
 this is the vr-heap-heat rule:
 	let Q Be whether or not word number 1 in the player's command is "bleep";
-	say "You [if Q is true]let go some grawlix-heavy invective, and it gives you enough of a boost to deal with the sleep sleet in order to pull out the cheap cheat[else]rub your hands together for warmth, blow on the sheet, and so on[end if]. And what do you know? It stays less frigid after you pick it up. It'd still be technically functional at any temperature, but small victories.";
+	say "You [if Q is true]let go some grawlix-heavy invective, and it gives you enough of a boost to deal with the sleep sleet in order to pull out the cheap cheat[else]rub your hands together for warmth, blow on the sheet, and so on[end if]. And what do you know? It stays less frigid after you pick it up. It'd still be technically functional at any temperature, but now it won't freeze your fingers if you carry it around.";
 	now player has sheep sheet;
 	moot sleep sleet;
 	phbt sheep sheet;
@@ -996,7 +998,7 @@ to say firstor of (t - indexed text):
 
 to wrmm-minus:
 	decrement wrmm-charges;
-	say "The wrath ravin['] math maven groans [if wrmm-charges is 0]and struggles from your grasp and runs off. Maybe more good guesses will bring it back[one of][or] again[stopping][else], but you grip it tighter[end if].";
+	say "The wrath ravin['] math maven groans[if wrmm-charges is 0] and struggles from your grasp and runs off. Maybe more good guesses will bring it back[one of][or] again[stopping][else], but you grip it tighter[end if].";
 	if wrmm-charges is 0, moot wrath ravin' math maven;
 	now in-jerk-jump is false;
 	increment wrmm-uses;
@@ -1016,22 +1018,12 @@ this is the winnable-with-cheating rule:
 		say "[line break]By the way, you can now cheat your way through the game with the PP command, if you want.";
 		now warn-cheap-win is true;
 
-to decide which number is solved-jerk-check: [yeah yeah magic numbers ?? we need to fix this]
-	if ts-tried-keep is true and cruel creep is in peep pool, decide on 1;
-	if ts-tale-early is true and ts-ale-old is true and ts-kale-cold is true, decide on 2;
-	decide on 0;
+to say dbnote:
+	if debug-state is true, say ". PPP gives testers unlimited uses";
 
 carry out pathpavining:
-	if debug-state is false:
-		if wrath ravin' math maven is off-stage, say "This is the hint/move-ahead command, but you don't have your hinting assistant, yet." instead;
-		if wrath ravin' math maven is moot, say "The [maven] ran off because you used it, but maybe good guesses will bring it back." instead;
-	else:
-		say "DEBUG: maven charges = [wrmm-charges].";
-	if solved-jerk-check > 0:
-		say "The wrath ravin['] math maven howls extra loud. 'Surely you don't mean to use me for this? Something you may already have figured?' It ... it's probably right. If you'd still like to use it anyway (not recommended,) say YES.";
-		unless the player yes-consents:
-			say "Okay.";
-			the rule succeeds;
+	if wrath ravin' math maven is off-stage, say "This is the hint/move-ahead command, but you don't have your hinting assistant, yet[dbnote]." instead;
+	if wrath ravin' math maven is moot, say "The [maven] ran off because you used it up, but maybe good guesses will bring it back[dbnote]." instead;
 	now in-jerk-jump is true;
 	now vc-dont-print is true;
 	repeat through table of verb checks:
@@ -1040,10 +1032,14 @@ carry out pathpavining:
 		process the ver-rule entry;
 		if the rule succeeded:
 			if core entry is false and player is not in gold gaol: [the only case is to get the sheet]
-				say "The [maven] seems to tug you [if player is in bight bier]in the direction of the sheep sheet[else]back to the sheep shet and the Bight Bier[end if], but you may not have to. Try for it anyway?";
+				say "The [maven] looks slightly offended and half-heartedly tugs you [if player is in bight bier]in the direction of the sheep sheet[else]back to the sheep sheet and the Bight Bier[end if], as if it's not really necessary to have TWO hint aids. Try for the sheet anyway?";
 				unless the player yes-consents:
 					say "OK. It's not STRICTLY necessary. Maybe you'll figure it on your own.";
 					the rule succeeds;
+			if doable-hinted > 0:
+				say "The [maven] squawks and taps its head, as if to indicate you're forgetting something. (THINK may show what.) Use the maven's help anyway?";
+				unless the player yes-consents:
+					say "OK. Again, THINKing should show what you can do now." instead;
 			say "After some thought, you consider the right way forward: [firstor of w1 entry] [firstor of w2 entry]...";
 			now idid entry is true; [this is so BURY BILE gets processed. We already checked IDID above.]
 			up-which core entry; [?? I really need to clean this code up. I want just to increment the score in one place. If a rule can keep track of the current row, that would be nifty.]
@@ -1054,6 +1050,7 @@ carry out pathpavining:
 			skip upcoming rulebook break;
 			wrmm-minus;
 			now vc-dont-print is false;
+			disable saving of undo state;
 			the rule succeeds;
 	now vc-dont-print is false;
 	say "The [maven] [if player is in Stair Stones][maven-up-stairs][else]sighs in exasperation. I guess there's nothing it can help you with, here[end if].";
@@ -1065,6 +1062,21 @@ to say maven-up-stairs:
 	else:
 		say "tries to run up the stones and fails miserably. It then points [if stone-filler is 0]north and south[else if ts-mulch-more is true]north[else]south[end if]";
 
+chapter undoing
+
+before undoing an action:
+	if save undo state is false:
+		say "[if player has the math maven]The math maven howls at your parser-subverting trickery, but what can it do? It doesn't know any destructive magic. You'd think it'd be happy with growing a little bigger, but noooo[else]The [maven] zips back in, running backwards. It doesn't look pleased at your little stunt, but you're bigger than it, so it can't stop you[end if].";
+		enable saving of undo state;
+	else:
+		say "Wiping one's typing ... TONS!";
+	the rule succeeds;
+
+volume beta testing - not for release
+
+when play begins:
+	say "NOTE: there is a small tweak for beta testers. PPP gives you enough Path Pavin' charges to get through the game.";
+
 chapter pppjng
 
 ppping is an action applying to nothing.
@@ -1075,6 +1087,7 @@ understand "ppp" as ppping.
 
 carry out ppping:
 	now wrmm-charges is 14;
-	say "Increasing maven charges to 14 for cheap dirty testing.";
+	say "Increasing maven charges to 14 for cheap dirty testing[if player does not have maven] and giving you the maven, too[end if].";
+	now player has wrath ravin' math maven;
 	the rule succeeds.
 

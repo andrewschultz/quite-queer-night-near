@@ -6,6 +6,9 @@
 
 * main-thru
 
+>pp
+This is the hint/move-ahead command, but you don't have your hinting assistant, yet.
+
 >ppp
 
 >pp
@@ -15,7 +18,7 @@ one point
 one point
 
 >pp
-The wrath ravin' math maven seems to tug you in the direction of the sheep sheet, but you may not have to. Try for it anyway?
+The wrath ravin' math maven looks slightly offended and half-heartedly tugs you in the direction of the sheep sheet, as if it's not really necessary to have TWO hint aids. Try for the sheet anyway?
 
 >e
 
@@ -47,3 +50,35 @@ one point
 one point
 >pp
 one point
+
+* undo-stuff
+
+> site seer
+> beep beat
+> leap leet
+>z
+>pp
+The wrath ravin' math maven groans and struggles from your grasp and runs off. Maybe more good guesses will bring it back.
+>undo
+The wrath ravin' math maven zips back in, running backwards. It doesn't look pleased at your little stunt, but you're bigger than it, so it can't stop you.
+
+>right rear
+>smite smear
+>peep peat
+>sweep suite
+
+>pink pug
+>fight fear
+>pp
+The wrath ravin' math maven squawks and taps its head, as if to indicate you're forgetting something. (THINK may show what.) Use the maven's help anyway?
+
+>undo
+The math maven howls at your parser-subverting trickery, but what can it do? It doesn't know any destructive magic. You'd think it'd be happy with growing a little bigger, but noooo.
+
+>pp
+>pp
+>e
+>s
+>pp
+The wrath ravin' math maven ran off because you used it up, but maybe good guesses will bring it back.
+
