@@ -67,7 +67,7 @@ refer to the sheep sheet
 No roadrunner whizzes by, and neither does a devious, planning coyote.
 > deep deet
 refer to the sheep sheet
-Details will pop up on the sheep sheet as you need them.
+You can't see any deep details, but maybe when you take the sheet...
 > neep neat
 refer to the sheep sheet
 You see no turnip turn up.
@@ -134,7 +134,8 @@ You don't need anything to be chasing you up a tree, hackneyed or otherwise.
 !refer to the sheep sheet
 No roadrunner whizzes by, and neither does a devious, planning coyote.
 > deep deet
-Details will pop up on the sheep sheet as you need them.
+!refer to the sheep sheet
+You pore through all the items the sheet has information on. You cross-compare them and make hypotheses. You check for contradictions and inconsistencies in the data. It takes a while, but you come up with the following:
 > neep neat
 !refer to the sheep sheet
 You see no turnip turn up.

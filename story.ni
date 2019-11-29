@@ -272,7 +272,7 @@ check examining the sheep sheet for the first time:
 the cheap cheat sheep sheet is a thing in Blight Blear Bight Bier. cht of sheep sheet is letminus. "A cheap cheat sheep sheet lies here, sort of daring you to take it. It's obscured by sleep sleet.". description of sheep sheet is "It has information on--well, most everything you see here. XX any item for particular information. I guess it's a sheep sheet because you still feel sheepish looking at it, no matter how many times you have, and also I feel sheepish for such a silly name. You can CC, SS, CCSS or CS anything to see cheating information.". [->heap heat]
 
 after examining sheep sheet when player has sheep sheet:
-	say "You can also type [b]DEEP DEET[r] to learn how, precisely, the sheet works.";
+	say "You can also type [b]DEEP DEET[r] to [if sheet-cheated is true]recap[else]learn[end if] how, precisely, the sheet works.";
 
 section ccsscs
 

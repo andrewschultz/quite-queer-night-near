@@ -119,7 +119,7 @@ refer to the sheep sheet
 No roadrunner whizzes by, and neither does a devious, planning coyote.
 > deep deet
 refer to the sheep sheet
-Details will pop up on the sheep sheet as you need them.
+You can't see any deep details, but maybe when you take the sheet...
 > neep neat
 refer to the sheep sheet
 You see no turnip turn up.
@@ -177,6 +177,23 @@ by one point
 >heap heat
 by one point
 
+@cs
+>x sheet
+You can also type DEEP DEET to learn how, precisely, the sheet works.
+>deep deet
+You pore through all the items the sheet has information on. You cross-compare them and make hypotheses. You check for contradictions and inconsistencies in the data. It takes a while, but you come up with the following:
+++ means the desired object or action has more letters in each word than the original object or room.
+== means the desired object or action has the same number of letters in each word as the original object or room.
+-- means the desired object or action has less letters in each word than the original object or room.
++=/=+ means the desired object or action has more letters in one word than the original object or room.
+-=/=- means the desired object or action has less letters in one word than the original object or room.
++-/-+ means the desired object or action has more in one, less in the other letters in each word than the original object or room.
+>deep deet
+You rehash your first deep examination of the sheet:
+>x sheet
+You can also type DEEP DEET to recap how, precisely, the sheet works.
+
+
 @mis
 > bite bier
 !refer to the sheep sheet
@@ -208,7 +225,8 @@ You don't need anything to be chasing you up a tree, hackneyed or otherwise.
 !refer to the sheep sheet
 No roadrunner whizzes by, and neither does a devious, planning coyote.
 > deep deet
-Details will pop up on the sheep sheet as you need them.
+!refer to the sheep sheet
+You pore through all the items the sheet has information on. You cross-compare them and make hypotheses. You check for contradictions and inconsistencies in the data. It takes a while, but you come up with the following:
 > neep neat
 !refer to the sheep sheet
 You see no turnip turn up.
@@ -269,7 +287,7 @@ Neither a favorite team's success nor drudgery will get your mind off things.
 Yes, fighting fear is a lifelong journey, but fighting too hard all at once will bring it back.
 > heap heat
 !by one point
-You already did that.
+You already warmed the sheet up.
 > pink pug
 !by one point
 You already got rid of the thug.

@@ -89,7 +89,10 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	still-rule	mist-txt
 
 section special text
 
+sheet-cheated is a truth state that varies.
+
 to say sheet-spoil:
+	now sheet-cheated is true;
 	say "[one of]You pore through all the items the sheet has information on. You cross-compare them and make hypotheses. You check for contradictions and inconsistencies in the data. It takes a while, but you come up with the following[or]You rehash your first deep examination of the sheet[stopping]:[line break]";
 	repeat through table of sheet spoilers:
 		say "[line break][reading entry] means the desired object or action has [res1 entry] letters in [res2 entry] word [res3 entry] the original object or room.[run paragraph on]";
