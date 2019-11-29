@@ -1,5 +1,5 @@
 
-## reg-qqnn-scan.txt
+## reg-qqnn-thru-scan.txt
 ## GENERATOR FILE: rbr-qqnn-thru.txt
 
 ** game: /home/andrew/prt/debug-quite-queer-night-near.z8
