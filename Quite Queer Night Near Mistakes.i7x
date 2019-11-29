@@ -8,18 +8,19 @@ Version 1/191030 of Quite Queer Night Near Mistakes by Andrew Schultz begins her
 
 table of mistake substitutions
 mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	still-rule	mist-txt
-"flight fleer"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"You need to get less scared, not more." [start bight bier]
+"flight fleer"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"You need to get less scared, not more. Plus, there's nowhere to run, anyway." [start bight bier]
 "light leer"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"No, facial expressions aren't enough, here. Especially expressions of contempt."
 "height here"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"How physically low or high you are isn't important. It's the mental bit."
 "kite keyer"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"You don't need the risk of getting zapped by electricity, too."
 "might/mite mere"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"You'd still be scared, reducing your antagonist's strength. You'd be scared of even losing to them. What can you do to stop being scared?"
 "right rear"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"You are right in the rear, but you need to move on."
 "shite sheer"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"Getting mad doesn't necessarily help here."
+"smite smear"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"You don't need violence or a battle cry."
 "sight seer"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"Yes, you're a sight seer."
 "skite skier"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"Too archaic, and you would gain no joy seeing someone else mess up."
 "plight pleaer"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"Seeing someone else scared and begging won't help you."
 "sprite spreer"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"Chugging pop will not help in your present circumstances."
-"white wier"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"No fence appears."
+"white wier/weir"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"No fence appears."
 "tight tier/tear"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"You think up all the formal and informal meanings of the word tight, but nothing pops up."
 "trite treer"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"You don't need anything to be chasing you up a tree, hackneyed or otherwise."
 "beep beat"	sheet-nearby rule	false	4	4	sheet-untaken rule	sheet-takeable rule	"You imagine an eternity spent listening to funky techno music. Scary!"
@@ -41,17 +42,17 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	still-rule	mist-txt
 "rink rug"	lug-nearby rule	false	4	3	thug-around rule	thug-around rule	"A rug would be out of place inside a roller rink or ice skating rink. Still, it was worth a try."
 "slink slug"	lug-nearby rule	false	4	3	thug-around rule	thug-around rule	"Perhaps that is a bit too drastic. Another more likable animal might work great, though."
 "hath haven"	maven-summoned rule	false	--	--	--	--	"[if maven is moot]The math maven already has one, for now[else]You don't want to let the maven escape. It could help you! Once you're free, you can set it free[end if]."
-"care cones"	in-stones rule	false	4	3	--	not-gaol rule	"Nothing appears to make you feel more loved. Aww." [start bare bones stair stones]
-"clayer/clare/clair clones"	in-stones rule	false	4	3	--	not-gaol rule	"No golems appear to try and build the stairs. But on the bright side, none appear from the stairs to make it tougher to go up."
-"crayer crones"	in-stones rule	false	4	3	--	not-gaol rule	"Not only is that a stretch, but it would actively hurt your quest."
-"fair/fare phones"	in-stones rule	false	4	3	--	not-gaol rule	"You have no outside communication here."
-"grayer grones"	in-stones rule	false	4	3	--	not-gaol rule	"A little more atmosphere doesn't help, but it doesn't hurt, either."
-"hair/hare hones"	in-stones rule	false	4	3	--	not-gaol rule	"This is no time for follicular or lagomorphic care!"
-"jer jones"	in-stones rule	false	4	3	--	not-gaol rule	"The owner of the Dallas Cowboys is nightmarish in his own way, though yes, it might be fun to stick him in a nightmare."
-"mare moans"	in-stones rule	false	4	3	--	not-gaol rule	"Horses whinny in the distance."
-"rare roans"	in-stones rule	false	4	3	--	not-gaol rule	"Bringing horses into this mess would be animal cruelty."
-"scare scones"	in-stones rule	false	4	3	--	not-gaol rule	"Spooky food is a creative idea here, but maybe not a practical one."
-"tare/tear tones"	in-stones rule	false	4	3	--	not-gaol rule	"No more scary noises than needed, please."
+"care cones"	in-stones rule	false	--	--	--	not-gaol rule	"Nothing appears to make you feel more loved. Aww." [start bare bones stair stones]
+"clayer/clare/clair clones"	in-stones rule	false	--	--	--	not-gaol rule	"No golems appear to try and build the stairs. But on the bright side, none appear from the stairs to make it tougher to go up."
+"crayer crones"	in-stones rule	false	--	--	--	not-gaol rule	"Not only is that a stretch, but it would actively hurt your quest."
+"fair/fare phones"	in-stones rule	false	--	--	--	not-gaol rule	"You have no outside communication here."
+"grayer grones"	in-stones rule	false	--	--	--	not-gaol rule	"A little more atmosphere doesn't help, but it doesn't hurt, either."
+"hair/hare hones"	in-stones rule	false	--	--	--	not-gaol rule	"This is no time for follicular or lagomorphic care!"
+"jer jones"	in-stones rule	false	--	--	--	not-gaol rule	"The owner of the Dallas Cowboys is nightmarish in his own way, though yes, it might be fun to stick him in a nightmare."
+"mare moans"	in-stones rule	false	--	--	--	not-gaol rule	"Horses whinny in the distance."
+"rare roans"	in-stones rule	false	--	--	--	not-gaol rule	"Bringing horses into this mess would be animal cruelty."
+"scare scones"	in-stones rule	false	--	--	--	not-gaol rule	"Spooky food is a creative idea here, but maybe not a practical one."
+"tare/tear tones"	in-stones rule	false	--	--	--	not-gaol rule	"No more scary noises than needed, please."
 "ark/arc ump"	in-dark-dump rule	false	4	4	any-dump-left rule	not-gaol rule	"Nobody appears to decide which animals will be doomed to forty days and nights of floods." [start dark dump]
 "clark clump"	in-dark-dump rule	false	4	4	any-dump-left rule	not-gaol rule	"Clark Griswold does not appear in a heap."
 "lark lump"	in-dark-dump rule	false	4	4	any-dump-left rule	not-gaol rule	"Eww, dead birds?"

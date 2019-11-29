@@ -247,7 +247,7 @@ volume the map
 
 chapter Blight Blear Bight Bier
 
-Blight Blear Bight Bier is a room. "Boy! It's scary here! [if spite spear is in bight bier]A spite spear hangs above, and y[else]Y[end if]ou can only go east[if thug is off-stage], but it might be even scarier there. You need some way to make things less scary, on this Quite Queer Night Near by the Blight Blear Bight Bear. A spite spear hangs in the distance, just ready to swoop on you[end if].". cht of Blight Blear Bight Bier is letboth. [->fight fear]
+Blight Blear Bight Bier is a room. "Boy! It's scary here! [if spite spear is in bight bier]A spite spear hangs above, and y[else]Y[end if]ou can only go east[if thug is off-stage], but it might be even scarier there. You need some way to make things less scary, on this Quite Queer Night Near by the Blight Blear Bight Bier. A spite spear hangs in the distance, just ready to swoop on you[end if].". cht of Blight Blear Bight Bier is letboth. [->fight fear]
 
 ts-fight-fear is a truth state that varies.
 
@@ -522,7 +522,7 @@ Rule for printing a parser error (this is the check for room name in player comm
 rule for printing a parser error:
 	if latest parser error is the not a verb I recognise error:
 		if score > 0:
-			say "That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe [if player is in stair stones]get up those stair stones, somehow[else if cht of location of player is phbt] look around somewhere else--there doesn't seem to be much left to do here[else]there's a bit more to find here, though[end if].";
+			say "That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe [if player is in stair stones]get up those stair stones, somehow[else if cht of location of player is phbt]look around somewhere else--there doesn't seem to be much left to do here[else]there's a bit more to find here, though[end if].";
 		else:
 			say "This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them. [if sheep sheet is touchable]Since[else]If[end if] you have the sheep sheet handy, you can [b]XX[r] something. You can also type ABOUT to see general information.";
 		the rule succeeds;
