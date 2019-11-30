@@ -309,7 +309,7 @@ carry out csing:
 		say "The sheep sheet shimmers vaguely. You suspect you can just take it, but getting it right would give a style point." instead;
 	if noun is the player, say "You don't need to change yourself. Whew." instead;
 	if cht of noun is phbt, say "You can't find any information on [the sheet] about [the noun]. Must not need changing." instead;
-	say "[leetclue of cht of noun].";
+	say "[leetclue of cht of noun and false].";
 	the rule succeeds;
 
 section sleep sleet
@@ -655,36 +655,58 @@ the wrath ravin' math maven is a boring thing. description is "The wrath ravin['
 
 the rhymeguess rules are a table name based rulebook. [okay, there's only one, but I need to define what it acts on]
 
+to decide which number is variable-scan-length of (mynum - a number):
+	if mynum is 100: [Dark Dump]
+		if stark stump is in dark dump:
+			if park pump is in dark dump and bark bump is in dark dump, decide on 0;
+			decide on 44; [only stump is left]
+		if park pump is off-stage or dark dump is off-stage, decide on 200; [this is the "all over"]
+		decide on 55;
+	say "BUG: no variable-scan-length for [mynum]. Please let me know what you typed.";
+	decide on 44;
+
 a rhymeguess rule for a table name (called tn) (this is the rhyme-guess-checker rule):
 	repeat through tn:
 		if the player's command matches mist-cmd entry:
-			process the mist-rule entry;
-			if the rule succeeded:
-				say "[mist-txt entry][line break]";
-				if there is a leet-rule entry:
-					process the leet-rule entry;
-					unless the rule succeeded:
-						if there is a still-rule entry: [this is a special case for if you take the sheet and then try DEEP DEET]
-							process the still-rule entry;
-							unless the rule succeeded, the rule succeeds;
-						if got-yet entry is false:
-							check-wrmm-progress;
-						now got-yet entry is true;
-						the rule succeeds;
-				let d1 be -10;
-				let d2 be -10;
-				if there is a w1let entry:
-					now d1 is w1let entry - number of characters in word number 1 in the player's command;
-					if there is a w2let entry:
-						now d2 is w2let entry - number of characters in word number 2 in the player's command;
-					if d2 is -10, now d2 is d1;
-					say "[line break][leetclue of cluecheat of d1 and d2].";
-				if got-yet entry is false:
-					check-wrmm-progress;
-				now got-yet entry is true;
-				the rule succeeds;
+			if there is a mist-rule entry:
+				process the mist-rule entry;
+				unless the rule succeeded, continue the action;
+			say "[mist-txt entry][line break]";
+			let see-leet-read be true;
+			let is-opt be false;
+			if there is a leet-rule entry:
+				process the leet-rule entry;
+				unless the rule succeeded:
+					now see-leet-read is false;
+					if there is a still-rule entry: [this is a special case for if you take the sheet and then try DEEP DEET]
+						process the still-rule entry;
+						unless the rule succeeded, the rule succeeds;
+					if got-yet entry is false:
+						check-wrmm-progress;
+					now got-yet entry is true;
+					the rule succeeds;
+			if see-leet-read is true and there is a magicnum entry: [see mistakes file for explanations of magic numbers]
+				let Q be magicnum entry;
+				if Q >= 100: [Just to make sure we start with a number that's out of bounds]
+					now Q is variable-scan-length of Q;
+					if debug-state is true, say "DEBUG: dynamic magic number directed us to [Q / 10] / [the remainder after dividing Q by 10].";
+				if Q < 0:
+					now is-opt is true;
+					now Q is 0 - Q;
+				if Q is not 0:
+					let d1 be Q / 10;
+					let d2 be the remainder after dividing Q by 10;
+					decrease d1 by number of characters in word number 1 in the player's command;
+					decrease d2 by number of characters in word number 2 in the player's command;
+					let cc be cluecheat of d1 and d2;
+					say "[leetclue of cc and is-opt].";
+			if got-yet entry is false:
+				check-wrmm-progress;
+			now got-yet entry is true;
+			the rule succeeds;
 
 to decide which cheattype is the cluecheat of (n1 - a number) and (n2 - a number):
+	if n1 > 10, decide on allover; [this is for ambiguous cases in the Dark Dump]
 	if n2 > n1, decide on cluecheat of n2 and n1;
 	if n1 is 0 and n2 is 0, decide on leteq; [center]
 	if n1 > 0 and n2 is 0, decide on partplus; [center left]
@@ -697,16 +719,16 @@ blight-hint is a truth state that varies.
 
 when play begins: if a random chance of 1 in 2 succeeds, now blight-hint is false.
 
-to say leetclue of (x - a cheattype):
+to say leetclue of (x - a cheattype) and (ts - a truth state):
 	if sheep sheet is not touchable, continue the action;
 	say "You refer to the sheep sheet, noticing it says ";
 	if noun is Blight Blear Bight Bier and Think Thug is not moot:
 		now blight-hint is whether or not blight-hint is false;
 		say "[if blight-hint is true]Blight Blear goes to --[else]Bight Bier goes to ==[end if][one of]. Maybe there's another reading for the other half of this location's name[or][stopping]";
 		continue the action;
-	say "[if noun is nothing]your effort[else][the noun][end if] goes to [scancol of x]";
+	say "[if noun is nothing]your effort[else][the noun][end if] goes to [scancol of x][if ts is true], but the writing's terribly messy, as if to say this isn't 100% critical";
 
-to say scancol of (x - a cheattype): say "[if x is letplus]++[else if x is partplus]+=/=+[else if x is leteq]==[else if x is partminus]-=/=-[else if x is letminus]--[else if x is letboth]+-/-+[else if x is phbt]00[else if x is allover]??[no line break][else]BUG[end if]"
+to say scancol of (x - a cheattype): say "[if x is letplus]++[else if x is partplus]+=/=+[else if x is leteq]==[else if x is partminus]-=/=-[else if x is letminus]--[else if x is letboth]+-/-+[else if x is phbt]00[else if x is allover]?? -- might be more than one thing to do here[no line break][else]BUG[end if]"
 
 chapter thinking
 

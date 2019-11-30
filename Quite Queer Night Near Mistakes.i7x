@@ -56,10 +56,10 @@ mist-cmd(topic)	mist-rule	got-yet	magicnum	leet-rule	still-rule	mist-txt
 "rare roans"	in-stones rule	false	--	--	not-gaol rule	"Bringing horses into this mess would be animal cruelty."
 "scare scones"	in-stones rule	false	--	--	not-gaol rule	"Spooky food is a creative idea here, but maybe not a practical one."
 "tare/tear tones"	in-stones rule	false	--	--	not-gaol rule	"No more scary noises than needed, please."
-"ark/arc ump"	in-dark-dump rule	false	44	any-dump-left rule	not-gaol rule	"Nobody appears to decide which animals will be doomed to forty days and nights of floods." [start dark dump]
-"clark clump"	in-dark-dump rule	false	44	any-dump-left rule	not-gaol rule	"Clark Griswold does not appear in a heap."
-"lark lump"	in-dark-dump rule	false	44	any-dump-left rule	not-gaol rule	"Eww, dead birds?"
-"mark mump"	in-dark-dump rule	false	44	any-dump-left rule	not-gaol rule	"You don't want half a sickness, even a temporary one."
+"ark/arc ump"	in-dark-dump rule	false	44	any-dump-left rule	not-gaol rule	"Nobody appears to decide which animals will be doomed to forty days and nights of floods." [start dark dump] [NOTE: this is technically all-over. But in this case, we have 33 mapping to 44 or 55, so we always get ++. A cheesy hack, but it works.]
+"clark clump"	in-dark-dump rule	false	100	any-dump-left rule	not-gaol rule	"Clark Griswold does not appear in a heap."
+"lark lump"	in-dark-dump rule	false	100	any-dump-left rule	not-gaol rule	"Eww, dead birds?"
+"mark mump"	in-dark-dump rule	false	100	any-dump-left rule	not-gaol rule	"You don't want half a sickness, even a temporary one."
 "faster fate"	in-gaster-gate rule	false	75	plates-needed rule	not-gaol rule	"But that might mean a faster BAD fate as well as a good one." [start gaster gate]
 "hastur hate"	in-gaster-gate rule	false	75	plates-needed rule	not-gaol rule	"Oh no. You don't need to make things worse."
 "laster late"	in-gaster-gate rule	false	75	plates-needed rule	not-gaol rule	"A good try, if un-grammatical. But you already have lasted, and you don't want your obstacles to last."
