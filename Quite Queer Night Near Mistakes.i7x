@@ -6,7 +6,7 @@ Version 1/191030 of Quite Queer Night Near Mistakes by Andrew Schultz begins her
 #! sounds: bl br cl cr dr fl fr gl gr pl pr sk sl sp st sw spr str tr
 #! sounds: ch sh th(ing) th(is) wh ng nk]
 
-table of mistake substitutions
+table of good guess rhymes
 mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	still-rule	mist-txt
 "flight fleer"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"You need to get less scared, not more. Plus, there's nowhere to run, anyway." [start bight bier]
 "light leer"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"No, facial expressions aren't enough, here. Especially expressions of contempt."
@@ -78,7 +78,7 @@ mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	still-rule	mist-txt
 "reap rule"	in-peep-pool rule	false	4	4	creep-unbeaten rule	not-gaol rule	"This adventure is about surviving, not taking over."
 "weep wool"	in-peep-pool rule	false	4	4	creep-unbeaten rule	not-gaol rule	"Crying is out. So are nice new warm clothes. You're on a spooky Halloween adventure, here!"
 
-table of homonym rejections
+table of first check rhymes
 mist-cmd(topic)	mist-rule	got-yet	w1let	w2let	leet-rule	still-rule	mist-txt
 "bite/bight bier/beer"	in-bight-bier rule	false	5	4	fear-to-fight rule	not-gaol rule	"You don't need homonyms here. Something else... something a bit more common..."
 "deep dual" or "dual deep"	in-peep-pool rule	false	4	4	duel-unstarted rule	not-gaol rule	"[if creep cruel is off-stage]You are very close. You don't need to make the pool deeper, but you need something else deep[else]Summoning the creep (cruel) was enough[end if]."

@@ -91,9 +91,9 @@ check requesting the score:
 	if can-cheat-win, say "[line break]You can, if you want, jump all the way to the end to win with PP.";
 	if debug-state is true, say "DEBUG: [wrmm-count] maven next-charge count. Maven charges = [wrmm-charges].";
 	if math maven is not off-stage:
-		let X be still-guess of table of homonym rejections;
-		let Y be still-guess of table of mistake substitutions;
-		let total-guesses be number of rows in table of homonym rejections + number of rows in table of mistake substitutions - 1; [we could run a loop to see what starts as "true" but it's not worth it to me. Only FOLD FAIL starts that way.]
+		let X be still-guess of table of first check rhymes;
+		let Y be still-guess of table of good guess rhymes;
+		let total-guesses be number of rows in table of first check rhymes + number of rows in table of good guess rhymes - 1; [we could run a loop to see what starts as "true" but it's not worth it to me. Only FOLD FAIL starts that way.]
 		say "You have made [wrmm-total] good guesses so far. You can still access [X + Y] of [total-guesses] good guesses.";
 [	if debug-state is true:
 		showme ts-bump-bark;
@@ -526,14 +526,10 @@ after reading a command:
 
 chapter parser error tweak(s)
 
-table-to-scour is a table name that varies.
-
 Rule for printing a parser error (this is the clue half right words rule):
-	now table-to-scour is table of homonym rejections;
-	abide by the mistake-checker rule;
+	abide by the rhyme-guess-checker rule for the table of first check rhymes;
 	abide by the verb-checker rule;
-	now table-to-scour is table of mistake substitutions;
-	abide by the mistake-checker rule;
+	abide by the rhyme-guess-checker rule for the table of good guess rhymes;
 	continue the action;
 
 zap-weird-break is a truth state that varies.
@@ -657,8 +653,10 @@ to check-wrmm-progress:
 
 the wrath ravin' math maven is a boring thing. description is "The wrath ravin['] math maven won't stop complaining, but it's stuck to you, and you know it is good for [ppp]--[wrmm-charges in words] charge[plur of wrmm-charges], to be precise.". bore-text of wrath ravin' math maven is "The math maven only allows for [ppp]."
 
-this is the mistake-checker rule:
-	repeat through table-to-scour:
+the rhymeguess rules are a table name based rulebook. [okay, there's only one, but I need to define what it acts on]
+
+a rhymeguess rule for a table name (called tn) (this is the rhyme-guess-checker rule):
+	repeat through tn:
 		if the player's command matches mist-cmd entry:
 			process the mist-rule entry;
 			if the rule succeeded:
