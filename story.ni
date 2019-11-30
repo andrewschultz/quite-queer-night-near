@@ -75,6 +75,7 @@ to decide whether the action is procedural:
 	if csing, yes;
 	if thinking, yes;
 	if pathpavining, yes;
+	if taking, yes;
 	no;
 
 when play begins:
@@ -662,6 +663,10 @@ to decide which number is variable-scan-length of (mynum - a number):
 			decide on 44; [only stump is left]
 		if park pump is off-stage or dark dump is off-stage, decide on 200; [this is the "all over"]
 		decide on 55;
+	else if mynum is 101: [gold gaol]
+		if ts-ale-old is true, decide on 44; [COLD KALE and or TOLD TALE to go]
+		if ts-kale-cold is true, decide on 33; [OLD ALE and TOLD TALE to go]
+		decide on 200; [COLD KALE and OLD ALE still to be done, leaving a conflict]
 	say "BUG: no variable-scan-length for [mynum]. Please let me know what you typed.";
 	decide on 44;
 
@@ -728,7 +733,7 @@ to say leetclue of (x - a cheattype) and (ts - a truth state):
 		continue the action;
 	say "[if noun is nothing]your effort[else][the noun][end if] goes to [scancol of x][if ts is true], but the writing's terribly messy, as if to say this isn't 100% critical";
 
-to say scancol of (x - a cheattype): say "[if x is letplus]++[else if x is partplus]+=/=+[else if x is leteq]==[else if x is partminus]-=/=-[else if x is letminus]--[else if x is letboth]+-/-+[else if x is phbt]00[else if x is allover]?? -- might be more than one thing to do here[no line break][else]BUG[end if]"
+to say scancol of (x - a cheattype): say "[if x is letplus]++[else if x is partplus]+=/=+[else if x is leteq]==[else if x is partminus]-=/=-[else if x is letminus]--[else if x is letboth]+-/-+[else if x is phbt]00[else if x is allover]?? -- there might be diverging possibilities here[no line break][else]BUG[end if]"
 
 chapter thinking
 
@@ -763,6 +768,17 @@ to clue-later (ct - text):
 			continue the action;
 	now think-clue-flag is true;
 	say "Oops. I tried to save [ct] in the THINK command for later, but failed[not-crit-but].";
+
+to decide whether tried-yet of (ct - text):
+	let tried-any be false;
+	repeat through table of forlaters:
+		if ct is cmd-to-say entry:
+			now tried-any is true;
+			if ready-to-hint entry is true:
+				process the can-do-now entry;
+				if the rule succeeded, decide yes;
+	if tried-any is false, say "I tried to check if [ct] was hinted in the THINK command but it wasn't in the help table[not-crit-but].";
+	decide no;
 
 to say not-crit-but: say ". This is not a critical bug, but I'd like to know about it"
 
@@ -828,11 +844,6 @@ ts-tried-keep is a truth state that varies.
 every turn when ts-tried-keep is true and creep cruel is in Peep Pool: [??zap this when ready]
 	say "You should probably KEEP COOL again. It will get rid of the creep (cruel.)";
 
-ts-tale-early is a truth state that varies.
-
-every turn when ts-tale-early is true and ts-ale-old is true and ts-kale-cold is true (this is the endgame prod rule):
-	say "You should probably try to make a TOLD TALE again. That's all that's left to do.";
-
 to check-north-flow:
 	if north-flow, say "[line break][if player is in dark dump]It seems like you have all the pieces together to create a river leading to the stones. You move back east to start dumping the plaster in. [end if]Breaking down the plaster plate is not hard. You dump it into the pool that formed in the east edge of the Dark Dump, and it flows slowly downward back to the area with the stair stones.";
 	check-stair-stones;
@@ -856,6 +867,10 @@ to check-stair-stones:
 				now cht of dark dump is letplus; [dark dump->stark stump]
 			else if stump is in dump:
 				now cht of dark dump is leteq; [dark dump->park pump]
+
+this is the endgame prod rule:
+	if tried-yet of "TOLD TALE":
+		say "[line break]So, yeah. That thing you tried before  that didn't work? TOLD TALE? It does now. There's not much else to do."
 
 section rules to sort
 
@@ -1027,7 +1042,6 @@ this is the vc-told-tale rule:
 	if player is not in gold gaol, the rule fails;
 	if ts-ale-old is false or ts-kale-cold is false:
 		vcp "You're not nourished enough to make it far out of the cell. You need food and drink. Even lousy food and drink.";
-		now ts-tale-early is true;
 		clue-later "TOLD TALE";
 		continue the action;
 	the rule succeeds;
