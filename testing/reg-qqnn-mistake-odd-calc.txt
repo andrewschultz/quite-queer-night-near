@@ -68,3 +68,49 @@ howls and grows
 >deep deet
 !maven count
 !maven charge
+
+* variable-calc
+
+>gonear dark dump
+>lark lump
+!You refer to the sheep sheet
+>purloin sheep sheet
+>lark lump
+You refer to the sheep sheet, noticing it says your effort goes to ?? -- there might be diverging possibilities here.
+>arc ump
+You refer to the sheep sheet, noticing it says your effort goes to ++ -- there might be diverging possibilities here.
+# already done, but this is an odd test case
+>stark stump
+>lark lump
+You refer to the sheep sheet, noticing it says your effort goes to ==.
+>undo
+>undo
+>park pump
+>lark lump
+You refer to the sheep sheet, noticing it says your effort goes to ?? -- there might be diverging possibilities here.
+>bark bump
+>lark lump
+You refer to the sheep sheet, noticing it says your effort goes to ++ -- there might be diverging possibilities here.
+>stark stump
+>lark lump
+!You refer to the sheep sheet
+
+>gonear gold gaol
+>z
+>old ale
+>bold bail
+You refer to the sheep sheet, noticing it says your effort goes to ==.
+>undo
+>undo
+
+>bold bail
+You refer to the sheep sheet, noticing it says your effort goes to ?? -- might be more than one thing to do here.
+>cold kale
+>bold bail
+You refer to the sheep sheet, noticing it says your effort goes to --.
+>old ale
+!You should probably try to make a TOLD TALE again. That's all that's left to do.
+>bold bail
+You don't have to be bold. The gaol is unguarded.
+You refer to the sheep sheet, noticing it says your effort goes to ==.
+
