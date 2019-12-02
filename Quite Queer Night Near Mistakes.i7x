@@ -44,22 +44,25 @@ mist-cmd(topic)	mist-rule	got-yet	magicnum	leet-rule	still-rule	mist-txt
 "mink mug"	lug-nearby rule	false	43	thug-around rule	thug-around rule	"The Think Thug is too smart to be upset for being called a rat-face or whatever."
 "rink rug"	lug-nearby rule	false	43	thug-around rule	thug-around rule	"A rug would be out of place inside a roller rink or ice skating rink. Still, it was worth a try."
 "slink slug"	lug-nearby rule	false	43	thug-around rule	thug-around rule	"Perhaps that is a bit too drastic. Another more likable animal might work great, though."
+"shrink shrug"    lug-nearby rule    false    43    thug-around rule    thug-around rule    "The [thug] would still be able to push you around ven if it shrunk a bit. Maybe you can make it shrink a lot."
 "hath haven"	maven-summoned rule	false	--	--	--	"[if maven is moot]The math maven already has one, for now[else]You don't want to let the maven escape. It could help you! Once you're free, you can set it free[end if]."
-"care cones"	in-stones rule	false	--	--	not-gaol rule	"Nothing appears to make you feel more loved. Aww." [start bare bones stair stones]
+"air/err owns"    in-stones rule    false    --    --    not-gaol rule    "The air is everywhere, and it'd take too long to own up to all your mistakes." [start bare bones stair stones]
+"care cones"	in-stones rule	false	--	--	not-gaol rule	"Nothing appears to make you feel more loved. Aww."
 "clayer/clare/clair clones"	in-stones rule	false	--	--	not-gaol rule	"No golems appear to try and build the stairs. But on the bright side, none appear from the stairs to make it tougher to go up."
 "crayer crones"	in-stones rule	false	--	--	not-gaol rule	"Not only is that a stretch, but it would actively hurt your quest."
 "fair/fare phones"	in-stones rule	false	--	--	not-gaol rule	"You have no outside communication here."
-"grayer grones"	in-stones rule	false	--	--	not-gaol rule	"A little more atmosphere doesn't help, but it doesn't hurt, either."
+"grayer groans"	in-stones rule	false	--	--	not-gaol rule	"A little more atmosphere doesn't help, but it doesn't hurt, either."
 "hair/hare hones"	in-stones rule	false	--	--	not-gaol rule	"This is no time for follicular or lagomorphic care!"
 "jer jones"	in-stones rule	false	--	--	not-gaol rule	"The owner of the Dallas Cowboys is nightmarish in his own way, though yes, it might be fun to stick him in a nightmare."
 "mare moans"	in-stones rule	false	--	--	not-gaol rule	"Horses whinny in the distance."
+"pear/pair/pare pwns"    in-stones rule    false    --    --    not-gaol rule    "You don't need any material items, or to win an argument, to escape."
 "rare roans"	in-stones rule	false	--	--	not-gaol rule	"Bringing horses into this mess would be animal cruelty."
 "scare scones"	in-stones rule	false	--	--	not-gaol rule	"Spooky food is a creative idea here, but maybe not a practical one."
 "tare/tear tones"	in-stones rule	false	--	--	not-gaol rule	"No more scary noises than needed, please."
 "ark/arc ump"	in-dark-dump rule	false	44	any-dump-left rule	not-gaol rule	"Nobody appears to decide which animals will be doomed to forty days and nights of floods." [start dark dump] [NOTE: this is technically all-over. But in this case, we have 33 mapping to 44 or 55, so we always get ++. A cheesy hack, but it works.]
 "clark clump"	in-dark-dump rule	false	100	any-dump-left rule	not-gaol rule	"Clark Griswold does not appear in a heap."
 "lark lump"	in-dark-dump rule	false	100	any-dump-left rule	not-gaol rule	"Eww, dead birds?"
-"mark mump"	in-dark-dump rule	false	100	any-dump-left rule	not-gaol rule	"You don't want half a sickness, even a temporary one."
+"mark mump"	in-dark-dump rule	false	100	any-dump-left rule	not-gaol rule	"With just one mump, you might drive yourself up the wall wondering if you are half-sick or half-well."
 "faster fate"	in-gaster-gate rule	false	75	plates-needed rule	not-gaol rule	"But that might mean a faster BAD fate as well as a good one." [start gaster gate]
 "hastur hate"	in-gaster-gate rule	false	75	plates-needed rule	not-gaol rule	"Oh no. You don't need to make things worse."
 "laster late"	in-gaster-gate rule	false	75	plates-needed rule	not-gaol rule	"A good try, if un-grammatical. But you already have lasted, and you don't want your obstacles to last."

@@ -484,7 +484,7 @@ understand "credits" as creditsing.
 
 carry out creditsing:
 	say "Thanks to JJ Guest for starting EctoComp, Duncan Bowsman for continuing it, and Ruber Eaglenest and JoshG for keeping it going further. EctoComp has been a fun way to throw out little games. Also, thanks to itch.io for hosting this game.";
-	say "[line break]Brian Rushton had some tips in-comp, and I received a very helpful transcript as well which helped me fix a few more things.";
+	say "[line break]Brian Rushton and Pace Smith had some tips in-comp, and I received a very helpful transcript as well which helped me fix a few more things.";
 	say "[line break]If you'd like to be in these credits, you too can do so by finding an issue or making a good suggestion.";
 	the rule succeeds.
 
