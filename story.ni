@@ -681,7 +681,7 @@ to decide which number is variable-scan-length of (mynum - a number):
 		if stark stump is in dark dump:
 			if park pump is in dark dump and bark bump is in dark dump, decide on 0;
 			decide on 44; [only stump is left]
-		if park pump is off-stage or dark dump is off-stage, decide on 200; [this is the "all over"]
+		if park pump is off-stage or bark bump is off-stage, decide on 200; [this is the "all over"]
 		decide on 55;
 	else if mynum is 101: [gold gaol]
 		if ts-ale-old is true, decide on 44; [COLD KALE and or TOLD TALE to go]

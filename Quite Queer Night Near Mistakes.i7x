@@ -37,16 +37,16 @@ mist-cmd(topic)	mist-rule	got-yet	magicnum	leet-rule	still-rule	mist-txt
 "streep street"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"Stalking an actress is scary, yes, but we're not going for that sort of scary."
 "sweep suite/sweet"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"Neither a favorite team's success nor drudgery will get your mind off things."
 "weep wheat"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"The ground remains unarable."
-"chink chug"	lug-nearby rule	false	43	thug-around rule	thug-around rule	"The Drink Drug Think Thug is too large to disappear through any crack. You're too large to escape."
-"fink fug"	lug-nearby rule	false	43	thug-around rule	thug-around rule	"No fog carries the Drink Drug Think Thug away or even makes it wimpier."
-"jink jug"	lug-nearby rule	false	43	thug-around rule	thug-around rule	"No liquid container to help your dexterity appears. Oh, well. It might've jinked YOU, anyway."
-"link lug"	lug-nearby rule	false	43	thug-around rule	thug-around rule	"You need to make the thug much less intimidating."
-"mink mug"	lug-nearby rule	false	43	thug-around rule	thug-around rule	"The Think Thug is too smart to be upset for being called a rat-face or whatever."
-"rink rug"	lug-nearby rule	false	43	thug-around rule	thug-around rule	"A rug would be out of place inside a roller rink or ice skating rink. Still, it was worth a try."
-"slink slug"	lug-nearby rule	false	43	thug-around rule	thug-around rule	"Perhaps that is a bit too drastic. Another more likable animal might work great, though."
-"shrink shrug"    lug-nearby rule    false    43    thug-around rule    thug-around rule    "The [thug] would still be able to push you around ven if it shrunk a bit. Maybe you can make it shrink a lot."
+"chink chug"	thug-nearby rule	false	43	--	thug-available rule	"The Drink Drug Think Thug is too large to disappear through any crack. You're too large to escape." [note that the thug-nearby and thug-available rule don't strictly NEED to be there for this game, but I'd like them there, on the very off chance that, say, I'd place the thug back off-stage to start.]
+"fink fug"	thug-nearby rule	false	43	--	thug-available rule	"No fog carries the Drink Drug Think Thug away or even makes it wimpier."
+"jink jug"	thug-nearby rule	false	43	--	thug-available rule	"No liquid container to help your dexterity appears. Oh, well. It might've jinked YOU, anyway."
+"link lug"	thug-nearby rule	false	43	--	thug-available rule	"You need to make the thug much less intimidating."
+"mink mug"	thug-nearby rule	false	43	--	thug-available rule	"The Think Thug is too smart to be upset for being called a rat-face or whatever."
+"rink rug"	thug-nearby rule	false	43	--	thug-available rule	"A rug would be out of place inside a roller rink or ice skating rink. Still, it was worth a try."
+"slink slug"	thug-nearby rule	false	43	--	thug-available rule	"Perhaps that is a bit too drastic. Another more likable animal might work great, though."
+"shrink shrug"	thug-nearby rule	false	43	--	thug-available rule	"A shrug would not shrink the [thug] by much. Perhaps there is something you can shrink it into, so it can't possibly be anywhere near as big as you."
 "hath haven"	maven-summoned rule	false	--	--	--	"[if maven is moot]The math maven already has one, for now[else]You don't want to let the maven escape. It could help you! Once you're free, you can set it free[end if]."
-"air/err owns"    in-stones rule    false    --    --    not-gaol rule    "The air is everywhere, and it'd take too long to own up to all your mistakes." [start bare bones stair stones]
+"air/err owns"	in-stones rule	false	--	--	not-gaol rule	"The air is everywhere, and it'd take too long to own up to all your mistakes." [start bare bones stair stones]
 "care cones"	in-stones rule	false	--	--	not-gaol rule	"Nothing appears to make you feel more loved. Aww."
 "clayer/clare/clair clones"	in-stones rule	false	--	--	not-gaol rule	"No golems appear to try and build the stairs. But on the bright side, none appear from the stairs to make it tougher to go up."
 "crayer crones"	in-stones rule	false	--	--	not-gaol rule	"Not only is that a stretch, but it would actively hurt your quest."
@@ -55,7 +55,7 @@ mist-cmd(topic)	mist-rule	got-yet	magicnum	leet-rule	still-rule	mist-txt
 "hair/hare hones"	in-stones rule	false	--	--	not-gaol rule	"This is no time for follicular or lagomorphic care!"
 "jer jones"	in-stones rule	false	--	--	not-gaol rule	"The owner of the Dallas Cowboys is nightmarish in his own way, though yes, it might be fun to stick him in a nightmare."
 "mare moans"	in-stones rule	false	--	--	not-gaol rule	"Horses whinny in the distance."
-"pear/pair/pare pwns"    in-stones rule    false    --    --    not-gaol rule    "You don't need any material items, or to win an argument, to escape."
+"pear/pair/pare pwns"	in-stones rule	false	--	--	not-gaol rule	"You don't need any material items, or to win an argument, to escape."
 "rare roans"	in-stones rule	false	--	--	not-gaol rule	"Bringing horses into this mess would be animal cruelty."
 "scare scones"	in-stones rule	false	--	--	not-gaol rule	"Spooky food is a creative idea here, but maybe not a practical one."
 "tare/tear tones"	in-stones rule	false	--	--	not-gaol rule	"No more scary noises than needed, please."
@@ -131,7 +131,7 @@ this is the in-peep-pool rule: if player is in peep pool, the rule succeeds;
 
 this is the in-stones rule: if player is in Stair Stones, the rule succeeds;
 
-this is the lug-nearby rule: if think thug is touchable, the rule succeeds;
+this is the thug-nearby rule: if think thug is touchable, the rule succeeds;
 
 this is the maven-summoned rule: if math maven is not off-stage, the rule succeeds;
 
@@ -159,7 +159,7 @@ this is the sheet-available rule: if player has sheep sheet or player is not in 
 
 this is the sheet-untaken rule: if player does not have sheep sheet, the rule succeeds;
 
-this is the thug-around rule: if think thug is not moot, the rule succeeds;
+this is the thug-available rule: if think thug is not moot, the rule succeeds;
 
 [zzqqle]
 

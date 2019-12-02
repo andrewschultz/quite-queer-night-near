@@ -35,7 +35,7 @@ You can also type DEEP DEET to learn how, precisely, the sheet works.
 >deep deet
 You pore through all the items the sheet has information on. You cross-compare them and make hypotheses. You check for contradictions and inconsistencies in the data. It takes a while, but you come up with the following:
 ++ means the desired object or action has more letters in each word than the original object or room.
-== means the desired object or action has the same number of letters in each word as the original object or room.
+/== means the desired object or action has the same number of letters in each word as the original object or room.
 -- means the desired object or action has less letters in each word than the original object or room.
 +=/=+ means the desired object or action has more letters in one word than the original object or room.
 -=/=- means the desired object or action has less letters in one word than the original object or room.
@@ -90,7 +90,7 @@ The stones are almost climbable but still too risky. You need to do a bit more.
 Dark Dump
 
 >cs
-You refer to the sheep sheet, noticing it says Dark Dump goes to ??
+You refer to the sheep sheet, noticing it says Dark Dump goes to ?? -- there might be diverging possibilities here.
 
 >stark stump
 >cs
@@ -99,7 +99,7 @@ You refer to the sheep sheet, noticing it says Dark Dump goes to ==
 >undo
 >park pump
 >cs
-You refer to the sheep sheet, noticing it says Dark Dump goes to ??
+You refer to the sheep sheet, noticing it says Dark Dump goes to ?? -- there might be diverging possibilities here.
 >stark stump
 >cs
 You refer to the sheep sheet, noticing it says Dark Dump goes to ==
@@ -112,7 +112,7 @@ You refer to the sheep sheet, noticing it says Dark Dump goes to ==
 by one point
 
 >cs
-You refer to the sheep sheet, noticing it says Dark Dump goes to ??.
+You refer to the sheep sheet, noticing it says Dark Dump goes to ?? -- there might be diverging possibilities here
 
 >stark stump
 by one point
@@ -145,7 +145,7 @@ You can't find any information on the cheap cheat sheep sheet about Gaster Gate.
 Gold Gaol
 
 >cs
-You refer to the sheep sheet, noticing it says Gold Gaol goes to ??.
+You refer to the sheep sheet, noticing it says Gold Gaol goes to ?? -- there might be diverging possibilities here
 >cold kale
 >cs
 You refer to the sheep sheet, noticing it says Gold Gaol goes to --.

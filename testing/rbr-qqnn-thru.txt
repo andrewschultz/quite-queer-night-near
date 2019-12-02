@@ -147,6 +147,9 @@ The Think Thug is too smart to be upset for being called a rat-face or whatever.
 > rink rug
 refer to the sheep sheet
 A rug would be out of place inside a roller rink or ice skating rink. Still, it was worth a try.
+> shrink shrug
+sheep sheet
+A shrug would not shrink the Drink Drug Think Thug by much. Perhaps there is something you can shrink it into, so it can't possibly be anywhere near as big as you.
 > slink slug
 refer to the sheep sheet
 Perhaps that is a bit too drastic. Another more likable animal might work great, though.
@@ -183,7 +186,7 @@ You can also type DEEP DEET to learn how, precisely, the sheet works.
 >deep deet
 You pore through all the items the sheet has information on. You cross-compare them and make hypotheses. You check for contradictions and inconsistencies in the data. It takes a while, but you come up with the following:
 ++ means the desired object or action has more letters in each word than the original object or room.
-== means the desired object or action has the same number of letters in each word as the original object or room.
+/== means the desired object or action has the same number of letters in each word as the original object or room.
 -- means the desired object or action has less letters in each word than the original object or room.
 +=/=+ means the desired object or action has more letters in one word than the original object or room.
 -=/=- means the desired object or action has less letters in one word than the original object or room.
@@ -316,6 +319,9 @@ You already got rid of the thug.
 Bare Bones Stair Stones
 
 @mis
+> air owns
+!sheep sheet
+The air is everywhere, and it'd take too long to own up to all your mistakes.
 > bear bones
 !sheep sheet
 That would make for creepier ambience, but more importantly, the bear bones would make the stair stones even tougher to climb.
@@ -328,12 +334,15 @@ Not only is that a stretch, but it would actively hurt your quest.
 > fair phones
 !sheep sheet
 You have no outside communication here.
-> grayer grones
+> grayer groans
 !sheep sheet
 A little more atmosphere doesn't help, but it doesn't hurt, either.
 > mare moans
 !sheep sheet
 Horses whinny in the distance.
+> pear pwns
+!sheep sheet
+You don't need any material items, or to win an argument, to escape.
 > rare roans
 !sheep sheet
 Bringing horses into this mess would be animal cruelty.
@@ -532,7 +541,7 @@ Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 
 @cs
 >cs
-You refer to the sheep sheet, noticing it says Dark Dump goes to ??
+You refer to the sheep sheet, noticing it says Dark Dump goes to ?? -- there might be diverging possibilities here.
 
 @cs
 >stark stump
@@ -542,7 +551,7 @@ You refer to the sheep sheet, noticing it says Dark Dump goes to ==
 >undo
 >park pump
 >cs
-You refer to the sheep sheet, noticing it says Dark Dump goes to ??
+You refer to the sheep sheet, noticing it says Dark Dump goes to ?? -- there might be diverging possibilities here.
 >stark stump
 >cs
 You refer to the sheep sheet, noticing it says Dark Dump goes to ==
@@ -563,7 +572,7 @@ refer to the sheep sheet
 Eww, dead birds?
 > mark mump
 refer to the sheep sheet
-You don't want half a sickness, even a temporary one.
+With just one mump, you might drive yourself up the wall wondering if you are half-sick or half-well.
 
 @alt
 >hark hump
@@ -575,7 +584,7 @@ by one point
 
 @cs
 >cs
-You refer to the sheep sheet, noticing it says Dark Dump goes to ??.
+You refer to the sheep sheet, noticing it says Dark Dump goes to ?? -- there might be diverging possibilities here
 
 >stark stump
 by one point
@@ -634,7 +643,7 @@ Clark Griswold does not appear in a heap.
 Eww, dead birds?
 > mark mump
 !sheep sheet
-You don't want half a sickness, even a temporary one.
+With just one mump, you might drive yourself up the wall wondering if you are half-sick or half-well.
 
 >e
 
@@ -793,7 +802,7 @@ You can't change the gaol. You can escape easily enough. You just need to figure
 
 @cs
 >cs
-You refer to the sheep sheet, noticing it says Gold Gaol goes to ??.
+You refer to the sheep sheet, noticing it says Gold Gaol goes to ?? -- there might be diverging possibilities here
 >cold kale
 >cs
 You refer to the sheep sheet, noticing it says Gold Gaol goes to --.

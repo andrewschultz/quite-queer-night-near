@@ -34,7 +34,7 @@ Zoom! The wrath ravin' math maven zips back near, sullenly. You pick it up.
 
 >score
 You have 0 out of 12 points needed to win the game, but there's a bonus point.
-You have made 6 good guesses so far. You can still access 68 of 74 good guesses.
+You have made 6 good guesses so far. You can still access 71 of 77 good guesses.
 
 >shite sheer
 The wrath ravin' math maven howls and grows bigger. All your guesses have paid off.
@@ -72,13 +72,14 @@ howls and grows
 * variable-calc
 
 >gonear dark dump
+>z
 >lark lump
 !You refer to the sheep sheet
 >purloin sheep sheet
 >lark lump
 You refer to the sheep sheet, noticing it says your effort goes to ?? -- there might be diverging possibilities here.
 >arc ump
-You refer to the sheep sheet, noticing it says your effort goes to ++ -- there might be diverging possibilities here.
+You refer to the sheep sheet, noticing it says your effort goes to ++.
 # already done, but this is an odd test case
 >stark stump
 >lark lump
@@ -90,7 +91,7 @@ You refer to the sheep sheet, noticing it says your effort goes to ==.
 You refer to the sheep sheet, noticing it says your effort goes to ?? -- there might be diverging possibilities here.
 >bark bump
 >lark lump
-You refer to the sheep sheet, noticing it says your effort goes to ++ -- there might be diverging possibilities here.
+You refer to the sheep sheet, noticing it says your effort goes to ++.
 >stark stump
 >lark lump
 !You refer to the sheep sheet
@@ -104,7 +105,7 @@ You refer to the sheep sheet, noticing it says your effort goes to ==.
 >undo
 
 >bold bail
-You refer to the sheep sheet, noticing it says your effort goes to ?? -- might be more than one thing to do here.
+You refer to the sheep sheet, noticing it says your effort goes to ?? -- there might be diverging possibilities here.
 >cold kale
 >bold bail
 You refer to the sheep sheet, noticing it says your effort goes to --.

@@ -95,6 +95,9 @@ The Think Thug is too smart to be upset for being called a rat-face or whatever.
 > rink rug
 refer to the sheep sheet
 A rug would be out of place inside a roller rink or ice skating rink. Still, it was worth a try.
+> shrink shrug
+sheep sheet
+A shrug would not shrink the Drink Drug Think Thug by much. Perhaps there is something you can shrink it into, so it can't possibly be anywhere near as big as you.
 > slink slug
 refer to the sheep sheet
 Perhaps that is a bit too drastic. Another more likable animal might work great, though.
@@ -193,6 +196,9 @@ Neither a favorite team's success nor drudgery will get your mind off things.
 >e
 Bare Bones Stair Stones
 
+> air owns
+!sheep sheet
+The air is everywhere, and it'd take too long to own up to all your mistakes.
 > bear bones
 !sheep sheet
 That would make for creepier ambience, but more importantly, the bear bones would make the stair stones even tougher to climb.
@@ -205,12 +211,15 @@ Not only is that a stretch, but it would actively hurt your quest.
 > fair phones
 !sheep sheet
 You have no outside communication here.
-> grayer grones
+> grayer groans
 !sheep sheet
 A little more atmosphere doesn't help, but it doesn't hurt, either.
 > mare moans
 !sheep sheet
 Horses whinny in the distance.
+> pear pwns
+!sheep sheet
+You don't need any material items, or to win an argument, to escape.
 > rare roans
 !sheep sheet
 Bringing horses into this mess would be animal cruelty.
@@ -306,7 +315,7 @@ refer to the sheep sheet
 Eww, dead birds?
 > mark mump
 refer to the sheep sheet
-You don't want half a sickness, even a temporary one.
+With just one mump, you might drive yourself up the wall wondering if you are half-sick or half-well.
 
 >bark bump
 by one point
@@ -328,7 +337,7 @@ Clark Griswold does not appear in a heap.
 Eww, dead birds?
 > mark mump
 !sheep sheet
-You don't want half a sickness, even a temporary one.
+With just one mump, you might drive yourself up the wall wondering if you are half-sick or half-well.
 
 >e
 
