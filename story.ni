@@ -238,13 +238,33 @@ check going nowhere:
 	if player is in peep pool, say "You can only go north or[if creep cruel is not moot], once the way is clear,[end if] east." instead;
 	say "I wish I could give more information, but you can't go that way." instead;
 
-volume adding verbs
+volume silly responses to popular Inform verbs
+
+chapter attacking
+
+the block attacking rule is not listed in any rulebook.
 
 check attacking: say "The game is not called row-right-now night!" instead;
+
+chapter waiting
+
+check waiting: say "Wow! [']Ll wait? Foul fate!" instead;
 
 volume the player
 
 description of player is "You are [if thug is off-stage]no longer [end if]shedding a tight tear[if player is in bier]. You're no sight seer[end if]."
+
+chapter xyzzying
+
+xyzzying is an action applying to nothing.
+
+understand the command "xyzzy" as something new.
+
+understand "xyzzy" as xyzzying.
+
+carry out xyzzying:
+	say "<VAST VERB-BLAST BLURB>[paragraph break]";
+	the rule succeeds.
 
 volume the map
 
@@ -1150,7 +1170,7 @@ before undoing an action:
 volume beta testing - not for release
 
 when play begins:
-	say "NOTE: there is a small tweak for beta testers. PPP gives you enough Path Pavin' charges to get through the game.";
+	say "NOTE: there is a small tweak for beta testers. PPP gives you enough Path Pavin['] charges to get through the game.";
 
 chapter pppjng
 
