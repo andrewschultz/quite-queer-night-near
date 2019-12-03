@@ -53,7 +53,9 @@ chapter boringness
 
 a thing has a rule called bore-rule. bore-rule of a thing is usually the bore-nothing rule.
 
-a thing can be boring. a thing is usually boring. a thing has text called bore-text. bore-text of a thing is "You don't have to do any usual parser manipulations on [the item described]. Maybe examine."
+a thing can be boring. a thing is usually boring. a thing has text called bore-text.
+
+a thing can be borewarned. a thing is usually not borewarned.
 
 skip-bore-text is a truth state that varies.
 
@@ -65,8 +67,13 @@ instead of doing something with a boring thing:
 	if skip-bore-text is true:
 		now skip-bore-text is false;
 		continue the action;
-	if bore-text of noun is not empty, say "[bore-text of noun][line break]" instead;
-	say "Not much to do with [the noun], so, examining...";
+	if bore-text of noun is not empty:
+		if noun is not borewarned:
+			say "(NOTE: standard verbs won't work to deal with obstacles,animated or otherwise. This is a generic message specific to [the noun].)[paragraph break]";
+			now noun is borewarned;
+		say "[bore-text of noun][line break]" instead;
+	else:
+		say "You don't have to try any of the usual parser manipulations on [the noun] besides maybe examining. So let's try that.";
 	try examining the noun instead;
 
 chapter largely copied from VVFF
@@ -230,7 +237,10 @@ check taking:
 		now sheep-hint is true;
 		the rule fails;
 
-report taking sheep sheet: max-down;
+report taking sheep sheet:
+	max-down;
+	say "A chill runs through your body. A voice whispers 'You'll never achieve the maximum score.' This makes you feel bad, until you remember escape is the most important thing.";
+	the rule succeeds;
 
 check exiting: try going outside instead;
 
@@ -419,7 +429,9 @@ check going east in Peep Pool:
 
 section creep cruel
 
-the creep cruel is a person. cht of creep cruel is letminus. "A cruel creep snickers, pacing back and forth and blocking the way east where the steep stool was, just to spite you.". description is "The creep cruel is a bit bigger than you, but more importantly, it probably knows dirty fighting tricks.". bore-text of creep cruel is "'Peach? Putz! Reach ruts!' Not very sophisticated, but hard not to be a little annoyed.". [->keep cool]
+the creep cruel is a person. cht of creep cruel is letminus. "A creep (cruel) snickers, pacing back and forth and blocking the way east where the steep stool was, just to spite you.". description is "The creep (cruel) is a bit bigger than you, but more importantly, it probably knows dirty fighting tricks.". bore-text of creep cruel is "'Peach? Putz! Reach ruts!' Not very sophisticated, but hard not to be a little annoyed.". [->keep cool]
+
+printed name of creep cruel is "creep (cruel)".
 
 chapter Gore Gulch
 
@@ -452,7 +464,7 @@ the bark bump is scenery. "A huge bark bump provides token protection against th
 
 section park pump
 
-the park pump is scenery. "The pump quit pumping once there was too much water."
+the park pump is scenery. "The pump doesn't seem operable, but [if north-flow]it already did its part pumping the plaster plate back to [stair stones][else]maybe you just need to get a few other things in place[end if]."
 
 section stark stump
 
@@ -602,15 +614,19 @@ Rule for printing a parser error (this is the check for room name in player comm
 	continue the action;
 
 rule for printing a parser error:
+	if latest parser error is the I beg your pardon error:
+		say "My ... mix, try tricks!";
+		the rule succeeds;
 	if latest parser error is the not a verb I recognise error:
 		if score > 0:
 			say "That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe [if player is in stair stones]get up those stair stones, somehow[else if cht of location of player is phbt]look around somewhere else--there doesn't seem to be much left to do here[else]there's a bit more to find here, though[end if].";
 		else:
-			say "This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them.";
+			say "Sorry, I can't do anything with that. This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them.";
 		say "[line break]";
 		unless player is in gold gaol and player does not have cheap cheat sheep sheet, say "[if sheep sheet is touchable]Since[else]If[end if] you have the sheep sheet handy, you can [b]CC[r] something. ";
 		say "You can also type VERBS for a list of valid verbs (it can change as you gain or lose hint items) or ABOUT to see general information.";
 		the rule succeeds;
+	say "You may've tried to do something too complex with what was here. [if score > 0]You only need rhyming pairs to get through the game[else]Once you figure the mechanic, you'll see why[end if].";
 
 chapter the big rule(s)
 
@@ -775,6 +791,8 @@ blight-hint is a truth state that varies.
 
 when play begins: if a random chance of 1 in 2 succeeds, now blight-hint is false.
 
+leetclue-exp-yet is a truth state that varies.
+
 to say leetclue of (x - a cheattype) and (ts - a truth state):
 	if sheep sheet is not touchable, continue the action;
 	say "You refer to the sheep sheet, noticing it says ";
@@ -783,6 +801,9 @@ to say leetclue of (x - a cheattype) and (ts - a truth state):
 		say "[if blight-hint is true]Blight Blear goes to --[else]Bight Bier goes to ==[end if][one of]. Maybe there's another reading for the other half of this location's name[or][stopping]";
 		continue the action;
 	say "[if noun is nothing]your effort[else][the noun][end if] goes to [scancol of x][if ts is true], but the writing's terribly messy, as if to say this isn't 100% critical";
+	if leetclue-exp-yet is false:
+		now leetclue-exp-yet is true;
+		say ".[paragraph break]NOTE: it's not critical to figure out what the clues mean. You may prefer to brute-force your way through, though [if player has sheep sheet]once[else]now[end if] you have the sheet, examining it will reveal a spoiler command"
 
 to say scancol of (x - a cheattype): say "[if x is letplus]++[else if x is partplus]+=/=+[else if x is leteq]==[else if x is partminus]-=/=-[else if x is letminus]--[else if x is letboth]+-/-+[else if x is phbt]00[else if x is allover]?? -- there might be diverging possibilities here[no line break][else]BUG[end if]"
 

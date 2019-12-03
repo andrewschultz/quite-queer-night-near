@@ -1,0 +1,95 @@
+#-- reg-qqnn-verbs.txt
+#-- tests various verbs.
+#--
+#-- use HHV.PY to verify ha-half
+#--
+
+** game: /home/andrew/prt/debug-quite-queer-night-near.z8
+** interpreter: /home/andrew/prt/dfrotz -m
+
+* hash
+
+>push all
+You may've tried to do something too complex with what was here. Once you figure the mechanic, you'll see why.
+>nonsense command
+Sorry, I can't do anything with that. This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them.
+Since you have the sheep sheet handy, you can CC something. You can also type VERBS for a list of valid verbs (it can change as you gain or lose hint items) or ABOUT to see general information.
+
+>
+My ... mix, try tricks!
+
+>score
+You have 0 out of 12 points needed to win the game, but there's a bonus point.
+
+>x sheet
+It claims to be a SHEEP SHEET because only sheeple use hints. This reminds you of all the times you were scared to ask for help, because you might feel dumb still not getting it or realizing you could've done without the help if you'd REALLY been thinking.
+
+Which is pretty scary. Not nearly, like, mortally. But it's lasted.
+
+It has information on--well, most everything you see here. XX any item for particular information. I guess it's a sheep sheet because you still feel sheepish looking at it, no matter how many times you have, and also I feel sheepish for such a silly name. You can CC, SS, CCSS or CS anything to see cheating information.
+
+>take sheet
+The sheep sheet feels a bit cold. You could take it anyway, but maybe you can do something to warm it up first.
+
+>take sheet
+A chill runs through your body. A voice whispers "You'll never achieve the maximum score." This makes you feel bad, until you remember escape is the most important thing.
+!Taken.
+
+>score
+You have 0 out of 12 points needed to win the game.
+
+>push thug
+(NOTE: standard verbs won't work to deal with obstacles,animated or otherwise. This is a generic message specific to the Drink Drug Think Thug.)
+"Walk! Wham! Block! Blam!" the Drink Drug Think Thug opines, unhelpfully. You'll need the right sort of magic to get by.
+>push thug
+"Walk! Wham! Block! Blam!" the Drink Drug Think Thug opines, unhelpfully. You'll need the right sort of magic to get by.
+!(NOTE: standard verbs won't work to deal with obstacles,animated or otherwise. This is a generic message specific to the Drink Drug Think Thug.)
+
+>attack thug
+The game is not called row-right-now night!
+
+>z
+Wow! 'Ll wait? Foul fate!
+>xyzzy
+<VAST VERB-BLAST BLURB>
+
+>drop sheet
+You don't have to try any of the usual parser manipulations on the cheap cheat sheep sheet besides maybe examining. So let's try that.
+
+It has information on--well, most everything you see here. XX any item for particular information. I guess it's a sheep sheet because you still feel sheepish looking at it, no matter how many times you have, and also I feel sheepish for such a silly name. You can CC, SS, CCSS or CS anything to see cheating information.
+
+>fight fear
+>pink pug
+
+>push all
+You may've tried to do something too complex with what was here. You only need rhyming pairs to get through the game.
+
+>e
+>n
+>e
+
+>push mate
+(NOTE: standard verbs won't work to deal with obstacles,animated or otherwise. This is a generic message specific to the Master Mate.)
+"Right rhyme ... slight slime!" Perhaps the Master Mate is magically bound from telling you the exact rhyme, but how many possibilities can there be?
+>push mate
+!(NOTE: standard verbs won't work to deal with obstacles,animated or otherwise. This is a generic message specific to the Master Mate.)
+"Right rhyme ... slight slime!" Perhaps the Master Mate is magically bound from telling you the exact rhyme, but how many possibilities can there be?
+
+>w
+>s
+>s
+>deep duel
+
+>push creep
+(NOTE: standard verbs won't work to deal with obstacles,animated or otherwise. This is a generic message specific to the creep (cruel).)
+"Peach? Putz! Reach ruts!" Not very sophisticated, but hard not to be a little annoyed.
+>push creep
+!(NOTE: standard verbs won't work to deal with obstacles,animated or otherwise. This is a generic message specific to the creep (cruel).)
+"Peach? Putz! Reach ruts!" Not very sophisticated, but hard not to be a little annoyed.
+
+>gonear gaol
+>abstract sheet to bier
+>nonsense command
+That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic.
+!sheet handy
+You can also type VERBS for a list of valid verbs (it can change as you gain or lose hint items) or ABOUT to see general information.
