@@ -110,8 +110,6 @@ You don't need to keep cool any more.
 !DEBUG: vc-keep-cool rule tipped off half-body tingling.
 !Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 
->e
-
 Gore Gulch
 
 > zmore mulch
@@ -203,6 +201,8 @@ That's already here.
 !Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 
 >e
+
+Gaster Gate
 
 > zplaster plate
 DEBUG: vc-plaster-plate rule tipped off half-body tingling.

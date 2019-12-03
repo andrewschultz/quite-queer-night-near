@@ -4,11 +4,12 @@
 #-- use HHV.PY to verify ha-half
 #--
 
-files=reg-qqnn-thru-min.txt,reg-qqnn-thru-all.txt,reg-qqnn-thru-think.txt,reg-qqnn-thru-alt-verbs.txt,reg-qqnn-thru-mistakes.txt,reg-qqnn-thru-ha-half.txt,reg-qqnn-thru-scan.txt
+files=reg-qqnn-thru-min.txt,reg-qqnn-thru-all.txt,reg-qqnn-thru-think.txt,reg-qqnn-thru-alt-verbs.txt,reg-qqnn-thru-mistakes.txt,reg-qqnn-thru-ha-half.txt,reg-qqnn-thru-scan.txt,reg-qqnn-thru-noway.txt
 ~	alt	t3
 ~	mis	t4
 ~	ha	t5
 ~	cs	t6
+~	way	t7
 
 ## *FILE
 ## *FORK
@@ -39,6 +40,16 @@ Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 > heap zheat
 DEBUG: vc-heap-heat rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+@way
+>e
+Not with the Drink Drug Think Thug blocking you.
+>n
+The boiled base spoiled space blocks you every way except east.
+>w
+The boiled base spoiled space blocks you every way except east.
+>s
+The boiled base spoiled space blocks you every way except east.
 
 @cs
 >cs me
@@ -196,7 +207,6 @@ You rehash your first deep examination of the sheet:
 >x sheet
 You can also type DEEP DEET to recap how, precisely, the sheet works.
 
-
 @mis
 > bite bier
 !refer to the sheep sheet
@@ -318,6 +328,10 @@ You already got rid of the thug.
 >e
 Bare Bones Stair Stones
 
+@way
+>u
+The stones are in nowhere near climbable condition. For now.
+
 @mis
 > air owns
 !sheep sheet
@@ -374,6 +388,14 @@ The stones are nowhere near in climbable condition yet.
 
 Peep Pool
 
+@way
+>w
+The [spoiled space] blocks your way west. You can only go north or, once the way is clear, east.
+>s
+The [spoiled space] blocks your way south. You can only go north or, once the way is clear, east.
+>e
+The steep stool is in the way. It's too big and heavy to move.
+
 @cs
 >cs
 You refer to the sheep sheet, noticing it says Peep Pool goes to ==.
@@ -426,6 +448,14 @@ by one point
 >deep duel
 by one point
 
+@way
+>w
+The [spoiled space] blocks your way west. You can only go north or, once the way is clear, east.
+>s
+The [spoiled space] blocks your way south. You can only go north or, once the way is clear, east.
+>e
+The creep (cruel) blocks you from going east. Exasperating, but that's just its nature. Maybe you can get rid of it.
+
 @cs
 >cs creep cruel
 You refer to the sheep sheet, noticing it says
@@ -473,9 +503,21 @@ This adventure is about surviving, not taking over.
 !refer to the sheep sheet
 Crying is out. So are nice new warm clothes. You're on a spooky Halloween adventure, here!
 
->e
+@way
+>w
+The [spoiled space] blocks your way [noun]. You can only go north or east.
+>s
+The [spoiled space] blocks your way [noun]. You can only go north or east.
 
 Gore Gulch
+
+@way
+>n
+The [spoiled space] and general ickiness encompass every way except back west.
+>s
+The [spoiled space] and general ickiness encompass every way except back west.
+>e
+The [spoiled space] and general ickiness encompass every way except back west.
 
 @cs
 >cs
@@ -499,6 +541,10 @@ by one point
 /^Stair Stones
 The gunky material flowing back to Bare Bones Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
 
+@way
+>u
+The stones are almost climbable but still too risky. You need to do a bit more.
+
 @ha
 > gonear gore gulch
 > more mulch
@@ -518,6 +564,12 @@ The stones are almost climbable but still too risky. You need to do a bit more.
 >n
 
 Dark Dump
+
+@way
+>n
+You can only go east or south. The boiled base spoiled space blocks your way north.
+>w
+You can only go east or south. The boiled base spoiled space blocks your way west.
 
 @ha
 > zbark bump
@@ -647,6 +699,16 @@ With just one mump, you might drive yourself up the wall wondering if you are ha
 
 >e
 
+Gaster Gate
+
+@way
+>e
+You aren't getting past the gate, but there's worse stuff behind. Trust me.
+>n
+The [spoiled space] blocks your passage north.
+>s
+The [spoiled space] blocks your passage south.
+
 @mis
 > faster fate
 refer to the sheep sheet
@@ -720,6 +782,16 @@ The wrath ravin' math maven rolls its eyes and groans as you go back south. Perh
 
 >u
 Gold Gaol
+
+@way
+>n
+You need to look back on your experiences before leaving. Anyway, you can't figure directions here.
+>s
+You need to look back on your experiences before leaving. Anyway, you can't figure directions here.
+>e
+You need to look back on your experiences before leaving. Anyway, you can't figure directions here.
+>w
+You need to look back on your experiences before leaving. Anyway, you can't figure directions here.
 
 @ha
 > zold ale

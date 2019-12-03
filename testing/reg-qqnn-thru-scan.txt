@@ -70,8 +70,6 @@ You refer to the sheep sheet, noticing it says
 >keep cool
 by one point
 
->e
-
 Gore Gulch
 
 >cs
@@ -127,6 +125,8 @@ by one point
 You can't find any information on the cheap cheat sheep sheet about Dark Dump. Must not need changing.
 
 >e
+
+Gaster Gate
 
 >cs
 You refer to the sheep sheet, noticing it says Gaster Gate goes to ++.

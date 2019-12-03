@@ -284,8 +284,6 @@ This adventure is about surviving, not taking over.
 !refer to the sheep sheet
 Crying is out. So are nice new warm clothes. You're on a spooky Halloween adventure, here!
 
->e
-
 Gore Gulch
 
 > boar bulge
@@ -340,6 +338,8 @@ Eww, dead birds?
 With just one mump, you might drive yourself up the wall wondering if you are half-sick or half-well.
 
 >e
+
+Gaster Gate
 
 > faster fate
 refer to the sheep sheet
