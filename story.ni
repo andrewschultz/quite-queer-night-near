@@ -232,17 +232,21 @@ check taking:
 
 report taking sheep sheet: max-down;
 
-check going nowhere:
+check exiting: try going outside instead;
+
+check going nowhere: [in rough order you find things, going north first]
 	if noun is diagonal, say "You don't need diagonal directions in this game." instead;
 	if player is in gold gaol, say "You need to look back on your experiences before leaving. Anyway, you can't figure directions here." instead;
 	if noun is inside or noun is outside, say "You never need to go inside or outside, though you may need to go up [if stair stones is unvisited]one place[else]in [stair stones][end if]." instead;
 	if player is in bight bier, say "The [spoiled space] blocks you every way except [if stair stones are visited]back [end if]east." instead;
-	if player is in gaster gate, say "[if noun is west]You aren't etting past the gate, but don't worry. There's worse stuff behind. Trust me[else]The [spoiled space] blocks your passage[end if]." instead;
+	if player is in stair stones, say "You can only go north, south or west[if stone-filler is 2]. And up. You probably want to go up[else]. And you can try to go up[end if]." instead; [check going up is flagged elsewhere]
+	if player is in gaster gate, say "[if noun is east]You aren't getting past the gate, but there's worse stuff behind. Trust me[all-plas][else]The [spoiled space] blocks your passage [noun][end if]." instead;
+	if player is in dark dump, say "You can only go east or south. The [spoiled space] blocks your way [noun]." instead;
+	if player is in peep pool, say "The [spoiled space] blocks your way [noun]. You can only go north or[if creep cruel is not moot], once the way is clear,[end if] east." instead;
 	if player is in gore gulch, say "The [spoiled space] and general ickiness encompass every way except back west." instead;
-	if player is in stair stones, say "You can only go north, south or west[if stone-filler is 2]. And up. You probably want to go up[else]. And you can try to go up[end if]." instead;
-	if player is in dark dump, say "You can only go east or south. The [spoiled space] blocks your way west and north." instead;
-	if player is in peep pool, say "You can only go north or[if creep cruel is not moot], once the way is clear,[end if] east. The [spoiled space] blocks your way south or west." instead;
 	say "I wish I could give more information, but you can't go that way." instead;
+
+to say all-plas: if ts-plaster-plate is true, say ". Breaking off the plaster plate was enough"
 
 volume silly responses to popular Inform verbs
 
@@ -255,6 +259,21 @@ check attacking: say "The game is not called row-right-now night!" instead;
 chapter waiting
 
 check waiting: say "Wow! [']Ll wait? Foul fate!" instead;
+
+chapter talking
+
+talking is an action applying to one thing.
+
+understand the command "talk" as something new.
+understand the command "talk to" as something new.
+
+understand "talk [something]" as talking.
+understand "talk to [something]" as talking.
+
+carry out talking:
+	if the noun is not a person, say "No response." instead;
+	say "They have nothing to say. They should, but they don't.";
+	the rule succeeds.
 
 volume the player
 
@@ -289,11 +308,10 @@ section DDTT
 [after choosing notable locale objects when player is in Bight Bier:
 	if Drink Drug Think Thug is in Bight Bier, set the locale priority of Drink Drug Think Thug to 9;]
 
-The Drink Drug Think Thug is a person in Blight Blear Bight Bier. cht of Think Thug is letminus. "Wait, no, you can't go east until you dispose of that Drink Drug Think Thug blocking the way.". description of Thug is "Big and brutal and surprisingly not dumb-looking. Even though they've abused their body and mind, they can beat you up physically and mentally. You'll need to change the Thug drastically to get by.". [-> pink pug]
+The Drink Drug Think Thug is a person in Blight Blear Bight Bier. cht of Think Thug is letminus. "Wait, no, you can't go east until you dispose of that Drink Drug Think Thug blocking the way.". description of Thug is "Big and brutal and surprisingly not dumb-looking. Even though they've abused their body and mind, they can beat you up physically and mentally. You'll need to change the Thug drastically to get by.". bore-text of Drink Drug Think Thug is "'Walk! Wham! Block! Blam!' the [thug] opines, unhelpfully. You'll need the right sort of magic to get by."  [-> pink pug]
 
 check going east in Blight Blear Bight Bier:
-	if Drink Drug Think Thug is in Bier, say "Not with the Drink Drug Think Thug by." instead;
-	if Drink Drug Think Thug is off-stage, say "No. You're too scared to do anything right now." instead;
+	if Drink Drug Think Thug is in Bier, say "Not with the Drink Drug Think Thug blocking you." instead;
 
 section sheep sheet
 
@@ -379,7 +397,7 @@ check going up in Bare Bones Stair Stones:
 		move player to gold gaol;
 		the rule succeeds;
 	if Q is 0:
-		say "The stones are nowhere near in climbable condition yet.";
+		say "The stones are in nowhere near climbable condition. For now.";
 	else if Q is 1:
 		say "The stones are almost climbable but still too risky. You need to do a bit more.";
 	the rule fails;
@@ -401,7 +419,7 @@ check going east in Peep Pool:
 
 section creep cruel
 
-the creep cruel is a person. cht of creep cruel is letminus. "A cruel creep snickers, pacing back and forth and blocking the way east where the steep stool was, just to spite you.". description is "The creep cruel is a bit bigger than you, but more importantly, it probably knows dirty fighting tricks.". [->keep cool]
+the creep cruel is a person. cht of creep cruel is letminus. "A cruel creep snickers, pacing back and forth and blocking the way east where the steep stool was, just to spite you.". description is "The creep cruel is a bit bigger than you, but more importantly, it probably knows dirty fighting tricks.". bore-text of creep cruel is "'Peach? Putz! Reach ruts!' Not very sophisticated, but hard not to be a little annoyed.". [->keep cool]
 
 chapter Gore Gulch
 
@@ -448,11 +466,11 @@ ts-plaster-plate is a truth state that varies.
 
 section Master Mate
 
-the Master Mate is a person in Gaster Gate. "A master mate stands here, looking pityingly on you. What could you possibly do to help things?". cht of Master Mate is letplus. [->plaster plate]
+the Master Mate is a person in Gaster Gate. "A master mate stands here, looking pityingly on you. What could you possibly do to help things?". description is "The Master Mate stands impassively, smiling slightly, shrugging occasionally. Their presence helps you ... a bit, you think.". cht of Master Mate is letplus. bore-text of Master Mate is "'Right rhyme ... slight slime!' Perhaps the Master Mate is magically bound from telling you the exact rhyme, but how many possibilities can there be?" [->plaster plate]
 
 chapter Gold Gaol
 
-Gold Gaol is a room. It is not bounded. "There's nothing much to do here. Well, the wall says FOLD FAIL, giving an idea of how gaol [i]should[r]' be pronounced. Hey, when you're a prisoner, you sort of need to do as you're told, I guess.". cht of gold gaol is allover. [->old ale] [->cold kale] [->told tale]
+Gold Gaol is a room. It is not bounded. "There's nothing much to do here. Well, the wall says FOLD FAIL, giving an idea of how gaol [i]should[r] be pronounced. Well, I guess there could be worse orders to receive as a prisoner.". cht of gold gaol is allover. [->old ale] [->cold kale] [->told tale]
 
 ts-ale-old is a truth state that varies.
 ts-kale-cold is a truth state that varies.
@@ -1049,7 +1067,7 @@ this is the vc-plaster-plate rule:
 	the rule succeeds;
 
 this is the vr-plaster-plate rule:
-	say "A huge chunk of the gaster gate breaks off and creates a plaster plate. It's much too big to eat off, but it crumbles quickly apart (probably not Last [']Er Late brand) and is washed away beyond the dark dump.";
+	say "A huge chunk of the gaster gate breaks off and creates a plaster plate. It's much too big to eat off, but it crumbles quickly apart (probably not Last [']Er Late brand) and is washed away beyond the dark dump. The Master Mate, their job done, smiles, gives a thumbs up, and walks away.";
 	now ts-plaster-plate is true;
 	moot master mate;
 	phbt gaster gate;
