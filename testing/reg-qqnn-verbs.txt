@@ -9,6 +9,9 @@
 
 * hash
 
+>ping bier
+The bier is too scary to even contemplate, though there is a way to deal with it tangentially.
+
 >push all
 You may've tried to do something too complex with what was here. Once you figure the mechanic, you'll see why.
 >nonsense command
@@ -59,6 +62,10 @@ You don't have to try any of the usual parser manipulations on the cheap cheat s
 It has information on--well, most everything you see here. XX any item for particular information. I guess it's a sheep sheet because you still feel sheepish looking at it, no matter how many times you have, and also I feel sheepish for such a silly name. You can CC, SS, CCSS or CS anything to see cheating information.
 
 >fight fear
+
+>ping bier
+The bier is too scary to even contemplate, though you found a way to deal with it tangentially.
+
 >pink pug
 
 >push all
@@ -68,6 +75,9 @@ You may've tried to do something too complex with what was here. You only need r
 >n
 >e
 
+>ping gate
+The gate is much too strong. It may be hiding worse things. But you may be able to break off a piece of it.
+
 >push mate
 (NOTE: standard verbs won't work to deal with obstacles,animated or otherwise. This is a generic message specific to the Master Mate.)
 "Right rhyme ... slight slime!" Perhaps the Master Mate is magically bound from telling you the exact rhyme, but how many possibilities can there be?
@@ -75,9 +85,21 @@ You may've tried to do something too complex with what was here. You only need r
 !(NOTE: standard verbs won't work to deal with obstacles,animated or otherwise. This is a generic message specific to the Master Mate.)
 "Right rhyme ... slight slime!" Perhaps the Master Mate is magically bound from telling you the exact rhyme, but how many possibilities can there be?
 
+>plaster plate
+>ping gate
+The gate is much too strong. It may be hiding worse things. But you already broke off some plaster from it.
+
 >w
 >s
+
+>ping stones
+You only really need to find a way up the stones.
+
 >s
+
+>ping pool
+You don't REALLY want to try to explore the pool too deeply. Going east would be enough.
+
 >deep duel
 
 >push creep
@@ -86,6 +108,16 @@ You may've tried to do something too complex with what was here. You only need r
 >push creep
 !(NOTE: standard verbs won't work to deal with obstacles,animated or otherwise. This is a generic message specific to the creep (cruel).)
 "Peach? Putz! Reach ruts!" Not very sophisticated, but hard not to be a little annoyed.
+
+>keep cool
+>ping pool
+You don't REALLY want to try to explore the pool too deeply. Going east is enough.
+
+>e
+>more mulch
+>s
+>ping pool
+You don't REALLY want to try to explore the pool too deeply. Going east was enough.
 
 >gonear gaol
 >abstract sheet to bier

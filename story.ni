@@ -596,9 +596,10 @@ Rule for printing a parser error (this is the clue half right words rule):
 zap-weird-break is a truth state that varies.
 
 Rule for printing a parser error (this is the check for room name in player command rule):
+	let w1 be word number 1 in the player's command;
 	repeat with X running from 1 to the number of words in the player's command:
 		if the printed name of location of player matches the regular expression "(^|\W)([word number X in the player's command])($|\W)", case insensitively:
-			if word number 1 in the player's command is "xx":
+			if w1 is "cc" or w1 is "cs" or w1 is "ss":
 				say "It looks like you may have tried to scan the current location. You just need to say CC to do this. Would you like to do so now?[line break]";
 				if the player consents:
 					skip upcoming rulebook break;
@@ -608,8 +609,16 @@ Rule for printing a parser error (this is the check for room name in player comm
 					the rule succeeds;
 				say "Okay. ";
 			else:
+				if player is in bight bier:
+					say "The bier is too scary to even contemplate, though [if ts-fight-fear is false]there is[else]you found[end if] a way to deal with it tangentially." instead;
+				else if player is in peep pool:
+					say "You don't REALLY want to try to explore the pool too deeply. Going east [if ts-mulch-more is true]was[else if creep is moot]is[else]would be[end if] enough." instead;
+				else if player is in gaster gate:
+					say "The gate is much too strong. It may be hiding worse things. But you [if ts-plaster-plate is true]already broke off some plaster from it[else]may be able to break off a piece of it[end if]." instead;
+				else if player is in bare bones stair stones:
+					say "You only really need to [if stone-filler is 2]go[else]find a way[end if] up the stones." instead;
 				say "It looks like you may have tried to refer to the room name, or part of it. ";
-			say "You never need to use the room name directly.";
+			say "You never need to use the location name directly.";
 			the rule succeeds;
 	continue the action;
 
