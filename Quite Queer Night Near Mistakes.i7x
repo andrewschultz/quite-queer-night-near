@@ -45,6 +45,10 @@ mist-cmd(topic)	mist-rule	got-yet	magicnum	leet-rule	still-rule	mist-txt
 "rink rug"	thug-nearby rule	false	43	--	thug-available rule	"A rug would be out of place inside a roller rink or ice skating rink. Still, it was worth a try."
 "slink slug"	thug-nearby rule	false	43	--	thug-available rule	"Perhaps that is a bit too drastic. Another more likable animal might work great, though."
 "shrink shrug"	thug-nearby rule	false	43	--	thug-available rule	"A shrug would not shrink the [thug] by much. Perhaps there is something you can shrink it into, so it can't possibly be anywhere near as big as you."
+"broiled brace"	boiled-base-around rule	false	--	--	not-gaol rule	"You can't imagine a brace would be tasty, fried, broiled, stewed or whatever."
+"foiled face"	boiled-base-around rule	false	--	--	not-gaol rule	"You frown at being unable to dispel the [spoiled space]. No reverse psychology kicks in."
+"moiled mace"	boiled-base-around rule	false	--	--	not-gaol rule	"No magic weapon pops in your hand as a reward for hard work you forgot you did."
+"roiled race"	boiled-base-around rule	false	--	--	not-gaol rule	"You'll never get made enough to run fast enough through the [spoiled space]."
 "hath haven"	maven-summoned rule	false	--	--	--	"[if maven is moot]The math maven already has one, for now[else]You don't want to let the maven escape. It could help you! Once you're free, you can set it free[end if]."
 "air/err owns"	in-stones rule	false	--	--	not-gaol rule	"The air is everywhere, and it'd take too long to own up to all your mistakes." [start bare bones stair stones]
 "care cones"	in-stones rule	false	--	--	not-gaol rule	"Nothing appears to make you feel more loved. Aww."
@@ -116,6 +120,8 @@ reading	res1	res2	res3
 section mist-rules alphabetized
 
 [xxqqmi]
+
+this is the boiled-base-around rule: if location of player is bounded, the rule succeeds;
 
 this is the in-bight-bier rule: if player is in Bight Bier, the rule succeeds;
 

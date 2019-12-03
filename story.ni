@@ -45,6 +45,10 @@ section when play begins - not for release
 
 when play begins: now debug-state is true;
 
+chapter room defs
+
+a room can be bounded. a room is usually bounded.
+
 chapter boringness
 
 a thing has a rule called bore-rule. bore-rule of a thing is usually the bore-nothing rule.
@@ -79,6 +83,7 @@ to decide whether the action is procedural:
 	no;
 
 when play begins:
+	move the boiled base spoiled space backdrop to all bounded rooms;
 	say "You should have known better than to eat any sort of marmite. Eww. But you definitely should not have eaten Far Fight Marmite. Especially not the bulk bar-bite kind. But you can't resist items on deep clearance at the lovely crowded store you visit every week. Full of indigestion, you hear voices saying 'Quite queer night near ... quite queer night near... [wfak]";
 	say "[paragraph break]You think you got to sleep. On waking up, you exit your bedroom to ... two small grey Teletubby-looking things (shudder) calling themselves Timmy Tingles and Jimmy Jingles! 'Come dance with us on the Shimmy Shingles!'[wfak]";
 	say "[line break]This is all too corny for you. You try to brush past, but they cry 'You're no Mimmy Mingles' before calling on Primmy Pringles and Limmy Lingles, three times their size and meaner, to drag you away...to the Dimmy Dingles? No, worse![wfak]";
@@ -228,14 +233,15 @@ check taking:
 report taking sheep sheet: max-down;
 
 check going nowhere:
+	if noun is diagonal, say "You don't need diagonal directions in this game." instead;
 	if player is in gold gaol, say "You need to look back on your experiences before leaving. Anyway, you can't figure directions here." instead;
 	if noun is inside or noun is outside, say "You never need to go inside or outside, though you may need to go up [if stair stones is unvisited]one place[else]in [stair stones][end if]." instead;
-	if player is in bight bier, say "The only way is east." instead;
-	if player is in gaster gate, say "The gate blocks passage every way except back west." instead;
-	if player is in gore gulch, say "Ickiness guards every way except back west." instead;
+	if player is in bight bier, say "The [spoiled space] blocks you every way except [if stair stones are visited]back [end if]east." instead;
+	if player is in gaster gate, say "[if noun is west]You aren't etting past the gate, but don't worry. There's worse stuff behind. Trust me[else]The [spoiled space] blocks your passage[end if]." instead;
+	if player is in gore gulch, say "The [spoiled space] and general ickiness encompass every way except back west." instead;
 	if player is in stair stones, say "You can only go north, south or west[if stone-filler is 2]. And up. You probably want to go up[else]. And you can try to go up[end if]." instead;
-	if player is in dark dump, say "You can only go east or south." instead;
-	if player is in peep pool, say "You can only go north or[if creep cruel is not moot], once the way is clear,[end if] east." instead;
+	if player is in dark dump, say "You can only go east or south. The [spoiled space] blocks your way west and north." instead;
+	if player is in peep pool, say "You can only go north or[if creep cruel is not moot], once the way is clear,[end if] east. The [spoiled space] blocks your way south or west." instead;
 	say "I wish I could give more information, but you can't go that way." instead;
 
 volume silly responses to popular Inform verbs
@@ -270,9 +276,13 @@ volume the map
 
 chapter Blight Blear Bight Bier
 
-Blight Blear Bight Bier is a room. "Boy! It's scary here! [if spite spear is in bight bier]A spite spear hangs above, and y[else]Y[end if]ou can only go east[if thug is off-stage], but it might be even scarier there. You need some way to make things less scary, on this Quite Queer Night Near by the Blight Blear Bight Bier. A spite spear hangs in the distance, just ready to swoop on you[end if].". cht of Blight Blear Bight Bier is letboth. [->fight fear]
+Blight Blear Bight Bier is a room. "Boy! It's scary here! [if spite spear is in bight bier]A spite spear hangs above, and a[else]A[end if] [spoiled space] prevents passage every way except east[if thug is off-stage], but it might be even scarier there. You need some way to make things less scary, on this Quite Queer Night Near by the Blight Blear Bight Bier. A spite spear hangs in the distance, just ready to swoop on you[end if].". cht of Blight Blear Bight Bier is letboth. [->fight fear]
 
 ts-fight-fear is a truth state that varies.
+
+section boiled base spoiled space
+
+the boiled base spoiled space is a boring backdrop. "You can barely see it, but it sure pulses ominously. But at least it helps narrow down the directions you [i]can[r] go.";
 
 section DDTT
 
@@ -343,7 +353,7 @@ the spite spear is boring scenery in Blight Blear Bight Bier. "It's too far away
 
 chapter Bare Bones Stair Stones
 
-Bare Bones Stair Stones is east of Bight Bier. "You can go back west to the Bier[if sheep sheet is in bier]--who knows, that sheet could come in handy[else], though you don't need to[end if]. You can also go north and south, but there seems to be a way out above--[if stone-filler is 0]or there could be[else if stone-filler is 1]you just need to fill the stairs in a bit more[else]you don't seem to have much else to do here[end if]!".
+Bare Bones Stair Stones is east of Bight Bier. It is not bounded. "You can go back west to the Bier[if sheep sheet is in bier]--who knows, that sheet could come in handy[else], though you don't need to[end if]. You can also go north and south, but there seems to be a way out above--[if stone-filler is 0]or there could be[else if stone-filler is 1]you just need to fill the stairs in a bit more[else]you don't seem to have much else to do here[end if]!".
 
 check going in Bare Bones Stair Stones when player has math maven:
 	if noun is south and ts-mulch-more is true, say "[maven-groan].";
@@ -376,7 +386,7 @@ check going up in Bare Bones Stair Stones:
 
 chapter Peep Pool
 
-Peep Pool is south of Stair Stones. "A passage bending north and east[if ts-duel-deep is false]. You may wish to look in the pool and summon something. That's what pools are for[end if][if steep stool is in peep pool]. A steep stool blocks the way east--maybe someone or something can help you destroy it[end if].". cht of peep pool is leteq. [->deep duel] [->keep cool]
+Peep Pool is south of Stair Stones. "A pool lies at the edge of a passage bending north and east through the [spoiled space][if steep stool is in peep pool]. A steep stool blocks the way east--maybe someone or something can help you destroy it[end if].". cht of peep pool is leteq. [->deep duel] [->keep cool]
 
 the steep stool is scenery in Peep Pool. "The steep stool is too smooth and, err, steep to climb, and it's too wide to get around. You may need to get rid of it--or have someone destroy it. Perhaps an enemy is waiting behind it to bust out.". cht of steep stool is letminus. [->deep duel]
 
@@ -401,18 +411,18 @@ ts-mulch-more is a truth state that varies.
 
 chapter Dark Dump
 
-Dark Dump is north of Bare Bones Stair Stones. "It's far too dark to the north and west[n-w-block]. You can still go south and east.". cht of dark dump is allover. [-> stark stump] [->bark bump] [->park pump]
+Dark Dump is north of Bare Bones Stair Stones. "The [spoiled space] blocks your progress north and west[n-w-block]. You can still go south and east.". cht of dark dump is allover. [-> stark stump] [->bark bump] [->park pump]
 
 to say n-w-block:
 	if bark bump is touchable and stark stump are touchable:
-		say ", but a bark bump blocks the way north and a stark stump blocks the way south";
+		say ". There's also a bark bump blocking the way north and a stark stump blocking the way south";
 	else if stark stump is touchable:
-		say ", but a stark stump blocks the way west. It feels like something similar and arboreal, if a bit weird, could also make this a safer corridor";
+		say ". A stark stump also blocks the way west. It feels like something similar and arboreal, if a bit weird, could also make this a safer corridor";
 	else if bark bump is touchable:
-		say ", but a tall bark bump blocks the way north. Maybe summoning something less weird could make this a safer corridor";
+		say ". A tall bark bump blocks the way north. Maybe summoning something less weird could make this a safer corridor";
 	else:
-		say ", and although nothing impedes you either way, perhaps you could build something to block baddies from coming IN";
-	if park pump is touchable, say ". A park pump is also in the center here, and it will pump water and create a stream if somehow the small amount pooled here disappears"
+		say ". Yet it would be nice to have any sort of barrier against it";
+	if park pump is touchable, say ". A park pump also lies in the center"
 
 ts-bump-bark is a truth state that varies.
 ts-pump-park is a truth state that varies.
@@ -420,7 +430,7 @@ ts-stump-stark is a truth state that varies.
 
 section bark bump
 
-the bark bump is scenery. "A huge bark bump to the north makes it impossible for anything to go that way."
+the bark bump is scenery. "A huge bark bump provides token protection against the [spoiled space]."
 
 section park pump
 
@@ -428,7 +438,7 @@ the park pump is scenery. "The pump quit pumping once there was too much water."
 
 section stark stump
 
-the stark stump is scenery. "The stark stump is so huge, it blocks passage west. It's immovable."
+the stark stump is scenery. "The stark stump provides some protection against the [spoiled space]."
 
 chapter Gaster Gate
 
@@ -442,7 +452,7 @@ the Master Mate is a person in Gaster Gate. "A master mate stands here, looking 
 
 chapter Gold Gaol
 
-Gold Gaol is a room. "There's nothing much to do here. Well, the wall says FOLD FAIL, giving an idea of how gaol [i]should[r]' be pronounced. Hey, when you're a prisoner, you sort of need to do as you're told, I guess.". cht of gold gaol is allover. [->old ale] [->cold kale] [->told tale]
+Gold Gaol is a room. It is not bounded. "There's nothing much to do here. Well, the wall says FOLD FAIL, giving an idea of how gaol [i]should[r]' be pronounced. Hey, when you're a prisoner, you sort of need to do as you're told, I guess.". cht of gold gaol is allover. [->old ale] [->cold kale] [->told tale]
 
 ts-ale-old is a truth state that varies.
 ts-kale-cold is a truth state that varies.
@@ -472,7 +482,7 @@ understand "about" as abouting.
 
 carry out abouting:
 	say "QQNN was written in under four hours for EctoComp 2019. It heavily cut-and-pasted from Very Vile Fairy File. It did not receive outside testing. However, I submitted a post-comp releaee that allowed for tweaks that weren't possible in the time allowed. If you want to report bugs/suggestions, do so at http://github.com/andrewschultz/quite-queer-night-near/issues. I appreciate them! CREDITS has additional thanks, and VERSIONS has some information about the versions.";
-	say "[line break][one of]QQNN is a sort of guess-the-verb game. If you want the game mechanic semi-spoiled, type ABOUT again[or]QQNN relies on couplets to increase your score. For instance, if there is a cold coy Rolled Roy needed courage, you could change him into BOLD BOY, and the game tries to give clever responses for tries (good-faith or otherwise) sycg as OLD OI[stopping].";
+	say "[line break][one of]QQNN is a sort of guess-the-verb game. If you want the game mechanic semi-spoiled, type ABOUT again[or]QQNN relies on couplets to increase your score. For instance, if a cold coy Rolled Roy needed courage, you could change him into BOLD BOY, and the game tries to give clever responses for tries (good-faith or otherwise) such as OLD OI[stopping].";
 
 chapter creditsing
 
@@ -484,7 +494,7 @@ understand "credits" as creditsing.
 
 carry out creditsing:
 	say "Thanks to JJ Guest for starting EctoComp, Duncan Bowsman for continuing it, and Ruber Eaglenest and JoshG for keeping it going further. EctoComp has been a fun way to throw out little games. Also, thanks to itch.io for hosting this game.";
-	say "[line break]Brian Rushton and Pace Smith had some tips in-comp, and I received a very helpful transcript as well which helped me fix a few more things.";
+	say "[line break]Brian Rushton and Pace Smith had some tips in-comp, and dgtziea sent me a really nice transcript, which helped me fix a few more things.";
 	say "[line break]If you'd like to be in these credits, you too can do so by finding an issue or making a good suggestion.";
 	the rule succeeds.
 
@@ -679,9 +689,9 @@ the rhymeguess rules are a table name based rulebook. [okay, there's only one, b
 to decide which number is variable-scan-length of (mynum - a number):
 	if mynum is 100: [Dark Dump]
 		if stark stump is in dark dump:
-			if park pump is in dark dump and bark bump is in dark dump, decide on 0;
+			if dump-block is 2, decide on 0;
 			decide on 44; [only stump is left]
-		if park pump is off-stage or bark bump is off-stage, decide on 200; [this is the "all over"]
+		if dump-block < 2, decide on 200; [this is the "all over"]
 		decide on 55;
 	else if mynum is 101: [gold gaol]
 		if ts-ale-old is true, decide on 44; [COLD KALE and or TOLD TALE to go]
@@ -859,11 +869,6 @@ to see-how-nourished:
 	else:
 		say "Having had both food and drink, you're ready to move on.";
 
-ts-tried-keep is a truth state that varies.
-
-every turn when ts-tried-keep is true and creep cruel is in Peep Pool: [??zap this when ready]
-	say "You should probably KEEP COOL again. It will get rid of the creep (cruel.)";
-
 to check-north-flow:
 	if north-flow, say "[line break][if player is in dark dump]It seems like you have all the pieces together to create a river leading to the stones. You move back east to start dumping the plaster in. [end if]Breaking down the plaster plate is not hard. You dump it into the pool that formed in the east edge of the Dark Dump, and it flows slowly downward back to the area with the stair stones.";
 	check-stair-stones;
@@ -880,10 +885,10 @@ to check-stair-stones:
 		move player to Stair Stones, without printing a room description;
 		say "[b][stair stones][r][line break]";
 	if player is in dark dump:
-		if stump is in dump and bump is in dump and pump is in dump: [oh, this makes me laugh]
+		if stump is in dump and dump-block is 2:
 			now cht of dark dump is phbt;
 		else:
-			if bump is in dump and pump is in dump:
+			if dump-block is 2:
 				now cht of dark dump is letplus; [dark dump->stark stump]
 			else if stump is in dump:
 				now cht of dark dump is leteq; [dark dump->park pump]
@@ -891,6 +896,12 @@ to check-stair-stones:
 this is the endgame prod rule:
 	if tried-yet of "TOLD TALE":
 		say "[line break]So, yeah. That thing you tried before  that didn't work? TOLD TALE? It does now. There's not much else to do."
+
+to decide which number is dump-block:
+	let temp be 0;
+	if stark stump is in dark dump, increment temp;
+	if bark bump is in dark dump, increment temp;
+	decide on temp;
 
 section rules to sort
 
@@ -964,7 +975,6 @@ this is the vc-keep-cool rule:
 	if player is not in peep pool, the rule fails;
 	if creep cruel is off-stage:
 		vcp "You have no one annoying you. But there might be someone later, if you're lucky! Wow!";
-		now ts-tried-keep is true;
 		clue-later "KEEP COOL";
 		continue the action;
 	if creep cruel is moot:
@@ -1011,7 +1021,7 @@ this is the vc-park-pump rule:
 	the rule succeeds;
 
 this is the vr-park-pump rule:
-	say "Poof! A park pump appears, just like you remember as a kid! It appears to be auto-pumping, creating a waterway until things get too flooded.";
+	say "Poof! A park pump appears, just like you remember as a kid! It appears to be auto-pumping, creating a waterway. [if dump-block is 2] With the stark stump and bark bump sealing off two exits, water flows freely to [bare bones][else if dump-block is 1]Water partially seeps out, and the pump stops pumping. Maybe you need to summon one more barrier here[else]The water seeps out to the north and west, lost to the [spoiled space]. The pump stops. Perhaps if you could create more natural barriers, the pump could start again[end if]";
 	now ts-pump-park is true;
 	move park pump to dark dump;
 	check-north-flow;
