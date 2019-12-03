@@ -110,6 +110,8 @@ You don't need to keep cool any more.
 !DEBUG: vc-keep-cool rule tipped off half-body tingling.
 !Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 
+>e
+
 Gore Gulch
 
 > zmore mulch
@@ -135,9 +137,6 @@ Hoo boy. You have enough mulch.
 !DEBUG: vc-more-mulch rule tipped off half-body tingling.
 !Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 >gonear stair stones
-
->u
-The stones are almost climbable but still too risky. You need to do a bit more.
 
 >n
 

@@ -380,9 +380,9 @@ The owner of the Dallas Cowboys is nightmarish in his own way, though yes, it mi
 !sheep sheet
 No more scary noises than needed, please.
 
-==t0
+@way
 >u
-The stones are nowhere near in climbable condition yet.
+The stones are in nowhere near climbable condition. For now.
 
 >s
 
@@ -390,9 +390,9 @@ Peep Pool
 
 @way
 >w
-The [spoiled space] blocks your way west. You can only go north or, once the way is clear, east.
+The boiled base spoiled space blocks your way west. You can only go north or, once the way is clear, east.
 >s
-The [spoiled space] blocks your way south. You can only go north or, once the way is clear, east.
+The boiled base spoiled space blocks your way south. You can only go north or, once the way is clear, east.
 >e
 The steep stool is in the way. It's too big and heavy to move.
 
@@ -450,9 +450,9 @@ by one point
 
 @way
 >w
-The [spoiled space] blocks your way west. You can only go north or, once the way is clear, east.
+The boiled base spoiled space blocks your way west. You can only go north or, once the way is clear, east.
 >s
-The [spoiled space] blocks your way south. You can only go north or, once the way is clear, east.
+The boiled base spoiled space blocks your way south. You can only go north or, once the way is clear, east.
 >e
 The creep (cruel) blocks you from going east. Exasperating, but that's just its nature. Maybe you can get rid of it.
 
@@ -505,19 +505,21 @@ Crying is out. So are nice new warm clothes. You're on a spooky Halloween advent
 
 @way
 >w
-The [spoiled space] blocks your way [noun]. You can only go north or east.
+The boiled base spoiled space blocks your way west. You can only go north or east.
 >s
-The [spoiled space] blocks your way [noun]. You can only go north or east.
+The boiled base spoiled space blocks your way south. You can only go north or east.
+
+>e
 
 Gore Gulch
 
 @way
 >n
-The [spoiled space] and general ickiness encompass every way except back west.
+The boiled base spoiled space and general ickiness encompass every way except back west.
 >s
-The [spoiled space] and general ickiness encompass every way except back west.
+The boiled base spoiled space and general ickiness encompass every way except back west.
 >e
-The [spoiled space] and general ickiness encompass every way except back west.
+The boiled base spoiled space and general ickiness encompass every way except back west.
 
 @cs
 >cs
@@ -558,6 +560,7 @@ Hoo boy. You have enough mulch.
 !Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 >gonear stair stones
 
+@way
 >u
 The stones are almost climbable but still too risky. You need to do a bit more.
 
@@ -705,9 +708,9 @@ Gaster Gate
 >e
 You aren't getting past the gate, but there's worse stuff behind. Trust me.
 >n
-The [spoiled space] blocks your passage north.
+The boiled base spoiled space blocks your passage north.
 >s
-The [spoiled space] blocks your passage south.
+The boiled base spoiled space blocks your passage south.
 
 @mis
 > faster fate

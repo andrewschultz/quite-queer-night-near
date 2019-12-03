@@ -284,6 +284,8 @@ This adventure is about surviving, not taking over.
 !refer to the sheep sheet
 Crying is out. So are nice new warm clothes. You're on a spooky Halloween adventure, here!
 
+>e
+
 Gore Gulch
 
 > boar bulge
@@ -294,9 +296,6 @@ That's a bit of a stretch, but Gore Gulch remains unstretched.
 by one point
 /^Stair Stones
 The gunky material flowing back to Bare Bones Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
-
->u
-The stones are almost climbable but still too risky. You need to do a bit more.
 
 >n
 

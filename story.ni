@@ -704,12 +704,15 @@ the wrath ravin' math maven is a boring thing. description is "The wrath ravin['
 
 the rhymeguess rules are a table name based rulebook. [okay, there's only one, but I need to define what it acts on]
 
+to decide which number is dump-fours-flipped:
+	decide on boolval of ts-bump-bark + boolval of ts-pump-park;
+
 to decide which number is variable-scan-length of (mynum - a number):
 	if mynum is 100: [Dark Dump]
 		if stark stump is in dark dump:
-			if dump-block is 2, decide on 0;
+			if dump-fours-flipped is 2, decide on 0;
 			decide on 44; [only stump is left]
-		if dump-block < 2, decide on 200; [this is the "all over"]
+		if dump-fours-flipped < 2, decide on 200; [this is the "all over"]
 		decide on 55;
 	else if mynum is 101: [gold gaol]
 		if ts-ale-old is true, decide on 44; [COLD KALE and or TOLD TALE to go]
@@ -903,10 +906,10 @@ to check-stair-stones:
 		move player to Stair Stones, without printing a room description;
 		say "[b][stair stones][r][line break]";
 	if player is in dark dump:
-		if stump is in dump and dump-block is 2:
+		if stump is in dump and dump-fours-flipped is 2:
 			now cht of dark dump is phbt;
 		else:
-			if dump-block is 2:
+			if dump-fours-flipped is 2:
 				now cht of dark dump is letplus; [dark dump->stark stump]
 			else if stump is in dump:
 				now cht of dark dump is leteq; [dark dump->park pump]
@@ -916,10 +919,7 @@ this is the endgame prod rule:
 		say "[line break]So, yeah. That thing you tried before  that didn't work? TOLD TALE? It does now. There's not much else to do."
 
 to decide which number is dump-block:
-	let temp be 0;
-	if stark stump is in dark dump, increment temp;
-	if bark bump is in dark dump, increment temp;
-	decide on temp;
+	decide on boolval of ts-stump-stark + boolval of ts-bump-bark;
 
 section rules to sort
 

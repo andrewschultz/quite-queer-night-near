@@ -70,6 +70,8 @@ You refer to the sheep sheet, noticing it says
 >keep cool
 by one point
 
+>e
+
 Gore Gulch
 
 >cs
@@ -79,9 +81,6 @@ You refer to the sheep sheet, noticing it says Gore Gulch goes to ==.
 by one point
 /^Stair Stones
 The gunky material flowing back to Bare Bones Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
-
->u
-The stones are almost climbable but still too risky. You need to do a bit more.
 
 >n
 
