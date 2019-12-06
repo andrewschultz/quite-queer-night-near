@@ -2,17 +2,19 @@ This is a walkthrough for Quite Queer Night Near. It contains spoilers.
 
 The basic object is to form the Bare Bones Stair Stones into something more, climb up, and escape the Gold Gaol.
 
-The first point we'll get is a bonus point. You can take the cheap cheet, which feels cold, or you can get it another way.
+The first point we'll get is a bonus point. You can take the cheap cheat sheep sheet, which just means you don't get a bonus point, or you can get it another way.
+
+How to use the sheet is detailed at the end of the document, spoiler-free except for mentioning which room has multiple puzzles, but brute-forcing your way through is also valid, and in such a small game, it might be more efficient.
 
 > HEAP HEAT
 
-(An alternative here is a BLEEP BLEAT.)
+(An alternative here is a BLEEP BLEAT. Whichever one you choose makes no difference.)
 
 Now to get less scared. There are actually two ways to do this.
 
 > FIGHT FEAR
 
-(FRIGHT FREER is less obvious, but it's still valid. Whichever one you choose makes no difference.)
+(FRIGHT FREER is less obvious, but it's still valid. Again, whichever one you choose makes no difference.)
 
 Now you can take on the Drink Drug Think Thug.
 
@@ -24,31 +26,29 @@ It doesn't matter which way you go first.
 
 > S
 
-The steep stool blocks your way.
+The steep stool blocks your way east.
 
 > DEEP DUEL
+
+The alternative here is to summon CREEP CRUEL directly.
 
 > KEEP COOL
 
 Now you can go east.
 
-What to do in gore gulch?
+What to do or create in Gore Gulch?
 
 > MORE MULCH
 
-The mulch slides back to the stones, but you need a bit more.
-
-> W
+The mulch slides back to the stones, where you patch things up a bit, but you can't quite climb the stairs yet. You need a bit more. Have a look north.
 
 > N
 
-> N
-
-The dark dump can be so much more.
+The dark dump can be so much more. Three things more, in particular.
 
 > PARK PUMP
 
-This gets water flowing, but the pump stops. It has nowhere to go and nothing to carry.
+This gets water flowing, but the pump stops. The stream it created has nowhere to go and nothing to carry.
 
 > STARK STUMP
 
@@ -56,32 +56,72 @@ Now you almost have a corridor.
 
 > BARK BUMP
 
-(Again, there is an alternate solution here: HARK HUMP.)
+(Again, there is an alternate equally functional solution here: HARK HUMP.)
 
-Now you really do.
+Now you really do have a corridor. But you need something to float in the stream.
 
 > E
 
-How can we get rid of the Gaster Gate, or part of it?
+The Master Mate is just there for a hint. So how can you get rid of the Gaster Gate, or part of it?
 
 > PLASTER PLATE
 
-> W
-
-> S
-
-Now we can go up!
+Again, you're kicked back to the stairs stones, but now you can go up!
 
 > U
 
-Oh no. We're hungry and thirsty.
+Hunger. Thirst. How to cure each, or both?
 
 > OLD ALE
 
 > COLD KALE
 
-We need put everything behind us.
+You need put everything behind you.
 
 > TOLD TALE
 
 Yay! You win.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The cheap cheat sheep sheet has settings such as ++, ==, --, +=, =+, -=, =-, and ??. What do they mean?
+
+You can say DEEP DEET once you have the sheet, or there's an explanation below.
+
+== is the most likely one. It says that the desired rhyme pair has two words of the same length as the initial rhyme pair. +=/=+ means one of the two desired rhymes is longer. -=/=- means one is shorter. +- is less likely to see, but it means a shorter and longer rhyme.
+
+?? is the trickiest. But it happens in the case of the Gold Gaol, where you have two things you need to do. One is ==, and one is --. But neither one must come first. A more detailed example is the Dark Dump. One rhyme is ++, and the other two are ==. So you will get ?? until you convert the ++.
