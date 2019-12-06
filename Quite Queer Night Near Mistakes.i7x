@@ -155,7 +155,7 @@ this is the creep-unbeaten rule: if creep cruel is not moot, the rule succeeds;
 
 this is the duel-unstarted rule: if creep cruel is off-stage, the rule succeeds;
 
-this is the fear-to-fight rule: if ts-fight-fear is false, the rule succeeds;
+this is the fear-to-fight rule: if sco-fight-fear is false, the rule succeeds;
 
 this is the not-gaol rule: if player is not in gold gaol, the rule succeeds;
 

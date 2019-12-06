@@ -109,11 +109,11 @@ check requesting the score:
 		let total-guesses be number of rows in table of first check rhymes + number of rows in table of good guess rhymes - 1; [we could run a loop to see what starts as "true" but it's not worth it to me. Only FOLD FAIL starts that way.]
 		say "You have made [wrmm-total] good guesses so far. You can still access [X + Y] of [total-guesses] good guesses.";
 [	if debug-state is true:
-		showme ts-bump-bark;
-		showme ts-pump-park;
-		showme ts-stump-stark;
-		showme ts-plaster-plate;
-		showme ts-mulch-more;]
+		showme sco-bark-bump;
+		showme sco-park-pump;
+		showme sco-stump-stark;
+		showme sco-plaster-plate;
+		showme sco-mulch-more;]
 	the rule succeeds;
 
 to decide which number is doable-hinted:
@@ -256,7 +256,7 @@ check going nowhere: [in rough order you find things, going north first]
 	if player is in gore gulch, say "The [spoiled space] and general ickiness encompass every way except back west." instead;
 	say "I wish I could give more information, but you can't go that way." instead;
 
-to say all-plas: if ts-plaster-plate is true, say ". Breaking off the plaster plate was enough"
+to say all-plas: if sco-plaster-plate is true, say ". Breaking off the plaster plate was enough"
 
 volume silly responses to popular Inform verbs
 
@@ -307,7 +307,7 @@ chapter Blight Blear Bight Bier
 
 Blight Blear Bight Bier is a room. "Boy! It's scary here! [if spite spear is in bight bier]A spite spear hangs above, and a[else]A[end if] [spoiled space] prevents passage every way except east[if thug is off-stage], but it might be even scarier there. You need some way to make things less scary, on this Quite Queer Night Near by the Blight Blear Bight Bier. A spite spear hangs in the distance, just ready to swoop on you[end if].". cht of Blight Blear Bight Bier is letboth. [->fight fear]
 
-ts-fight-fear is a truth state that varies.
+sco-fight-fear is a truth state that varies.
 
 section boiled base spoiled space
 
@@ -384,19 +384,19 @@ chapter Bare Bones Stair Stones
 Bare Bones Stair Stones is east of Bight Bier. It is not bounded. "You can go back west to the Bier[if sheep sheet is in bier]--who knows, that sheet could come in handy[else], though you don't need to[end if]. You can also go north and south, but there seems to be a way out above--[if stone-filler is 0]or there could be[else if stone-filler is 1]you just need to fill the stairs in a bit more[else]you don't seem to have much else to do here[end if]!".
 
 check going in Bare Bones Stair Stones when player has math maven:
-	if noun is south and ts-mulch-more is true, say "[maven-groan].";
+	if noun is south and sco-mulch-more is true, say "[maven-groan].";
 	if noun is north and north-flow, say "The [maven-groan].";
 	if noun is west and player has sheep sheet, say "[maven-groan].";
 
 to say maven-groan: say "The [maven] rolls its eyes and groans as you go back [noun][one of]. Perhaps you're done there[or][stopping]"
 
 to decide which number is stone-filler:
-	let temp be boolval of ts-mulch-more;
+	let temp be boolval of sco-mulch-more;
 	if north-flow, increment temp;
 	decide on temp;
 
 to decide whether north-flow:
-	if ts-bump-bark is true and ts-stump-stark is true and ts-pump-park is true and ts-plaster-plate is true, yes;
+	if sco-bark-bump is true and sco-stump-stark is true and sco-park-pump is true and sco-plaster-plate is true, yes;
 	no;
 
 check going up in Bare Bones Stair Stones:
@@ -435,9 +435,9 @@ printed name of creep cruel is "creep (cruel)".
 
 chapter Gore Gulch
 
-Gore Gulch is east of Peep Pool. cht of Gore Gulch is leteq. "The only way back is west. [if ts-mulch-more is false]There's something icky and sticky here besides gore, but you're not sure what[else]You extracted more mulch here, so there's nothing else to do[end if].". [-> more mulch]
+Gore Gulch is east of Peep Pool. cht of Gore Gulch is leteq. "The only way back is west. [if sco-mulch-more is false]There's something icky and sticky here besides gore, but you're not sure what[else]You extracted more mulch here, so there's nothing else to do[end if].". [-> more mulch]
 
-ts-mulch-more is a truth state that varies.
+sco-mulch-more is a truth state that varies.
 
 chapter Dark Dump
 
@@ -454,9 +454,9 @@ to say n-w-block:
 		say ". Yet it would be nice to have any sort of barrier against it";
 	if park pump is touchable, say ". A park pump also lies in the center"
 
-ts-bump-bark is a truth state that varies.
-ts-pump-park is a truth state that varies.
-ts-stump-stark is a truth state that varies.
+sco-bark-bump is a truth state that varies.
+sco-park-pump is a truth state that varies.
+sco-stump-stark is a truth state that varies.
 
 section bark bump
 
@@ -474,7 +474,7 @@ chapter Gaster Gate
 
 Gaster Gate is east of Dark Dump. "The only way back is west. A gaster (that's an archaic verb meaning to scare) gate blocks the way east[if master mate is moot]. With the Master Mate gone, there's not much left to do here[end if].". cht of Gaster Gate is letplus. [->plaster plate]
 
-ts-plaster-plate is a truth state that varies.
+sco-plaster-plate is a truth state that varies.
 
 section Master Mate
 
@@ -484,8 +484,8 @@ chapter Gold Gaol
 
 Gold Gaol is a room. It is not bounded. "There's nothing much to do here. Well, the wall says FOLD FAIL, giving an idea of how gaol [i]should[r] be pronounced. Well, I guess there could be worse orders to receive as a prisoner.". cht of gold gaol is allover. [->old ale] [->cold kale] [->told tale]
 
-ts-ale-old is a truth state that varies.
-ts-kale-cold is a truth state that varies.
+sco-old-ale is a truth state that varies.
+sco-cold-kale is a truth state that varies.
 
 chapter Gazy Gap
 
@@ -610,11 +610,11 @@ Rule for printing a parser error (this is the check for room name in player comm
 				say "Okay. ";
 			else:
 				if player is in bight bier:
-					say "The bier is too scary to even contemplate, though [if ts-fight-fear is false]there is[else]you found[end if] a way to deal with it tangentially." instead;
+					say "The bier is too scary to even contemplate, though [if sco-fight-fear is false]there is[else]you found[end if] a way to deal with it tangentially." instead;
 				else if player is in peep pool:
-					say "You don't REALLY want to try to explore the pool too deeply. Going east [if ts-mulch-more is true]was[else if creep is moot]is[else]would be[end if] enough." instead;
+					say "You don't REALLY want to try to explore the pool too deeply. Going east [if sco-mulch-more is true]was[else if creep is moot]is[else]would be[end if] enough." instead;
 				else if player is in gaster gate:
-					say "The gate is much too strong. It may be hiding worse things. But you [if ts-plaster-plate is true]already broke off some plaster from it[else]may be able to break off a piece of it[end if]." instead;
+					say "The gate is much too strong. It may be hiding worse things. But you [if sco-plaster-plate is true]already broke off some plaster from it[else]may be able to break off a piece of it[end if]." instead;
 				else if player is in bare bones stair stones:
 					say "You only really need to [if stone-filler is 2]go[else]find a way[end if] up the stones." instead;
 				say "It looks like you may have tried to refer to the room name, or part of it. ";
@@ -730,7 +730,7 @@ the wrath ravin' math maven is a boring thing. description is "The wrath ravin['
 the rhymeguess rules are a table name based rulebook. [okay, there's only one, but I need to define what it acts on]
 
 to decide which number is dump-fours-flipped:
-	decide on boolval of ts-bump-bark + boolval of ts-pump-park;
+	decide on boolval of sco-bark-bump + boolval of sco-park-pump;
 
 to decide which number is variable-scan-length of (mynum - a number):
 	if mynum is 100: [Dark Dump]
@@ -740,8 +740,8 @@ to decide which number is variable-scan-length of (mynum - a number):
 		if dump-fours-flipped < 2, decide on 200; [this is the "all over"]
 		decide on 55;
 	else if mynum is 101: [gold gaol]
-		if ts-ale-old is true, decide on 44; [COLD KALE and or TOLD TALE to go]
-		if ts-kale-cold is true, decide on 33; [OLD ALE and TOLD TALE to go]
+		if sco-old-ale is true, decide on 44; [COLD KALE and or TOLD TALE to go]
+		if sco-cold-kale is true, decide on 33; [OLD ALE and TOLD TALE to go]
 		decide on 200; [COLD KALE and OLD ALE still to be done, leaving a conflict]
 	say "BUG: no variable-scan-length for [mynum]. Please let me know what you typed.";
 	decide on 44;
@@ -913,9 +913,9 @@ to vcal (t - text): [verb conditional print, flag already rhymed e.g. if HEAP HE
 to see-how-nourished:
 	say "[line break]";
 	now cht of gold gaol is leteq; [-> told tale]
-	if ts-ale-old is false or ts-kale-cold is false:
+	if sco-old-ale is false or sco-cold-kale is false:
 		say "You still need more nourishment, though. Food and drink.";
-		if ts-ale-old is false:
+		if sco-old-ale is false:
 			now cht of gold gaol is letminus; [gold gaol->old ale]
 	else:
 		say "Having had both food and drink, you're ready to move on.";
@@ -949,7 +949,7 @@ this is the endgame prod rule:
 		say "[line break]So, yeah. That thing you tried before  that didn't work? TOLD TALE? It does now. There's not much else to do."
 
 to decide which number is dump-block:
-	decide on boolval of ts-stump-stark + boolval of ts-bump-bark;
+	decide on boolval of sco-stump-stark + boolval of sco-bark-bump;
 
 section rules to sort
 
@@ -957,7 +957,7 @@ section rules to sort
 
 this is the vc-bark-bump rule:
 	if player is not in dark dump, the rule fails;
-	if ts-bump-bark is true:
+	if sco-bark-bump is true:
 		vcal "That's already here.";
 		continue the action;
 	the rule succeeds;
@@ -965,19 +965,19 @@ this is the vc-bark-bump rule:
 this is the vr-bark-bump rule:
 	say "A bark bump appears to the north! You weren't going that way, but it provides a bit of a channel.";
 	move bark bump to Dark Dump;
-	now ts-bump-bark is true;
+	now sco-bark-bump is true;
 	check-north-flow;
 
 this is the vc-cold-kale rule:
 	if player is not in gold gaol, the rule fails;
-	if ts-kale-cold is true:
+	if sco-cold-kale is true:
 		vcal "To quote Al and Peg Bundy: 'More kale, dear?' / 'Did I ASK for more kale, dear?'";
 		continue the action;
 	the rule succeeds;
 
 this is the vr-cold-kale rule:
 	say "Some cold kale appears! It's not very tasty, but it's better than nothing.";
-	now ts-kale-cold is true;
+	now sco-cold-kale is true;
 	see-how-nourished;
 	process the endgame prod rule;
 
@@ -994,14 +994,14 @@ this is the vr-deep-duel rule:
 	moot steep stool.
 
 this is the vc-fight-fear rule:
-	if ts-fight-fear is true:
+	if sco-fight-fear is true:
 		vcal "Yes, fighting fear is a lifelong journey, but fighting too hard all at once will bring it back.";
 		continue the action;
 	the rule succeeds;
 
 this is the vr-fight-fear rule:
 	say "You do your best to feel braver. It works, well enough! The Drink Drug Think Thug seems a bit less tough now, and what do you know? The spite spear vanishes, too!";
-	now ts-fight-fear is true;
+	now sco-fight-fear is true;
 	moot spite spear;
 	phbt bight bier;
 
@@ -1037,46 +1037,46 @@ this is the vr-keep-cool rule:
 
 this is the vc-more-mulch rule:
 	if player is not in Gore Gulch, the rule fails;
-	if ts-mulch-more is true:
+	if sco-mulch-more is true:
 		vcal "Hoo boy. You have enough mulch.";
 		continue the action;
 	the rule succeeds;
 
 this is the vr-more-mulch rule:
 	say "More mulch appears! It spills out to the peep pool and beyond, probably even back to the stair stones.";
-	now ts-mulch-more is true;
+	now sco-mulch-more is true;
 	phbt Gore Gulch;
 	check-stair-stones;
 
 this is the vc-old-ale rule:
 	if player is not in gold gaol, the rule fails;
-	if ts-ale-old is true:
+	if sco-old-ale is true:
 		vcal "If you were trying to get drunk, the old ale would be the way to do it. But you're trying to get FREE.";
 		continue the action;
 	the rule succeeds;
 
 this is the vr-old-ale rule:
 	say "Yum! Or not. You find a firkin or flagon or whatever of old ale, and it doesn't taste very good, but it's nourishing and hopefully not too alcoholic.";
-	now ts-ale-old is true;
+	now sco-old-ale is true;
 	see-how-nourished;
 	process the endgame prod rule;
 
 this is the vc-park-pump rule:
 	if player is not in dark dump, the rule fails;
-	if ts-pump-park is true:
+	if sco-park-pump is true:
 		vcal "That's already here.";
 		continue the action;
 	the rule succeeds;
 
 this is the vr-park-pump rule:
 	say "Poof! A park pump appears, just like you remember as a kid! It appears to be auto-pumping, creating a waterway. [if dump-block is 2] With the stark stump and bark bump sealing off two exits, water flows freely to [bare bones][else if dump-block is 1]Water partially seeps out, and the pump stops pumping. Maybe you need to summon one more barrier here[else]The water seeps out to the north and west, lost to the [spoiled space]. The pump stops. Perhaps if you could create more natural barriers, the pump could start again[end if]";
-	now ts-pump-park is true;
+	now sco-park-pump is true;
 	move park pump to dark dump;
 	check-north-flow;
 
 this is the vc-pink-pug rule:
 	if drink drug think thug is off-stage or player is not in bight bier, the rule fails;
-	if ts-fight-fear is false:
+	if sco-fight-fear is false:
 		vcp "You're too scared to think that something like that could even work. Maybe later, though.";
 		clue-later "PINK PUG";
 		continue the action;
@@ -1098,14 +1098,14 @@ this is the vc-plaster-plate rule:
 
 this is the vr-plaster-plate rule:
 	say "A huge chunk of the gaster gate breaks off and creates a plaster plate. It's much too big to eat off, but it crumbles quickly apart (probably not Last [']Er Late brand) and is washed away beyond the dark dump. The Master Mate, their job done, smiles, gives a thumbs up, and walks away.";
-	now ts-plaster-plate is true;
+	now sco-plaster-plate is true;
 	moot master mate;
 	phbt gaster gate;
 	check-north-flow;
 
 this is the vc-stark-stump rule:
 	if player is not in dark dump, the rule fails;
-	if ts-stump-stark is true:
+	if sco-stump-stark is true:
 		vcal "That's already here.";
 		continue the action;
 	the rule succeeds;
@@ -1113,12 +1113,12 @@ this is the vc-stark-stump rule:
 this is the vr-stark-stump rule:
 	say "Poof! A stark stump appears! It blocks the way to the west, but it provides a channel in case anything would come flowing through.";
 	move stark stump to Dark Dump;
-	now ts-stump-stark is true;
+	now sco-stump-stark is true;
 	check-north-flow;
 
 this is the vc-told-tale rule:
 	if player is not in gold gaol, the rule fails;
-	if ts-ale-old is false or ts-kale-cold is false:
+	if sco-old-ale is false or sco-cold-kale is false:
 		vcp "You're not nourished enough to make it far out of the cell. You need food and drink. Even lousy food and drink.";
 		clue-later "TOLD TALE";
 		continue the action;
@@ -1213,7 +1213,7 @@ to say maven-up-stairs:
 	if stone-filler is 2:
 		say "gestures upward, as if to ask why you haven't climbed already";
 	else:
-		say "tries to run up the stones and fails miserably. It then points [if stone-filler is 0]north and south[else if ts-mulch-more is true]north[else]south[end if]";
+		say "tries to run up the stones and fails miserably. It then points [if stone-filler is 0]north and south[else if sco-mulch-more is true]north[else]south[end if]";
 
 chapter undoing
 
