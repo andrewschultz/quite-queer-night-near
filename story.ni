@@ -1125,7 +1125,7 @@ this is the vc-told-tale rule:
 	the rule succeeds;
 
 this is the vr-told-tale rule:
-	say "Yeah, that's it. You've had your fun. Time to move on. Your adventures are just silly enough and just believable enough to scare friends or to laugh at things.";
+	say "Yeah, that's it. You've had your fun. Time to move on. As you leave, you notice some fey foam. You're obviously meant to do something with it, so you build a day dome before a nay-gnome appears. You enter it and say the magic words: HEY, HOME.[paragraph break]Your adventures are just silly enough and just believable enough to scare friends or to laugh at things.";
 	process the notify score changes rule;
 	phbt gold gaol;
 	end the story finally saying "BAH?! BOO-YAH, YOU!";
