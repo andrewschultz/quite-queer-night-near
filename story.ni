@@ -4,7 +4,7 @@ volume variables and stuff
 
 the story headline is "Hokey Haunts, Jokey Jaunts".
 
-the release number is 2.
+the release number is 3.
 
 release along with a website.
 
@@ -19,6 +19,12 @@ include Quite Queer Night Near Tables by Andrew Schultz.
 include Quite Queer Night Near Tests by Andrew Schultz.
 
 include Quite Queer Night Near Mistakes by Andrew Schultz.
+
+include Jest Jokes Pest Pokes Universal by Andrew Schultz.
+
+use authorial modesty.
+
+entry-in-series is 2.
 
 procedural rule while eating something: ignore the carrying requirements rule.
 
@@ -290,12 +296,6 @@ volume the player
 description of player is "You are [if thug is off-stage]no longer [end if]shedding a tight tear[if player is in bier]. You're no sight seer[end if]."
 
 chapter xyzzying
-
-xyzzying is an action applying to nothing.
-
-understand the command "xyzzy" as something new.
-
-understand "xyzzy" as xyzzying.
 
 carry out xyzzying:
 	say "<VAST VERB-BLAST BLURB>[paragraph break]";
