@@ -70,6 +70,20 @@ You refer to the sheep sheet, noticing it says the Drink Drug Think Thug goes to
 The sheep sheet shimmers vaguely. You suspect you can just take it, but getting it right would give a style point.
 
 @mis
+> broiled brace
+!sheep sheet
+You can't imagine a brace would be tasty, fried, broiled, stewed or whatever.
+> foiled face
+!sheep sheet
+You frown at being unable to dispel the/. No reverse psychology kicks in.
+> moiled mace
+!sheep sheet
+No magic weapon pops in your hand as a reward for hard work you forgot you did.
+> roiled race
+!sheep sheet
+You'll never get made enough to run fast enough through the/.
+
+@mis
 > kite keyer
 refer to the sheep sheet
 You don't need the risk of getting zapped by electricity, too.
@@ -327,6 +341,12 @@ You already got rid of the thug.
 
 >e
 Bare Bones Stair Stones
+
+@mis
+#check that boiled base is not present as a backdrop
+#next-cmd-pass
+> broiled brace
+!You can't imagine a brace would be tasty, fried, broiled, stewed or whatever.
 
 @way
 >u
