@@ -8,7 +8,7 @@ the release number is 3.
 
 release along with a website.
 
-release along with an interpreter.
+release along with the "Parchment" interpreter.
 
 include undo output control by Erik Temple.
 
@@ -59,7 +59,7 @@ instead of doing something with a boring thing:
 		continue the action;
 	if bore-text of noun is not empty:
 		if noun is not borewarned:
-			say "(NOTE: standard verbs won't work to deal with obstacles,animated or otherwise. This is a generic message specific to [the noun].)[paragraph break]";
+			say "(NOTE: standard verbs won't work to deal with obstacles or scenery, animated or otherwise. This is a generic message and not specific to [the noun].)[paragraph break]";
 			now noun is borewarned;
 		say "[bore-text of noun][line break]" instead;
 	else:
@@ -459,8 +459,8 @@ check taking inventory:
 chapter abouting
 
 carry out abouting:
-	say "QQNN was written in under four hours for EctoComp 2019. It heavily cut-and-pasted from Very Vile Fairy File. It did not receive outside testing. However, I submitted a post-comp releaee that allowed for tweaks that weren't possible in the time allowed. If you want to report bugs/suggestions, do so at http://github.com/andrewschultz/quite-queer-night-near/issues. I appreciate them! CREDITS has additional thanks, and VERSIONS has some information about the versions.";
-	say "[line break][one of]QQNN is a sort of guess-the-verb game. If you want the game mechanic semi-spoiled, type ABOUT again[or]QQNN relies on couplets to increase your score. For instance, if a cold coy Rolled Roy needed courage, you could change him into BOLD BOY, and the game tries to give clever responses for tries (good-faith or otherwise) such as OLD OI[stopping].";
+	say "[this-game] was written in under four hours for EctoComp 2019. It heavily cut-and-pasted from Very Vile Fairy File. It did not receive outside testing. However, I submitted a post-comp releaee that allowed for tweaks that weren't possible in the time allowed. If you want to report bugs/suggestions, do so at http://github.com/andrewschultz/quite-queer-night-near/issues. I appreciate them! CREDITS has additional thanks, and VERSIONS has some information about the versions.";
+	say "[line break][this-game] [one of]is a sort of guess-the-verb game. If you want the game mechanic semi-spoiled, type [b]ABOUT[r] again[or]relies on couplets to increase your score. For instance, if Cold Coy Rolled Roy needed courage, you could change him into [b]BOLD BOY[r], and the game tries to give clever responses for tries (good-faith or otherwise) such as [b]OLD OI[r]--punctuation is automatically stripped[stopping].";
 
 chapter creditsing
 
@@ -473,8 +473,8 @@ carry out creditsing:
 chapter verbsing
 
 carry out verbsing:
-	say "QQNN has a stripped-down parser. You can X/EXAMINE things or use the four basic directions, or go up. While you don't need any standard verbs beyond moving to win the game, you do have to figure out two-word actions to move forward.";
-	if cheap cheat sheep sheet is touchable, say "[line break]You can CC/CS/SS/CCSS to use the [cheap cheat] on any object. The command on its own scans your current location, which can also be helpful.";
+	say "[this-game] has a stripped-down parser. You can X/EXAMINE things or use the four basic directions, or go up. While you don't need any standard verbs beyond moving to win the game, you do have to figure out two-word actions to move forward.";
+	if cheap cheat sheep sheet is fungible, say "[line break]You can CC/CS/SS/CCSS to use the [cheap cheat] on any object. The command on its own scans your current location, which can also be helpful.";
 	if player has sheep sheet, say "[line break]DEEP DEET can be used to demystify the cheap cheat sheep sheet.";
 	if player has math maven, say "[line break]You can [ppp] to see if the [math maven] can help you here.";
 	the rule succeeds.
@@ -483,8 +483,8 @@ chapter versioning
 
 carry out versioning:
 	say "Version 1 was released for EctoComp on October 30, 2019. It contained large chunks of code copied over from Very Vile Fairy File.";
-	say "Version 2 was released after EctoComp on November ??, 2019. It added the [maven] as a more animated and spooky helper than the Leet Learner, and it added a lot of cluing (including indications you were done in a certain area,) bug fixes, alternate solutions and even ambience like the Spite Spear. It also let you know how many possible good guesses were left, and it tracked if you could win the game with only the maven. Oh, and the introduction got sillier, too.";
-	the rule succeeds.
+	say "Version 2 was released after EctoComp on November ??, 2019. It added the [maven] as a more animated and spooky helper than the Leet Learner, and it added a lot of cluing (including indications you were done in a certain area,) bug fixes, alternate solutions and even ambiance like the Spite Spear. It also let you know how many possible good guesses were left, and it tracked if you could win the game with only the maven. Oh, and the introduction got sillier, too.";
+	say "Version 3 had small fixes based on pulling common code into a Universal and Common code module.";
 	the rule succeeds.
 
 chapter after reading a command
