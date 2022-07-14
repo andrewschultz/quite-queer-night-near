@@ -312,7 +312,7 @@ understand "ss" as csing.
 understand "ccss" as csing.
 
 rule for supplying a missing noun when csing:
-	if cheap cheat sheep sheet is touchable:
+	if cheap cheat sheep sheet is fungible:
 		say "You consult [the sheet] about the general area...";
 		now the noun is the location of the player;
 	else:
@@ -321,7 +321,7 @@ rule for supplying a missing noun when csing:
 	continue the action;
 
 carry out csing:
-	if cheap cheat sheep sheet is not touchable, say "You'd like to, but [the sheet] isn't around. [if player is in gaol]There's no way to get it, but you made it this far[else]Nothing's stopping you from going back, though[end if]." instead;
+	if cheap cheat sheep sheet is not fungible, say "You'd like to, but [the sheet] isn't around. [if player is in gaol]There's no way to get it, but you made it this far[else]Nothing's stopping you from going back, though[end if]." instead;
 	if noun is sheep sheet:
 		if player has sheep sheet, say "You can't really consult the sheet about itself." instead;
 		say "The sheep sheet shimmers vaguely. You suspect you can just take it, but getting it right would give a style point." instead;
@@ -380,11 +380,11 @@ the steep stool is scenery in Peep Pool. "The steep stool is too smooth and, err
 ts-duel-deep is a truth state that varies.
 
 check going north in peep pool:
-	if creep cruel is touchable, say "'Yeep! You'll...' calls the creep (cruel,) and though you manage to avoid stumbling or caring, you get slightly agitated wondering what bad things could happen." instead;
+	if creep cruel is fungible, say "'Yeep! You'll...' calls the creep (cruel,) and though you manage to avoid stumbling or caring, you get slightly agitated wondering what bad things could happen." instead;
 
 check going east in Peep Pool:
-	if creep cruel is touchable, say "The creep (cruel) blocks you from going east. Exasperating, but that's just its nature. Maybe you can get rid of it." instead;
-	if steep stool is touchable, say "The steep stool is in the way. It's too big and heavy to move." instead;
+	if creep cruel is fungible, say "The creep (cruel) blocks you from going east. Exasperating, but that's just its nature. Maybe you can get rid of it." instead;
+	if steep stool is fungible, say "The steep stool is in the way. It's too big and heavy to move." instead;
 
 section creep cruel
 
@@ -403,15 +403,15 @@ chapter Dark Dump
 Dark Dump is north of Bare Bones Stair Stones. "The [spoiled space] blocks your progress north and west[n-w-block]. You can still go south and east.". cht of dark dump is allover. [-> stark stump] [->bark bump] [->park pump]
 
 to say n-w-block:
-	if bark bump is touchable and stark stump are touchable:
+	if bark bump is fungible and stark stump are fungible:
 		say ". There's also a bark bump blocking the way north and a stark stump blocking the way south";
-	else if stark stump is touchable:
+	else if stark stump is fungible:
 		say ". A stark stump also blocks the way west. It feels like something similar and arboreal, if a bit weird, could also make this a safer corridor";
-	else if bark bump is touchable:
+	else if bark bump is fungible:
 		say ". A tall bark bump blocks the way north. Maybe summoning something less weird could make this a safer corridor";
 	else:
 		say ". Yet it would be nice to have any sort of barrier against it";
-	if park pump is touchable, say ". A park pump also lies in the center"
+	if park pump is fungible, say ". A park pump also lies in the center"
 
 sco-bark-bump is a truth state that varies.
 sco-park-pump is a truth state that varies.
@@ -549,7 +549,7 @@ rule for printing a parser error:
 		else:
 			say "Sorry, I can't do anything with that. This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them.";
 		say "[line break]";
-		unless player is in gold gaol and player does not have cheap cheat sheep sheet, say "[if sheep sheet is touchable]Since[else]If[end if] you have the sheep sheet handy, you can [b]CC[r] something. ";
+		unless player is in gold gaol and player does not have cheap cheat sheep sheet, say "[if sheep sheet is fungible]Since[else]If[end if] you have the sheep sheet handy, you can [b]CC[r] something. ";
 		say "You can also type VERBS for a list of valid verbs (it can change as you gain or lose hint items) or ABOUT to see general information.";
 		the rule succeeds;
 	say "You may've tried to do something too complex with what was here. [if score > 0]You only need rhyming pairs to get through the game[else]Once you figure the mechanic, you'll see why[end if].";
@@ -718,7 +718,7 @@ when play begins: if a random chance of 1 in 2 succeeds, now blight-hint is fals
 leetclue-exp-yet is a truth state that varies.
 
 to say leetclue of (x - a cheattype) and (ts - a truth state):
-	if sheep sheet is not touchable, continue the action;
+	if sheep sheet is not fungible, continue the action;
 	say "You refer to the sheep sheet, noticing it says ";
 	if noun is Blight Blear Bight Bier and Think Thug is not moot:
 		now blight-hint is whether or not blight-hint is false;
