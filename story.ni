@@ -209,17 +209,10 @@ report taking sheep sheet:
 
 check exiting: try going outside instead;
 
-check going nowhere: [in rough order you find things, going north first]
-	if noun is diagonal, say "You don't need diagonal directions in this game." instead;
-	if player is in gold gaol, say "You need to look back on your experiences before leaving. Anyway, you can't figure directions here." instead;
+check going nowhere:
 	if noun is inside or noun is outside, say "You never need to go inside or outside, though you may need to go up [if stair stones is unvisited]one place[else]in [stair stones][end if]." instead;
-	if player is in bight bier, say "The [spoiled space] blocks you every way except [if stair stones are visited]back [end if]east." instead;
-	if player is in stair stones, say "You can only go north, south or west[if stone-filler is 2]. And up. You probably want to go up[else]. And you can try to go up[end if]." instead; [check going up is flagged elsewhere]
-	if player is in gaster gate, say "[if noun is east]You aren't getting past the gate, but there's worse stuff behind. Trust me[all-plas][else]The [spoiled space] blocks your passage [noun][end if]." instead;
-	if player is in dark dump, say "You can only go east or south. The [spoiled space] blocks your way [noun]." instead;
-	if player is in peep pool, say "The [spoiled space] blocks your way [noun]. You can only go north or[if creep cruel is not moot], once the way is clear,[end if] east." instead;
-	if player is in gore gulch, say "The [spoiled space] and general ickiness encompass every way except back west." instead;
-	say "I wish I could give more information, but you can't go that way." instead;
+	if noway-text of location of player is empty, say "I wish I could give more information, but you can't go that way." instead;
+	say "[noway-text of location of player][line break]" instead;
 
 to say all-plas: if sco-plaster-plate is true, say ". Breaking off the plaster plate was enough"
 
@@ -264,7 +257,9 @@ volume the map
 
 chapter Blight Blear Bight Bier
 
-Blight Blear Bight Bier is a room. "Boy! It's scary here! [if spite spear is in bight bier]A spite spear hangs above, and a[else]A[end if] [spoiled space] prevents passage every way except east[if thug is off-stage], but it might be even scarier there. You need some way to make things less scary, on this Quite Queer Night Near by the Blight Blear Bight Bier. A spite spear hangs in the distance, just ready to swoop on you[end if].". cht of Blight Blear Bight Bier is letboth. [->fight fear]
+Blight Blear Bight Bier is a room. "Boy! It's scary here! [if spite spear is in bight bier]A spite spear hangs above, and a[else]A[end if] [spoiled space] prevents passage every way except east[if thug is off-stage], but it might be even scarier there. You need some way to make things less scary, on this Quite Queer Night Near by the Blight Blear Bight Bier. A spite spear hangs in the distance, just ready to swoop on you[end if].". cht of Blight Blear Bight Bier is letboth. noway-text of bight bier is "The [spoiled space] blocks you every way except [if stair stones are visited]back [end if]east.". [->fight fear]
+
+the player is in Blight Blear Bight Bier.
 
 sco-fight-fear is a truth state that varies.
 
@@ -340,7 +335,7 @@ the spite spear is boring scenery in Blight Blear Bight Bier. "It's too far away
 
 chapter Bare Bones Stair Stones
 
-Bare Bones Stair Stones is east of Bight Bier. It is not bounded. "You can go back west to the Bier[if sheep sheet is in bier]--who knows, that sheet could come in handy[else], though you don't need to[end if]. You can also go north and south, but there seems to be a way out above--[if stone-filler is 0]or there could be[else if stone-filler is 1]you just need to fill the stairs in a bit more[else]you don't seem to have much else to do here[end if]!".
+Bare Bones Stair Stones is east of Bight Bier. It is not bounded. "You can go back west to the Bier[if sheep sheet is in bier]--who knows, that sheet could come in handy[else], though you don't need to[end if]. You can also go north and south, but there seems to be a way out above--[if stone-filler is 0]or there could be[else if stone-filler is 1]you just need to fill the stairs in a bit more[else]you don't seem to have much else to do here[end if]!". noway-text of stair stones is "You can only go north, south or west[if stone-filler is 2]. And up. You probably want to go up[else]. And you can try to go up[end if].".
 
 check going in Bare Bones Stair Stones when player has math maven:
 	if noun is south and sco-mulch-more is true, say "[maven-groan].";
@@ -373,7 +368,7 @@ check going up in Bare Bones Stair Stones:
 
 chapter Peep Pool
 
-Peep Pool is south of Stair Stones. "A pool lies at the edge of a passage bending north and east through the [spoiled space][if steep stool is in peep pool]. A steep stool blocks the way east--maybe someone or something can help you destroy it[end if].". cht of peep pool is leteq. [->deep duel] [->keep cool]
+Peep Pool is south of Stair Stones. "A pool lies at the edge of a passage bending north and east through the [spoiled space][if steep stool is in peep pool]. A steep stool blocks the way east--maybe someone or something can help you destroy it[end if].". cht of peep pool is leteq. noway-text of peep pool is "The [spoiled space] blocks your way [noun]. You can only go north or[if creep cruel is not moot], once the way is clear,[end if] east.". [->deep duel] [->keep cool]
 
 the steep stool is scenery in Peep Pool. "The steep stool is too smooth and, err, steep to climb, and it's too wide to get around. You may need to get rid of it--or have someone destroy it. Perhaps an enemy is waiting behind it to bust out.". cht of steep stool is letminus. [->deep duel]
 
@@ -394,13 +389,13 @@ printed name of creep cruel is "creep (cruel)".
 
 chapter Gore Gulch
 
-Gore Gulch is east of Peep Pool. cht of Gore Gulch is leteq. "The only way back is west. [if sco-mulch-more is false]There's something icky and sticky here besides gore, but you're not sure what[else]You extracted more mulch here, so there's nothing else to do[end if].". [-> more mulch]
+Gore Gulch is east of Peep Pool. cht of Gore Gulch is leteq. "The only way back is west. [if sco-mulch-more is false]There's something icky and sticky here besides gore, but you're not sure what[else]You extracted more mulch here, so there's nothing else to do[end if].". noway-text of gore gulch is "The [spoiled space] and general ickiness encompass every way except back west.". [-> more mulch]
 
 sco-mulch-more is a truth state that varies.
 
 chapter Dark Dump
 
-Dark Dump is north of Bare Bones Stair Stones. "The [spoiled space] blocks your progress north and west[n-w-block]. You can still go south and east.". cht of dark dump is allover. [-> stark stump] [->bark bump] [->park pump]
+Dark Dump is north of Bare Bones Stair Stones. "The [spoiled space] blocks your progress north and west[n-w-block]. You can still go south and east.". cht of dark dump is allover. noway-text of dark dump is "You can only go east or south. The [spoiled space] blocks your way [noun].". [-> stark stump] [->bark bump] [->park pump]
 
 to say n-w-block:
 	if bark bump is fungible and stark stump are fungible:
@@ -431,7 +426,7 @@ the stark stump is scenery. "The stark stump provides some protection against th
 
 chapter Gaster Gate
 
-Gaster Gate is east of Dark Dump. "The only way back is west. A gaster (that's an archaic verb meaning to scare) gate blocks the way east[if master mate is moot]. With the Master Mate gone, there's not much left to do here[end if].". cht of Gaster Gate is letplus. [->plaster plate]
+Gaster Gate is east of Dark Dump. "The only way back is west. A gaster (that's an archaic verb meaning to scare) gate blocks the way east[if master mate is moot]. With the Master Mate gone, there's not much left to do here[end if].". cht of Gaster Gate is letplus. noway-text of gaster gate is "[if noun is east]You aren't getting past the gate, but there's worse stuff behind. Trust me[all-plas][else]The [spoiled space] blocks your passage [noun][end if].". [->plaster plate]
 
 sco-plaster-plate is a truth state that varies.
 
@@ -441,7 +436,7 @@ the Master Mate is a person in Gaster Gate. "A master mate stands here, looking 
 
 chapter Gold Gaol
 
-Gold Gaol is a room. It is not bounded. "There's nothing much to do here. Well, the wall says FOLD FAIL, giving an idea of how gaol [i]should[r] be pronounced. Well, I guess there could be worse orders to receive as a prisoner.". cht of gold gaol is allover. [->old ale] [->cold kale] [->told tale]
+Gold Gaol is a room. It is not bounded. "There's nothing much to do here. Well, the wall says FOLD FAIL, giving an idea of how gaol [i]should[r] be pronounced. Well, I guess there could be worse orders to receive as a prisoner.". cht of gold gaol is allover. noway-text of gold gaol is "You need to look back on your experiences before leaving. Anyway, you can't figure directions here.". [->old ale] [->cold kale] [->told tale]
 
 sco-old-ale is a truth state that varies.
 sco-cold-kale is a truth state that varies.
