@@ -20,7 +20,7 @@ include Quite Queer Night Near Tests by Andrew Schultz.
 
 include Quite Queer Night Near Mistakes by Andrew Schultz.
 
-include Jest Jokes Pest Pokes Universal by Andrew Schultz.
+include Civil Seeming Drivel Dreaming Universal by Andrew Schultz.
 
 use authorial modesty.
 
@@ -28,24 +28,16 @@ entry-in-series is 2.
 
 procedural rule while eating something: ignore the carrying requirements rule.
 
-The print final score rule is not listed in for printing the player's obituary.
-
-cheattype is a kind of value. the cheattypes are phbt, letplus, letminus, partplus, partminus, leteq, letboth, and allover.
-
-to phbt (x - a thing): now cht of x is phbt;
-
-to phbt (x - a room): now cht of x is phbt;
-
-a room has a cheattype called cht. cht of a room is usually phbt.
-
-a thing has a cheattype called cht. cht of a thing is usually phbt.
-
 to say once-now of (ru - a rule):
 	process ru;
 	say "[if the rule succeeded]now[else]once[end if]"
 
 check examining:
 	if description of noun is empty, say "The description of [the noun] has been hidden because it is too scary for mere text and not because I was trying to cram a lot of programming into 4 hours. Ooh! Ooh! The unknown is so frightening!" instead;
+
+section game-specific stuff from the universal file
+
+to decide whether vcp-ignore: decide no; [When do we block check-text? In VVFF, when we have Been Buggin]
 
 section when play begins - not for release
 
@@ -57,15 +49,7 @@ a room can be bounded. a room is usually bounded.
 
 chapter boringness
 
-a thing has a rule called bore-rule. bore-rule of a thing is usually the bore-nothing rule.
-
-a thing can be boring. a thing is usually boring. a thing has text called bore-text.
-
-a thing can be borewarned. a thing is usually not borewarned.
-
-skip-bore-text is a truth state that varies.
-
-this is the bore-nothing rule: do nothing;
+a thing is usually not boring.
 
 instead of doing something with a boring thing:
 	if action is procedural, continue the action;
@@ -151,15 +135,6 @@ definition: a thing (called x) is moot:
 
 ha-half is a truth state that varies.
 
-zap-core-entry is a truth state that varies.
-
-to up-which (ts - a truth state):
-	if ts is true:
-		up-reg;
-	else:
-		up-min;
-		increment cur-bonus
-
 core-max is a number that varies. core-max is 12. [core-max is fixed. It is the number of point-scoring actions you need.]
 
 min-needed is a number that varies. min-needed is 12. [min-needed increases as you find LLPs.]
@@ -167,22 +142,6 @@ min-needed is a number that varies. min-needed is 12. [min-needed increases as y
 max-bonus is a number that varies. max-bonus is 1.
 
 cur-bonus is a number that varies. cur-bonus is 0. [we could define min-needed as core-max + cur-bonus I guess.]
-
-core-score is a number that varies. core-score is 0.
-
-max-overall is a number that varies.
-
-max-poss is a number that varies.
-
-to up-min:
-	increment min-needed;
-	increment the score;
-
-to up-reg:
-	increment core-score;
-	increment the score;
-
-to max-down: decrement max-poss;
 
 chapter verb carnage
 
@@ -504,23 +463,11 @@ check taking inventory:
 
 chapter abouting
 
-abouting is an action applying to nothing.
-
-understand the command "about" as something new.
-
-understand "about" as abouting.
-
 carry out abouting:
 	say "QQNN was written in under four hours for EctoComp 2019. It heavily cut-and-pasted from Very Vile Fairy File. It did not receive outside testing. However, I submitted a post-comp releaee that allowed for tweaks that weren't possible in the time allowed. If you want to report bugs/suggestions, do so at http://github.com/andrewschultz/quite-queer-night-near/issues. I appreciate them! CREDITS has additional thanks, and VERSIONS has some information about the versions.";
 	say "[line break][one of]QQNN is a sort of guess-the-verb game. If you want the game mechanic semi-spoiled, type ABOUT again[or]QQNN relies on couplets to increase your score. For instance, if a cold coy Rolled Roy needed courage, you could change him into BOLD BOY, and the game tries to give clever responses for tries (good-faith or otherwise) such as OLD OI[stopping].";
 
 chapter creditsing
-
-creditsing is an action applying to nothing.
-
-understand the command "credits" as something new.
-
-understand "credits" as creditsing.
 
 carry out creditsing:
 	say "Thanks to JJ Guest for starting EctoComp, Duncan Bowsman for continuing it, and Ruber Eaglenest and JoshG for keeping it going further. EctoComp has been a fun way to throw out little games. Also, thanks to itch.io for hosting this game.";
@@ -529,15 +476,6 @@ carry out creditsing:
 	the rule succeeds.
 
 chapter verbsing
-
-check going:
-	if noun is diagonal, say "Diagonal directions aren't used in this game.";
-
-verbsing is an action applying to nothing.
-
-understand the command "verbs" as something new.
-
-understand "verbs" as verbsing.
 
 carry out verbsing:
 	say "QQNN has a stripped-down parser. You can X/EXAMINE things or use the four basic directions, or go up. While you don't need any standard verbs beyond moving to win the game, you do have to figure out two-word actions to move forward.";
@@ -548,31 +486,10 @@ carry out verbsing:
 
 chapter versioning
 
-versioning is an action applying to nothing.
-
-understand the command "version" as something new.
-
-understand "version" as versioning.
-
 carry out versioning:
 	say "Version 1 was released for EctoComp on October 30, 2019. It contained large chunks of code copied over from Very Vile Fairy File.";
 	say "Version 2 was released after EctoComp on November ??, 2019. It added the [maven] as a more animated and spooky helper than the Leet Learner, and it added a lot of cluing (including indications you were done in a certain area,) bug fixes, alternate solutions and even ambience like the Spite Spear. It also let you know how many possible good guesses were left, and it tracked if you could win the game with only the maven. Oh, and the introduction got sillier, too.";
 	the rule succeeds.
-
-chapter soundsing
-
-soundsing is an action applying to nothing.
-
-understand the command "sounds" as something new.
-understand the command "sound" as something new.
-
-understand "sounds" and "sound" as soundsing.
-
-carry out soundsing:
-	say "The basic sounds in the English language are:[paragraph break]";
-	say "one letter: b k d f g h j l m n p r s t v w x z (c q and x map to others.)";
-	say "two letters: ur ar or bl br cl cr dr fl fr gl gr pl pr sk sl sp st sw spr str tr.";
-	say "rarer two letters: ch so th (thing or this) wh ng nk oi ow oo (took) aw zh (vision.)";
 	the rule succeeds.
 
 chapter after reading a command
@@ -726,8 +643,6 @@ to check-wrmm-progress:
 	if debug-state is true, say "DEBUG: [wrmm-count] maven count, [wrmm-charges] maven charges.";
 
 the wrath ravin' math maven is a boring thing. description is "The wrath ravin['] math maven won't stop complaining, but it's stuck to you, and you know it is good for [ppp]--[wrmm-charges in words] charge[plur of wrmm-charges], to be precise.". bore-text of wrath ravin' math maven is "The math maven only allows for [ppp]."
-
-the rhymeguess rules are a table name based rulebook. [okay, there's only one, but I need to define what it acts on]
 
 to decide which number is dump-fours-flipped:
 	decide on boolval of sco-bark-bump + boolval of sco-park-pump;
@@ -898,17 +813,6 @@ w1 (text)	w2 (text)	okflip	core	idid	ver-rule	do-rule	wfull (topic)
 "told"	"tale"	true	true	false	vc-told-tale rule	vr-told-tale rule	--
 
 section auxiliary
-
-already-rhymed-this is a truth state that varies.
-
-vc-dont-print is a truth state that varies.
-
-to vcp (t - text): [verb conditional print]
-	if vc-dont-print is false, say "[t][line break]";
-
-to vcal (t - text): [verb conditional print, flag already rhymed e.g. if HEAP HEAT and then try it again]
-	now already-rhymed-this is true;
-	if vc-dont-print is false, say "[t][line break]";
 
 to see-how-nourished:
 	say "[line break]";
