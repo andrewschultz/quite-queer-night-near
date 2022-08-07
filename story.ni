@@ -247,6 +247,10 @@ volume the player
 
 description of player is "You are [if thug is off-stage]no longer [end if]shedding a tight tear[if player is in bier]. You're no sight seer[end if]."
 
+chapter swearing
+
+check swearing obscenely: say "A spooky voice intones: 'Cursin? [']K, person, pay!' But nothing happens, thankfully." instead;
+
 chapter xyzzying
 
 carry out xyzzying:
