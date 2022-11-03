@@ -712,58 +712,6 @@ to say scancol of (x - a cheattype): say "[if x is letplus]++[else if x is partp
 
 chapter thinking
 
-ever-thought is a truth state that varies.
-
-the block thinking rule is not listed in any rulebook.
-
-to read-laters (ts - a truth state):
-	let thought-any be false;
-	repeat through table of forlaters:
-		if ready-to-hint entry is true:
-			if is-done entry is true:
-				if debug-state is true, say "(DEBUG NOTE) Somehow the [cmd-to-say entry] is-done entry didn't get wiped out after the score adjustments.";
-				now ready-to-hint entry is false;
-				next; [ this may duplicate code from the score and thinking changes rules but I'm still a bit nervous about it at the moment. This shuts the door 100%. ]
-			process the can-do-now entry; [?? surround with vc-dont-print being true then false ??]
-			let Q be whether or not the rule succeeded;
-			if Q is not ts, next;
-			if thought-any is false, say "[line break]";
-			if the rule succeeded, say "([b]CAN DO NOW[r]) ";
-			now thought-any is true;
-			say "[think-advice entry][line break]";
-
-to clue-later (ct - text):
-	if vc-dont-print is true, continue the action;
-	repeat through table of forlaters:
-		if ct is cmd-to-say entry:
-			if debug-state is true and ready-to-hint entry is true, say "(DEBUG re-checking)[line break]";
-			if ready-to-hint entry is false, now think-clue-flag is true;
-			process the note right guess wrong time rule;
-			now ready-to-hint entry is true;
-			continue the action;
-	now think-clue-flag is true;
-	say "Oops. I tried to save [ct] in the THINK command for later, but failed[not-crit-but].";
-
-to decide whether tried-yet of (ct - text):
-	let tried-any be false;
-	repeat through table of forlaters:
-		if ct is cmd-to-say entry:
-			now tried-any is true;
-			if ready-to-hint entry is true:
-				process the can-do-now entry;
-				if the rule succeeded, decide yes;
-	if tried-any is false, say "I tried to check if [ct] was hinted in the THINK command but it wasn't in the help table[not-crit-but].";
-	decide no;
-
-carry out thinking:
-	now vc-dont-print is true;
-	read-laters true;
-	read-laters false;
-	if ever-thought is false:
-		now ever-thought is true;
-		say "[line break][b]NOTE[r]: The game will indicate when one command you found early will be applicable. An asterisk or (+) will also appear in the score in the upper right. Until then, you can [b]THINK[r] to see things you figured but aren't quite ready to do yet.";
-	now vc-dont-print is false;
-
 think-clue-flag is a truth state that varies.
 
 every turn when think-clue-flag is true (this is the note right guess wrong time rule):

@@ -2,14 +2,6 @@ Version 1/191110 of Quite Queer Night Near Tables by Andrew Schultz begins here.
 
 "This should briefly describe the purpose of Quite Queer Night Near Tables."
 
-volume stuff you can't do yet
-
-table of forlaters [the CAN rules need to remain for the most part, because they are about if you can move around to do something.]
-cmd-to-say	ready-to-hint	can-do-now	is-done	think-advice
-"PINK PUG"	false	vc-pink-pug rule	false	"You could turn the Drink Drug Think Thug into a [b]PINK PUG[r] [once-now of vc-pink-pug rule] you feel less scared and overwhelmed."
-"KEEP COOL"	false	vc-keep-cool rule	false	"You can [b]KEEP COOL[r] [once-now of vc-keep-cool rule] you have someone who is trying to annoy you."
-"TOLD TALE"	false	vc-told-tale rule	false	"You can make a [b]TOLD TALE[r] [once-now of vc-told-tale rule] you have had (barely) adequate food and drink."
-
 volume core game progress table and rules
 
 chapter the big table
@@ -17,10 +9,10 @@ chapter the big table
 table of verb checks [xxvc]
 w1 (text)	w2 (text)	posthom (topic)	hom-txt-rule (rule)	think-cue	okflip	core	idid	bestroom	check-rule	run-rule	wfull (topic)	think-advice (text)
 "fight|fright"	"fear|freer"	--	--	false	true	true	false	bight bier	vc-fight-fear rule	vr-fight-fear rule	"fight fear" or "fright freer"	-- [start bight bier]
-"pink"	"pug"	--	--	false	true	true	false	bight bier	vc-pink-pug rule	vr-pink-pug rule	--	--
+"pink"	"pug"	--	--	false	true	true	false	bight bier	vc-pink-pug rule	vr-pink-pug rule	--	"You could turn the Drink Drug Think Thug into a [b]PINK PUG[r] [once-now of vc-pink-pug rule] you feel less scared and overwhelmed."
 "heap|bleep"	"heat|bleat"	--	--	false	true	false	false	bight bier	vc-heap-heat rule	vr-heap-heat rule	"heap heat" or "bleep bleat"	--
 "deep|creep"	"duel|cruel"	--	--	false	true	true	false	peep pool	vc-deep-duel rule	vr-deep-duel rule	"deep duel" or "creep cruel"	-- [start peep pool]
-"keep"	"cool"	--	--	false	true	true	false	peep pool	vc-keep-cool rule	vr-keep-cool rule	--	"You can keep cool [once-now of vc-keep-cool-rule] things have gotten intense."
+"keep"	"cool"	--	--	false	true	true	false	peep pool	vc-keep-cool rule	vr-keep-cool rule	--	"You can [b]KEEP COOL[r] [once-now of vc-keep-cool rule] you have someone who is trying to annoy you."
 "more"	"mulch"	--	--	false	true	true	false	gore gulch	vc-more-mulch rule	vr-more-mulch rule	--	-- [start gore gulch]
 "plaster"	"plate"	--	--	false	true	true	false	gaster gate	vc-plaster-plate rule	vr-plaster-plate rule	--	-- [start gaster gate]
 "bark|hark"	"bump|hump"	--	--	false	true	true	false	dark dump	vc-bark-bump rule	vr-bark-bump rule	"bark bump" or "hark hump"	-- [start dark dump]
@@ -28,7 +20,7 @@ w1 (text)	w2 (text)	posthom (topic)	hom-txt-rule (rule)	think-cue	okflip	core	id
 "stark"	"stump"	--	--	false	true	true	false	dark dump	vc-stark-stump rule	vr-stark-stump rule	--	--
 "old"	"ale"	--	--	false	true	true	false	gold gaol	vc-old-ale rule	vr-old-ale rule	--	-- [start gold gaol]
 "cold"	"kale"	--	--	false	true	true	false	gold gaol	vc-cold-kale rule	vr-cold-kale rule	--	--
-"told"	"tale"	--	--	false	true	true	false	gold gaol	vc-told-tale rule	vr-told-tale rule	--	--
+"told"	"tale"	--	--	false	true	true	false	gold gaol	vc-told-tale rule	vr-told-tale rule	--	"You can make a [b]TOLD TALE[r] [once-now of vc-told-tale rule] you have had (barely) adequate food and drink."
 
 section auxiliary
 
@@ -67,8 +59,8 @@ to check-stair-stones:
 				now cht of dark dump is leteq; [dark dump->park pump]
 
 this is the endgame prod rule:
-	if tried-yet of "TOLD TALE":
-		say "[line break]So, yeah. That thing you tried before  that didn't work? TOLD TALE? It does now. There's not much else to do."
+	repeat through table of verb checks:
+		if check-rule entry is vc-told-tale rule and think-cue entry is true, say "[line break]So, yeah. That thing you tried before  that didn't work? TOLD TALE? It does now. There's not much else to do."
 
 to decide which number is dump-block:
 	decide on boolval of sco-stump-stark + boolval of sco-bark-bump;
