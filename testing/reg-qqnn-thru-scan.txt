@@ -1,11 +1,14 @@
-
 ## reg-qqnn-thru-scan.txt
 ## GENERATOR FILE: rbr-qqnn-thru.txt
+
+## walkthrough with cheat sheet testing
 
 ** game: /home/andrew/prt/debug-quite-queer-night-near.z8
 ** interpreter: /home/andrew/prt/dfrotz -m
 
 * main-thru
+
+>au 2
 
 >cs me
 You don't need to change yourself. Whew.
@@ -49,11 +52,8 @@ You can also type DEEP DEET to recap how, precisely, the sheet works.
 by one point
 
 >e
-Bare Bones Stair Stones
 
 >s
-
-Peep Pool
 
 >cs
 You refer to the sheep sheet, noticing it says Peep Pool goes to ==.
@@ -72,8 +72,6 @@ by one point
 
 >e
 
-Gore Gulch
-
 >cs
 You refer to the sheep sheet, noticing it says Gore Gulch goes to ==.
 
@@ -84,20 +82,24 @@ The gunky material flowing back to Bare Bones Stair Stones is icky, but it will 
 
 >n
 
-Dark Dump
-
 >cs
 You refer to the sheep sheet, noticing it says Dark Dump goes to ?? -- there might be diverging possibilities here.
 
 >stark stump
+by one point
+
 >cs
 You refer to the sheep sheet, noticing it says Dark Dump goes to ==
 >undo
 >undo
 >park pump
+by one point
+
 >cs
 You refer to the sheep sheet, noticing it says Dark Dump goes to ?? -- there might be diverging possibilities here.
 >stark stump
+by one point
+
 >cs
 You refer to the sheep sheet, noticing it says Dark Dump goes to ==
 >undo
@@ -125,8 +127,6 @@ You can't find any information on the cheap cheat sheep sheet about Dark Dump. M
 
 >e
 
-Gaster Gate
-
 >cs
 You refer to the sheep sheet, noticing it says Gaster Gate goes to ++.
 
@@ -141,11 +141,12 @@ You can't find any information on the cheap cheat sheep sheet about Gaster Gate.
 >gonear stair stones
 
 >u
-Gold Gaol
 
 >cs
 You refer to the sheep sheet, noticing it says Gold Gaol goes to ?? -- there might be diverging possibilities here
 >cold kale
+by one point
+
 >cs
 You refer to the sheep sheet, noticing it says Gold Gaol goes to --.
 >undo

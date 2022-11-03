@@ -1,12 +1,27 @@
-
 ## reg-qqnn-thru-mistakes.txt
 ## GENERATOR FILE: rbr-qqnn-thru.txt
+
+## walkthrough with mistakes
 
 ** game: /home/andrew/prt/debug-quite-queer-night-near.z8
 ** interpreter: /home/andrew/prt/dfrotz -m
 
 * main-thru
 
+>au 2
+
+> broiled brace
+!sheep sheet
+You can't imagine a brace would be tasty, fried, broiled, stewed or whatever.
+> foiled face
+!sheep sheet
+You frown at being unable to dispel the/. No reverse psychology kicks in.
+> moiled mace
+!sheep sheet
+No magic weapon pops in your hand as a reward for hard work you forgot you did.
+> roiled race
+!sheep sheet
+You'll never get made enough to run fast enough through the/.
 > kite keyer
 refer to the sheep sheet
 You don't need the risk of getting zapped by electricity, too.
@@ -194,7 +209,11 @@ Neither a favorite team's success nor drudgery will get your mind off things.
 !refer to the sheep sheet
 
 >e
-Bare Bones Stair Stones
+
+#check that boiled base is not present as a backdrop
+#next-cmd-pass
+> broiled brace
+!You can't imagine a brace would be tasty, fried, broiled, stewed or whatever.
 
 > air owns
 !sheep sheet
@@ -245,8 +264,6 @@ No more scary noises than needed, please.
 
 >s
 
-Peep Pool
-
 > jeep jewel
 refer to the sheep sheet
 The jeep would probably run over YOU.
@@ -286,8 +303,6 @@ Crying is out. So are nice new warm clothes. You're on a spooky Halloween advent
 
 >e
 
-Gore Gulch
-
 > boar bulge
 refer to the sheep sheet
 That's a bit of a stretch, but Gore Gulch remains unstretched.
@@ -298,8 +313,6 @@ by one point
 The gunky material flowing back to Bare Bones Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
 
 >n
-
-Dark Dump
 
 > ark ump
 sheep sheet
@@ -338,8 +351,6 @@ With just one mump, you might drive yourself up the wall wondering if you are ha
 
 >e
 
-Gaster Gate
-
 > faster fate
 refer to the sheep sheet
 But that might mean a faster BAD fate as well as a good one.
@@ -374,7 +385,6 @@ Your text adventure remains totally texty.
 >gonear stair stones
 
 >u
-Gold Gaol
 
 > rolled rail
 refer to the sheep sheet

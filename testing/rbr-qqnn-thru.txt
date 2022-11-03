@@ -4,7 +4,10 @@
 #-- use HHV.PY to verify ha-half
 #--
 
-files=reg-qqnn-thru-min.txt,reg-qqnn-thru-all.txt,reg-qqnn-thru-think.txt,reg-qqnn-thru-alt-verbs.txt,reg-qqnn-thru-mistakes.txt,reg-qqnn-thru-ha-half.txt,reg-qqnn-thru-scan.txt,reg-qqnn-thru-noway.txt
+files=reg-qqnn-thru-min.txt,reg-qqnn-thru-all.txt,reg-qqnn-thru-reject.txt,reg-qqnn-thru-alt-verbs.txt,reg-qqnn-thru-mistakes.txt,reg-qqnn-thru-ha-half.txt,reg-qqnn-thru-scan.txt,reg-qqnn-thru-noway.txt
+~	min	t0
+~	all	t1
+~	rej	t2
 ~	alt	t3
 ~	mis	t4
 ~	ha	t5
@@ -14,30 +17,55 @@ files=reg-qqnn-thru-min.txt,reg-qqnn-thru-all.txt,reg-qqnn-thru-think.txt,reg-qq
 ## *FILE
 ## *FORK
 
-TSV:## minimum walkthrough	## walkthrough with all points	## walkthrough with altverb tests ## walkthrough with fake deaths ## walkthrough testing all mistakes
+TSV:## minimum walkthrough	## walkthrough with all points	##walkthrough with THINK and REJECT commands	## walkthrough with altverb tests	## walkthrough with mistakes	## walkthrough with HA HALF testing	## walkthrough with cheat sheet testing	## walkthrough with NOWAY testing
 
 ** game: /home/andrew/prt/debug-quite-queer-night-near.z8
 ** interpreter: /home/andrew/prt/dfrotz -m
 
 * main-thru
 
+@all
+#testcase-room-names-blight-blear-bight-bier
+`Blight Blear Bight Bier
+
+>au 2
+
 @ha
+#testcase-ha-half-table-of-verb-checks-1-fear-freer
 > zfight fear
 DEBUG: vc-fight-fear rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+#testcase-ha-half-table-of-verb-checks-1-fight-fright
 > fight zfear
 DEBUG: vc-fight-fear rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+#testcase-ha-half-table-of-verb-checks-2-pug
 > zpink pug
 DEBUG: vc-pink-pug rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+#testcase-ha-half-table-of-verb-checks-2-pink
 > pink zpug
 DEBUG: vc-pink-pug rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+#testcase-ha-half-table-of-verb-checks-3-heat-bleat
 > zheap heat
 DEBUG: vc-heap-heat rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+> zbleep bleat
+DEBUG: vc-heap-heat rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+#testcase-ha-half-table-of-verb-checks-3-heap-bleep
 > heap zheat
+DEBUG: vc-heap-heat rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+> bleep zbleat
 DEBUG: vc-heap-heat rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 
@@ -82,8 +110,6 @@ No magic weapon pops in your hand as a reward for hard work you forgot you did.
 > roiled race
 !sheep sheet
 You'll never get made enough to run fast enough through the/.
-
-@mis
 > kite keyer
 refer to the sheep sheet
 You don't need the risk of getting zapped by electricity, too.
@@ -308,7 +334,7 @@ Neither a favorite team's success nor drudgery will get your mind off things.
 > weep wheat
 !refer to the sheep sheet
 
-@ha
+@rej
 > fight fear
 !by one point
 Yes, fighting fear is a lifelong journey, but fighting too hard all at once will bring it back.
@@ -340,7 +366,10 @@ You already got rid of the thug.
 !Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 
 >e
-Bare Bones Stair Stones
+
+@all
+#testcase-room-names-bare-bones-stair-stones
+`Bare Bones Stair Stones
 
 @mis
 #check that boiled base is not present as a backdrop
@@ -406,7 +435,9 @@ The stones are in nowhere near climbable condition. For now.
 
 >s
 
-Peep Pool
+@all
+#testcase-room-names-peep-pool
+`Peep Pool
 
 @way
 >w
@@ -447,15 +478,31 @@ You have no one annoying you. But there might be someone later, if you're lucky!
 KEEP COOL
 
 @ha
+#testcase-ha-half-table-of-verb-checks-4-duel-cruel
 > zdeep duel
 DEBUG: vc-deep-duel rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+> zcreep cruel
+DEBUG: vc-deep-duel rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+#testcase-ha-half-table-of-verb-checks-4-deep-creep
 > deep zduel
 DEBUG: vc-deep-duel rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+> creep zcruel
+DEBUG: vc-deep-duel rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+#testcase-ha-half-table-of-verb-checks-5-keep
+\\
 > zkeep cool
 DEBUG: vc-keep-cool rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+#testcase-ha-half-table-of-verb-checks-5-cool
 > keep zcool
 DEBUG: vc-keep-cool rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
@@ -531,7 +578,9 @@ The boiled base spoiled space blocks your way south. You can only go north or ea
 
 >e
 
-Gore Gulch
+@all
+#testcase-room-names-gore-gulch
+`Gore Gulch
 
 @way
 >n
@@ -551,9 +600,12 @@ refer to the sheep sheet
 That's a bit of a stretch, but Gore Gulch remains unstretched.
 
 @ha
+#testcase-ha-half-table-of-verb-checks-6-mulch
 > zmore mulch
 DEBUG: vc-more-mulch rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+#testcase-ha-half-table-of-verb-checks-6-more
 > more zmulch
 DEBUG: vc-more-mulch rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
@@ -586,7 +638,9 @@ The stones are almost climbable but still too risky. You need to do a bit more.
 
 >n
 
-Dark Dump
+@all
+#testcase-room-names-dark-dump
+`Dark Dump
 
 @way
 >n
@@ -595,21 +649,40 @@ You can only go east or south. The boiled base spoiled space blocks your way nor
 You can only go east or south. The boiled base spoiled space blocks your way west.
 
 @ha
+#testcase-ha-half-table-of-verb-checks-8-bump-hump
 > zbark bump
 DEBUG: vc-bark-bump rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+> zhark hump
+DEBUG: vc-bark-bump rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+#testcase-ha-half-table-of-verb-checks-8-bark-hark
 > bark zbump
 DEBUG: vc-bark-bump rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+> hark zhump
+DEBUG: vc-bark-bump rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+#testcase-ha-half-table-of-verb-checks-9-pump
 > zpark pump
 DEBUG: vc-park-pump rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+#testcase-ha-half-table-of-verb-checks-9-park
 > park zpump
 DEBUG: vc-park-pump rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+#testcase-ha-half-table-of-verb-checks-10-stump
 > zstark stump
 DEBUG: vc-stark-stump rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+#testcase-ha-half-table-of-verb-checks-10-stark
 > stark zstump
 DEBUG: vc-stark-stump rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
@@ -617,17 +690,23 @@ Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 @cs
 >cs
 You refer to the sheep sheet, noticing it says Dark Dump goes to ?? -- there might be diverging possibilities here.
-
-@cs
+\\
+##balance undos
 >stark stump
+by one point
+\\
 >cs
 You refer to the sheep sheet, noticing it says Dark Dump goes to ==
 >undo
 >undo
 >park pump
+by one point
+\\
 >cs
 You refer to the sheep sheet, noticing it says Dark Dump goes to ?? -- there might be diverging possibilities here.
 >stark stump
+by one point
+\\
 >cs
 You refer to the sheep sheet, noticing it says Dark Dump goes to ==
 >undo
@@ -671,7 +750,7 @@ You refer to the sheep sheet, noticing it says Dark Dump goes to ==.
 >park pump
 by one point
 
-@ha
+@rej
 > bark bump
 !by one point
 That's already here.
@@ -722,7 +801,9 @@ With just one mump, you might drive yourself up the wall wondering if you are ha
 
 >e
 
-Gaster Gate
+@all
+#testcase-room-names-gaster-gate
+`Gaster Gate
 
 @way
 >e
@@ -751,9 +832,12 @@ Your text adventure remains totally texty.
 You refer to the sheep sheet, noticing it says Gaster Gate goes to ++.
 
 @ha
+#testcase-ha-half-table-of-verb-checks-7-plate
 > zplaster plate
 DEBUG: vc-plaster-plate rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+#testcase-ha-half-table-of-verb-checks-7-plaster
 > plaster zplate
 DEBUG: vc-plaster-plate rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
@@ -804,7 +888,10 @@ The wrath ravin' math maven rolls its eyes and groans as you go back south. Perh
 >n
 
 >u
-Gold Gaol
+
+@all
+#testcase-room-names-gold-gaol
+`Gold Gaol
 
 @way
 >n
@@ -817,21 +904,32 @@ You need to look back on your experiences before leaving. Anyway, you can't figu
 You need to look back on your experiences before leaving. Anyway, you can't figure directions here.
 
 @ha
+#testcase-ha-half-table-of-verb-checks-11-old
 > zold ale
 DEBUG: vc-old-ale rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+#testcase-ha-half-table-of-verb-checks-11-ale
 > old zale
 DEBUG: vc-old-ale rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+#testcase-ha-half-table-of-verb-checks-12-kale
 > zcold kale
 DEBUG: vc-cold-kale rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+#testcase-ha-half-table-of-verb-checks-12-cold
 > cold zkale
 DEBUG: vc-cold-kale rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+#testcase-ha-half-table-of-verb-checks-13-tale
 > ztold tale
 DEBUG: vc-told-tale rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
+#testcase-ha-half-table-of-verb-checks-13-told
 > told ztale
 DEBUG: vc-told-tale rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
@@ -899,6 +997,8 @@ You can't change the gaol. You can escape easily enough. You just need to figure
 >cs
 You refer to the sheep sheet, noticing it says Gold Gaol goes to ?? -- there might be diverging possibilities here
 >cold kale
+by one point
+\\
 >cs
 You refer to the sheep sheet, noticing it says Gold Gaol goes to --.
 >undo
@@ -922,20 +1022,23 @@ You refer to the sheep sheet, noticing it says Gold Gaol goes to ==.
 > zold ale
 !DEBUG: vc-old-ale rule tipped off half-body tingling.
 !Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
 > old zale
 !DEBUG: vc-old-ale rule tipped off half-body tingling.
 !Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
 > zcold kale
 !DEBUG: vc-cold-kale rule tipped off half-body tingling.
 !Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+\\
 > cold zkale
 !DEBUG: vc-cold-kale rule tipped off half-body tingling.
 !Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
-
-@ha
+\\
 > old ale
 !by one point
 If you were trying to get drunk, the old ale would be the way to do it. But you're trying to get FREE.
+\\
 > cold kale
 !by one point
 To quote Al and Peg Bundy: "More kale, dear?" / "Did I ASK for more kale, dear?"

@@ -1,28 +1,50 @@
-
 ## reg-qqnn-thru-ha-half.txt
 ## GENERATOR FILE: rbr-qqnn-thru.txt
+
+## walkthrough with ha half testing
 
 ** game: /home/andrew/prt/debug-quite-queer-night-near.z8
 ** interpreter: /home/andrew/prt/dfrotz -m
 
 * main-thru
 
+>au 2
+
+#testcase-ha-half-table-of-verb-checks-1-fear-freer
 > zfight fear
 DEBUG: vc-fight-fear rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+#testcase-ha-half-table-of-verb-checks-1-fight-fright
 > fight zfear
 DEBUG: vc-fight-fear rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+#testcase-ha-half-table-of-verb-checks-2-pug
 > zpink pug
 DEBUG: vc-pink-pug rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+#testcase-ha-half-table-of-verb-checks-2-pink
 > pink zpug
 DEBUG: vc-pink-pug rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+#testcase-ha-half-table-of-verb-checks-3-heat-bleat
 > zheap heat
 DEBUG: vc-heap-heat rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+> zbleep bleat
+DEBUG: vc-heap-heat rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+#testcase-ha-half-table-of-verb-checks-3-heap-bleep
 > heap zheat
+DEBUG: vc-heap-heat rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+> bleep zbleat
 DEBUG: vc-heap-heat rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 
@@ -34,16 +56,6 @@ by one point
 
 >pink pug
 by one point
-
-> fight fear
-!by one point
-Yes, fighting fear is a lifelong journey, but fighting too hard all at once will bring it back.
-> heap heat
-!by one point
-You already warmed the sheet up.
-> pink pug
-!by one point
-You already got rid of the thug.
 
 > zfight fear
 !DEBUG: vc-fight-fear rule tipped off half-body tingling.
@@ -65,21 +77,34 @@ You already got rid of the thug.
 !Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 
 >e
-Bare Bones Stair Stones
 
 >s
 
-Peep Pool
-
+#testcase-ha-half-table-of-verb-checks-4-duel-cruel
 > zdeep duel
 DEBUG: vc-deep-duel rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+> zcreep cruel
+DEBUG: vc-deep-duel rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+#testcase-ha-half-table-of-verb-checks-4-deep-creep
 > deep zduel
 DEBUG: vc-deep-duel rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+> creep zcruel
+DEBUG: vc-deep-duel rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+#testcase-ha-half-table-of-verb-checks-5-keep
+
 > zkeep cool
 DEBUG: vc-keep-cool rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+#testcase-ha-half-table-of-verb-checks-5-cool
 > keep zcool
 DEBUG: vc-keep-cool rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
@@ -112,11 +137,12 @@ You don't need to keep cool any more.
 
 >e
 
-Gore Gulch
-
+#testcase-ha-half-table-of-verb-checks-6-mulch
 > zmore mulch
 DEBUG: vc-more-mulch rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+#testcase-ha-half-table-of-verb-checks-6-more
 > more zmulch
 DEBUG: vc-more-mulch rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
@@ -140,23 +166,40 @@ Hoo boy. You have enough mulch.
 
 >n
 
-Dark Dump
-
+#testcase-ha-half-table-of-verb-checks-8-bump-hump
 > zbark bump
 DEBUG: vc-bark-bump rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+> zhark hump
+DEBUG: vc-bark-bump rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+#testcase-ha-half-table-of-verb-checks-8-bark-hark
 > bark zbump
 DEBUG: vc-bark-bump rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+> hark zhump
+DEBUG: vc-bark-bump rule tipped off half-body tingling.
+Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+#testcase-ha-half-table-of-verb-checks-9-pump
 > zpark pump
 DEBUG: vc-park-pump rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+#testcase-ha-half-table-of-verb-checks-9-park
 > park zpump
 DEBUG: vc-park-pump rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+#testcase-ha-half-table-of-verb-checks-10-stump
 > zstark stump
 DEBUG: vc-stark-stump rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+#testcase-ha-half-table-of-verb-checks-10-stark
 > stark zstump
 DEBUG: vc-stark-stump rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
@@ -169,16 +212,6 @@ by one point
 
 >park pump
 by one point
-
-> bark bump
-!by one point
-That's already here.
-> park pump
-!by one point
-That's already here.
-> stark stump
-!by one point
-That's already here.
 
 > zbark bump
 !DEBUG: vc-bark-bump rule tipped off half-body tingling.
@@ -201,11 +234,12 @@ That's already here.
 
 >e
 
-Gaster Gate
-
+#testcase-ha-half-table-of-verb-checks-7-plate
 > zplaster plate
 DEBUG: vc-plaster-plate rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+#testcase-ha-half-table-of-verb-checks-7-plaster
 > plaster zplate
 DEBUG: vc-plaster-plate rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
@@ -228,23 +262,33 @@ You already made a plaster plate.
 >gonear stair stones
 
 >u
-Gold Gaol
 
+#testcase-ha-half-table-of-verb-checks-11-old
 > zold ale
 DEBUG: vc-old-ale rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+#testcase-ha-half-table-of-verb-checks-11-ale
 > old zale
 DEBUG: vc-old-ale rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+#testcase-ha-half-table-of-verb-checks-12-kale
 > zcold kale
 DEBUG: vc-cold-kale rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+#testcase-ha-half-table-of-verb-checks-12-cold
 > cold zkale
 DEBUG: vc-cold-kale rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+#testcase-ha-half-table-of-verb-checks-13-tale
 > ztold tale
 DEBUG: vc-told-tale rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
+#testcase-ha-half-table-of-verb-checks-13-told
 > told ztale
 DEBUG: vc-told-tale rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
@@ -258,12 +302,15 @@ by one point
 > zold ale
 !DEBUG: vc-old-ale rule tipped off half-body tingling.
 !Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
 > old zale
 !DEBUG: vc-old-ale rule tipped off half-body tingling.
 !Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
 > zcold kale
 !DEBUG: vc-cold-kale rule tipped off half-body tingling.
 !Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
 > cold zkale
 !DEBUG: vc-cold-kale rule tipped off half-body tingling.
 !Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
@@ -271,6 +318,7 @@ by one point
 > old ale
 !by one point
 If you were trying to get drunk, the old ale would be the way to do it. But you're trying to get FREE.
+
 > cold kale
 !by one point
 To quote Al and Peg Bundy: "More kale, dear?" / "Did I ASK for more kale, dear?"

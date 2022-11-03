@@ -1,12 +1,17 @@
-
 ## reg-qqnn-thru-all.txt
 ## GENERATOR FILE: rbr-qqnn-thru.txt
 
 ## walkthrough with all points
+
 ** game: /home/andrew/prt/debug-quite-queer-night-near.z8
 ** interpreter: /home/andrew/prt/dfrotz -m
 
 * main-thru
+
+#testcase-room-names-blight-blear-bight-bier
+`Blight Blear Bight Bier
+
+>au 2
 
 >fight fear
 by one point
@@ -18,11 +23,14 @@ by one point
 by one point
 
 >e
-Bare Bones Stair Stones
+
+#testcase-room-names-bare-bones-stair-stones
+`Bare Bones Stair Stones
 
 >s
 
-Peep Pool
+#testcase-room-names-peep-pool
+`Peep Pool
 
 >deep duel
 by one point
@@ -32,7 +40,8 @@ by one point
 
 >e
 
-Gore Gulch
+#testcase-room-names-gore-gulch
+`Gore Gulch
 
 >more mulch
 by one point
@@ -41,7 +50,8 @@ The gunky material flowing back to Bare Bones Stair Stones is icky, but it will 
 
 >n
 
-Dark Dump
+#testcase-room-names-dark-dump
+`Dark Dump
 
 >bark bump
 by one point
@@ -54,7 +64,8 @@ by one point
 
 >e
 
-Gaster Gate
+#testcase-room-names-gaster-gate
+`Gaster Gate
 
 >plaster plate
 by one point
@@ -66,7 +77,9 @@ The wrath ravin' math maven rolls its eyes and groans as you go back south. Perh
 >n
 
 >u
-Gold Gaol
+
+#testcase-room-names-gold-gaol
+`Gold Gaol
 
 >old ale
 by one point

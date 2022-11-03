@@ -1,12 +1,14 @@
-
-## reg-qqnn-thru-think.txt
+## reg-qqnn-thru-reject.txt
 ## GENERATOR FILE: rbr-qqnn-thru.txt
 
-## walkthrough with altverb tests ## walkthrough with fake deaths ## walkthrough testing all mistakes
+##walkthrough with think and reject commands
+
 ** game: /home/andrew/prt/debug-quite-queer-night-near.z8
 ** interpreter: /home/andrew/prt/dfrotz -m
 
 * main-thru
+
+>au 2
 
 >pink pug
 You're too scared to think that something like that could even work. Maybe later, though.
@@ -23,12 +25,19 @@ by one point
 >pink pug
 by one point
 
+> fight fear
+!by one point
+Yes, fighting fear is a lifelong journey, but fighting too hard all at once will bring it back.
+> heap heat
+!by one point
+You already warmed the sheet up.
+> pink pug
+!by one point
+You already got rid of the thug.
+
 >e
-Bare Bones Stair Stones
 
 >s
-
-Peep Pool
 
 >keep cool
 You have no one annoying you. But there might be someone later, if you're lucky! Wow!
@@ -44,16 +53,12 @@ by one point
 
 >e
 
-Gore Gulch
-
 >more mulch
 by one point
 /^Stair Stones
 The gunky material flowing back to Bare Bones Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
 
 >n
-
-Dark Dump
 
 >bark bump
 by one point
@@ -64,9 +69,17 @@ by one point
 >park pump
 by one point
 
->e
+> bark bump
+!by one point
+That's already here.
+> park pump
+!by one point
+That's already here.
+> stark stump
+!by one point
+That's already here.
 
-Gaster Gate
+>e
 
 >plaster plate
 by one point
@@ -74,7 +87,6 @@ Lair 'Lone's Stair Stones
 The gunky material flowing back to Stair Stones is icky, but it will help patch them up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
 
 >u
-Gold Gaol
 
 >told tale
 You're not nourished enough to make it far out of the cell. You need food and drink. Even lousy food and drink.

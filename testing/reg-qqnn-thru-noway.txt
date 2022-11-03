@@ -1,11 +1,14 @@
-
 ## reg-qqnn-thru-noway.txt
 ## GENERATOR FILE: rbr-qqnn-thru.txt
+
+## walkthrough with noway testing
 
 ** game: /home/andrew/prt/debug-quite-queer-night-near.z8
 ** interpreter: /home/andrew/prt/dfrotz -m
 
 * main-thru
+
+>au 2
 
 >e
 Not with the Drink Drug Think Thug blocking you.
@@ -26,7 +29,6 @@ by one point
 by one point
 
 >e
-Bare Bones Stair Stones
 
 >u
 The stones are in nowhere near climbable condition. For now.
@@ -35,8 +37,6 @@ The stones are in nowhere near climbable condition. For now.
 The stones are in nowhere near climbable condition. For now.
 
 >s
-
-Peep Pool
 
 >w
 The boiled base spoiled space blocks your way west. You can only go north or, once the way is clear, east.
@@ -65,8 +65,6 @@ The boiled base spoiled space blocks your way south. You can only go north or ea
 
 >e
 
-Gore Gulch
-
 >n
 The boiled base spoiled space and general ickiness encompass every way except back west.
 >s
@@ -87,8 +85,6 @@ The stones are almost climbable but still too risky. You need to do a bit more.
 
 >n
 
-Dark Dump
-
 >n
 You can only go east or south. The boiled base spoiled space blocks your way north.
 >w
@@ -105,8 +101,6 @@ by one point
 
 >e
 
-Gaster Gate
-
 >e
 You aren't getting past the gate, but there's worse stuff behind. Trust me.
 >n
@@ -120,7 +114,6 @@ Lair 'Lone's Stair Stones
 The gunky material flowing back to Stair Stones is icky, but it will help patch them up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
 
 >u
-Gold Gaol
 
 >n
 You need to look back on your experiences before leaving. Anyway, you can't figure directions here.
