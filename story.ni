@@ -20,7 +20,7 @@ include Quite Queer Night Near Tests by Andrew Schultz.
 
 include Quite Queer Night Near Mistakes by Andrew Schultz.
 
-include Civil Seeming Drivel Dreaming Universal by Andrew Schultz.
+include Prime Pro Rhyme Row Universal by Andrew Schultz.
 
 use authorial modesty.
 
@@ -35,7 +35,7 @@ to say once-now of (ru - a rule):
 check examining:
 	if description of noun is empty, say "The description of [the noun] has been hidden because it is too scary for mere text and not because I was trying to cram a lot of programming into 4 hours. Ooh! Ooh! The unknown is so frightening!" instead;
 
-section game-specific stuff from CSDD universal file (CSDD common file is not included)
+section game-specific stuff from PPRR universal file (PPRR common file is not included)
 
 definition: a direction (called d) is viable:
 	if the room d of location of the player is nowhere, no;
@@ -587,7 +587,7 @@ this is the verb-checker rule:
 			if zap-core-entry is true:
 				blank out the core entry;
 				now zap-core-entry is false;
-			process the notify score changes rule;
+			process the score and thinking changes rule;
 			if there is a core entry and core entry is false:
 				check-wrmm-progress;
 			process the winnable-with-cheating rule;
@@ -806,7 +806,7 @@ to wrmm-minus:
 	if wrmm-charges is 0, moot wrath ravin' math maven;
 	now in-jerk-jump is false;
 	increment wrmm-uses;
-	process the notify score changes rule;
+	process the score and thinking changes rule;
 
 to decide whether can-cheat-win:
 	if core-max - core-score <= wrmm-charges, yes;
