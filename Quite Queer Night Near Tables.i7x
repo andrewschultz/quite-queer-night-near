@@ -62,9 +62,6 @@ this is the endgame prod rule:
 	repeat through table of verb checks:
 		if check-rule entry is vc-told-tale rule and think-cue entry is true, say "[line break]So, yeah. That thing you tried before  that didn't work? TOLD TALE? It does now. There's not much else to do."
 
-to decide which number is dump-block:
-	decide on boolval of sco-stump-stark + boolval of sco-bark-bump;
-
 section rules to sort
 
 [xxqqnnr]
