@@ -15,20 +15,20 @@ volume core game progress table and rules
 chapter the big table
 
 table of verb checks [xxvc]
-w1 (text)	w2 (text)	okflip	core	idid	check-rule	run-rule	wfull (topic)
-"fight|fright"	"fear|freer"	true	true	false	vc-fight-fear rule	vr-fight-fear rule	"fight fear" or "fright freer" [start bight bier]
-"pink"	"pug"	true	true	false	vc-pink-pug rule	vr-pink-pug rule	--
-"heap|bleep"	"heat|bleat"	true	false	false	vc-heap-heat rule	vr-heap-heat rule	"heap heat" or "bleep bleat"
-"deep|creep"	"duel|cruel"	true	true	false	vc-deep-duel rule	vr-deep-duel rule	"deep duel" or "creep cruel" [start peep pool]
-"keep"	"cool"	true	true	false	vc-keep-cool rule	vr-keep-cool rule	--
-"more"	"mulch"	true	true	false	vc-more-mulch rule	vr-more-mulch rule	-- [start gore gulch]
-"plaster"	"plate"	true	true	false	vc-plaster-plate rule	vr-plaster-plate rule	-- [start gaster gate]
-"bark|hark"	"bump|hump"	true	true	false	vc-bark-bump rule	vr-bark-bump rule	"bark bump" or "hark hump" [start dark dump]
-"park"	"pump"	true	true	false	vc-park-pump rule	vr-park-pump rule	--
-"stark"	"stump"	true	true	false	vc-stark-stump rule	vr-stark-stump rule	--
-"old"	"ale"	true	true	false	vc-old-ale rule	vr-old-ale rule	-- [start gold gaol]
-"cold"	"kale"	true	true	false	vc-cold-kale rule	vr-cold-kale rule	--
-"told"	"tale"	true	true	false	vc-told-tale rule	vr-told-tale rule	--
+w1 (text)	w2 (text)	posthom (topic)	hom-txt-rule (rule)	think-cue	okflip	core	idid	bestroom	check-rule	run-rule	wfull (topic)	think-advice (text)
+"fight|fright"	"fear|freer"	--	--	false	true	true	false	bight bier	vc-fight-fear rule	vr-fight-fear rule	"fight fear" or "fright freer"	-- [start bight bier]
+"pink"	"pug"	--	--	false	true	true	false	bight bier	vc-pink-pug rule	vr-pink-pug rule	--	--
+"heap|bleep"	"heat|bleat"	--	--	false	true	false	false	bight bier	vc-heap-heat rule	vr-heap-heat rule	"heap heat" or "bleep bleat"	--
+"deep|creep"	"duel|cruel"	--	--	false	true	true	false	peep pool	vc-deep-duel rule	vr-deep-duel rule	"deep duel" or "creep cruel"	-- [start peep pool]
+"keep"	"cool"	--	--	false	true	true	false	peep pool	vc-keep-cool rule	vr-keep-cool rule	--	"You can keep cool [once-now of vc-keep-cool-rule] things have gotten intense."
+"more"	"mulch"	--	--	false	true	true	false	gore gulch	vc-more-mulch rule	vr-more-mulch rule	--	-- [start gore gulch]
+"plaster"	"plate"	--	--	false	true	true	false	gaster gate	vc-plaster-plate rule	vr-plaster-plate rule	--	-- [start gaster gate]
+"bark|hark"	"bump|hump"	--	--	false	true	true	false	dark dump	vc-bark-bump rule	vr-bark-bump rule	"bark bump" or "hark hump"	-- [start dark dump]
+"park"	"pump"	--	--	false	true	true	false	dark dump	vc-park-pump rule	vr-park-pump rule	--	--
+"stark"	"stump"	--	--	false	true	true	false	dark dump	vc-stark-stump rule	vr-stark-stump rule	--	--
+"old"	"ale"	--	--	false	true	true	false	gold gaol	vc-old-ale rule	vr-old-ale rule	--	-- [start gold gaol]
+"cold"	"kale"	--	--	false	true	true	false	gold gaol	vc-cold-kale rule	vr-cold-kale rule	--	--
+"told"	"tale"	--	--	false	true	true	false	gold gaol	vc-told-tale rule	vr-told-tale rule	--	--
 
 section auxiliary
 

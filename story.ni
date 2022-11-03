@@ -217,19 +217,16 @@ the block attacking rule is not listed in any rulebook.
 
 check attacking: say "The game is not called row-right-now night!" instead;
 
+chapter singing
+
+check singing:
+	say "The only sign that comes to mind is [i]Dearie, Dark Eerie Ark[r]." instead;
+
 chapter waiting
 
 check waiting: say "Wow! [']Ll wait? Foul fate!" instead;
 
 chapter talking
-
-talking is an action applying to one thing.
-
-understand the command "talk" as something new.
-understand the command "talk to" as something new.
-
-understand "talk [something]" as talking.
-understand "talk to [something]" as talking.
 
 carry out talking:
 	if the noun is not a person, say "No response." instead;
@@ -484,16 +481,6 @@ carry out versioning:
 	say "Version 3 had small fixes based on pulling common code into a Universal and Common code module.";
 	the rule succeeds.
 
-chapter after reading a command
-
-after reading a command:
-	if the player's command matches the regular expression "<^a-z '>":
-		if the player's command matches the regular expression "^ *<\*;>":
-			if currently transcripting:
-				say "Noted.";
-		say "You don't need any special characters in your command to win.";
-		if debug-state is false, reject the player's command;
-
 chapter parser error tweak(s)
 
 Rule for printing a parser error (this is the clue half right words rule):
@@ -654,7 +641,7 @@ to decide which number is variable-scan-length of (mynum - a number):
 	decide on 44;
 
 a rhymeguess rule for a table name (called tn) (this is the rhyme-guess-checker rule):
-	repeat through tn:
+	repeat through tn: [cannot be merged with QQNN due to check-wrmm-progress]
 		if the player's command matches mist-cmd entry:
 			if there is a mist-rule entry:
 				process the mist-rule entry;
@@ -793,12 +780,6 @@ understand the command "pp" as something new.
 
 understand "path pavin" as pathpavining.
 understand "pp" as pathpavining.
-
-in-jerk-jump is a truth state that varies.
-
-to say firstor of (t - indexed text):
-	replace the regular expression "\|.*" in t with "";
-	say "[t in upper case]";
 
 to wrmm-minus:
 	decrement wrmm-charges;
