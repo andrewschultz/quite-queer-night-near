@@ -14,6 +14,8 @@ include undo output control by Erik Temple.
 
 include Trivial Niceties by Andrew Schultz.
 
+include Quite Queer Night Near Definitions by Andrew Schultz.
+
 include Quite Queer Night Near Tables by Andrew Schultz.
 
 include Quite Queer Night Near Tests by Andrew Schultz.
@@ -255,8 +257,6 @@ Blight Blear Bight Bier is a room. "Boy! It's scary here! [if spite spear is in 
 
 the player is in Blight Blear Bight Bier.
 
-sco-fight-fear is a truth state that varies.
-
 section boiled base spoiled space
 
 the boiled base spoiled space is a boring backdrop. "You can barely see it, but it sure pulses ominously. But at least it helps narrow down the directions you [i]can[r] go.";
@@ -385,8 +385,6 @@ chapter Gore Gulch
 
 Gore Gulch is east of Peep Pool. cht of Gore Gulch is leteq. "The only way back is west. [if sco-mulch-more is false]There's something icky and sticky here besides gore, but you're not sure what[else]You extracted more mulch here, so there's nothing else to do[end if].". noway-text of gore gulch is "The [spoiled space] and general ickiness encompass every way except back west.". [-> more mulch]
 
-sco-mulch-more is a truth state that varies.
-
 chapter Dark Dump
 
 Dark Dump is north of Bare Bones Stair Stones. "The [spoiled space] blocks your progress north and west[n-w-block]. You can still go south and east.". cht of dark dump is allover. noway-text of dark dump is "You can only go east or south. The [spoiled space] blocks your way [noun].". [-> stark stump] [->bark bump] [->park pump]
@@ -401,10 +399,6 @@ to say n-w-block:
 	else:
 		say ". Yet it would be nice to have any sort of barrier against it";
 	if park pump is fungible, say ". A park pump also lies in the center"
-
-sco-bark-bump is a truth state that varies.
-sco-park-pump is a truth state that varies.
-sco-stump-stark is a truth state that varies.
 
 section bark bump
 
@@ -422,8 +416,6 @@ chapter Gaster Gate
 
 Gaster Gate is east of Dark Dump. "The only way back is west. A gaster (that's an archaic verb meaning to scare) gate blocks the way east[if master mate is moot]. With the Master Mate gone, there's not much left to do here[end if].". cht of Gaster Gate is letplus. noway-text of gaster gate is "[if noun is east]You aren't getting past the gate, but there's worse stuff behind. Trust me[all-plas][else]The [spoiled space] blocks your passage [noun][end if].". [->plaster plate]
 
-sco-plaster-plate is a truth state that varies.
-
 section Master Mate
 
 the Master Mate is a person in Gaster Gate. "A master mate stands here, looking pityingly on you. What could you possibly do to help things?". description is "The Master Mate stands impassively, smiling slightly, shrugging occasionally. Their presence helps you ... a bit, you think.". cht of Master Mate is letplus. bore-text of Master Mate is "'Right rhyme ... slight slime!' Perhaps the Master Mate is magically bound from telling you the exact rhyme, but how many possibilities can there be?" [->plaster plate]
@@ -431,9 +423,6 @@ the Master Mate is a person in Gaster Gate. "A master mate stands here, looking 
 chapter Gold Gaol
 
 Gold Gaol is a room. It is not bounded. "There's nothing much to do here. Well, the wall says FOLD FAIL, giving an idea of how gaol [i]should[r] be pronounced. Well, I guess there could be worse orders to receive as a prisoner.". cht of gold gaol is allover. noway-text of gold gaol is "You need to look back on your experiences before leaving. Anyway, you can't figure directions here.". [->old ale] [->cold kale] [->told tale]
-
-sco-old-ale is a truth state that varies.
-sco-cold-kale is a truth state that varies.
 
 chapter Gazy Gap
 

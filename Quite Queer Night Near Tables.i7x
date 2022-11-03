@@ -101,6 +101,7 @@ this is the vc-deep-duel rule:
 
 this is the vr-deep-duel rule:
 	say "There is no progress without conflict. You look into the peep pool and wait for an opponent to show. A crash from the steep stool to the east indicates someone has arrived for a deep duel: a creep, cruel![paragraph break]Maybe if you defeat them, you'll be able to go east. But right now, being around them is just annoying.";
+	now sco-deep-duel is true;
 	move creep cruel to peep pool;
 	moot steep stool.
 
@@ -143,6 +144,7 @@ this is the vc-keep-cool rule:
 
 this is the vr-keep-cool rule:
 	say "You manage to ignore the creep (cruel) as they get more and more desperate to insult you. Eventually, they explain you're not worth the effort, and also you are probably too callous and selfish to care about the next person they'll need to insult even worse.";
+	now sco-keep-cool is true;
 	moot creep cruel;
 	phbt peep pool;
 
@@ -199,6 +201,7 @@ this is the vc-pink-pug rule:
 this is the vr-pink-pug rule:
 	say "POOF! The drink-drug think-thug turns into a far more innocuous pink pug, which runs off, yapping.";
 	moot Drink Drug Think Thug;
+	now sco-pink-pug is true;
 
 this is the vc-plaster-plate rule:
 	if player is not in gaster gate, the rule fails;
