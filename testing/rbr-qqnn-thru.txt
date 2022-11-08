@@ -214,6 +214,8 @@ PINK PUG
 
 @alt
 >z
+\\
+#testcase-alt-words-table-of-verb-checks-1-fear-freer
 >fright freer
 by one point
 >undo
@@ -222,6 +224,7 @@ by one point
 by one point
 
 @alt
+#testcase-alt-words-table-of-verb-checks-3-heat-bleat
 >z
 >bleep bleat
 by one point
@@ -508,6 +511,7 @@ DEBUG: vc-keep-cool rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 
 @alt
+#testcase-alt-words-table-of-verb-checks-4-duel-cruel
 >creep cruel
 by one point
 >undo
@@ -729,6 +733,7 @@ refer to the sheep sheet
 With just one mump, you might drive yourself up the wall wondering if you are half-sick or half-well.
 
 @alt
+#testcase-alt-words-table-of-verb-checks-8-bump-hump
 >hark hump
 by one point
 >undo
@@ -1042,6 +1047,61 @@ If you were trying to get drunk, the old ale would be the way to do it. But you'
 >cold kale
 !by one point
 To quote Al and Peg Bundy: "More kale, dear?" / "Did I ASK for more kale, dear?"
+
+@rej
+====alphabetize on
+#testcase-reject-end-table-of-verb-checks-vr-bark-bump-rule
+>bark bump
+{$REJECT2}
+\\
+#testcase-reject-end-table-of-verb-checks-vr-cold-kale-rule
+>cold kale
+{$REJECT2}
+\\
+#testcase-reject-end-table-of-verb-checks-vr-deep-duel-rule
+>deep-creep duel-cruel
+{$REJECT2}
+\\
+#testcase-reject-end-table-of-verb-checks-vr-fight-fear-rule
+>fight-fright fear-freer
+{$REJECT2}
+\\
+#testcase-reject-end-table-of-verb-checks-vr-heap-heat-rule
+>heap-bleep heat-bleat
+{$REJECT2}
+\\
+#testcase-reject-end-table-of-verb-checks-vr-keep-cool-rule
+>keep cool
+{$REJECT2}
+\\
+#testcase-reject-end-table-of-verb-checks-vr-more-mulch-rule
+>more mulch
+{$REJECT2}
+\\
+#testcase-reject-end-table-of-verb-checks-vr-old-ale-rule
+>old ale
+{$REJECT2}
+\\
+#testcase-reject-end-table-of-verb-checks-vr-park-pump-rule
+>park pump
+{$REJECT2}
+\\
+#testcase-reject-end-table-of-verb-checks-vr-pink-pug-rule
+>pink pug
+{$REJECT2}
+\\
+#testcase-reject-end-table-of-verb-checks-vr-plaster-plate-rule
+>plaster plate
+{$REJECT2}
+\\
+#testcase-reject-end-table-of-verb-checks-vr-stark-stump-rule
+>stark stump
+{$REJECT2}
+\\
+#testcase-reject-end-table-of-verb-checks-vr-told-tale-rule
+>told tale
+{$REJECT2}
+====alphabetize off
 
 >told tale
 by one point

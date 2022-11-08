@@ -11,6 +11,7 @@
 >au 2
 
 >z
+#testcase-alt-words-table-of-verb-checks-1-fear-freer
 >fright freer
 by one point
 >undo
@@ -18,6 +19,7 @@ by one point
 >fight fear
 by one point
 
+#testcase-alt-words-table-of-verb-checks-3-heat-bleat
 >z
 >bleep bleat
 by one point
@@ -33,6 +35,7 @@ by one point
 
 >s
 
+#testcase-alt-words-table-of-verb-checks-4-duel-cruel
 >creep cruel
 by one point
 >undo
@@ -52,6 +55,7 @@ The gunky material flowing back to Bare Bones Stair Stones is icky, but it will 
 
 >n
 
+#testcase-alt-words-table-of-verb-checks-8-bump-hump
 >hark hump
 by one point
 >undo
