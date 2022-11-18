@@ -9,7 +9,7 @@ Version 1/191030 of Quite Queer Night Near Mistakes by Andrew Schultz begins her
 [the magic numbers column deserves an explanation. Usually it will be (10*expected length of first word) + (expected length of second word). However, in some cases, this is variable. Then we have a magic number from -10 to 10. This is converted, via variable-scan-length, to a two-digit number as above, possibly negative.
 Also, if a final number is negative, that means what you almost rhymed is optional.]
 
-table of good guess rhymes
+table of general good guesses
 mist-cmd(topic)	mist-rule	got-yet	magicnum	leet-rule	still-rule	mist-txt
 "flight fleer"	in-bight-bier rule	false	54	fear-to-fight rule	not-gaol rule	"You need to get less scared, not more. Plus, there's nowhere to run, anyway." [start bight bier]
 "light leer"	in-bight-bier rule	false	54	fear-to-fight rule	not-gaol rule	"No, facial expressions aren't enough, here. Especially expressions of contempt."
@@ -26,6 +26,9 @@ mist-cmd(topic)	mist-rule	got-yet	magicnum	leet-rule	still-rule	mist-txt
 "white wier/weir"	in-bight-bier rule	false	54	fear-to-fight rule	not-gaol rule	"No fence appears."
 "tight tier/tear"	in-bight-bier rule	false	54	fear-to-fight rule	not-gaol rule	"You think up all the formal and informal meanings of the word tight, but nothing pops up."
 "trite treer"	in-bight-bier rule	false	54	fear-to-fight rule	not-gaol rule	"You don't need anything to be chasing you up a tree, hackneyed or otherwise."
+
+table of good guess rhymes
+mist-cmd(topic)	mist-rule	got-yet	magicnum	leet-rule	still-rule	mist-txt
 "beep beat"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"You imagine an eternity spent listening to funky techno music. Scary!"
 "meep meat"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"No roadrunner whizzes by, and neither does a devious, planning coyote."
 "deep deet"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-untaken rule	"[if player has sheep sheet][sheet-spoil][else]You can't see any deep details, but maybe when you take the sheet...[end if]"

@@ -7,7 +7,7 @@ volume core game progress table and rules
 chapter the big table
 
 table of verb checks [xxvc]
-w1 (text)	w2 (text)	posthom (topic)	hom-txt-rule (rule)	think-cue	okflip	core	idid	bestroom	check-rule	run-rule	wfull (topic)	think-advice (text)
+w1 (text)	w2 (text)	posthom (topic)	hom-txt-rule (rule)	think-cue	okflip	core	idid	best-room	check-rule	run-rule	wfull (topic)	think-advice (text)
 "fight|fright"	"fear|freer"	--	--	false	true	true	false	bight bier	vc-fight-fear rule	vr-fight-fear rule	"fight fear" or "fright freer"	-- [start bight bier]
 "pink"	"pug"	--	--	false	true	true	false	bight bier	vc-pink-pug rule	vr-pink-pug rule	--	"You could turn the Drink Drug Think Thug into a [b]PINK PUG[r] [once-now of vc-pink-pug rule] you feel less scared and overwhelmed."
 "heap|bleep"	"heat|bleat"	--	--	false	true	false	false	bight bier	vc-heap-heat rule	vr-heap-heat rule	"heap heat" or "bleep bleat"	--
@@ -66,12 +66,12 @@ section rules to sort
 
 [xxqqnnr]
 
-this is the vc-bark-bump rule:
-	if player is not in dark dump, the rule fails;
+a goodrhyme rule (this is the vc-bark-bump rule):
+	if player is not in dark dump, unavailable;
 	if sco-bark-bump is true:
 		vcal "That's already here.";
-		continue the action;
-	the rule succeeds;
+		already-done;
+	ready;
 
 this is the vr-bark-bump rule:
 	say "A bark bump appears to the north! You weren't going that way, but it provides a bit of a channel.";
@@ -79,12 +79,12 @@ this is the vr-bark-bump rule:
 	now sco-bark-bump is true;
 	check-north-flow;
 
-this is the vc-cold-kale rule:
-	if player is not in gold gaol, the rule fails;
+a goodrhyme rule (this is the vc-cold-kale rule):
+	if player is not in gold gaol, unavailable;
 	if sco-cold-kale is true:
 		vcal "To quote Al and Peg Bundy: 'More kale, dear?' / 'Did I ASK for more kale, dear?'";
-		continue the action;
-	the rule succeeds;
+		already-done;
+	ready;
 
 this is the vr-cold-kale rule:
 	say "Some cold kale appears! It's not very tasty, but it's better than nothing.";
@@ -92,12 +92,12 @@ this is the vr-cold-kale rule:
 	see-how-nourished;
 	process the endgame prod rule;
 
-this is the vc-deep-duel rule:
-	if player is not in peep pool, the rule fails;
+a goodrhyme rule (this is the vc-deep-duel rule):
+	if player is not in peep pool, unavailable;
 	if creep cruel is not off-stage:
 		vcal "You already summoned the creep (cruel).";
-		continue the action;
-	the rule succeeds;
+		already-done;
+	ready;
 
 this is the vr-deep-duel rule:
 	say "There is no progress without conflict. You look into the peep pool and wait for an opponent to show. A crash from the steep stool to the east indicates someone has arrived for a deep duel: a creep, cruel![paragraph break]Maybe if you defeat them, you'll be able to go east. But right now, being around them is just annoying.";
@@ -105,11 +105,11 @@ this is the vr-deep-duel rule:
 	move creep cruel to peep pool;
 	moot steep stool.
 
-this is the vc-fight-fear rule:
+a goodrhyme rule (this is the vc-fight-fear rule):
 	if sco-fight-fear is true:
 		vcal "Yes, fighting fear is a lifelong journey, but fighting too hard all at once will bring it back.";
-		continue the action;
-	the rule succeeds;
+		already-done;
+	ready;
 
 this is the vr-fight-fear rule:
 	say "You do your best to feel braver. It works, well enough! The Drink Drug Think Thug seems a bit less tough now, and what do you know? The spite spear vanishes, too!";
@@ -117,12 +117,12 @@ this is the vr-fight-fear rule:
 	moot spite spear;
 	phbt bight bier;
 
-this is the vc-heap-heat rule:
-	if sheep sheet is off-stage, the rule fails;
+a goodrhyme rule (this is the vc-heap-heat rule):
+	if sheep sheet is off-stage, unavailable;
 	if player has cheap cheat sheep sheet:
 		vcal "You already warmed the sheet up.";
-		continue the action;
-	the rule succeeds;
+		already-done;
+	ready;
 
 this is the vr-heap-heat rule:
 	let Q Be whether or not word number 1 in the player's command is "bleep";
@@ -131,16 +131,15 @@ this is the vr-heap-heat rule:
 	moot sleep sleet;
 	phbt sheep sheet;
 
-this is the vc-keep-cool rule:
-	if player is not in peep pool, the rule fails;
+a goodrhyme rule (this is the vc-keep-cool rule):
+	if player is not in peep pool, unavailable;
 	if creep cruel is off-stage:
 		vcp "You have no one annoying you. But there might be someone later, if you're lucky! Wow!";
-		clue-later "KEEP COOL";
-		continue the action;
+		not-yet;
 	if creep cruel is moot:
 		vcal "You don't need to keep cool any more.";
-		continue the action;
-	the rule succeeds;
+		already-done;
+	ready;
 
 this is the vr-keep-cool rule:
 	say "You manage to ignore the creep (cruel) as they get more and more desperate to insult you. Eventually, they explain you're not worth the effort, and also you are probably too callous and selfish to care about the next person they'll need to insult even worse.";
@@ -148,12 +147,12 @@ this is the vr-keep-cool rule:
 	moot creep cruel;
 	phbt peep pool;
 
-this is the vc-more-mulch rule:
-	if player is not in Gore Gulch, the rule fails;
+a goodrhyme rule (this is the vc-more-mulch rule):
+	if player is not in Gore Gulch, unavailable;
 	if sco-mulch-more is true:
 		vcal "Hoo boy. You have enough mulch.";
-		continue the action;
-	the rule succeeds;
+		already-done;
+	ready;
 
 this is the vr-more-mulch rule:
 	say "More mulch appears! It spills out to the peep pool and beyond, probably even back to the stair stones.";
@@ -161,12 +160,12 @@ this is the vr-more-mulch rule:
 	phbt Gore Gulch;
 	check-stair-stones;
 
-this is the vc-old-ale rule:
-	if player is not in gold gaol, the rule fails;
+a goodrhyme rule (this is the vc-old-ale rule):
+	if player is not in gold gaol, unavailable;
 	if sco-old-ale is true:
 		vcal "If you were trying to get drunk, the old ale would be the way to do it. But you're trying to get FREE.";
-		continue the action;
-	the rule succeeds;
+		already-done;
+	ready;
 
 this is the vr-old-ale rule:
 	say "Yum! Or not. You find a firkin or flagon or whatever of old ale, and it doesn't taste very good, but it's nourishing and hopefully not too alcoholic.";
@@ -174,12 +173,12 @@ this is the vr-old-ale rule:
 	see-how-nourished;
 	process the endgame prod rule;
 
-this is the vc-park-pump rule:
-	if player is not in dark dump, the rule fails;
+a goodrhyme rule (this is the vc-park-pump rule):
+	if player is not in dark dump, unavailable;
 	if sco-park-pump is true:
 		vcal "That's already here.";
-		continue the action;
-	the rule succeeds;
+		already-done;
+	ready;
 
 this is the vr-park-pump rule:
 	say "Poof! A park pump appears, just like you remember as a kid! It appears to be auto-pumping, creating a waterway. [if dump-block is 2] With the stark stump and bark bump sealing off two exits, water flows freely to [bare bones][else if dump-block is 1]Water partially seeps out, and the pump stops pumping. Maybe you need to summon one more barrier here[else]The water seeps out to the north and west, lost to the [spoiled space]. The pump stops. Perhaps if you could create more natural barriers, the pump could start again[end if]";
@@ -187,28 +186,27 @@ this is the vr-park-pump rule:
 	move park pump to dark dump;
 	check-north-flow;
 
-this is the vc-pink-pug rule:
-	if drink drug think thug is off-stage or player is not in bight bier, the rule fails;
+a goodrhyme rule (this is the vc-pink-pug rule):
+	if drink drug think thug is off-stage or player is not in bight bier, unavailable;
 	if sco-fight-fear is false:
 		vcp "You're too scared to think that something like that could even work. Maybe later, though.";
-		clue-later "PINK PUG";
-		continue the action;
+		not-yet;
 	if drink drug think thug is moot:
 		vcal "You already got rid of the thug.";
-		continue the action;
-	the rule succeeds;
+		already-done;
+	ready;
 
 this is the vr-pink-pug rule:
 	say "POOF! The drink-drug think-thug turns into a far more innocuous pink pug, which runs off, yapping.";
 	moot Drink Drug Think Thug;
 	now sco-pink-pug is true;
 
-this is the vc-plaster-plate rule:
-	if player is not in gaster gate, the rule fails;
-	if master mate is moot:
+a goodrhyme rule (this is the vc-plaster-plate rule):
+	if player is not in gaster gate, unavailable;
+	if sco-plaster-plate is true:
 		vcal "You already made a plaster plate.";
-		continue the action;
-	the rule succeeds;
+		already-done;
+	ready;
 
 this is the vr-plaster-plate rule:
 	say "A huge chunk of the gaster gate breaks off and creates a plaster plate. It's much too big to eat off, but it crumbles quickly apart (probably not Last [']Er Late brand) and is washed away beyond the dark dump. The Master Mate, their job done, smiles, gives a thumbs up, and walks away.";
@@ -217,12 +215,12 @@ this is the vr-plaster-plate rule:
 	phbt gaster gate;
 	check-north-flow;
 
-this is the vc-stark-stump rule:
-	if player is not in dark dump, the rule fails;
+a goodrhyme rule (this is the vc-stark-stump rule):
+	if player is not in dark dump, unavailable;
 	if sco-stump-stark is true:
 		vcal "That's already here.";
-		continue the action;
-	the rule succeeds;
+		already-done;
+	ready;
 
 this is the vr-stark-stump rule:
 	say "Poof! A stark stump appears! It blocks the way to the west, but it provides a channel in case anything would come flowing through.";
@@ -230,13 +228,12 @@ this is the vr-stark-stump rule:
 	now sco-stump-stark is true;
 	check-north-flow;
 
-this is the vc-told-tale rule:
-	if player is not in gold gaol, the rule fails;
+a goodrhyme rule (this is the vc-told-tale rule):
+	if player is not in gold gaol, unavailable;
 	if sco-old-ale is false or sco-cold-kale is false:
 		vcp "You're not nourished enough to make it far out of the cell. You need food and drink. Even lousy food and drink.";
-		clue-later "TOLD TALE";
-		continue the action;
-	the rule succeeds;
+		not-yet;
+	ready;
 
 this is the vr-told-tale rule:
 	say "Yeah, that's it. You've had your fun. Time to move on. As you leave, you notice some fey foam. You're obviously meant to do something with it, so you build a day dome before a nay-gnome appears. You enter it and say the magic words: HEY, HOME.[paragraph break]Your adventures are just silly enough and just believable enough to scare friends or to laugh at things.";
@@ -246,6 +243,57 @@ this is the vr-told-tale rule:
 	follow the shutdown rules;
 
 [zzqqnnr]
+
+volume homonym rejections
+
+chapter thing homonyms
+
+[this should not be alphabetized as otherwise Inform will assume from the first entry, the Bot Board, that everything is a person.]
+[the fixfirst= in talf.txt makes sure that a regular item comes first.]
+
+table of thing homonyms
+mything	hom-rule (a rule)	myhom (topic)	custom-msg (text)
+cheat cheat sheep sheet	--	"cheep"	"Oh, hey, you note the sheet has a note that homonyms aren't necessary, but sometimes homonyms of the needed word or words will work great."
+
+section thing homonym rules
+
+chapter room homonyms
+
+[the room homonyms work as follows: if we have a rule with multiple room states/possibilities and no topic, then we skip the topic. If we have a rule and a topic, we print the custom-msg if the rule and topic match. Otherwise, we print the custom-msg for a generic error if the topic matches. So that is why the topic or rule can be blank.]
+
+table of room homonyms
+loc	hom-rule (a rule)	myhom (topic)	custom-msg (text)
+bight bier	hom-bight-bier rule	--	--
+bare bones stair stones	hom-bones-stones rule	--	--
+gaster gate	--	"gait"	"You are walking around just fine. No need for homonyms."
+
+this is the hom-bight-bier rule:
+	if the player's command matches "beer":
+		say "Alas, there is no alcohol. Well, there may be later.";
+		the rule succeeds;
+	else if the player's command matches "bite":
+		say "You don't need to be violent like that.";
+		the rule succeeds;
+
+this is the hom-bones-stones rule:
+	if the player's command matches "bear":
+		say "No, the thug was enough for one adventure.";
+		the rule succeeds;
+	else if the player's command matches "bear":
+		say "You could just type [b]Z[r] to space out a bit.";
+		the rule succeeds;
+
+volume can't go that way
+
+table of noways
+noway-rm	noway-txt
+bight bier	"The [spoiled space] blocks you every way except [if stair stones are visited]back [end if]east."
+stair stones	"You can only go north, south or west[if stone-filler is 2]. And up. You probably want to go up[else]. And you can try to go up[end if]."
+peep pool	"The [spoiled space] blocks your way [noun]. You can only go north or[if creep cruel is not moot], once the way is clear,[end if] east."
+gore gulch	"The [spoiled space] and general ickiness encompass every way except back west."
+dark dump	"You can only go east or south. The [spoiled space] blocks your way [noun]."
+gaster gate	"[if noun is east]You aren't getting past the gate, but there's worse stuff behind. Trust me[all-plas][else]The [spoiled space] blocks your passage [noun][end if]."
+gold gaol	"You need to look back on your experiences before leaving. Anyway, you can't figure directions here."
 
 Quite Queer Night Near Tables ends here.
 

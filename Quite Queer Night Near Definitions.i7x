@@ -2,15 +2,41 @@ Version 1/221103 of Quite Queer Night Near Definitions by Andrew Schultz begins 
 
 "This should briefly describe the purpose of Quite Queer Night Near Definitions."
 
-volume VVFF-ish stuff
+volume rules needed by core
 
-cheattype is a kind of value. the cheattypes are phbt, letplus, letminus, partplus, partminus, leteq, letboth.
+to decide whether (ru - a rule) is spaceable: [annoying space breaks in inform]
+	no;
 
-book properties
+to decide whether (r1 - a room) and (r2 - a room) are gong-adjacent:
+	if r1 is adjacent to r2, yes;
+	no;
 
-a room has a cheattype called cht. cht of a room is usually phbt.
+to decide whether (di - a direction) is blocked: no;
 
-a thing has a cheattype called cht. cht of a thing is usually phbt.
+this is the narrative-checking rule: make no decision;
+
+to decide whether good-say-guess: ["SAY" generally wipes out the starting say, but for some good guesses, it plays straight-up]
+	no;
+
+this is the flag bad goto to rule: do nothing;
+
+this is the stuck-right-now rule: do nothing;
+
+this is the flag bad goto from rule:
+	if player is in Gold Gaol, say "There's no way back!" instead;
+
+this is the did-i-ll rule: do nothing;
+
+to say optional-hint-think-item: say "";
+
+definition: a room (called rm) is available-from-here:
+	if rm is unvisited, no;
+	yes;
+
+to decide whether too-distracted: no; [been buggin stuff]
+
+to decide whether immediate-attention of (ru - a rule):
+	no;
 
 volume numbers determined
 

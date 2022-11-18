@@ -14,7 +14,15 @@ include undo output control by Erik Temple.
 
 include Trivial Niceties by Andrew Schultz.
 
+include Prime Pro Rhyme Row Universal by Andrew Schultz.
+
+include Prime Pro Rhyme Row Common by Andrew Schultz.
+
+include Prime Pro Rhyme Row E12 by Andrew Schultz.
+
 include Quite Queer Night Near Definitions by Andrew Schultz.
+
+include Quite Queer Night Near Globals by Andrew Schultz.
 
 include Quite Queer Night Near Tables by Andrew Schultz.
 
@@ -22,28 +30,28 @@ include Quite Queer Night Near Tests by Andrew Schultz.
 
 include Quite Queer Night Near Mistakes by Andrew Schultz.
 
-include Prime Pro Rhyme Row Universal by Andrew Schultz.
-
 use authorial modesty.
 
 entry-in-series is 2.
 
 procedural rule while eating something: ignore the carrying requirements rule.
 
-to say once-now of (ru - a rule):
-	process ru;
-	say "[if the rule succeeded]now[else]once[end if]"
-
 check examining:
 	if description of noun is empty, say "The description of [the noun] has been hidden because it is too scary for mere text and not because I was trying to cram a lot of programming into 4 hours. Ooh! Ooh! The unknown is so frightening!" instead;
 
 section game-specific stuff from PPRR universal file (PPRR common file is not included)
+
+this is the game-specific-backdrop-check rule: do nothing;
 
 definition: a direction (called d) is viable:
 	if the room d of location of the player is nowhere, no;
 	yes;
 
 to decide whether vcp-ignore: decide no; [When do we block check-text? In VVFF, when we have Been Buggin]
+
+this is the note learner changes rule: do nothing;
+
+to current-table-note-x (tn - a table name): current-table-note tn;
 
 section when play begins - not for release
 
@@ -86,17 +94,16 @@ to decide whether the action is procedural:
 	no;
 
 when play begins:
+	now press-pro-level is 3;
 	move the boiled base spoiled space backdrop to all bounded rooms;
 	say "You should have known better than to eat any sort of marmite. Eww. But you definitely should not have eaten Far Fight Marmite. Especially not the bulk bar-bite kind. But you can't resist items on deep clearance at the lovely crowded store you visit every week. Full of indigestion, you hear voices saying 'Quite queer night near ... quite queer night near... [wfak]";
 	say "[paragraph break]You think you got to sleep. On waking up, you exit your bedroom to ... two small grey Teletubby-looking things (shudder) calling themselves Timmy Tingles and Jimmy Jingles! 'Come dance with us on the Shimmy Shingles!'[wfak]";
 	say "[line break]This is all too corny for you. You try to brush past, but they cry 'You're no Mimmy Mingles' before calling on Primmy Pringles and Limmy Lingles, three times their size and meaner, to drag you away...to the Dimmy Dingles? No, worse![wfak]";
 	say "[line break]You black out as you are dragged away. A voice booms 'ARRRRRIGHT! Tar! Tight! Spar! Spite!' You look around. You see ... a bier with your name on it! Scary, scary!";
-	now max-poss is max-bonus + min-needed;
-	now the right hand status line is "[score][if doable-hinted > 0](+[doable-hinted])[end if]/[if max-poss is not min-needed][min-needed]-[end if][max-poss]";
 	now ha-half is true;
 
 check requesting the score:
-	say "You have [score] out of [min-needed] points needed to win the game[if max-poss > min-needed], but there's a bonus point[end if].";
+	say "You have [core-score] out of [min-needed] points needed to win the game[if cur-bonus < max-bonus], but there's a bonus point[end if].";
 	if can-cheat-win, say "[line break]You can, if you want, jump all the way to the end to win with PP.";
 	if debug-state is true, say "DEBUG: [wrmm-count] maven next-charge count. Maven charges = [wrmm-charges].";
 	if math maven is not off-stage:
@@ -206,8 +213,7 @@ check exiting: try going outside instead;
 
 check going nowhere:
 	if noun is inside or noun is outside, say "You never need to go inside or outside, though you may need to go up [if stair stones is unvisited]one place[else]in [stair stones][end if]." instead;
-	if noway-text of location of player is empty, say "I wish I could give more information, but you can't go that way." instead;
-	say "[noway-text of location of player][line break]" instead;
+	say "I wish I could give more information, but you can't go [noun]." instead;
 
 to say all-plas: if sco-plaster-plate is true, say ". Breaking off the plaster plate was enough"
 
@@ -230,7 +236,7 @@ check waiting: say "Wow! [']Ll wait? Foul fate!" instead;
 
 chapter talking
 
-carry out talking:
+carry out talktoing:
 	if the noun is not a person, say "No response." instead;
 	say "They have nothing to say. They should, but they don't.";
 	the rule succeeds.
@@ -253,7 +259,7 @@ volume the map
 
 chapter Blight Blear Bight Bier
 
-Blight Blear Bight Bier is a room. "Boy! It's scary here! [if spite spear is in bight bier]A spite spear hangs above, and a[else]A[end if] [spoiled space] prevents passage every way except east[if thug is off-stage], but it might be even scarier there. You need some way to make things less scary, on this Quite Queer Night Near by the Blight Blear Bight Bier. A spite spear hangs in the distance, just ready to swoop on you[end if].". cht of Blight Blear Bight Bier is letboth. noway-text of bight bier is "The [spoiled space] blocks you every way except [if stair stones are visited]back [end if]east.". [->fight fear]
+Blight Blear Bight Bier is a room. "Boy! It's scary here! [if spite spear is in bight bier]A spite spear hangs above, and a[else]A[end if] [spoiled space] prevents passage every way except east[if thug is off-stage], but it might be even scarier there. You need some way to make things less scary, on this Quite Queer Night Near by the Blight Blear Bight Bier. A spite spear hangs in the distance, just ready to swoop on you[end if].". cht of Blight Blear Bight Bier is letboth.
 
 the player is in Blight Blear Bight Bier.
 
@@ -329,7 +335,7 @@ the spite spear is boring scenery in Blight Blear Bight Bier. "It's too far away
 
 chapter Bare Bones Stair Stones
 
-Bare Bones Stair Stones is east of Bight Bier. It is not bounded. "You can go back west to the Bier[if sheep sheet is in bier]--who knows, that sheet could come in handy[else], though you don't need to[end if]. You can also go north and south, but there seems to be a way out above--[if stone-filler is 0]or there could be[else if stone-filler is 1]you just need to fill the stairs in a bit more[else]you don't seem to have much else to do here[end if]!". noway-text of stair stones is "You can only go north, south or west[if stone-filler is 2]. And up. You probably want to go up[else]. And you can try to go up[end if].".
+Bare Bones Stair Stones is east of Bight Bier. It is not bounded. "You can go back west to the Bier[if sheep sheet is in bier]--who knows, that sheet could come in handy[else], though you don't need to[end if]. You can also go north and south, but there seems to be a way out above--[if stone-filler is 0]or there could be[else if stone-filler is 1]you just need to fill the stairs in a bit more[else]you don't seem to have much else to do here[end if]!".
 
 check going in Bare Bones Stair Stones when player has math maven:
 	if noun is south and sco-mulch-more is true, say "[maven-groan].";
@@ -362,7 +368,7 @@ check going up in Bare Bones Stair Stones:
 
 chapter Peep Pool
 
-Peep Pool is south of Stair Stones. "A pool lies at the edge of a passage bending north and east through the [spoiled space][if steep stool is in peep pool]. A steep stool blocks the way east--maybe someone or something can help you destroy it[end if].". cht of peep pool is leteq. noway-text of peep pool is "The [spoiled space] blocks your way [noun]. You can only go north or[if creep cruel is not moot], once the way is clear,[end if] east.". [->deep duel] [->keep cool]
+Peep Pool is south of Stair Stones. "A pool lies at the edge of a passage bending north and east through the [spoiled space][if steep stool is in peep pool]. A steep stool blocks the way east--maybe someone or something can help you destroy it[end if].". cht of peep pool is leteq.
 
 the steep stool is scenery in Peep Pool. "The steep stool is too smooth and, err, steep to climb, and it's too wide to get around. You may need to get rid of it--or have someone destroy it. Perhaps an enemy is waiting behind it to bust out.". cht of steep stool is letminus. [->deep duel]
 
@@ -383,11 +389,11 @@ printed name of creep cruel is "creep (cruel)".
 
 chapter Gore Gulch
 
-Gore Gulch is east of Peep Pool. cht of Gore Gulch is leteq. "The only way back is west. [if sco-mulch-more is false]There's something icky and sticky here besides gore, but you're not sure what[else]You extracted more mulch here, so there's nothing else to do[end if].". noway-text of gore gulch is "The [spoiled space] and general ickiness encompass every way except back west.". [-> more mulch]
+Gore Gulch is east of Peep Pool. cht of Gore Gulch is leteq. "The only way back is west. [if sco-mulch-more is false]There's something icky and sticky here besides gore, but you're not sure what[else]You extracted more mulch here, so there's nothing else to do[end if]."
 
 chapter Dark Dump
 
-Dark Dump is north of Bare Bones Stair Stones. "The [spoiled space] blocks your progress north and west[n-w-block]. You can still go south and east.". cht of dark dump is allover. noway-text of dark dump is "You can only go east or south. The [spoiled space] blocks your way [noun].". [-> stark stump] [->bark bump] [->park pump]
+Dark Dump is north of Bare Bones Stair Stones. "The [spoiled space] blocks your progress north and west[n-w-block]. You can still go south and east.". cht of dark dump is allover.
 
 to say n-w-block:
 	if bark bump is fungible and stark stump are fungible:
@@ -414,7 +420,7 @@ the stark stump is scenery. "The stark stump provides some protection against th
 
 chapter Gaster Gate
 
-Gaster Gate is east of Dark Dump. "The only way back is west. A gaster (that's an archaic verb meaning to scare) gate blocks the way east[if master mate is moot]. With the Master Mate gone, there's not much left to do here[end if].". cht of Gaster Gate is letplus. noway-text of gaster gate is "[if noun is east]You aren't getting past the gate, but there's worse stuff behind. Trust me[all-plas][else]The [spoiled space] blocks your passage [noun][end if].". [->plaster plate]
+Gaster Gate is east of Dark Dump. "The only way back is west. A gaster (that's an archaic verb meaning to scare) gate blocks the way east[if master mate is moot]. With the Master Mate gone, there's not much left to do here[end if].". cht of Gaster Gate is letplus.
 
 section Master Mate
 
@@ -422,7 +428,7 @@ the Master Mate is a person in Gaster Gate. "A master mate stands here, looking 
 
 chapter Gold Gaol
 
-Gold Gaol is a room. It is not bounded. "There's nothing much to do here. Well, the wall says FOLD FAIL, giving an idea of how gaol [i]should[r] be pronounced. Well, I guess there could be worse orders to receive as a prisoner.". cht of gold gaol is allover. noway-text of gold gaol is "You need to look back on your experiences before leaving. Anyway, you can't figure directions here.". [->old ale] [->cold kale] [->told tale]
+Gold Gaol is a room. It is not bounded. "There's nothing much to do here. Well, the wall says FOLD FAIL, giving an idea of how gaol [i]should[r] be pronounced. Well, I guess there could be worse orders to receive as a prisoner.". cht of gold gaol is allover.
 
 chapter Gazy Gap
 
@@ -473,10 +479,32 @@ carry out versioning:
 chapter parser error tweak(s)
 
 Rule for printing a parser error (this is the clue half right words rule):
+	now compare-item is the player;
+	now got-half-match is false;
 	abide by the rhyme-guess-checker rule for the table of first check rhymes;
+	abide by the game-specific-backdrop-check rule;
+	unless guess-table of location of player is table of no good guesses:
+		[if debug-state is true, say "DEBUG location guesses: [location of player], [guess-table of location of player].";]
+		abide by the rhyme-guess-checker rule for guess-table of location of player;
+	let table-list be a list of table names;
+	repeat with fun running through fungible rhymables:
+		let gtt be guess-table of fun;
+		if gtt is table of no good guesses or gtt is listed in table-list, next;
+		add gtt to table-list;
+		now compare-item is fun;
+		abide by the rhyme-guess-checker rule for gtt;
+	repeat with fun running through fungible people:
+		let gtt be guess-table of fun;
+		if gtt is table of no good guesses or gtt is listed in table-list, next;
+		add gtt to table-list;
+		now compare-item is fun;
+		abide by the rhyme-guess-checker rule for gtt;
 	abide by the verb-checker rule;
-	abide by the rhyme-guess-checker rule for the table of good guess rhymes;
+	abide by the rhyme-guess-checker rule for table of general good guesses;
+	if press-pro-level is 4 and got-half-match is true, say "The leet learner beeps weirdly. You had one word guessed right." instead;
 	continue the action;
+
+the clue half right words rule is listed first in the for printing a parser error rulebook. [note: this caused a speedup when I first tried it. I'm not sure if this would last, so I'll need to do testing with this line vs with it commented out. ?? ]
 
 zap-weird-break is a truth state that varies.
 
@@ -530,7 +558,8 @@ this is the verb-checker rule:
 		let my-count be 0;
 		now vc-dont-print is true;
 		process the check-rule entry;
-		if the rule failed, next;
+		let rb-out be the outcome of the rulebook;
+		if rb-out is the unavailable outcome, next;
 		now vc-dont-print is false;
 		if the player's command matches the regular expression "(^|\W)([w1 entry])($|\W)", increment my-count;
 		if there is a w2 entry:
@@ -545,8 +574,17 @@ this is the verb-checker rule:
 			else if my-count is 2:
 				now wfull-fail is true;
 		if my-count >= 2:
-			process the check-rule entry;
-			unless the rule succeeded, the rule succeeds;
+			process the check-rule entry; [necessary to catch the mad monk--perhaps we could have an extra "inconclusive" state]
+			let rb-out be the outcome of the rulebook;
+			if rb-out is the already-done outcome, the rule succeeds;
+			if rb-out is the not-yet outcome:
+				let exact-cmd be whether or not the player's command matches the text "[first-of-ors of w1 entry][if there is a w2 entry] [first-of-ors of w2 entry][end if]", case insensitively;
+				if think-cue entry is false:
+					say "[line break][one of][b]NOTE[r]: this command[if exact-cmd is false] (well, an equivalent, as there were alternate solutions)[end if] will be useful later, but you aren't ready to use it, yet. You can track commands like this by typing [b]THINK[r], which will also clue you if they now work.[or](useful command[if exact-cmd is false] (or a functionally equivalent alternate solution)[end if] again saved to [b]THINK[r] for later reference.)[stopping]";
+					now think-cue entry is true;
+				else:
+					say "[line break]Hmph. That [if exact-cmd is false](or a functionally equivalent alternate solution) [end if]still doesn't quite work! You'll figure out the how and when and where, though.";
+				the rule succeeds;
 			if okflip entry is false:
 				unless my-count is 3 or there is no w2 entry or the player's command matches the regular expression "^([w1 entry])\W": [this is for the DIM'D test case... and "my-count is 3" is a hack for FLIMFLAM]
 					say "You've got it backwards! Just flip things around, and it'll be okay.";
@@ -668,16 +706,6 @@ a rhymeguess rule for a table name (called tn) (this is the rhyme-guess-checker 
 				check-wrmm-progress;
 			now got-yet entry is true;
 			the rule succeeds;
-
-to decide which cheattype is the cluecheat of (n1 - a number) and (n2 - a number):
-	if n1 > 10, decide on allover; [this is for ambiguous cases in the Dark Dump]
-	if n2 > n1, decide on cluecheat of n2 and n1;
-	if n1 is 0 and n2 is 0, decide on leteq; [center]
-	if n1 > 0 and n2 is 0, decide on partplus; [center left]
-	if n1 > 0 and n2 > 0, decide on letplus; [left]
-	if n1 is 0 and n2 < 0, decide on partminus; [center right]
-	if n1 < 0 and n2 < 0, decide on letminus; [right]
-	decide on letboth; [one +, one minus, wobbles]
 
 blight-hint is a truth state that varies.
 

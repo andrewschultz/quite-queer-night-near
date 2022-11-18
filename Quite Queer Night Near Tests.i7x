@@ -12,6 +12,8 @@ test w-s with "s/deep duel/keep cool/e/more mulch".
 
 test ending with "u/cold kale/old ale/told tale".
 
+test togaol with "test start/e/test w-s/test w-n"
+
 test w1 with "test start/e/test w-s/test w-n/test ending/".
 
 test w2 with "test start/e/test w-n/test w-s/test ending/".
