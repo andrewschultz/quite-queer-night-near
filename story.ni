@@ -197,6 +197,8 @@ chapter talking
 
 carry out talktoing:
 	if the noun is not a person, say "No response." instead;
+	if noun is drink drug think thug, say "They grunt. You're not sure if they're in deep thought or making fun of you, or thinking deeply about the optimal way to make fun of you, but you need to get by them!" instead;
+	if noun is creep cruel, say "That never works with people like that." instead;
 	say "They have nothing to say. They should, but they don't.";
 	the rule succeeds.
 
@@ -233,7 +235,7 @@ section DDTT
 [after choosing notable locale objects when player is in Bight Bier:
 	if Drink Drug Think Thug is in Bight Bier, set the locale priority of Drink Drug Think Thug to 9;]
 
-The Drink Drug Think Thug is a person in Blight Blear Bight Bier. cht of Think Thug is letminus. "Wait, no, you can't go east until you dispose of that Drink Drug Think Thug blocking the way.". description of Thug is "Big and brutal and surprisingly not dumb-looking. Even though they've abused their body and mind, they can beat you up physically and mentally. You'll need to change the Thug drastically to get by.". bore-text of Drink Drug Think Thug is "'Walk! Wham! Block! Blam!' the [thug] opines, unhelpfully. You'll need the right sort of magic to get by."  [-> pink pug]
+The Drink Drug Think Thug is a boring person in Blight Blear Bight Bier. cht of Think Thug is letminus. "Wait, no, you can't go east until you dispose of that Drink Drug Think Thug blocking the way.". description of Thug is "Big and brutal and surprisingly not dumb-looking. Even though they've abused their body and mind, they can beat you up physically and mentally. You'll need to change the Thug drastically to get by.". bore-text of Drink Drug Think Thug is "'Walk! Wham! Block! Blam!' the [thug] opines, unhelpfully. You'll need the right sort of magic to get by."  [-> pink pug]
 
 guess-table of drink drug think thug is table of drink drug think thug guesses.
 
@@ -245,7 +247,7 @@ section sheep sheet
 check examining the sheep sheet for the first time:
 	if player does not have sheep sheet, say "It claims to be a SHEEP SHEET because only sheeple use hints. This reminds you of all the times you were scared to ask for help, because you might feel dumb still not getting it or realizing you could've done without the help if you'd REALLY been thinking.[paragraph break]Which is pretty scary. Not nearly, like, mortally. But it's lasted.[line break]";
 
-the cheap cheat sheep sheet is a thing in Blight Blear Bight Bier. cht of sheep sheet is letminus. "A cheap cheat sheep sheet lies here, sort of daring you to take it. It's obscured by sleep sleet.". description of sheep sheet is "It has information on--well, most everything you see here. XX any item for particular information. I guess it's a sheep sheet because you still feel sheepish looking at it, no matter how many times you have, and also I feel sheepish for such a silly name. You can CC, SS, CCSS or CS anything to see cheating information.". [->heap heat]
+the cheap cheat sheep sheet is a rhymable in Blight Blear Bight Bier. cht of sheep sheet is letminus. "A cheap cheat sheep sheet lies here, sort of daring you to take it. It's obscured by sleep sleet.". description of sheep sheet is "It has information on--well, most everything you see here. XX any item for particular information. I guess it's a sheep sheet because you still feel sheepish looking at it, no matter how many times you have, and also I feel sheepish for such a silly name. You can CC, SS, CCSS or CS anything to see cheating information.". [->heap heat]
 
 guess-table of cheap cheat sheep sheet is table of cheap cheat sheep sheet guesses.
 
@@ -352,7 +354,7 @@ check going east in Peep Pool:
 
 section creep cruel
 
-the creep cruel is a person. cht of creep cruel is letminus. "A creep (cruel) snickers, pacing back and forth and blocking the way east where the steep stool was, just to spite you.". description is "The creep (cruel) is a bit bigger than you, but more importantly, it probably knows dirty fighting tricks.". bore-text of creep cruel is "'Peach? Putz! Reach ruts!' Not very sophisticated, but hard not to be a little annoyed.". [->keep cool]
+the creep cruel is a boring person. cht of creep cruel is letminus. "A creep (cruel) snickers, pacing back and forth and blocking the way east where the steep stool was, just to spite you.". description is "The creep (cruel) is a bit bigger than you, but more importantly, it probably knows dirty fighting tricks.". bore-text of creep cruel is "'Peach? Putz! Reach ruts!' Not very sophisticated, but hard not to be a little annoyed.". [->keep cool]
 
 printed name of creep cruel is "creep (cruel)".
 
@@ -399,7 +401,7 @@ guess-table of gaster gate is table of gaster gate guesses.
 
 section Master Mate
 
-the Master Mate is a person in Gaster Gate. "A master mate stands here, looking pityingly on you. What could you possibly do to help things?". description is "The Master Mate stands impassively, smiling slightly, shrugging occasionally. Their presence helps you ... a bit, you think.". cht of Master Mate is letplus. bore-text of Master Mate is "'Right rhyme ... slight slime!' Perhaps the Master Mate is magically bound from telling you the exact rhyme, but how many possibilities can there be?" [->plaster plate]
+the Master Mate is a boring person in Gaster Gate. "A master mate stands here, looking pityingly on you. What could you possibly do to help things?". description is "The Master Mate stands impassively, smiling slightly, shrugging occasionally. Their presence helps you ... a bit, you think.". cht of Master Mate is letplus. bore-text of Master Mate is "'Right rhyme ... slight slime!' Perhaps the Master Mate is magically bound from telling you the exact rhyme, but how many possibilities can there be?" [->plaster plate]
 
 chapter Gold Gaol
 
@@ -597,7 +599,7 @@ to check-wrmm-progress:
 		process the winnable-with-cheating rule;
 	if debug-state is true, say "DEBUG: [wrmm-count] maven count, [wrmm-charges] maven charges.";
 
-the wrath ravin' math maven is a boring thing. description is "The wrath ravin['] math maven won't stop complaining, but it's stuck to you, and you know it is good for [ppp]--[wrmm-charges in words] charge[plur of wrmm-charges], to be precise.". bore-text of wrath ravin' math maven is "The math maven only allows for [ppp]."
+the wrath ravin' math maven is a rhymable. description is "The wrath ravin['] math maven won't stop complaining, but it's stuck to you, and you know it is good for [ppp]--[wrmm-charges in words] charge[plur of wrmm-charges], to be precise.". bore-text of wrath ravin' math maven is "The math maven only allows for [ppp]."
 
 guess-table of wrath ravin' math maven is table of wrath ravin math maven guesses.
 

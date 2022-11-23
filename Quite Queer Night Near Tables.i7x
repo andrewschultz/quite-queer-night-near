@@ -163,7 +163,7 @@ this is the vr-more-mulch rule:
 a goodrhyme rule (this is the vc-old-ale rule):
 	if player is not in gold gaol, unavailable;
 	if sco-old-ale is true:
-		vcal "If you were trying to get drunk, the old ale would be the way to do it. But you're trying to get FREE.";
+		vcal "If you were trying to get drunk, more old ale would be the way to do it. But you're trying to get FREE.";
 		already-done;
 	ready;
 
