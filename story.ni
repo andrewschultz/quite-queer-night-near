@@ -4,8 +4,6 @@ volume variables and stuff
 
 the story headline is "Hokey Haunts, Jokey Jaunts".
 
-the release number is 3.
-
 release along with a website.
 
 release along with the "Parchment" interpreter.
@@ -31,8 +29,6 @@ include Quite Queer Night Near Tests by Andrew Schultz.
 include Quite Queer Night Near Mistakes by Andrew Schultz.
 
 use authorial modesty.
-
-entry-in-series is 2.
 
 procedural rule while eating something: ignore the carrying requirements rule.
 
@@ -103,47 +99,10 @@ when play begins:
 	now ha-half is true;
 
 check requesting the score:
-	say "You have [core-score] out of [min-needed] points needed to win the game[if cur-bonus < max-bonus], but there's a bonus point[end if].";
+	say "You have [current-score] out of [min-needed] points needed to win the game[if cur-bonus < cur-max-bonus], but there's a bonus point[end if].";
 	if can-cheat-win, say "[line break]You can, if you want, jump all the way to the end to win with PP.";
 	if debug-state is true, say "DEBUG: [wrmm-count] maven next-charge count. Maven charges = [wrmm-charges].";
-	if math maven is not off-stage:
-		let X be still-guess of table of first check rhymes;
-		let Y be still-guess of table of good guess rhymes;
-		let total-guesses be number of rows in table of first check rhymes + number of rows in table of good guess rhymes - 1; [we could run a loop to see what starts as "true" but it's not worth it to me. Only FOLD FAIL starts that way.]
-		say "You have made [wrmm-total] good guesses so far. You can still access [X + Y] of [total-guesses] good guesses.";
-[	if debug-state is true:
-		showme sco-bark-bump;
-		showme sco-park-pump;
-		showme sco-stump-stark;
-		showme sco-plaster-plate;
-		showme sco-mulch-more;]
 	the rule succeeds;
-
-to decide which number is still-guess of (ta - a table name):
-	let temp be 0;
-	repeat through ta:
-		if got-yet entry is false:
-			if there is a still-rule entry:
-				process the still-rule entry;
-				unless the rule succeeded, next;
-			increment temp;
-	decide on temp;
-
-to moot (x - a thing): move x to Gazy Gap;
-
-definition: a thing (called x) is moot:
-	if x is in Gazy Gap, yes;
-	no;
-
-ha-half is a truth state that varies.
-
-core-max is a number that varies. core-max is 12. [core-max is fixed. It is the number of point-scoring actions you need.]
-
-min-needed is a number that varies. min-needed is 12. [min-needed increases as you find LLPs.]
-
-max-bonus is a number that varies. max-bonus is 1.
-
-cur-bonus is a number that varies. cur-bonus is 0. [we could define min-needed as core-max + cur-bonus I guess.]
 
 chapter verb carnage
 
@@ -496,34 +455,6 @@ carry out versioning:
 
 chapter parser error tweak(s)
 
-Rule for printing a parser error (this is the clue half right words rule):
-	now compare-item is the player;
-	now got-half-match is false;
-	abide by the rhyme-guess-checker rule for the table of first check rhymes;
-	abide by the game-specific-backdrop-check rule;
-	unless guess-table of location of player is table of no good guesses:
-		[if debug-state is true, say "DEBUG location guesses: [location of player], [guess-table of location of player].";]
-		abide by the rhyme-guess-checker rule for guess-table of location of player;
-	let table-list be a list of table names;
-	repeat with fun running through fungible rhymables:
-		let gtt be guess-table of fun;
-		if gtt is table of no good guesses or gtt is listed in table-list, next;
-		add gtt to table-list;
-		now compare-item is fun;
-		abide by the rhyme-guess-checker rule for gtt;
-	repeat with fun running through fungible people:
-		let gtt be guess-table of fun;
-		if gtt is table of no good guesses or gtt is listed in table-list, next;
-		add gtt to table-list;
-		now compare-item is fun;
-		abide by the rhyme-guess-checker rule for gtt;
-	abide by the verb-checker rule;
-	abide by the rhyme-guess-checker rule for table of general good guesses;
-	if press-pro-level is 4 and got-half-match is true, say "The leet learner beeps weirdly. You had one word guessed right." instead;
-	continue the action;
-
-the clue half right words rule is listed first in the for printing a parser error rulebook. [note: this caused a speedup when I first tried it. I'm not sure if this would last, so I'll need to do testing with this line vs with it commented out. ?? ]
-
 zap-weird-break is a truth state that varies.
 
 Rule for printing a parser error (this is the check for room name in player command rule):
@@ -558,7 +489,7 @@ rule for printing a parser error:
 		say "My ... mix, try tricks!";
 		the rule succeeds;
 	if latest parser error is the not a verb I recognise error:
-		if score > 0:
+		if core-score > 0:
 			say "That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe [if player is in stair stones]get up those stair stones, somehow[else if cht of location of player is phbt]look around somewhere else--there doesn't seem to be much left to do here[else]there's a bit more to find here, though[end if].";
 		else:
 			say "Sorry, I can't do anything with that. This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them.";
@@ -566,7 +497,7 @@ rule for printing a parser error:
 		unless player is in gold gaol and player does not have cheap cheat sheep sheet, say "[if sheep sheet is fungible]Since[else]If[end if] you have the sheep sheet handy, you can [b]CC[r] something. ";
 		say "You can also type VERBS for a list of valid verbs (it can change as you gain or lose hint items) or ABOUT to see general information.";
 		the rule succeeds;
-	say "You may've tried to do something too complex with what was here. [if score > 0]You only need rhyming pairs to get through the game[else]Once you figure the mechanic, you'll see why[end if].";
+	say "You may've tried to do something too complex with what was here. [if core-score > 0]You only need rhyming pairs to get through the game[else]Once you figure the mechanic, you'll see why[end if].";
 
 chapter the big rule(s)
 
