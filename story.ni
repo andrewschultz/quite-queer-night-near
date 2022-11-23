@@ -263,6 +263,8 @@ Blight Blear Bight Bier is a room. "Boy! It's scary here! [if spite spear is in 
 
 the player is in Blight Blear Bight Bier.
 
+guess-table of Bight Bier is table of blight blear bight bear guesses.
+
 section boiled base spoiled space
 
 the boiled base spoiled space is a boring backdrop. "You can barely see it, but it sure pulses ominously. But at least it helps narrow down the directions you [i]can[r] go.";
@@ -274,6 +276,8 @@ section DDTT
 
 The Drink Drug Think Thug is a person in Blight Blear Bight Bier. cht of Think Thug is letminus. "Wait, no, you can't go east until you dispose of that Drink Drug Think Thug blocking the way.". description of Thug is "Big and brutal and surprisingly not dumb-looking. Even though they've abused their body and mind, they can beat you up physically and mentally. You'll need to change the Thug drastically to get by.". bore-text of Drink Drug Think Thug is "'Walk! Wham! Block! Blam!' the [thug] opines, unhelpfully. You'll need the right sort of magic to get by."  [-> pink pug]
 
+guess-table of drink drug think thug is table of drink drug think thug guesses.
+
 check going east in Blight Blear Bight Bier:
 	if Drink Drug Think Thug is in Bier, say "Not with the Drink Drug Think Thug blocking you." instead;
 
@@ -283,6 +287,8 @@ check examining the sheep sheet for the first time:
 	if player does not have sheep sheet, say "It claims to be a SHEEP SHEET because only sheeple use hints. This reminds you of all the times you were scared to ask for help, because you might feel dumb still not getting it or realizing you could've done without the help if you'd REALLY been thinking.[paragraph break]Which is pretty scary. Not nearly, like, mortally. But it's lasted.[line break]";
 
 the cheap cheat sheep sheet is a thing in Blight Blear Bight Bier. cht of sheep sheet is letminus. "A cheap cheat sheep sheet lies here, sort of daring you to take it. It's obscured by sleep sleet.". description of sheep sheet is "It has information on--well, most everything you see here. XX any item for particular information. I guess it's a sheep sheet because you still feel sheepish looking at it, no matter how many times you have, and also I feel sheepish for such a silly name. You can CC, SS, CCSS or CS anything to see cheating information.". [->heap heat]
+
+guess-table of cheap cheat sheep sheet is table of cheap cheat sheep sheet guesses.
 
 after examining sheep sheet when player has sheep sheet:
 	say "You can also type [b]DEEP DEET[r] to [if sheet-cheated is true]recap[else]learn[end if] how, precisely, the sheet works.";
@@ -337,6 +343,8 @@ chapter Bare Bones Stair Stones
 
 Bare Bones Stair Stones is east of Bight Bier. It is not bounded. "You can go back west to the Bier[if sheep sheet is in bier]--who knows, that sheet could come in handy[else], though you don't need to[end if]. You can also go north and south, but there seems to be a way out above--[if stone-filler is 0]or there could be[else if stone-filler is 1]you just need to fill the stairs in a bit more[else]you don't seem to have much else to do here[end if]!".
 
+guess-table of bare bones stair stones is table of bare bones stair stones guesses.
+
 check going in Bare Bones Stair Stones when player has math maven:
 	if noun is south and sco-mulch-more is true, say "[maven-groan].";
 	if noun is north and north-flow, say "The [maven-groan].";
@@ -370,6 +378,8 @@ chapter Peep Pool
 
 Peep Pool is south of Stair Stones. "A pool lies at the edge of a passage bending north and east through the [spoiled space][if steep stool is in peep pool]. A steep stool blocks the way east--maybe someone or something can help you destroy it[end if].". cht of peep pool is leteq.
 
+guess-table of peep pool is table of peep pool guesses.
+
 the steep stool is scenery in Peep Pool. "The steep stool is too smooth and, err, steep to climb, and it's too wide to get around. You may need to get rid of it--or have someone destroy it. Perhaps an enemy is waiting behind it to bust out.". cht of steep stool is letminus. [->deep duel]
 
 ts-duel-deep is a truth state that varies.
@@ -391,9 +401,13 @@ chapter Gore Gulch
 
 Gore Gulch is east of Peep Pool. cht of Gore Gulch is leteq. "The only way back is west. [if sco-mulch-more is false]There's something icky and sticky here besides gore, but you're not sure what[else]You extracted more mulch here, so there's nothing else to do[end if]."
 
+guess-table of gore gulch is table of gore gulch guesses.
+
 chapter Dark Dump
 
 Dark Dump is north of Bare Bones Stair Stones. "The [spoiled space] blocks your progress north and west[n-w-block]. You can still go south and east.". cht of dark dump is allover.
+
+guess-table of dark dump is table of dark dump guesses.
 
 to say n-w-block:
 	if bark bump is fungible and stark stump are fungible:
@@ -422,6 +436,8 @@ chapter Gaster Gate
 
 Gaster Gate is east of Dark Dump. "The only way back is west. A gaster (that's an archaic verb meaning to scare) gate blocks the way east[if master mate is moot]. With the Master Mate gone, there's not much left to do here[end if].". cht of Gaster Gate is letplus.
 
+guess-table of gaster gate is table of gaster gate guesses.
+
 section Master Mate
 
 the Master Mate is a person in Gaster Gate. "A master mate stands here, looking pityingly on you. What could you possibly do to help things?". description is "The Master Mate stands impassively, smiling slightly, shrugging occasionally. Their presence helps you ... a bit, you think.". cht of Master Mate is letplus. bore-text of Master Mate is "'Right rhyme ... slight slime!' Perhaps the Master Mate is magically bound from telling you the exact rhyme, but how many possibilities can there be?" [->plaster plate]
@@ -429,6 +445,8 @@ the Master Mate is a person in Gaster Gate. "A master mate stands here, looking 
 chapter Gold Gaol
 
 Gold Gaol is a room. It is not bounded. "There's nothing much to do here. Well, the wall says FOLD FAIL, giving an idea of how gaol [i]should[r] be pronounced. Well, I guess there could be worse orders to receive as a prisoner.". cht of gold gaol is allover.
+
+guess-table of gold gaol is table of gold gaol guesses.
 
 chapter Gazy Gap
 
@@ -650,6 +668,8 @@ to check-wrmm-progress:
 
 the wrath ravin' math maven is a boring thing. description is "The wrath ravin['] math maven won't stop complaining, but it's stuck to you, and you know it is good for [ppp]--[wrmm-charges in words] charge[plur of wrmm-charges], to be precise.". bore-text of wrath ravin' math maven is "The math maven only allows for [ppp]."
 
+guess-table of wrath ravin' math maven is table of wrath ravin math maven guesses.
+
 to decide which number is dump-fours-flipped:
 	decide on boolval of sco-bark-bump + boolval of sco-park-pump;
 
@@ -669,7 +689,7 @@ to decide which number is variable-scan-length of (mynum - a number):
 
 a rhymeguess rule for a table name (called tn) (this is the rhyme-guess-checker rule):
 	repeat through tn: [cannot be merged with QQNN due to check-wrmm-progress]
-		if the player's command matches mist-cmd entry:
+		if player's command matches the regular expression "^[mist-regex entry]$":
 			if there is a mist-rule entry:
 				process the mist-rule entry;
 				unless the rule succeeded, continue the action;
