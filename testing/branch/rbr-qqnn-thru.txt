@@ -19,6 +19,9 @@ files=reg-qqnn-thru-min.txt,reg-qqnn-thru-all.txt,reg-qqnn-thru-reject.txt,reg-q
 
 TSV:## minimum walkthrough	## walkthrough with all points	##walkthrough with THINK and REJECT commands	## walkthrough with altverb tests	## walkthrough with mistakes	## walkthrough with HA HALF testing	## walkthrough with cheat sheet testing	## walkthrough with NOWAY testing
 
+}$REJECT1=Sorry, I can't do anything with that. This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them.
+}$REJECT2=That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
+
 ** game: /home/andrew/prt/debug-quite-queer-night-near.z8
 ** interpreter: /home/andrew/prt/dfrotz -m
 
@@ -69,6 +72,11 @@ Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 DEBUG: vc-heap-heat rule tipped off half-body tingling.
 Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 
+@rej
+====alphabetize on
+>bark bump
+{$REJECT1}
+
 @way
 >e
 Not with the Drink Drug Think Thug blocking you.
@@ -103,13 +111,13 @@ The sheep sheet shimmers vaguely. You suspect you can just take it, but getting 
 You can't imagine a brace would be tasty, fried, broiled, stewed or whatever.
 >foiled face
 !sheep sheet
-You frown at being unable to dispel the/. No reverse psychology kicks in.
+You frown at being unable to dispel the boiled base spoiled space. No reverse psychology kicks in.
 >moiled mace
 !sheep sheet
 No magic weapon pops in your hand as a reward for hard work you forgot you did.
 >roiled race
 !sheep sheet
-You'll never get made enough to run fast enough through the/.
+You'll never get mad enough to run fast enough through the boiled base spoiled space.
 >kite keyer
 refer to the sheep sheet
 You don't need the risk of getting zapped by electricity, too.
@@ -237,6 +245,7 @@ by one point
 @cs
 >x sheet
 You can also type DEEP DEET to learn how, precisely, the sheet works.
+\\
 >deep deet
 You pore through all the items the sheet has information on. You cross-compare them and make hypotheses. You check for contradictions and inconsistencies in the data. It takes a while, but you come up with the following:
 ++ means the desired object or action has more letters in each word than the original object or room.
@@ -1042,7 +1051,7 @@ You refer to the sheep sheet, noticing it says Gold Gaol goes to ==.
 \\
 >old ale
 !by one point
-If you were trying to get drunk, the old ale would be the way to do it. But you're trying to get FREE.
+If you were trying to get drunk, more old ale would be the way to do it. But you're trying to get FREE.
 \\
 >cold kale
 !by one point
@@ -1054,20 +1063,12 @@ To quote Al and Peg Bundy: "More kale, dear?" / "Did I ASK for more kale, dear?"
 >bark bump
 {$REJECT2}
 \\
-#testcase-reject-end-table-of-verb-checks-vr-cold-kale-rule
->cold kale
+#testcase-reject-end-table-of-verb-checks-vr-deep-duel-rule
+>creep cruel
 {$REJECT2}
 \\
 #testcase-reject-end-table-of-verb-checks-vr-deep-duel-rule
->deep-creep duel-cruel
-{$REJECT2}
-\\
-#testcase-reject-end-table-of-verb-checks-vr-fight-fear-rule
->fight-fright fear-freer
-{$REJECT2}
-\\
-#testcase-reject-end-table-of-verb-checks-vr-heap-heat-rule
->heap-bleep heat-bleat
+>deep duel
 {$REJECT2}
 \\
 #testcase-reject-end-table-of-verb-checks-vr-keep-cool-rule
@@ -1076,10 +1077,6 @@ To quote Al and Peg Bundy: "More kale, dear?" / "Did I ASK for more kale, dear?"
 \\
 #testcase-reject-end-table-of-verb-checks-vr-more-mulch-rule
 >more mulch
-{$REJECT2}
-\\
-#testcase-reject-end-table-of-verb-checks-vr-old-ale-rule
->old ale
 {$REJECT2}
 \\
 #testcase-reject-end-table-of-verb-checks-vr-park-pump-rule
@@ -1096,10 +1093,6 @@ To quote Al and Peg Bundy: "More kale, dear?" / "Did I ASK for more kale, dear?"
 \\
 #testcase-reject-end-table-of-verb-checks-vr-stark-stump-rule
 >stark stump
-{$REJECT2}
-\\
-#testcase-reject-end-table-of-verb-checks-vr-told-tale-rule
->told tale
 {$REJECT2}
 ====alphabetize off
 

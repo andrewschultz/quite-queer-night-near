@@ -11,6 +11,7 @@
 >au 2
 
 >z
+
 #testcase-alt-words-table-of-verb-checks-1-fear-freer
 >fright freer
 by one point

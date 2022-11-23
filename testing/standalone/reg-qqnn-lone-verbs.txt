@@ -1,4 +1,4 @@
-#-- reg-qqnn-verbs.txt
+## reg-qqnn-lone-verbs.txt
 #-- tests various verbs.
 #--
 #-- use HHV.PY to verify ha-half
@@ -14,6 +14,7 @@ The bier is too scary to even contemplate, though there is a way to deal with it
 
 >push all
 You may've tried to do something too complex with what was here. Once you figure the mechanic, you'll see why.
+
 >nonsense command
 Sorry, I can't do anything with that. This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them.
 Since you have the sheep sheet handy, you can CC something. You can also type VERBS for a list of valid verbs (it can change as you gain or lose hint items) or ABOUT to see general information.
@@ -42,11 +43,11 @@ A chill runs through your body. A voice whispers "You'll never achieve the maxim
 You have 0 out of 12 points needed to win the game.
 
 >push thug
-(NOTE: standard verbs won't work to deal with obstacles,animated or otherwise. This is a generic message specific to the Drink Drug Think Thug.)
+(NOTE: standard verbs won't work to deal with obstacles or scenery, animated or otherwise. This is a generic message and not specific to the Drink Drug Think Thug.)
 "Walk! Wham! Block! Blam!" the Drink Drug Think Thug opines, unhelpfully. You'll need the right sort of magic to get by.
 >push thug
 "Walk! Wham! Block! Blam!" the Drink Drug Think Thug opines, unhelpfully. You'll need the right sort of magic to get by.
-!(NOTE: standard verbs won't work to deal with obstacles,animated or otherwise. This is a generic message specific to the Drink Drug Think Thug.)
+!(NOTE: standard verbs won't work to deal with obstacles or scenery, animated or otherwise. This is a generic message and not specific to the Drink Drug Think Thug.)
 
 >attack thug
 The game is not called row-right-now night!
@@ -57,9 +58,7 @@ Wow! 'Ll wait? Foul fate!
 <VAST VERB-BLAST BLURB>
 
 >drop sheet
-You don't have to try any of the usual parser manipulations on the cheap cheat sheep sheet besides maybe examining. So let's try that.
-
-It has information on--well, most everything you see here. XX any item for particular information. I guess it's a sheep sheet because you still feel sheepish looking at it, no matter how many times you have, and also I feel sheepish for such a silly name. You can CC, SS, CCSS or CS anything to see cheating information.
+You never need to drop anything in Quite Queer Night Near. To help with inventory management, items are usually destroyed once you're done with them, hopefully with some degree of believability.
 
 >fight fear
 
@@ -79,10 +78,10 @@ You may've tried to do something too complex with what was here. You only need r
 The gate is much too strong. It may be hiding worse things. But you may be able to break off a piece of it.
 
 >push mate
-(NOTE: standard verbs won't work to deal with obstacles,animated or otherwise. This is a generic message specific to the Master Mate.)
+(NOTE: standard verbs won't work to deal with obstacles or scenery, animated or otherwise. This is a generic message and not specific to the Master Mate.)
 "Right rhyme ... slight slime!" Perhaps the Master Mate is magically bound from telling you the exact rhyme, but how many possibilities can there be?
 >push mate
-!(NOTE: standard verbs won't work to deal with obstacles,animated or otherwise. This is a generic message specific to the Master Mate.)
+!(NOTE: standard verbs won't work to deal with obstacles or scenery, animated or otherwise. This is a generic message and not specific to the Master Mate.)
 "Right rhyme ... slight slime!" Perhaps the Master Mate is magically bound from telling you the exact rhyme, but how many possibilities can there be?
 
 >plaster plate
@@ -103,10 +102,10 @@ You don't REALLY want to try to explore the pool too deeply. Going east would be
 >deep duel
 
 >push creep
-(NOTE: standard verbs won't work to deal with obstacles,animated or otherwise. This is a generic message specific to the creep (cruel).)
+(NOTE: standard verbs won't work to deal with obstacles or scenery, animated or otherwise. This is a generic message and not specific to the creep (cruel).)
 "Peach? Putz! Reach ruts!" Not very sophisticated, but hard not to be a little annoyed.
 >push creep
-!(NOTE: standard verbs won't work to deal with obstacles,animated or otherwise. This is a generic message specific to the creep (cruel).)
+!(NOTE: standard verbs won't work to deal with obstacles or scenery, animated or otherwise. This is a generic message and not specific to the creep (cruel).)
 "Peach? Putz! Reach ruts!" Not very sophisticated, but hard not to be a little annoyed.
 
 >keep cool

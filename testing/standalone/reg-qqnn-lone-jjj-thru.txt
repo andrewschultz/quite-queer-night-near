@@ -1,10 +1,14 @@
-#-- reg-ppnn-ppp-thru.txt
-#-- Jerking Jump through
+## reg-qqnn-lone-jjj-thru.txt
+#-- Jerking Jump through (Well, Path Pavin')
 
 ** game: /home/andrew/prt/debug-quite-queer-night-near.z8
 ** interpreter: /home/andrew/prt/dfrotz -m
 
 * main-thru
+
+>jj
+Sorry, I can't do anything with that. This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them.
+Since you have the sheep sheet handy, you can CC something. You can also type VERBS for a list of valid verbs (it can change as you gain or lose hint items) or ABOUT to see general information.
 
 >pp
 This is the hint/move-ahead command, but you don't have your hinting assistant, yet.
@@ -12,43 +16,64 @@ This is the hint/move-ahead command, but you don't have your hinting assistant, 
 >ppp
 
 >pp
+After some thought, you consider the right way forward: FIGHT FEAR...
 one point
 
 >pp
+After some thought, you consider the right way forward: PINK PUG...
 one point
 
 >pp
 The wrath ravin' math maven looks slightly offended and half-heartedly tugs you in the direction of the sheep sheet, as if it's not really necessary to have TWO hint aids. Try for the sheet anyway?
+one point
+After some thought, you consider the right way forward: HEAP HEAT...
 
 >e
-
->pp
 
 >n
+
 >pp
+After some thought, you consider the right way forward: BARK BUMP...
 one point
+
 >pp
+After some thought, you consider the right way forward: PARK PUMP...
 one point
+
 >pp
+After some thought, you consider the right way forward: STARK STUMP...
 one point
+
 >e
+
 >pp
+After some thought, you consider the right way forward: PLASTER PLATE...
 one point
 
 >s
 >pp
+After some thought, you consider the right way forward: DEEP DUEL...
 one point
 >pp
+After some thought, you consider the right way forward: KEEP COOL...
 one point
+
 >e
 >pp
+After some thought, you consider the right way forward: MORE MULCH...
 one point
+
 >u
 >pp
+After some thought, you consider the right way forward: OLD ALE...
 one point
+
 >pp
+After some thought, you consider the right way forward: COLD KALE...
 one point
+
 >pp
+After some thought, you consider the right way forward: TOLD TALE...
 one point
 
 * undo-stuff

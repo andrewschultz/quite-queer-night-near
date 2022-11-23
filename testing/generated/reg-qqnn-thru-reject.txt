@@ -10,6 +10,9 @@
 
 >au 2
 
+>bark bump
+Sorry, I can't do anything with that. This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them.
+
 >pink pug
 You're too scared to think that something like that could even work. Maybe later, though.
 !by one point
@@ -105,6 +108,42 @@ by one point
 
 >cold kale
 by one point
+
+#testcase-reject-end-table-of-verb-checks-vr-bark-bump-rule
+>bark bump
+That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
+
+#testcase-reject-end-table-of-verb-checks-vr-deep-duel-rule
+>creep cruel
+That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
+
+#testcase-reject-end-table-of-verb-checks-vr-deep-duel-rule
+>deep duel
+That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
+
+#testcase-reject-end-table-of-verb-checks-vr-keep-cool-rule
+>keep cool
+That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
+
+#testcase-reject-end-table-of-verb-checks-vr-more-mulch-rule
+>more mulch
+That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
+
+#testcase-reject-end-table-of-verb-checks-vr-park-pump-rule
+>park pump
+That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
+
+#testcase-reject-end-table-of-verb-checks-vr-pink-pug-rule
+>pink pug
+That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
+
+#testcase-reject-end-table-of-verb-checks-vr-plaster-plate-rule
+>plaster plate
+That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
+
+#testcase-reject-end-table-of-verb-checks-vr-stark-stump-rule
+>stark stump
+That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
 
 >told tale
 by one point

@@ -1,4 +1,4 @@
-#-- reg-qqnn-altord.txt
+## reg-qqnn-lone-altord.txt
 #-- tests alternate orders to complete things in. In which to complete things.
 #--
 #-- use HHV.PY to verify ha-half
