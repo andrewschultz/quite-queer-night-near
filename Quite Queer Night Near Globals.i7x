@@ -14,6 +14,8 @@ max-bonus is 1.
 
 book booleans
 
+sco-heap-heat is a truth state that varies.
+
 sco-fight-fear is a truth state that varies.
 
 sco-pink-pug is a truth state that varies.
@@ -21,11 +23,11 @@ sco-pink-pug is a truth state that varies.
 sco-deep-duel is a truth state that varies.
 sco-keep-cool is a truth state that varies.
 
-sco-mulch-more is a truth state that varies.
+sco-more-mulch is a truth state that varies.
 
 sco-bark-bump is a truth state that varies.
 sco-park-pump is a truth state that varies.
-sco-stump-stark is a truth state that varies.
+sco-stark-stump is a truth state that varies.
 
 sco-plaster-plate is a truth state that varies.
 

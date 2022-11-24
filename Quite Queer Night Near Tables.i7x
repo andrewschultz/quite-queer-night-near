@@ -60,7 +60,7 @@ to check-stair-stones:
 
 this is the endgame prod rule:
 	repeat through table of verb checks:
-		if check-rule entry is vc-told-tale rule and think-cue entry is true, say "[line break]So, yeah. That thing you tried before  that didn't work? TOLD TALE? It does now. There's not much else to do."
+		if check-rule entry is vc-told-tale rule and think-cue entry is true, say "[line break]So, yeah. That thing you tried before that didn't work? TOLD TALE? It does now. There's not much else to do."
 
 section rules to sort
 
@@ -131,6 +131,7 @@ this is the vr-heap-heat rule:
 	let Q Be whether or not word number 1 in the player's command is "bleep";
 	say "You [if Q is true]let go some grawlix-heavy invective, and it gives you enough of a boost to deal with the sleep sleet in order to pull out the cheap cheat[else]rub your hands together for warmth, blow on the sheet, and so on[end if]. And what do you know? It stays less frigid after you pick it up. It'd still be technically functional at any temperature, but now it won't freeze your fingers if you carry it around.[paragraph break]What's more, if you don't understand how it works, you can spoil things with [b]DEEP DEET[r].";
 	now player has sheep sheet;
+	now sco-heap-heat is true;
 	moot sleep sleet;
 	phbt sheep sheet;
 
@@ -152,14 +153,14 @@ this is the vr-keep-cool rule:
 
 a goodrhyme rule (this is the vc-more-mulch rule):
 	if player is not in Gore Gulch, unavailable;
-	if sco-mulch-more is true:
+	if sco-more-mulch is true:
 		vcal "Hoo boy. You have enough mulch.";
 		already-done;
 	ready;
 
 this is the vr-more-mulch rule:
 	say "More mulch appears! It spills out to the peep pool and beyond, probably even back to the stair stones.";
-	now sco-mulch-more is true;
+	now sco-more-mulch is true;
 	phbt Gore Gulch;
 	check-stair-stones;
 
@@ -184,7 +185,7 @@ a goodrhyme rule (this is the vc-park-pump rule):
 	ready;
 
 this is the vr-park-pump rule:
-	say "Poof! A park pump appears, just like you remember as a kid! It appears to be auto-pumping, creating a waterway. [if dump-block is 2] With the stark stump and bark bump sealing off two exits, water flows freely to [bare bones][else if dump-block is 1]Water partially seeps out, and the pump stops pumping. Maybe you need to summon one more barrier here[else]The water seeps out to the north and west, lost to the [spoiled space]. The pump stops. Perhaps if you could create more natural barriers, the pump could start again[end if]";
+	say "Poof! A park pump appears, just like you remember as a kid! It appears to be auto-pumping, creating a waterway. [if pump-block is 2]With the stark stump and bark bump sealing off two exits, water flows freely back south[else if pump-block is 1]Water partially seeps out, and the pump stops pumping. Maybe you need to summon one more barrier here[else]The water seeps out to the north and west, lost to the [spoiled space]. The pump stops. Perhaps if you could create more natural barriers, the pump could start again[end if].";
 	now sco-park-pump is true;
 	move park pump to dark dump;
 	check-north-flow;
@@ -220,7 +221,7 @@ this is the vr-plaster-plate rule:
 
 a goodrhyme rule (this is the vc-stark-stump rule):
 	if player is not in dark dump, unavailable;
-	if sco-stump-stark is true:
+	if sco-stark-stump is true:
 		vcal "That's already here.";
 		already-done;
 	ready;
@@ -228,13 +229,13 @@ a goodrhyme rule (this is the vc-stark-stump rule):
 this is the vr-stark-stump rule:
 	say "Poof! A stark stump appears! It blocks the way to the west, but it provides a channel in case anything would come flowing through.";
 	move stark stump to Dark Dump;
-	now sco-stump-stark is true;
+	now sco-stark-stump is true;
 	check-north-flow;
 
 a goodrhyme rule (this is the vc-told-tale rule):
 	if player is not in gold gaol, unavailable;
 	if sco-old-ale is false or sco-cold-kale is false:
-		vcp "You're not nourished enough to make it far out of the cell. You need food and drink. Even lousy food and drink.";
+		vcp "You're not nourished enough to make it far out of the cell. You need [if sco-old-ale is true]food with your drink. Even lousy food[else if sco-cold-kale is true]drink with your food. Even lousy drink[else]food and drink. Even lousy food and drink[end if].";
 		not-yet;
 	ready;
 
@@ -280,9 +281,9 @@ this is the hom-bight-bier rule:
 
 this is the hom-bones-stones rule:
 	if the player's command matches "bear":
-		say "No, the thug was enough for one adventure.";
+		say "No, the thug was enough muscle in your way for one adventure.";
 		the rule succeeds;
-	else if the player's command matches "bear":
+	else if the player's command matches "stare":
 		say "You could just type [b]Z[r] to space out a bit.";
 		the rule succeeds;
 

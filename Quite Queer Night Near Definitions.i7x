@@ -40,8 +40,8 @@ to decide whether immediate-attention of (ru - a rule):
 
 volume numbers determined
 
-to decide which number is dump-block:
-	decide on boolval of sco-stump-stark + boolval of sco-bark-bump;
+to decide which number is pump-block: [ the rhymes that help the pump ]
+	decide on boolval of sco-stark-stump + boolval of sco-bark-bump;
 
 Quite Queer Night Near Definitions ends here.
 

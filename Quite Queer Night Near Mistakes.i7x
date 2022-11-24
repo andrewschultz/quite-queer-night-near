@@ -32,9 +32,23 @@ mist-regex	mist-rule	got-yet	magicnum	leet-rule	still-rule	mist-txt
 
 volume thing(s)
 
+table of cheap cheat sheep sheet guesses
+mist-regex	mist-rule	got-yet	magicnum	leet-rule	still-rule	mist-txt
+"beep beat"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"You imagine an eternity spent listening to funky techno music. Scary!"
+"creep crete"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"You fail to hyperwarp across the Mediterranean."
+"deep deet"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-untaken rule	"[if player has sheep sheet][sheet-spoil][else]You can't see any deep details, but maybe when you take the sheet...[end if]"
+"leap leet"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"You take a giant step towards understanding a tricky science concept from high school."
+"meep meat"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"No roadrunner whizzes by, and neither does a devious, planning coyote."
+"neep neat"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"You see no turnip turn up."
+"peep peat"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"The ground around you remains hard."
+"seep seat"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"What on earth would you do with a leaky chair?"
+"streep street"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"Stalking an actress is scary, yes, but we're not going for that sort of scary."
+"sweep (suite|sweet)"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"Neither a favorite team's success nor drudgery will get your mind off things."
+"weep wheat"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"The ground remains unarable."
+
 table of drink drug think thug guesses
 mist-regex	mist-rule	got-yet	magicnum	leet-rule	still-rule	mist-txt
-"chink chug"	thug-nearby rule	false	43	--	thug-available rule	"The Drink Drug Think Thug is too large to disappear through any crack. You're too large to escape." [note that the thug-nearby and thug-available rule don't strictly NEED to be there for this game, but I'd like them there, on the very off chance that, say, I'd place the thug back off-stage to start.]
+"chink chug"	thug-nearby rule	false	43	--	thug-available rule	"The Drink Drug Think Thug is too large to disappear through any crack. You're too large to escape."
 "fink fug"	thug-nearby rule	false	43	--	thug-available rule	"No fog carries the Drink Drug Think Thug away or even makes it wimpier."
 "jink jug"	thug-nearby rule	false	43	--	thug-available rule	"No liquid container to help your dexterity appears. Oh, well. It might've jinked YOU, anyway."
 "link lug"	thug-nearby rule	false	43	--	thug-available rule	"You need to make the thug much less intimidating."
@@ -43,34 +57,21 @@ mist-regex	mist-rule	got-yet	magicnum	leet-rule	still-rule	mist-txt
 "slink slug"	thug-nearby rule	false	43	--	thug-available rule	"Perhaps that is a bit too drastic. Another more likable animal might work great, though."
 "shrink shrug"	thug-nearby rule	false	43	--	thug-available rule	"A shrug would not shrink the [thug] by much. Perhaps there is something you can shrink it into, so it can't possibly be anywhere near as big as you."
 
-table of blight blear bight bear guesses
+this is the thug-available rule: if think thug is not moot, the rule succeeds;
+
+this is the thug-nearby rule: if think thug is touchable, the rule succeeds;
+
+table of foldfail guesses
 mist-regex	mist-rule	got-yet	magicnum	leet-rule	still-rule	mist-txt
-"broiled brace"	boiled-base-around rule	false	--	--	not-gaol rule	"You can't imagine a brace would be tasty, fried, broiled, stewed or whatever."
-"foiled face"	boiled-base-around rule	false	--	--	not-gaol rule	"You frown at being unable to dispel the [spoiled space]. No reverse psychology kicks in."
-"moiled mace"	boiled-base-around rule	false	--	--	not-gaol rule	"No magic weapon pops in your hand as a reward for hard work you forgot you did."
-"roiled race"	boiled-base-around rule	false	--	--	not-gaol rule	"You'll never get mad enough to run fast enough through the [spoiled space]."
+"fold fail"	in-gold-gaol rule	true	101	--	--	"You look at FOLD FAIL on the wall, hoping for the [maven] to get exasperated enough to spill a solution. But apparently it's good at passive-aggressiveness, too!" [the TRUE here indicates this is not strictly a good guess. Since FOLD FAIL is in the room description, it can't and shouldn't count.]
 
 volume places
-
-table of cheap cheat sheep sheet guesses
-mist-regex	mist-rule	got-yet	magicnum	leet-rule	still-rule	mist-txt
-"beep beat"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"You imagine an eternity spent listening to funky techno music. Scary!"
-"meep meat"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"No roadrunner whizzes by, and neither does a devious, planning coyote."
-"deep deet"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-untaken rule	"[if player has sheep sheet][sheet-spoil][else]You can't see any deep details, but maybe when you take the sheet...[end if]"
-"creep crete"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"You fail to hyperwarp across the Mediterranean."
-"leap leet"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"You take a giant step towards understanding a tricky science concept from high school."
-"neep neat"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"You see no turnip turn up."
-"peep peat"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"The ground around you remains hard."
-"seep seat"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"What on earth would you do with a leaky chair?"
-"streep street"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"Stalking an actress is scary, yes, but we're not going for that sort of scary."
-"sweep (suite|sweet)"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"Neither a favorite team's success nor drudgery will get your mind off things."
-"weep wheat"	sheet-nearby rule	false	44	sheet-untaken rule	sheet-available rule	"The ground remains unarable."
 
 table of bare bones stair stones guesses
 mist-regex	mist-rule	got-yet	magicnum	leet-rule	still-rule	mist-txt
 "air|err owns"	in-stones rule	false	--	--	not-gaol rule	"The air is everywhere, and it'd take too long to own up to all your mistakes." [start bare bones stair stones]
 "care cones"	in-stones rule	false	--	--	not-gaol rule	"Nothing appears to make you feel more loved. Aww."
-"(clayer|clare|clair) clones"	in-stones rule	false	--	--	not-gaol rule	"No golems appear to try and build the stairs. But on the bright side, none appear from the stairs to make it tougher to go up."
+"(clayer|clare|clair) clones"	in-stones rule	false	--	--	not-gaol rule	"No golems of any name appear to try and build the stairs. But on the bright side, none appear from the stairs to make it tougher to go up."
 "crayer crones"	in-stones rule	false	--	--	not-gaol rule	"Not only is that a stretch, but it would actively hurt your quest."
 "(fair|fare) phones"	in-stones rule	false	--	--	not-gaol rule	"You have no outside communication here."
 "grayer groans"	in-stones rule	false	--	--	not-gaol rule	"A little more atmosphere doesn't help, but it doesn't hurt, either."
@@ -81,6 +82,13 @@ mist-regex	mist-rule	got-yet	magicnum	leet-rule	still-rule	mist-txt
 "rare roans"	in-stones rule	false	--	--	not-gaol rule	"Bringing horses into this mess would be animal cruelty."
 "scare scones"	in-stones rule	false	--	--	not-gaol rule	"Spooky food is a creative idea here, but maybe not a practical one."
 "(tare|tear) tones"	in-stones rule	false	--	--	not-gaol rule	"No more scary noises than needed, please."
+
+table of blight blear bight bear guesses
+mist-regex	mist-rule	got-yet	magicnum	leet-rule	still-rule	mist-txt
+"broiled brace"	boiled-base-around rule	false	--	--	not-gaol rule	"You can't imagine a brace would be tasty, fried, broiled, stewed or whatever."
+"foiled face"	boiled-base-around rule	false	--	--	not-gaol rule	"You frown at being unable to dispel the [spoiled space]. No reverse psychology kicks in."
+"moiled mace"	boiled-base-around rule	false	--	--	not-gaol rule	"No magic weapon pops in your hand as a reward for hard work you forgot you did."
+"roiled race"	boiled-base-around rule	false	--	--	not-gaol rule	"You'll never get mad enough to run fast enough through the [spoiled space]."
 
 table of dark dump guesses
 mist-regex	mist-rule	got-yet	magicnum	leet-rule	still-rule	mist-txt
@@ -104,7 +112,6 @@ table of gold gaol guesses
 mist-regex	mist-rule	got-yet	magicnum	leet-rule	still-rule	mist-txt
 "bold (bail|bowl|bale)"	in-gold-gaol rule	false	101	--	--	"You don't have to be bold. The gaol is unguarded." [start gold gaol]
 "doled dale"	in-gold-gaol rule	false	101	--	--	"That's a bit too archaic to be a final solution, but ... you do dream about these sorts of things in prison."
-"fold fail"	in-gold-gaol rule	true	101	--	--	"You look at FOLD FAIL on the wall, hoping for the [maven] to get exasperated enough to spill a solution. But apparently it's good at passive-aggressiveness, too!" [the TRUE here indicates this is not strictly a good guess. Since FOLD FAIL is in the room description, it can't and shouldn't count.]
 "hold (hail|hale)"	in-gold-gaol rule	false	101	--	--	"There is nobody to summon, and you don't want to summon weather, either."
 "mold (male|mail)"	in-gold-gaol rule	false	101	--	--	"You uncover no old letters checking on how you are. Not surprising. You've only been here a bit."
 "polled pail|pale"	in-gold-gaol rule	false	101	--	--	"You haven't been here long enough to even want the company of a pollster."
@@ -171,8 +178,6 @@ this is the in-peep-pool rule: if player is in peep pool, the rule succeeds;
 
 this is the in-stones rule: if player is in Stair Stones, the rule succeeds;
 
-this is the thug-nearby rule: if think thug is touchable, the rule succeeds;
-
 this is the maven-summoned rule: if math maven is not off-stage, the rule succeeds;
 
 this is the sheet-nearby rule: if sheep sheet is touchable, the rule succeeds;
@@ -198,8 +203,6 @@ this is the plates-needed rule: if master mate is not moot, the rule succeeds;
 this is the sheet-available rule: if player has sheep sheet or player is not in gold gaol, the rule succeeds;
 
 this is the sheet-untaken rule: if player does not have sheep sheet, the rule succeeds;
-
-this is the thug-available rule: if think thug is not moot, the rule succeeds;
 
 [zzqqle]
 

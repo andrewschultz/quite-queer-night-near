@@ -35,6 +35,8 @@ procedural rule while eating something: ignore the carrying requirements rule.
 check examining:
 	if description of noun is empty, say "The description of [the noun] has been hidden because it is too scary for mere text and not because I was trying to cram a lot of programming into 4 hours. Ooh! Ooh! The unknown is so frightening!" instead;
 
+understand the command "jj" as something new.
+
 section game-specific stuff from PPRR universal file (PPRR common file is not included)
 
 this is the game-specific-backdrop-check rule: do nothing;
@@ -307,19 +309,19 @@ Bare Bones Stair Stones is east of Bight Bier. It is not bounded. "You can go ba
 guess-table of bare bones stair stones is table of bare bones stair stones guesses.
 
 check going in Bare Bones Stair Stones when player has math maven:
-	if noun is south and sco-mulch-more is true, say "[maven-groan].";
+	if noun is south and sco-more-mulch is true, say "[maven-groan].";
 	if noun is north and north-flow, say "The [maven-groan].";
 	if noun is west and player has sheep sheet, say "[maven-groan].";
 
 to say maven-groan: say "The [maven] rolls its eyes and groans as you go back [noun][one of]. Perhaps you're done there[or][stopping]"
 
 to decide which number is stone-filler:
-	let temp be boolval of sco-mulch-more;
+	let temp be boolval of sco-more-mulch;
 	if north-flow, increment temp;
 	decide on temp;
 
 to decide whether north-flow:
-	if sco-bark-bump is true and sco-stump-stark is true and sco-park-pump is true and sco-plaster-plate is true, yes;
+	if sco-bark-bump is true and sco-stark-stump is true and sco-park-pump is true and sco-plaster-plate is true, yes;
 	no;
 
 check going up in Bare Bones Stair Stones:
@@ -338,7 +340,7 @@ check going up in Bare Bones Stair Stones:
 
 chapter Peep Pool
 
-Peep Pool is south of Stair Stones. "A pool lies at the edge of a passage bending north and east through the [spoiled space][if steep stool is in peep pool]. A steep stool blocks the way east--maybe someone or something can help you destroy it[end if].". cht of peep pool is leteq.
+Peep Pool is south of Bare Bones Stair Stones. "A pool lies at the edge of a passage bending north and east through the [spoiled space][if steep stool is in peep pool]. A steep stool blocks the way east--maybe someone or something can help you destroy it[end if].". cht of peep pool is leteq.
 
 guess-table of peep pool is table of peep pool guesses.
 
@@ -361,7 +363,7 @@ printed name of creep cruel is "creep (cruel)".
 
 chapter Gore Gulch
 
-Gore Gulch is east of Peep Pool. cht of Gore Gulch is leteq. "The only way back is west. [if sco-mulch-more is false]There's something icky and sticky here besides gore, but you're not sure what[else]You extracted more mulch here, so there's nothing else to do[end if]."
+Gore Gulch is east of Peep Pool. cht of Gore Gulch is leteq. "The only way back is west. [if sco-more-mulch is false]There's something icky and sticky here besides gore, but you're not sure what[else]You extracted more mulch here, so there's nothing else to do[end if]."
 
 guess-table of gore gulch is table of gore gulch guesses.
 
@@ -410,6 +412,12 @@ Gold Gaol is a room. It is not bounded. "There's nothing much to do here. Well, 
 
 guess-table of gold gaol is table of gold gaol guesses.
 
+section dummy foldfail item to cover FOLD FAIL case
+
+the foldfail is a privately-named rhymable. printed name is "FOLD FAIL on the wall".
+
+guess-table of foldfail is table of foldfail guesses.
+
 chapter Gazy Gap
 
 Gazy Gap is a room.
@@ -452,8 +460,8 @@ chapter versioning
 
 carry out versioning:
 	say "Version 1 was released for EctoComp on October 30, 2019. It contained large chunks of code copied over from Very Vile Fairy File.";
-	say "Version 2 was released after EctoComp on November ??, 2019. It added the [maven] as a more animated and spooky helper than the Leet Learner, and it added a lot of cluing (including indications you were done in a certain area,) bug fixes, alternate solutions and even ambiance like the Spite Spear. It also let you know how many possible good guesses were left, and it tracked if you could win the game with only the maven. Oh, and the introduction got sillier, too.";
-	say "Version 3 had small fixes based on pulling common code into a Universal and Common code module.";
+	say "Version 2 was released after EctoComp on December 9, 2019. It added the [maven] as a more animated and spooky helper than the Leet Learner, and it added a lot of cluing (including indications you were done in a certain area,) bug fixes, alternate solutions and even ambiance like the Spite Spear. It also let you know how many possible good guesses were left, and it tracked if you could win the game with only the maven. Oh, and the introduction got sillier, too.";
+	say "Version 3 was released after EctoComp 2022 on November (11/) 22, 2022. It had fixes based on pulling common code into a Universal and Common code module. This resulted in features similar with the other [pprr] games.";
 	the rule succeeds.
 
 chapter parser error tweak(s)
@@ -477,7 +485,7 @@ Rule for printing a parser error (this is the check for room name in player comm
 				if player is in bight bier:
 					say "The bier is too scary to even contemplate, though [if sco-fight-fear is false]there is[else]you found[end if] a way to deal with it tangentially." instead;
 				else if player is in peep pool:
-					say "You don't REALLY want to try to explore the pool too deeply. Going east [if sco-mulch-more is true]was[else if creep is moot]is[else]would be[end if] enough." instead;
+					say "You don't REALLY want to try to explore the pool too deeply. Going east [if sco-more-mulch is true]was[else if creep is moot]is[else]would be[end if] enough." instead;
 				else if player is in gaster gate:
 					say "The gate is much too strong. It may be hiding worse things. But you [if sco-plaster-plate is true]already broke off some plaster from it[else]may be able to break off a piece of it[end if]." instead;
 				else if player is in bare bones stair stones:
@@ -601,8 +609,6 @@ to check-wrmm-progress:
 	if debug-state is true, say "DEBUG: [wrmm-count] maven count, [wrmm-charges] maven charges.";
 
 the wrath ravin' math maven is a rhymable. description is "The wrath ravin['] math maven won't stop complaining, but it's stuck to you, and you know it is good for [ppp]--[wrmm-charges in words] charge[plur of wrmm-charges], to be precise.". bore-text of wrath ravin' math maven is "The math maven only allows for [ppp]."
-
-guess-table of wrath ravin' math maven is table of wrath ravin math maven guesses.
 
 to decide which number is dump-fours-flipped:
 	decide on boolval of sco-bark-bump + boolval of sco-park-pump;
@@ -734,7 +740,8 @@ carry out pathpavining:
 		unless there is a core entry, next;
 		if idid entry is true, next;
 		process the check-rule entry;
-		if the rule succeeded:
+		let rb-out be the outcome of the rulebook;
+		if rb-out is the ready outcome:
 			if core entry is false and player is not in gold gaol: [the only case is to get the sheet]
 				say "The [maven] looks slightly offended and half-heartedly tugs you [if player is in bight bier]in the direction of the sheep sheet[else]back to the sheep sheet and the Bight Bier[end if], as if it's not really necessary to have TWO hint aids. Try for the sheet anyway?";
 				unless the player yes-consents:
@@ -764,7 +771,7 @@ to say maven-up-stairs:
 	if stone-filler is 2:
 		say "gestures upward, as if to ask why you haven't climbed already";
 	else:
-		say "tries to run up the stones and fails miserably. It then points [if stone-filler is 0]north and south[else if sco-mulch-more is true]north[else]south[end if]";
+		say "tries to run up the stones and fails miserably. It then points [if stone-filler is 0]north and south[else if sco-more-mulch is true]north[else]south[end if]";
 
 chapter undoing
 
