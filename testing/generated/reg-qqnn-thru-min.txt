@@ -30,8 +30,6 @@ by one point
 
 >more mulch
 by one point
-/^Stair Stones
-The gunky material flowing back to Bare Bones Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
 
 >n
 
@@ -48,8 +46,6 @@ by one point
 
 >plaster plate
 by one point
-Lair 'Lone's Stair Stones
-The gunky material flowing back to Stair Stones is icky, but it will help patch them up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
 
 >u
 

@@ -8,6 +8,8 @@
 
 * main-thru
 
+>z
+
 >au 2
 
 #testcase-ha-half-table-of-verb-checks-1-fear-freer
@@ -125,9 +127,6 @@ You already summoned the creep (cruel).
 >keep cool
 by one point
 
->keep cool
-!by one point
-You don't need to keep cool any more.
 >zkeep cool
 !DEBUG: vc-keep-cool rule tipped off half-body tingling.
 !Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
@@ -149,16 +148,16 @@ Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 
 >more mulch
 by one point
-/^Stair Stones
-The gunky material flowing back to Bare Bones Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
 
 >gonear gore gulch
 >more mulch
 !by one point
 Hoo boy. You have enough mulch.
+
 >zmore mulch
 !DEBUG: vc-more-mulch rule tipped off half-body tingling.
 !Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
 >more zmulch
 !DEBUG: vc-more-mulch rule tipped off half-body tingling.
 !Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
@@ -246,20 +245,20 @@ Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
 
 >plaster plate
 by one point
-Lair 'Lone's Stair Stones
-The gunky material flowing back to Stair Stones is icky, but it will help patch them up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
 
 >gonear gaster gate
->plaster plate
-!by one point
-You already made a plaster plate.
+
 >zplaster plate
 !DEBUG: vc-plaster-plate rule tipped off half-body tingling.
 !Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
+
 >plaster zplate
 !DEBUG: vc-plaster-plate rule tipped off half-body tingling.
 !Half of your body tingles. Perhaps you are (yeah, this is corny) halfway right.
->gonear stair stones
+
+>undo
+>undo
+>undo
 
 >u
 

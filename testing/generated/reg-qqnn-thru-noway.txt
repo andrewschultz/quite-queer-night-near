@@ -8,10 +8,15 @@
 
 * main-thru
 
+>z
+
 >au 2
 
 >e
 Not with the Drink Drug Think Thug blocking you.
+
+#testcase-goto-table-of-noways-bight-bier
+
 >n
 The boiled base spoiled space blocks you every way except east.
 >w
@@ -30,34 +35,43 @@ by one point
 
 >e
 
+#testcase-goto-table-of-noways-stair-stones
 >u
 The stones are in nowhere near climbable condition. For now.
 
+#+testcase-goto-table-of-noways-stair-stones
 >u
 The stones are in nowhere near climbable condition. For now.
 
 >s
 
+#testcase-goto-table-of-noways-peep-pool
 >w
 The boiled base spoiled space blocks your way west. You can only go north or, once the way is clear, east.
+
 >s
 The boiled base spoiled space blocks your way south. You can only go north or, once the way is clear, east.
+
 >e
 The steep stool is in the way. It's too big and heavy to move.
 
 >deep duel
 by one point
 
+#+testcase-goto-table-of-noways-peep-pool
 >w
 The boiled base spoiled space blocks your way west. You can only go north or, once the way is clear, east.
+
 >s
 The boiled base spoiled space blocks your way south. You can only go north or, once the way is clear, east.
+
 >e
 The creep (cruel) blocks you from going east. Exasperating, but that's just its nature. Maybe you can get rid of it.
 
 >keep cool
 by one point
 
+#+testcase-goto-table-of-noways-peep-pool
 >w
 The boiled base spoiled space blocks your way west. You can only go north or east.
 >s
@@ -65,6 +79,7 @@ The boiled base spoiled space blocks your way south. You can only go north or ea
 
 >e
 
+#testcase-goto-table-of-noways-gore-gulch
 >n
 The boiled base spoiled space and general ickiness encompass every way except back west.
 >s
@@ -74,17 +89,18 @@ The boiled base spoiled space and general ickiness encompass every way except ba
 
 >more mulch
 by one point
-/^Stair Stones
-The gunky material flowing back to Bare Bones Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
 
+#+testcase-goto-table-of-noways-stair-stones
 >u
 The stones are almost climbable but still too risky. You need to do a bit more.
 
+#+testcase-goto-table-of-noways-stair-stones
 >u
 The stones are almost climbable but still too risky. You need to do a bit more.
 
 >n
 
+#testcase-goto-table-of-noways-dark-dump
 >n
 You can only go east or south. The boiled base spoiled space blocks your way north.
 >w
@@ -101,6 +117,7 @@ by one point
 
 >e
 
+#testcase-goto-table-of-noways-gaster-gate
 >e
 You aren't getting past the gate, but there's worse stuff behind. Trust me.
 >n
@@ -110,11 +127,10 @@ The boiled base spoiled space blocks your passage south.
 
 >plaster plate
 by one point
-Lair 'Lone's Stair Stones
-The gunky material flowing back to Stair Stones is icky, but it will help patch them up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
 
 >u
 
+#testcase-goto-table-of-noways-gold-gaol
 >n
 You need to look back on your experiences before leaving. Anyway, you can't figure directions here.
 >s

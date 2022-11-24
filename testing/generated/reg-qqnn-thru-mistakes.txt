@@ -8,111 +8,187 @@
 
 * main-thru
 
+>z
+
 >au 2
 
+#testcase-mistakes-table-of-blight-blear-bight-bear-guesses-broiled-brace
 >broiled brace
 !sheep sheet
 You can't imagine a brace would be tasty, fried, broiled, stewed or whatever.
+
+#testcase-mistakes-table-of-blight-blear-bight-bear-guesses-foiled-face
 >foiled face
 !sheep sheet
 You frown at being unable to dispel the boiled base spoiled space. No reverse psychology kicks in.
+
+#testcase-mistakes-table-of-blight-blear-bight-bear-guesses-moiled-mace
 >moiled mace
 !sheep sheet
 No magic weapon pops in your hand as a reward for hard work you forgot you did.
+
+#testcase-mistakes-table-of-blight-blear-bight-bear-guesses-roiled-race
 >roiled race
 !sheep sheet
 You'll never get mad enough to run fast enough through the boiled base spoiled space.
+
+#testcase-mistakes-table-of-general-good-guesses-flight-fleer
+>flight fleer
+You need to get less scared, not more. Plus, there's nowhere to run, anyway.
+
+#testcase-mistakes-table-of-general-good-guesses-height-here
+>height here
+How physically low or high you are isn't important. It's the mental bit.
+
+#testcase-mistakes-table-of-general-good-guesses-kite-keyer
 >kite keyer
 refer to the sheep sheet
 You don't need the risk of getting zapped by electricity, too.
+
+#testcase-mistakes-table-of-general-good-guesses-light-leer
+>light leer
+No, facial expressions aren't enough, here. Especially expressions of contempt.
+
+#testcase-mistakes-table-of-general-good-guesses-might-mite-mere
 >might mere
 refer to the sheep sheet
 You'd still be scared, reducing your antagonist's strength. You'd be scared of even losing to them. What can you do to stop being scared?
->skite skier
-refer to the sheep sheet
-Too archaic, and you would gain no joy seeing someone else mess up.
+
+#testcase-mistakes-table-of-general-good-guesses-plight-pleaer
 >plight pleaer
 refer to the sheep sheet
 Seeing someone else scared and begging won't help you.
->sprite spreer
-refer to the sheep sheet
-Chugging pop will not help in your present circumstances.
->trite treer
-refer to the sheep sheet
-You don't need anything to be chasing you up a tree, hackneyed or otherwise.
->bite bier
-refer to the sheep sheet
-You don't need homonyms here. Something else... something a bit more common...
->flight fleer
-You need to get less scared, not more. Plus, there's nowhere to run, anyway.
->light leer
-No, facial expressions aren't enough, here. Especially expressions of contempt.
->height here
-How physically low or high you are isn't important. It's the mental bit.
+
+#testcase-mistakes-table-of-general-good-guesses-right-rear
 >right rear
 You are right in the rear, but you need to move on.
+
+#testcase-mistakes-table-of-general-good-guesses-shite-sheer
 >shite sheer
 Getting mad doesn't necessarily help here.
+
+#testcase-mistakes-table-of-general-good-guesses-sight-site-seer
 >sight seer
 Yes, you're a sight seer.
+
+#testcase-mistakes-table-of-general-good-guesses-skite-skier
+>skite skier
+refer to the sheep sheet
+Too archaic, and you would gain no joy seeing someone else mess up.
+
+#testcase-mistakes-table-of-general-good-guesses-smite-smear
 >smite smear
 sheep sheet
 You don't need violence or a battle cry.
->white wier
-No fence appears.
+
+#testcase-mistakes-table-of-general-good-guesses-sprite-spreer
+>sprite spreer
+refer to the sheep sheet
+Chugging pop will not help in your present circumstances.
+
+#testcase-mistakes-table-of-general-good-guesses-tight-tier-tear
 >tight tier
 You think up all the formal and informal meanings of the word tight, but nothing pops up.
+
+#testcase-mistakes-table-of-general-good-guesses-trite-treer
+>trite treer
+refer to the sheep sheet
+You don't need anything to be chasing you up a tree, hackneyed or otherwise.
+
+#testcase-mistakes-table-of-general-good-guesses-white-wier-weir
+>white wier
+No fence appears.
+
+#testcase-mistakes-table-of-cheap-cheat-sheep-sheet-guesses-beep-beat
 >beep beat
 You imagine an eternity spent listening to funky techno music. Scary!
+
+#testcase-mistakes-table-of-cheap-cheat-sheep-sheet-guesses-creep-crete
 >creep crete
 You fail to hyperwarp across the Mediterranean.
->leap leet
-You take a giant step towards understanding a tricky science concept from high school.
->peep peat
-refer to the sheep sheet
-The ground around you remains hard.
->streep street
-Stalking an actress is scary, yes, but we're not going for that sort of scary.
->sweep suite
-Neither a favorite team's success nor drudgery will get your mind off things.
->weep wheat
-The ground remains unarable.
->meep meat
-refer to the sheep sheet
-No roadrunner whizzes by, and neither does a devious, planning coyote.
+
+#testcase-mistakes-table-of-cheap-cheat-sheep-sheet-guesses-deep-deet
 >deep deet
 refer to the sheep sheet
 You can't see any deep details, but maybe when you take the sheet...
+
+#testcase-mistakes-table-of-cheap-cheat-sheep-sheet-guesses-leap-leet
+>leap leet
+You take a giant step towards understanding a tricky science concept from high school.
+
+#testcase-mistakes-table-of-cheap-cheat-sheep-sheet-guesses-meep-meat
+>meep meat
+refer to the sheep sheet
+No roadrunner whizzes by, and neither does a devious, planning coyote.
+
+#testcase-mistakes-table-of-cheap-cheat-sheep-sheet-guesses-neep-neat
 >neep neat
 refer to the sheep sheet
 You see no turnip turn up.
+
+#testcase-mistakes-table-of-cheap-cheat-sheep-sheet-guesses-peep-peat
+>peep peat
+refer to the sheep sheet
+The ground around you remains hard.
+
+#testcase-mistakes-table-of-cheap-cheat-sheep-sheet-guesses-seep-seat
 >seep seat
 refer to the sheep sheet
 What on earth would you do with a leaky chair?
+
+#testcase-mistakes-table-of-cheap-cheat-sheep-sheet-guesses-streep-street
+>streep street
+Stalking an actress is scary, yes, but we're not going for that sort of scary.
+
+#testcase-mistakes-table-of-cheap-cheat-sheep-sheet-guesses-sweep-suite-sweet
+>sweep suite
+Neither a favorite team's success nor drudgery will get your mind off things.
+
+#testcase-mistakes-table-of-cheap-cheat-sheep-sheet-guesses-weep-wheat
+>weep wheat
+The ground remains unarable.
+
+#testcase-mistakes-table-of-general-good-guesses-hath-haven
 >hath haven
 !refer to the sheep sheet
 You don't want to let the maven escape. It could help you! Once you're free, you can set it free.
+
+#testcase-mistakes-table-of-drink-drug-think-thug-guesses-chink-chug
 >chink chug
 refer to the sheep sheet
-The Drink Drug Think Thug is too large to disappear through any crack. You're too large to escape
->jink jug
-refer to the sheep sheet
-No liquid container to help your dexterity appears. Oh, well. It might've jinked YOU, anyway.
+The Drink Drug Think Thug is too large to disappear through any crack. You're too large to escape.
+
+#testcase-mistakes-table-of-drink-drug-think-thug-guesses-fink-fug
 >fink fug
 refer to the sheep sheet
 No fog carries the Drink Drug Think Thug away or even makes it wimpier.
+
+#testcase-mistakes-table-of-drink-drug-think-thug-guesses-jink-jug
+>jink jug
+refer to the sheep sheet
+No liquid container to help your dexterity appears. Oh, well. It might've jinked YOU, anyway.
+
+#testcase-mistakes-table-of-drink-drug-think-thug-guesses-link-lug
 >link lug
 refer to the sheep sheet
 You need to make the thug much less intimidating.
+
+#testcase-mistakes-table-of-drink-drug-think-thug-guesses-mink-mug
 >mink mug
 refer to the sheep sheet
 The Think Thug is too smart to be upset for being called a rat-face or whatever.
+
+#testcase-mistakes-table-of-drink-drug-think-thug-guesses-rink-rug
 >rink rug
 refer to the sheep sheet
 A rug would be out of place inside a roller rink or ice skating rink. Still, it was worth a try.
+
+#testcase-mistakes-table-of-drink-drug-think-thug-guesses-shrink-shrug
 >shrink shrug
 sheep sheet
 A shrug would not shrink the Drink Drug Think Thug by much. Perhaps there is something you can shrink it into, so it can't possibly be anywhere near as big as you.
+
+#testcase-mistakes-table-of-drink-drug-think-thug-guesses-slink-slug
 >slink slug
 refer to the sheep sheet
 Perhaps that is a bit too drastic. Another more likable animal might work great, though.
@@ -215,33 +291,51 @@ Neither a favorite team's success nor drudgery will get your mind off things.
 >broiled brace
 !You can't imagine a brace would be tasty, fried, broiled, stewed or whatever.
 
+#testcase-mistakes-table-of-bare-bones-stair-stones-guesses-air-err-owns
 >air owns
 !sheep sheet
 The air is everywhere, and it'd take too long to own up to all your mistakes.
->bear bones
-!sheep sheet
-That would make for creepier ambience, but more importantly, the bear bones would make the stair stones even tougher to climb.
+
+#testcase-mistakes-table-of-bare-bones-stair-stones-guesses-care-cones
 >care cones
 !sheep sheet
 Nothing appears to make you feel more loved. Aww.
+
+#testcase-mistakes-table-of-bare-bones-stair-stones-guesses-clayer-clare-clair-clones
+>clair clones
+No golems of any name appear to try and build the stairs. But on the bright side, none appear from the stairs to make it tougher to go up.
+
+#testcase-mistakes-table-of-bare-bones-stair-stones-guesses-crayer-crones
 >crayer crones
 !sheep sheet
 Not only is that a stretch, but it would actively hurt your quest.
+
+#testcase-mistakes-table-of-bare-bones-stair-stones-guesses-fair-fare-phones
 >fair phones
 !sheep sheet
 You have no outside communication here.
+
+#testcase-mistakes-table-of-bare-bones-stair-stones-guesses-grayer-groans
 >grayer groans
 !sheep sheet
 A little more atmosphere doesn't help, but it doesn't hurt, either.
+
+#testcase-mistakes-table-of-bare-bones-stair-stones-guesses-mare-moans
 >mare moans
 !sheep sheet
 Horses whinny in the distance.
+
+#testcase-mistakes-table-of-bare-bones-stair-stones-guesses-pear-pair-pare-pwns
 >pear pwns
 !sheep sheet
 You don't need any material items, or to win an argument, to escape.
+
+#testcase-mistakes-table-of-bare-bones-stair-stones-guesses-rare-roans
 >rare roans
 !sheep sheet
 Bringing horses into this mess would be animal cruelty.
+
+#testcase-mistakes-table-of-bare-bones-stair-stones-guesses-scare-scones
 >scare scones
 !sheep sheet
 Spooky food is a creative idea here, but maybe not a practical one.
@@ -251,42 +345,42 @@ Spooky food is a creative idea here, but maybe not a practical one.
 Nothing appears in the stones. You would need to repair them to climb them.
 >clayer clones
 !sheep sheet
-No golems appear to try and build the stairs. But on the bright side, none appear from the stairs to make it tougher to go up.
+No golems of any name appear to try and build the stairs. But on the bright side, none appear from the stairs to make it tougher to go up.
+
+#testcase-mistakes-table-of-bare-bones-stair-stones-guesses-hair-hare-hones
 >hair hones
 !sheep sheet
 This is no time for follicular or lagomorphic care!
+
+#testcase-mistakes-table-of-bare-bones-stair-stones-guesses-jer-jones
 >jer jones
 !sheep sheet
 The owner of the Dallas Cowboys is nightmarish in his own way, though yes, it might be fun to stick him in a nightmare.
+
+#testcase-mistakes-table-of-bare-bones-stair-stones-guesses-tare-tear-tones
 >tare tones
 !sheep sheet
 No more scary noises than needed, please.
 
 >s
 
+#testcase-mistakes-table-of-peep-pool-guesses-jeep-jewel-joule
 >jeep jewel
 refer to the sheep sheet
 The jeep would probably run over YOU.
+
+#testcase-mistakes-table-of-peep-pool-guesses-reap-rule
 >reap rule
 refer to the sheep sheet
 This adventure is about surviving, not taking over.
+
+#testcase-mistakes-table-of-peep-pool-guesses-weep-wool
 >weep wool
 refer to the sheep sheet
 Crying is out. So are nice new warm clothes. You're on a spooky Halloween adventure, here!
->deep dual
-refer to the sheep sheet
-You are very close. You don't need to make the pool deeper, but you need something else deep
->dual deep
-refer to the sheep sheet
-You are very close. You don't need to make the pool deeper, but you need something else deep.
 
 >deep duel
 by one point
-
->deep dual
-Summoning the creep (cruel) was enough.
->dual deep
-Summoning the creep (cruel) was enough.
 
 >keep cool
 by one point
@@ -303,26 +397,40 @@ Crying is out. So are nice new warm clothes. You're on a spooky Halloween advent
 
 >e
 
+#testcase-mistakes-table-of-gore-gulch-guesses-boar-bore-bulge
 >boar bulge
+refer to the sheep sheet
+That's a bit of a stretch, but Gore Gulch remains unstretched.
+
+>bore bulge
 refer to the sheep sheet
 That's a bit of a stretch, but Gore Gulch remains unstretched.
 
 >more mulch
 by one point
-/^Stair Stones
-The gunky material flowing back to Bare Bones Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
 
 >n
 
+#testcase-mistakes-table-of-dark-dump-guesses-ark-arc-ump
 >ark ump
 sheep sheet
 Nobody appears to decide which animals will be doomed to forty days and nights of floods.
+
+>arc ump
+sheep sheet
+Nobody appears to decide which animals will be doomed to forty days and nights of floods.
+
+#testcase-mistakes-table-of-dark-dump-guesses-clark-clump
 >clark clump
 refer to the sheep sheet
 Clark Griswold does not appear in a heap.
+
+#testcase-mistakes-table-of-dark-dump-guesses-lark-lump
 >lark lump
 refer to the sheep sheet
 Eww, dead birds?
+
+#testcase-mistakes-table-of-dark-dump-guesses-mark-mump
 >mark mump
 refer to the sheep sheet
 With just one mump, you might drive yourself up the wall wondering if you are half-sick or half-well.
@@ -351,23 +459,28 @@ With just one mump, you might drive yourself up the wall wondering if you are ha
 
 >e
 
+#testcase-mistakes-table-of-gaster-gate-guesses-faster-fate
 >faster fate
 refer to the sheep sheet
 But that might mean a faster BAD fate as well as a good one.
+
+#testcase-mistakes-table-of-gaster-gate-guesses-hastur-hate
 >hastur hate
 refer to the sheep sheet
 Oh no. You don't need to make things worse.
+
+#testcase-mistakes-table-of-gaster-gate-guesses-laster-late
 >laster late
 refer to the sheep sheet
 A good try, if un-grammatical. But you already have lasted, and you don't want your obstacles to last.
+
+#testcase-mistakes-table-of-gaster-gate-guesses-raster-rate
 >raster rate
 refer to the sheep sheet
 Your text adventure remains totally texty.
 
 >plaster plate
 by one point
-Lair 'Lone's Stair Stones
-The gunky material flowing back to Stair Stones is icky, but it will help patch them up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
 
 >gonear gaster gate
 >faster fate
@@ -386,42 +499,62 @@ Your text adventure remains totally texty.
 
 >u
 
->rolled rail
-refer to the sheep sheet
-You don't need assistance getting out. Or a need to rail verbally.
+#testcase-mistakes-table-of-gold-gaol-guesses-bold-bail-bowl-bale
 >bold bail
 refer to the sheep sheet
 You don't have to be bold. The gaol is unguarded.
+
+#testcase-mistakes-table-of-gold-gaol-guesses-doled-dale
 >doled dale
 refer to the sheep sheet
 That's a bit too archaic to be a final solution, but ... you do dream about these sorts of things in prison.
+
+#testcase-mistakes-table-of-foldfail-guesses-fold-fail
 >fold fail
 refer to the sheep sheet
 You look at FOLD FAIL on the wall, hoping for the wrath ravin' math maven to get exasperated enough to spill a solution. But apparently it's good at passive-aggressiveness, too!
+
+#testcase-mistakes-table-of-gold-gaol-guesses-hold-hail-hale
 >hold hail
 refer to the sheep sheet
 There is nobody to summon, and you don't want to summon weather, either.
+
+#testcase-mistakes-table-of-gold-gaol-guesses-mold-male-mail
 >mold male
 refer to the sheep sheet
 You uncover no old letters checking on how you are. Not surprising. You've only been here a bit.
+
+#testcase-mistakes-table-of-gold-gaol-guesses-polled-pail-pale
 >polled pail
 refer to the sheep sheet
 You haven't been here long enough to even want the company of a pollster.
+
+#testcase-mistakes-table-of-gold-gaol-guesses-rolled-rail
+>rolled rail
+refer to the sheep sheet
+You don't need assistance getting out. Or a need to rail verbally.
+
+#testcase-mistakes-table-of-gold-gaol-guesses-scold-scale
 >scold scale
 refer to the sheep sheet
 The scold scale is probably something you get BEFORE you are sent to prison.
+
+#testcase-mistakes-table-of-gold-gaol-guesses-sold-sail-sale
 >sold sail
 refer to the sheep sheet
 You don't have to buy anything. You don't want to.
+
+#testcase-mistakes-table-of-gold-gaol-guesses-swolled-swale
 >swolled swale
 refer to the sheep sheet
 The gold gaol cannot change THAT drastically.
->tolled tail
-sheep sheet
-That must be very close indeed.
+
+#testcase-mistakes-table-of-gold-gaol-guesses-trolled-trail
 >trolled trail
 refer to the sheep sheet
 You will have to make your own trail out. Make it enough yours, you could recount it to others.
+
+#testcase-mistakes-table-of-gold-gaol-guesses-wold-wail-whale
 >wold wail
 refer to the sheep sheet
 Nothing too drastic, here.

@@ -8,11 +8,13 @@
 
 * main-thru
 
+>z
+
 >au 2
 
 >z
 
-#testcase-alt-words-table-of-verb-checks-1-fear-freer
+#testcase-alt-words-table-of-verb-checks-1-fight-fright-fear-freer
 >fright freer
 by one point
 >undo
@@ -20,7 +22,7 @@ by one point
 >fight fear
 by one point
 
-#testcase-alt-words-table-of-verb-checks-3-heat-bleat
+#testcase-alt-words-table-of-verb-checks-3-heap-bleep-heat-bleat
 >z
 >bleep bleat
 by one point
@@ -36,7 +38,14 @@ by one point
 
 >s
 
-#testcase-alt-words-table-of-verb-checks-4-duel-cruel
+>deep dual
+refer to the sheep sheet
+You are very close. You don't need to make the pool deeper, but you need something else deep
+>dual deep
+refer to the sheep sheet
+You are very close. You don't need to make the pool deeper, but you need something else deep.
+
+#testcase-alt-words-table-of-verb-checks-4-deep-creep-duel-cruel
 >creep cruel
 by one point
 >undo
@@ -51,12 +60,10 @@ by one point
 
 >more mulch
 by one point
-/^Stair Stones
-The gunky material flowing back to Bare Bones Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
 
 >n
 
-#testcase-alt-words-table-of-verb-checks-8-bump-hump
+#testcase-alt-words-table-of-verb-checks-8-bark-hark-bump-hump
 >hark hump
 by one point
 >undo
@@ -74,8 +81,6 @@ by one point
 
 >plaster plate
 by one point
-Lair 'Lone's Stair Stones
-The gunky material flowing back to Stair Stones is icky, but it will help patch them up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
 
 >u
 

@@ -8,76 +8,246 @@
 
 * main-thru
 
+>z
+
 >au 2
 
+>get sheet
+The sheep sheet feels a bit cold. You could take it anyway, but maybe you can do something to warm it up first.
+
+>get sheet
+A chill runs through your body. A voice whispers "You'll never achieve the maximum score." This makes you feel bad, until you remember escape is the most important thing.
+
+#testcase-check-vc-heap-heat-rule-if-player-has-cheap-cheat-sheep-sheet
+>heap heat
+You already warmed the sheet up, but that command would've gotten a bonus point before.
+
+>undo
+>undo
+>undo
+
+>fight fear
+by one point
+
+>pink pug
+by one point
+
+>e
+
+#testcase-check-vc-heap-heat-rule-if-sheep-sheet-is-not-fungible
+>heap heat
+This will work once you go back to Blight Blear Bight Bier.
+
+#testcase-think-table-of-verb-checks-vc-heap-heat-rule
+>think
+(OPTIONAL) You can go back to Blight Blear Bight Bier to HEAP HEAT on the cheap cheat sheep sheet.
+
+>undo
+
+>gonear gold gaol
+
+>heap heat
+That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
+You can also type VERBS for a list of valid verbs (it can change as you gain or lose hint items) or ABOUT to see general information.
+
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+
+#testcase-reject-start-table-of-verb-checks-vc-bark-bump-rule
+#testcase-check-vc-bark-bump-rule-if-player-is-not-in-dark-dump
 >bark bump
 Sorry, I can't do anything with that. This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them.
 
+#testcase-reject-start-table-of-verb-checks-vc-cold-kale-rule
+#testcase-check-vc-cold-kale-rule-if-player-is-not-in-gold-gaol
+>cold kale
+Sorry, I can't do anything with that. This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them.
+
+#testcase-reject-start-table-of-verb-checks-vc-deep-duel-rule
+#testcase-check-vc-deep-duel-rule-if-player-is-not-in-peep-pool
+>deep duel
+Sorry, I can't do anything with that. This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them.
+
+#testcase-reject-start-table-of-verb-checks-vc-keep-cool-rule
+#testcase-check-vc-keep-cool-rule-if-player-is-not-in-peep-pool
+>keep cool
+Sorry, I can't do anything with that. This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them.
+
+#testcase-reject-start-table-of-verb-checks-vc-more-mulch-rule
+#testcase-check-vc-more-mulch-rule-if-player-is-not-in-gore-gulch
+>more mulch
+Sorry, I can't do anything with that. This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them.
+
+#testcase-reject-start-table-of-verb-checks-vc-old-ale-rule
+#testcase-check-vc-old-ale-rule-if-player-is-not-in-gold-gaol
+>old ale
+Sorry, I can't do anything with that. This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them.
+
+#testcase-reject-start-table-of-verb-checks-vc-park-pump-rule
+#testcase-check-vc-park-pump-rule-if-player-is-not-in-dark-dump
+>park pump
+Sorry, I can't do anything with that. This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them.
+
+#testcase-reject-start-table-of-verb-checks-vc-plaster-plate-rule
+#testcase-check-vc-plaster-plate-rule-if-player-is-not-in-gaster-gate
+>plaster plate
+Sorry, I can't do anything with that. This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them.
+
+#testcase-reject-start-table-of-verb-checks-vc-stark-stump-rule
+#testcase-check-vc-stark-stump-rule-if-player-is-not-in-dark-dump
+>stark stump
+Sorry, I can't do anything with that. This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them.
+
+#testcase-reject-start-table-of-verb-checks-vc-told-tale-rule
+#testcase-check-vc-told-tale-rule-if-player-is-not-in-gold-gaol
+>told tale
+Sorry, I can't do anything with that. This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them.
+
+#testcase-check-vc-pink-pug-rule-if-sco-fight-fear-is-false
 >pink pug
 You're too scared to think that something like that could even work. Maybe later, though.
 !by one point
+
+#testcase-think-table-of-verb-checks-vc-pink-pug-rule
 >think
 PINK PUG
 
 >fight fear
 by one point
 
+#testcase-check-vc-fight-fear-rule-fallthrough
+You do your best to feel braver. It works, well enough! The Drink Drug Think Thug seems a bit less tough now, and what do you know? The spite spear vanishes, too!
+
+#testcase-check-vc-fight-fear-rule-if-sco-fight-fear-is-true
+>fight fear
+Yes, fighting fear is a lifelong journey, but fighting too hard all at once will bring it back.
+
 >heap heat
 by one point
+
+#testcase-check-vc-heap-heat-rule-fallthrough
+You rub your hands together for warmth, blow on the sheet, and so on. And what do you know? It stays less frigid after you pick it up. It'd still be technically functional at any temperature, but now it won't freeze your fingers if you carry it around.
+What's more, if you don't understand how it works, you can spoil things with DEEP DEET.
 
 >pink pug
 by one point
 
+#testcase-check-vc-pink-pug-rule-fallthrough
+POOF! The drink-drug think-thug turns into a far more innocuous pink pug, which runs off, yapping.
+
 >fight fear
 !by one point
 Yes, fighting fear is a lifelong journey, but fighting too hard all at once will bring it back.
+
+#+testcase-check-vc-heap-heat-rule-if-player-has-cheap-cheat-sheep-sheet
 >heap heat
 !by one point
 You already warmed the sheet up.
+
+#testcase-check-vc-pink-pug-rule-if-drink-drug-think-thug-is-moot
 >pink pug
 !by one point
 You already got rid of the thug.
 
 >e
 
+#testcase-check-vc-pink-pug-rule-if-drink-drug-think-thug-is-off-stage-or-player-is-not-in-bight-bier
+>pink pug
+That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe get up those stair stones, somehow.
+Since you have the sheep sheet handy, you can CC something. You can also type VERBS for a list of valid verbs (it can change as you gain or lose hint items) or ABOUT to see general information.
+
 >s
 
+#testcase-check-vc-keep-cool-rule-if-creep-cruel-is-off-stage
 >keep cool
 You have no one annoying you. But there might be someone later, if you're lucky! Wow!
 !by one point
+
+#testcase-think-table-of-verb-checks-vc-keep-cool-rule
 >think
 KEEP COOL
 
 >deep duel
 by one point
 
+#testcase-check-vc-deep-duel-rule-fallthrough
+There is no progress without conflict. You look into the peep pool and wait for an opponent to show. A crash from the steep stool to the east indicates someone has arrived for a deep duel: a creep, cruel!
+Maybe if you defeat them, you'll be able to go east. But right now, being around them is just annoying.
+
+#testcase-check-vc-deep-duel-rule-if-creep-cruel-is-not-off-stage
+>deep duel
+You already summoned the creep (cruel).
+
+>deep dual
+Summoning the creep (cruel) was enough.
+
+>dual deep
+Summoning the creep (cruel) was enough.
+
 >keep cool
 by one point
+
+#testcase-check-vc-keep-cool-rule-fallthrough
+You manage to ignore the creep (cruel) as they get more and more desperate to insult you. Eventually, they explain you're not worth the effort, and also you are probably too callous and selfish to care about the next person they'll need to insult even worse.
+
+#testcase-check-vc-keep-cool-rule-if-creep-cruel-is-moot
+>keep cool
+!by one point
+You don't need to keep cool any more.
 
 >e
 
 >more mulch
 by one point
-/^Stair Stones
-The gunky material flowing back to Bare Bones Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
+
+#testcase-check-vc-more-mulch-rule-fallthrough
+More mulch appears! It spills out to the peep pool and beyond, probably even back to the stair stones.
+
+>s
+>e
+
+#testcase-check-vc-more-mulch-rule-if-sco-more-mulch-is-true
+>more mulch
+Hoo boy. You have enough mulch.
+
+>undo
+>undo
+>undo
 
 >n
 
 >bark bump
 by one point
 
+#testcase-check-vc-bark-bump-rule-fallthrough
+A bark bump appears to the north! You weren't going that way, but it provides a bit of a channel.
+
 >stark stump
 by one point
 
+#testcase-check-vc-stark-stump-rule-fallthrough
+Poof! A stark stump appears! It blocks the way to the west, but it provides a channel in case anything would come flowing through.
+
 >park pump
 by one point
 
+#testcase-check-vc-park-pump-rule-fallthrough
+Poof! A park pump appears, just like you remember as a kid! It appears to be auto-pumping, creating a waterway. With the stark stump and bark bump sealing off two exits, water flows freely back south.
+
+#testcase-check-vc-bark-bump-rule-if-sco-bark-bump-is-true
 >bark bump
-!by one point
 That's already here.
+
+#testcase-check-vc-park-pump-rule-if-sco-park-pump-is-true
 >park pump
 !by one point
 That's already here.
+
+#testcase-check-vc-stark-stump-rule-if-sco-stark-stump-is-true
 >stark stump
 !by one point
 That's already here.
@@ -86,65 +256,132 @@ That's already here.
 
 >plaster plate
 by one point
-Lair 'Lone's Stair Stones
-The gunky material flowing back to Stair Stones is icky, but it will help patch them up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
+
+#testcase-check-vc-plaster-plate-rule-fallthrough
+A huge chunk of the gaster gate breaks off and creates a plaster plate. It's much too big to eat off, but it crumbles quickly apart (probably not Last 'Er Late brand) and is washed away beyond the dark dump. The Master Mate, their job done, smiles, gives a thumbs up, and walks away.
+
+#testcase-check-vc-plaster-plate-rule-if-sco-plaster-plate-is-true
+>gonear gaster gate
+
+>plaster plate
+!by one point
+You already made a plaster plate.
+
+>undo
+>undo
 
 >u
 
+#testcase-check-vc-told-tale-rule-if-sco-old-ale-is-false-or-sco-cold-kale-is-false
 >told tale
 You're not nourished enough to make it far out of the cell. You need food and drink. Even lousy food and drink.
 !by one point
+
+#testcase-think-table-of-verb-checks-vc-told-tale-rule
 >think
-TOLD TALE
+You think about more specific challenges you've encountered and not solved, and what you've done and tried, and what you can do.
+You can make a TOLD TALE once you have had (barely) adequate food and drink.
+!But you don't remember
+
 >cold kale
+by one point
+
+#+testcase-check-vc-told-tale-rule-if-sco-old-ale-is-false-or-sco-cold-kale-is-false
+>told tale
+You're not nourished enough to make it far out of the cell. You need drink with your food. Even lousy drink.
+Hmph. That still doesn't quite work! You'll figure out the how and when and where, though.
+
+>undo
+
+#+testcase-think-table-of-verb-checks-vc-told-tale-rule
 >think
-once
-TOLD TALE
+You think about more specific challenges you've encountered and not solved, and what you've done and tried, and what you can do.
+You can make a TOLD TALE once you have had (barely) adequate food and drink.
+!But you don't remember
+
 >undo
 >undo
 
 >old ale
 by one point
 
+#+testcase-check-vc-told-tale-rule-if-sco-old-ale-is-false-or-sco-cold-kale-is-false
+>told tale
+You're not nourished enough to make it far out of the cell. You need food with your drink. Even lousy food.
+
+>undo
+
+#+testcase-think-table-of-verb-checks-vc-told-tale-rule
+>think
+You can make a TOLD TALE once you have had (barely) adequate food and drink.
+TOLD TALE
+
+>undo
+>undo
+
+>old ale
+by one point
+
+#testcase-check-vc-old-ale-rule-fallthrough
+Yum! Or not. You find a firkin or flagon or whatever of old ale, and it doesn't taste very good, but it's nourishing and hopefully not too alcoholic.
+
+#testcase-check-vc-old-ale-rule-if-sco-old-ale-is-true
+>old ale
+If you were trying to get drunk, more old ale would be the way to do it. But you're trying to get FREE.
+
 >cold kale
 by one point
 
-#testcase-reject-end-table-of-verb-checks-vr-bark-bump-rule
+#testcase-check-vc-cold-kale-rule-fallthrough
+Some cold kale appears! It's not very tasty, but it's better than nothing.
+
+#testcase-check-vc-cold-kale-rule-if-sco-cold-kale-is-true
+>cold kale
+To quote Al and Peg Bundy: "More kale, dear?" / "Did I ASK for more kale, dear?"
+
+#testcase-reject-end-table-of-verb-checks-vc-bark-bump-rule
 >bark bump
 That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
 
-#testcase-reject-end-table-of-verb-checks-vr-deep-duel-rule
->creep cruel
-That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
-
-#testcase-reject-end-table-of-verb-checks-vr-deep-duel-rule
+#testcase-reject-end-table-of-verb-checks-vc-deep-duel-rule
 >deep duel
 That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
 
-#testcase-reject-end-table-of-verb-checks-vr-keep-cool-rule
+#testcase-reject-end-table-of-verb-checks-vc-heap-heat-rule
+>abstract cheap cheat to bight
+>heap heat
+That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
+
+>undo
+>undo
+
+#testcase-reject-end-table-of-verb-checks-vc-keep-cool-rule
 >keep cool
 That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
 
-#testcase-reject-end-table-of-verb-checks-vr-more-mulch-rule
+#testcase-reject-end-table-of-verb-checks-vc-more-mulch-rule
 >more mulch
 That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
 
-#testcase-reject-end-table-of-verb-checks-vr-park-pump-rule
+#testcase-reject-end-table-of-verb-checks-vc-park-pump-rule
 >park pump
 That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
 
-#testcase-reject-end-table-of-verb-checks-vr-pink-pug-rule
+#testcase-reject-end-table-of-verb-checks-vc-pink-pug-rule
 >pink pug
 That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
 
-#testcase-reject-end-table-of-verb-checks-vr-plaster-plate-rule
+#testcase-reject-end-table-of-verb-checks-vc-plaster-plate-rule
 >plaster plate
 That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
 
-#testcase-reject-end-table-of-verb-checks-vr-stark-stump-rule
+#testcase-reject-end-table-of-verb-checks-vc-stark-stump-rule
 >stark stump
 That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
 
 >told tale
 by one point
+
+#testcase-check-vc-told-tale-rule-fallthrough
+BAH?! BOO-YAH, YOU!
 

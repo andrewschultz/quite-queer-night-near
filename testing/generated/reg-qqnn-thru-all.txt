@@ -1,7 +1,7 @@
 ## reg-qqnn-thru-all.txt
 ## GENERATOR FILE: rbr-qqnn-thru.txt
 
-## walkthrough with all points
+## walkthrough with all points and text
 
 ** game: /home/andrew/prt/debug-quite-queer-night-near.z8
 ** interpreter: /home/andrew/prt/dfrotz -m
@@ -11,16 +11,35 @@
 #testcase-room-names-blight-blear-bight-bier
 `Blight Blear Bight Bier
 
+>z
+
 >au 2
 
 >fight fear
 by one point
 
+#testcase-run-vr-fight-fear-rule-default
+You do your best to feel braver. It works, well enough! The Drink Drug Think Thug seems a bit less tough now, and what do you know? The spite spear vanishes, too!
+
+#testcase-run-vr-heap-heat-rule-default
+>bleep bleat
+You let go some grawlix-heavy invective, and it gives you enough of a boost to deal with the sleep sleet in order to pull out the cheap cheat. And what do you know? It stays less frigid after you pick it up. It'd still be technically functional at any temperature, but now it won't freeze your fingers if you carry it around.
+What's more, if you don't understand how it works, you can spoil things with DEEP DEET.
+
+>undo
+
 >heap heat
 by one point
 
+#testcase-run-vr-heap-heat-rule-default
+You rub your hands together for warmth, blow on the sheet, and so on. And what do you know? It stays less frigid after you pick it up. It'd still be technically functional at any temperature, but now it won't freeze your fingers if you carry it around.
+What's more, if you don't understand how it works, you can spoil things with DEEP DEET.
+
 >pink pug
 by one point
+
+#testcase-run-vr-pink-pug-rule-default
+POOF! The drink-drug think-thug turns into a far more innocuous pink pug, which runs off, yapping.
 
 >e
 
@@ -35,8 +54,15 @@ by one point
 >deep duel
 by one point
 
+#testcase-run-vr-deep-duel-rule-default
+There is no progress without conflict. You look into the peep pool and wait for an opponent to show. A crash from the steep stool to the east indicates someone has arrived for a deep duel: a creep, cruel!
+Maybe if you defeat them, you'll be able to go east. But right now, being around them is just annoying.
+
 >keep cool
 by one point
+
+#testcase-run-vr-keep-cool-rule-default
+You manage to ignore the creep (cruel) as they get more and more desperate to insult you. Eventually, they explain you're not worth the effort, and also you are probably too callous and selfish to care about the next person they'll need to insult even worse.
 
 >e
 
@@ -45,22 +71,47 @@ by one point
 
 >more mulch
 by one point
-/^Stair Stones
-The gunky material flowing back to Bare Bones Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
+
+#testcase-run-vr-more-mulch-rule-default
+More mulch appears! It spills out to the peep pool and beyond, probably even back to the stair stones.
+
+`Stair Stones
+The gunky material flowing back to Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
 
 >n
 
 #testcase-room-names-dark-dump
 `Dark Dump
 
+#testcase-run-vr-park-pump-rule-default
+>park pump
+Poof! A park pump appears, just like you remember as a kid! It appears to be auto-pumping, creating a waterway. The water seeps out to the north and west, lost to the boiled base spoiled space. The pump stops. Perhaps if you could create more natural barriers, the pump could start again.
+
+>undo
+
 >bark bump
 by one point
+
+#testcase-run-vr-bark-bump-rule-default
+A bark bump appears to the north! You weren't going that way, but it provides a bit of a channel.
+
+#testcase-run-vr-park-pump-rule-default
+>park pump
+Poof! A park pump appears, just like you remember as a kid! It appears to be auto-pumping, creating a waterway. Water partially seeps out, and the pump stops pumping. Maybe you need to summon one more barrier here.
+
+>undo
 
 >stark stump
 by one point
 
+#testcase-run-vr-stark-stump-rule-default
+Poof! A stark stump appears! It blocks the way to the west, but it provides a channel in case anything would come flowing through.
+
 >park pump
 by one point
+
+#testcase-run-vr-park-pump-rule-default
+Poof! A park pump appears, just like you remember as a kid! It appears to be auto-pumping, creating a waterway. With the stark stump and bark bump sealing off two exits, water flows freely back south.
 
 >e
 
@@ -69,8 +120,12 @@ by one point
 
 >plaster plate
 by one point
+
 Lair 'Lone's Stair Stones
 The gunky material flowing back to Stair Stones is icky, but it will help patch them up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
+
+#testcase-run-vr-plaster-plate-rule-default
+A huge chunk of the gaster gate breaks off and creates a plaster plate. It's much too big to eat off, but it crumbles quickly apart (probably not Last 'Er Late brand) and is washed away beyond the dark dump. The Master Mate, their job done, smiles, gives a thumbs up, and walks away.
 
 >s
 The wrath ravin' math maven rolls its eyes and groans as you go back south. Perhaps you're done there.
@@ -81,12 +136,66 @@ The wrath ravin' math maven rolls its eyes and groans as you go back south. Perh
 #testcase-room-names-gold-gaol
 `Gold Gaol
 
->old ale
-by one point
+>told tale
+You're not nourished enough to make it far out of the cell. You need food and drink. Even lousy food and drink.
 
 >cold kale
 by one point
 
+#testcase-run-vr-old-ale-rule-process-the-endgame-prod-rule
+>old ale
+by one point
+So, yeah. That thing you tried before that didn't work? TOLD TALE? It does now. There's not much else to do."
+
+>undo
+>undo
+
+>old ale
+by one point
+
+#testcase-run-vr-cold-kale-rule-process-the-endgame-prod-rule
+>cold kale
+by one point
+So, yeah. That thing you tried before that didn't work? TOLD TALE? It does now. There's not much else to do."
+
+>undo
+>undo
+>undo
+
+>cold kale
+by one point
+
+>old ale
+by one point
+
+>told tale
+by one point
+BAH?! BOO-YAH, YOU!
+
+>undo
+>undo
+>undo
+
+>old ale
+by one point
+
+#testcase-run-vr-old-ale-rule-default
+Yum! Or not. You find a firkin or flagon or whatever of old ale, and it doesn't taste very good, but it's nourishing and hopefully not too alcoholic.
+
+>cold kale
+by one point
+
+#testcase-run-vr-cold-kale-rule-default
+Some cold kale appears! It's not very tasty, but it's better than nothing.
+
 >told tale
 by one point
 
+#testcase-run-vr-told-tale-rule-default
+#testcase-run-vr-told-tale-rule-fallthrough
+#testcase-run-vr-told-tale-rule-follow-the-shutdown-rules
+#testcase-run-vr-told-tale-rule-process-the-score-and-thinking-changes-rule
+by one point
+Yeah, that's it. You've had your fun. Time to move on. As you leave, you notice some fey foam. You're obviously meant to do something with it, so you build a day dome before a nay-gnome appears. You enter it and say the magic words: HEY, HOME.
+Your adventures are just silly enough and just believable enough to scare friends or to laugh at things.
+BAH?! BOO-YAH, YOU!
