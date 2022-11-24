@@ -1,0 +1,62 @@
+## reg-qqnn-lone-think-odds.txt
+#-- tests a special case of something disappearing from THINK.
+#--
+#-- use HHV.PY to verify ha-half
+#--
+
+** game: /home/andrew/prt/debug-quite-queer-night-near.z8
+** interpreter: /home/andrew/prt/dfrotz -m
+
+* main-thru
+
+>fight fear
+by one point
+
+>pink pug
+by one point
+
+>e
+
+>heap heat
+This will work once you go back to Blight Blear Bight Bier.
+
+>n
+
+>bark bump
+by one point
+
+>park pump
+by one point
+
+>stark stump
+by one point
+
+>e
+
+>plaster plate
+by one point
+
+>s
+
+>deep duel
+by one point
+
+>keep cool
+by one point
+
+>e
+
+>more mulch
+by one point
+
+>think
+You think about more specific challenges you've encountered and not solved, and what you've done and tried, and what you can do.
+(OPTIONAL) You can go back to Blight Blear Bight Bier to HEAP HEAT on the cheap cheat sheep sheet.
+!But you don't
+
+>u
+
+>think
+You think about more specific challenges you've encountered and not solved, and what you've done and tried, and what you can do.
+But you don't remember anything that could work later.
+!HEAP HEAT

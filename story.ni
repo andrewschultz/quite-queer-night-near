@@ -328,6 +328,7 @@ check going up in Bare Bones Stair Stones:
 		say "You see a way through! You've built the bare bones stair stones into something more. You're ready to ascend and leave ... but you are so sure you will make it, you slip and tumble into...";
 		if sheep sheet is in bight bier, max-down;
 		move player to gold gaol;
+		zap-clue vc-heap-heat rule;
 		the rule succeeds;
 	if Q is 0:
 		say "The stones are in nowhere near climbable condition. For now.";

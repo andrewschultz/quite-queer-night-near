@@ -10,7 +10,7 @@ table of verb checks [xxvc]
 w1 (text)	w2 (text)	posthom (topic)	hom-txt-rule (rule)	think-cue	okflip	core	idid	best-room	check-rule	run-rule	wfull (topic)	think-advice (text)
 "fight|fright"	"fear|freer"	--	--	false	true	true	false	bight bier	vc-fight-fear rule	vr-fight-fear rule	"fight fear" or "fright freer"	-- [start bight bier]
 "pink"	"pug"	--	--	false	true	true	false	bight bier	vc-pink-pug rule	vr-pink-pug rule	--	"You could turn the Drink Drug Think Thug into a [b]PINK PUG[r] [once-now of vc-pink-pug rule] you feel less scared and overwhelmed."
-"heap|bleep"	"heat|bleat"	--	--	false	true	false	false	bight bier	vc-heap-heat rule	vr-heap-heat rule	"heap heat" or "bleep bleat"	--
+"heap|bleep"	"heat|bleat"	--	--	false	true	false	false	bight bier	vc-heap-heat rule	vr-heap-heat rule	"heap heat" or "bleep bleat"	"You can go back to [bier] to [b]HEAP HEAT[r] on the [sheet]."
 "deep|creep"	"duel|cruel"	--	--	false	true	true	false	peep pool	vc-deep-duel rule	vr-deep-duel rule	"deep duel" or "creep cruel"	-- [start peep pool]
 "keep"	"cool"	--	--	false	true	true	false	peep pool	vc-keep-cool rule	vr-keep-cool rule	--	"You can [b]KEEP COOL[r] [once-now of vc-keep-cool rule] you have someone who is trying to annoy you."
 "more"	"mulch"	--	--	false	true	true	false	gore gulch	vc-more-mulch rule	vr-more-mulch rule	--	-- [start gore gulch]
@@ -118,9 +118,12 @@ this is the vr-fight-fear rule:
 	phbt bight bier;
 
 a goodrhyme rule (this is the vc-heap-heat rule):
-	if sheep sheet is off-stage, unavailable;
+	if sheep sheet is not fungible:
+		if player is in gold gaol, unavailable;
+		vcp "This will work once you go back to [bight bier].";
+		not-yet;
 	if player has cheap cheat sheep sheet:
-		vcal "You already warmed the sheet up.";
+		vcal "You already warmed the sheet up[if sco-heap-heat is false], but that command would've gotten a bonus point before[end if].";
 		already-done;
 	ready;
 
