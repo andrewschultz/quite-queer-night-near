@@ -4,7 +4,7 @@
 #-- use HHV.PY to verify ha-half
 #--
 
-files=reg-qqnn-thru-min.txt,reg-qqnn-thru-all.txt,reg-qqnn-thru-reject.txt,reg-qqnn-thru-alt-verbs.txt,reg-qqnn-thru-mistakes.txt,reg-qqnn-thru-ha-half.txt,reg-qqnn-thru-homonyms.txt,reg-qqnn-thru-scan.txt,reg-qqnn-thru-noway.txt
+files=reg-qqnn-thru-min.txt,reg-qqnn-thru-all.txt,reg-qqnn-thru-reject.txt,reg-qqnn-thru-alt-verbs.txt,reg-qqnn-thru-mistakes.txt,reg-qqnn-thru-ha-half.txt,reg-qqnn-thru-homonyms.txt,reg-qqnn-thru-scan.txt,reg-qqnn-thru-gong.txt,reg-qqnn-thru-prong.txt,reg-qqnn-thru-noway.txt
 ~	min	t0
 ~	all	t1
 ~	rej	t2
@@ -13,12 +13,14 @@ files=reg-qqnn-thru-min.txt,reg-qqnn-thru-all.txt,reg-qqnn-thru-reject.txt,reg-q
 ~	ha	t5
 ~	hom	t6
 ~	cs	t7
-~	way	t8
+~	gong	t8
+~	prong	t9
+~	way	t10
 
 ## *FILE
 ## *FORK
 
-TSV:## minimum walkthrough	## walkthrough with all points and text	##walkthrough with THINK and REJECT commands	## walkthrough with altverb tests	## walkthrough with mistakes	## walkthrough with HA HALF testing	## walkthrough with cheat sheet testing	## walkthrough with homonym testing	## walkthrough with NOWAY testing
+TSV:## minimum walkthrough	## walkthrough with all points and text	##walkthrough with THINK and REJECT commands	## walkthrough with altverb tests	## walkthrough with mistakes	## walkthrough with HA HALF testing	## walkthrough with cheat sheet testing	## walkthrough with homonym testing	## walkthrough with guide gong	## walkthrough with pride prong	## walkthrough with NOWAY testing
 
 }$REJECT1=Sorry, I can't do anything with that. This is a sort of guess-the-verb game. Examining and directions are the main commands. Point scoring actions are verbs to guess, and there is a theme to them.
 }$REJECT2=That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
@@ -35,7 +37,35 @@ TSV:## minimum walkthrough	## walkthrough with all points and text	##walkthrough
 @!min
 >z
 
+@gong
+>guide gong
+(disabling later explanation of GUIDE GONG, etc., but it will still be in VERBS)
+You are now repelled by a guide gong if you try to go down a path where you have nothing game-critical to do in any branches.
+
+@prong
+>pride prong
+(disabling later explanation of GUIDE GONG, etc., but it will still be in VERBS)
+You are now blocked from paths with no points, critical or bonus, available in any branches.
+
 >au 2
+
+@gong,prong
+>fight fear
+by one point
+\\
+>pink pug
+by one point
+\\
+>e
+\\
+>w
+{--prong}The pride-prong you summoned earlier pokes you to go and see what's ahead, even if it might not be critical to your quest.
+{--gong}!maven\\A guide gong rings to notify you that you don't need to go back through Blight Blear Bight Bier.
+\\
+>undo
+>undo
+>undo
+>undo
 
 @hom
 #ttc-table-of-thing-homonyms-cheat-cheat-sheep-sheet-cheep
@@ -617,6 +647,11 @@ You already got rid of the thug.
 #testcase-room-names-bare-bones-stair-stones
 `Bare Bones Stair Stones
 
+@gong,prong
+>w
+The wrath ravin' math maven seems about to say something until it's interrupted by something intrusive.
+A guide gong rings to notify you that you don't need to go back through Blight Blear Bight Bier.
+
 @rej
 #testcase-check-vc-pink-pug-rule-if-drink-drug-think-thug-is-off-stage-or-player-is-not-in-bight-bier
 >pink pug
@@ -956,6 +991,26 @@ More mulch appears! It spills out to the peep pool and beyond, probably even bac
 @all
 `Stair Stones
 The gunky material flowing back to Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
+
+@gong,prong
+#south branch testing
+>s
+That guide gong, again, rings to notify you that you don't need to go back through Peep Pool.
+\\
+>stride strong
+\\
+>s
+\\
+{--gong}>guide gong
+{--prong}>pride prong
+\\
+>e
+That guide gong, again, rings to notify you that you don't need to go back through Gore Gulch.
+\\
+>undo
+>undo
+>undo
+>undo
 
 @rej
 ##balance undos
@@ -1326,6 +1381,26 @@ Your text adventure remains totally texty.
 >s
 The wrath ravin' math maven rolls its eyes and groans as you go back south. Perhaps you're done there.
 >n
+
+@gong,prong
+#north branch testing
+>n
+That guide gong, again, rings to notify you that you don't need to go back through Dark Dump.
+\\
+>stride strong
+\\
+>n
+\\
+{--gong}>guide gong
+{--prong}>pride prong
+\\
+>e
+That guide gong, again, rings to notify you that you don't need to go back through Gaster Gate.
+\\
+>undo
+>undo
+>undo
+>undo
 
 >u
 

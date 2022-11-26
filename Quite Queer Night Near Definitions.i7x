@@ -43,6 +43,9 @@ volume numbers determined
 to decide which number is pump-block: [ the rhymes that help the pump ]
 	decide on boolval of sco-stark-stump + boolval of sco-bark-bump;
 
+to decide which number is pump-total: [ the rhymes that help the pump ]
+	decide on boolval of sco-stark-stump + boolval of sco-bark-bump + boolval of sco-park-pump;
+
 Quite Queer Night Near Definitions ends here.
 
 ---- DOCUMENTATION ----
