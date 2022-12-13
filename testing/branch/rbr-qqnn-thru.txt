@@ -108,6 +108,7 @@ This will work once you go back to Blight Blear Bight Bier.
 \\
 >gonear gold gaol
 \\
+#testcase-check-vc-heap-heat-rule-if-sheep-sheet-is-not-fungible-if-player-is-in-gold-gaol
 >heap heat
 That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
 You can also type VERBS for a list of valid verbs (it can change as you gain or lose hint items) or ABOUT to see general information.
@@ -332,17 +333,17 @@ No fence appears.
 
 @hom
 #ttc-table-of-room-homonyms-bight-bier-hom-bight-bier-rule
->bite bier
-refer to the sheep sheet
-You don't need homonyms here. Something else... something a bit more common...
+>bite xxx
+!refer to the sheep sheet
+You don't need to be violent like that, but, well, that word sounded mostly right. Maybe homonyms aren't quite it.
 \\
->byte bier
-refer to the sheep sheet
-You don't need homonyms here. Something else... something a bit more common...
+>byte xxx
+!refer to the sheep sheet
+There is no need for detailed hacking, but, well, that word sounded mostly right. Maybe homonyms aren't quite it.
 \\
->bight beer
-refer to the sheep sheet
-You don't need homonyms here. Something else... something a bit more common...
+>xxx beer
+!refer to the sheep sheet
+Alas, there is no alcohol. Well, there may be later, but, well, that word sounded mostly right. Maybe homonyms aren't quite it.
 
 @mis
 #testcase-mistakes-table-of-cheap-cheat-sheep-sheet-guesses-beep-beat
@@ -493,7 +494,7 @@ by one point
 
 @all,rej
 {--rej}#testcase-check-vc-heap-heat-rule-fallthrough
-{--all}#testcase-run-vr-heap-heat-rule-default
+{--all}#+testcase-run-vr-heap-heat-rule-default
 You rub your hands together for warmth, blow on the sheet, and so on. And what do you know? It stays less frigid after you pick it up. It'd still be technically functional at any temperature, but now it won't freeze your fingers if you carry it around.
 What's more, if you don't understand how it works, you can spoil things with DEEP DEET.
 
@@ -661,10 +662,10 @@ Since you have the sheep sheet handy, you can CC something. You can also type VE
 @hom
 #ttc-table-of-room-homonyms-bare-bones-stair-stones-hom-bones-stones-rule
 >bear
-WRONG
+No, the thug was enough muscle in your way for one adventure.
 \\
 >stare
-WRONG
+You could just type Z to space out a bit.
 
 @mis
 #check that boiled base is not present as a backdrop
@@ -990,7 +991,7 @@ More mulch appears! It spills out to the peep pool and beyond, probably even bac
 
 @all
 `Stair Stones
-The gunky material flowing back to Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
+The gunky material flowing back west and north is icky, but it will help patch the stones up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
 
 @gong,prong
 #south branch testing
@@ -1180,7 +1181,7 @@ A bark bump appears to the north! You weren't going that way, but it provides a 
 You refer to the sheep sheet, noticing it says Dark Dump goes to ?? -- there might be diverging possibilities here
 
 @all
-#testcase-run-vr-park-pump-rule-default
+#+testcase-run-vr-park-pump-rule-default
 >park pump
 Poof! A park pump appears, just like you remember as a kid! It appears to be auto-pumping, creating a waterway. Water partially seeps out, and the pump stops pumping. Maybe you need to summon one more barrier here.
 \\
@@ -1203,7 +1204,7 @@ by one point
 
 @all,rej
 {--rej}#testcase-check-vc-park-pump-rule-fallthrough
-{--all}#testcase-run-vr-park-pump-rule-default
+{--all}#+testcase-run-vr-park-pump-rule-default
 Poof! A park pump appears, just like you remember as a kid! It appears to be auto-pumping, creating a waterway. With the stark stump and bark bump sealing off two exits, water flows freely back south.
 
 @rej
@@ -1320,7 +1321,7 @@ by one point
 
 @all
 Lair 'Lone's Stair Stones
-The gunky material flowing back to Stair Stones is icky, but it will help patch them up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
+The gunky material flowing back west and south is icky, but it will help patch the stones up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
 
 @all,rej
 {--rej}#testcase-check-vc-plaster-plate-rule-fallthrough
@@ -1430,7 +1431,7 @@ by one point
 #testcase-run-vr-old-ale-rule-process-the-endgame-prod-rule
 >old ale
 by one point
-So, yeah. That thing you tried before that didn't work? TOLD TALE? It does now. There's not much else to do."
+So, yeah. That thing you tried before that didn't work? TOLD TALE? It does now. There's not much else to do.
 \\
 >undo
 >undo
@@ -1441,7 +1442,7 @@ by one point
 #testcase-run-vr-cold-kale-rule-process-the-endgame-prod-rule
 >cold kale
 by one point
-So, yeah. That thing you tried before that didn't work? TOLD TALE? It does now. There's not much else to do."
+So, yeah. That thing you tried before that didn't work? TOLD TALE? It does now. There's not much else to do.
 \\
 >undo
 >undo

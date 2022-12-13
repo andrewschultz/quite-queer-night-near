@@ -46,6 +46,7 @@ This will work once you go back to Blight Blear Bight Bier.
 
 >gonear gold gaol
 
+#testcase-check-vc-heap-heat-rule-if-sheep-sheet-is-not-fungible-if-player-is-in-gold-gaol
 >heap heat
 That's not a verb this (stripped down) parser recognizes, and it doesn't contain any magic. Maybe there's a bit more to find here, though.
 You can also type VERBS for a list of valid verbs (it can change as you gain or lose hint items) or ABOUT to see general information.

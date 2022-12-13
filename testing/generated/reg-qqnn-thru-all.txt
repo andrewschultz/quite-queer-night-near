@@ -31,7 +31,7 @@ What's more, if you don't understand how it works, you can spoil things with DEE
 >heap heat
 by one point
 
-#testcase-run-vr-heap-heat-rule-default
+#+testcase-run-vr-heap-heat-rule-default
 You rub your hands together for warmth, blow on the sheet, and so on. And what do you know? It stays less frigid after you pick it up. It'd still be technically functional at any temperature, but now it won't freeze your fingers if you carry it around.
 What's more, if you don't understand how it works, you can spoil things with DEEP DEET.
 
@@ -76,7 +76,7 @@ by one point
 More mulch appears! It spills out to the peep pool and beyond, probably even back to the stair stones.
 
 `Stair Stones
-The gunky material flowing back to Stair Stones is icky, but it will help patch them up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
+The gunky material flowing back west and north is icky, but it will help patch the stones up. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks almost traversable.
 
 >n
 
@@ -95,7 +95,7 @@ by one point
 #testcase-run-vr-bark-bump-rule-default
 A bark bump appears to the north! You weren't going that way, but it provides a bit of a channel.
 
-#testcase-run-vr-park-pump-rule-default
+#+testcase-run-vr-park-pump-rule-default
 >park pump
 Poof! A park pump appears, just like you remember as a kid! It appears to be auto-pumping, creating a waterway. Water partially seeps out, and the pump stops pumping. Maybe you need to summon one more barrier here.
 
@@ -110,7 +110,7 @@ Poof! A stark stump appears! It blocks the way to the west, but it provides a ch
 >park pump
 by one point
 
-#testcase-run-vr-park-pump-rule-default
+#+testcase-run-vr-park-pump-rule-default
 Poof! A park pump appears, just like you remember as a kid! It appears to be auto-pumping, creating a waterway. With the stark stump and bark bump sealing off two exits, water flows freely back south.
 
 >e
@@ -122,7 +122,7 @@ Poof! A park pump appears, just like you remember as a kid! It appears to be aut
 by one point
 
 Lair 'Lone's Stair Stones
-The gunky material flowing back to Stair Stones is icky, but it will help patch them up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
+The gunky material flowing back west and south is icky, but it will help patch the stones up even more. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks traversable.
 
 #testcase-run-vr-plaster-plate-rule-default
 A huge chunk of the gaster gate breaks off and creates a plaster plate. It's much too big to eat off, but it crumbles quickly apart (probably not Last 'Er Late brand) and is washed away beyond the dark dump. The Master Mate, their job done, smiles, gives a thumbs up, and walks away.
@@ -145,7 +145,7 @@ by one point
 #testcase-run-vr-old-ale-rule-process-the-endgame-prod-rule
 >old ale
 by one point
-So, yeah. That thing you tried before that didn't work? TOLD TALE? It does now. There's not much else to do."
+So, yeah. That thing you tried before that didn't work? TOLD TALE? It does now. There's not much else to do.
 
 >undo
 >undo
@@ -156,7 +156,7 @@ by one point
 #testcase-run-vr-cold-kale-rule-process-the-endgame-prod-rule
 >cold kale
 by one point
-So, yeah. That thing you tried before that didn't work? TOLD TALE? It does now. There's not much else to do."
+So, yeah. That thing you tried before that didn't work? TOLD TALE? It does now. There's not much else to do.
 
 >undo
 >undo
