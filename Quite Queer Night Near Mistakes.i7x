@@ -132,7 +132,7 @@ volume first stuff to check
 
 table of first check rhymes
 mist-regex	mist-rule	got-yet	magicnum	leet-rule	still-rule	mist-txt
-"(bite|bight) (bier|beer)"	in-bight-bier rule	false	54	fear-to-fight rule	not-gaol rule	"You don't need homonyms here. Something else... something a bit more common..."
+"(bite|bight|byte) (bier|beer)"	in-bight-bier rule	false	54	fear-to-fight rule	not-gaol rule	"You don't need homonyms here. Something else... something a bit more common..."
 "(deep dual|dual deep)"	in-peep-pool rule	false	44	duel-unstarted rule	not-gaol rule	"[if creep cruel is off-stage]You are very close. You don't need to make the pool deeper, but you need something else deep[else]Summoning the creep (cruel) was enough[end if]."
 "bear bones"	in-stones rule	false	--	--	not-gaol rule	"That would make for creepier ambience, but more importantly, the bear bones would make the stair stones even tougher to climb."
 "stare stones"	in-stones rule	false	--	--	not-gaol rule	"Nothing appears in the stones. You [if stone-filler is 2]can just[else if stone-filler is 1]have a bit more work before you[else]would need to repair them to[end if] climb them."

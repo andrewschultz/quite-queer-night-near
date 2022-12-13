@@ -43,7 +43,7 @@ old-filler is a number that varies.
 to check-stair-stones:
 	let Q be stone-filler;
 	if Q is not old-filler:
-		say "[line break]The gunky material flowing back to [stair stones] is icky, but it will help patch them up[one of][or] even more[stopping]. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks [one of]almost [or][stopping]traversable.";
+		say "[line break]The gunky material flowing back [if player is in gore gulch or player is in gaster gate]west and [end if][if player is in gore gulch or player is in peep pool]north[else]south[end if] is icky, but it will help patch the stones up[one of][or] even more[stopping]. You run back quickly. It takes a while, and it's not art, but you do your best. Once it dries, the way up looks [one of]almost [or][stopping]traversable.";
 		if Q is 1, now printed name of Bare Bones Stair Stones is "Stair Stones";
 		if Q is 2, now printed name of Bare Bones Stair Stones is "Lair [']Lone's Stair Stones";
 		now old-filler is Q;
@@ -272,20 +272,26 @@ bare bones stair stones	hom-bones-stones rule	--	--
 gaster gate	--	"gait"	"You are walking around just fine. No need for homonyms."
 
 this is the hom-bight-bier rule:
-	if the player's command matches "beer":
-		say "Alas, there is no alcohol. Well, there may be later.";
+	if the player's command includes "beer":
+		say "Alas, there is no alcohol. Well, there may be later[but-hom].";
 		the rule succeeds;
-	else if the player's command matches "bite":
-		say "You don't need to be violent like that.";
+	else if the player's command includes "byte":
+		say "There is no need for detailed hacking[but-hom].";
+		the rule succeeds;
+	else if the player's command includes "bite":
+		say "You don't need to be violent like that[but-hom].";
 		the rule succeeds;
 
 this is the hom-bones-stones rule:
-	if the player's command matches "bear":
+	if the player's command includes "bear":
 		say "No, the thug was enough muscle in your way for one adventure.";
 		the rule succeeds;
-	else if the player's command matches "stare":
+	else if the player's command includes "stare":
 		say "You could just type [b]Z[r] to space out a bit.";
 		the rule succeeds;
+
+to say but-hom:
+	if current-score is 0, say ", but, well, that word sounded mostly right. Maybe homonyms aren't quite it"
 
 volume can't go that way
 
